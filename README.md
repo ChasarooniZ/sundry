@@ -5,6 +5,7 @@
 
 ![module_banner](https://github.com/ChasarooniZ/pf2e-usage-updater/assets/79132112/3b2a4f8c-7ba1-4647-b073-d8ecac9d93a6)
 
+[![gitlocalized ](https://gitlocalize.com/repo/10447/whole_project/badge.svg)](https://gitlocalize.com/repo/10447?utm_source=badge)
 [![](https://img.shields.io/badge/ko--fi-donate-%23FF5E5B?style=flat-square&logo=ko-fi&logoColor=white)](https://ko-fi.com/Chasarooni)
 
 
@@ -20,6 +21,34 @@ Message Headers
 ## Changelog
 
 You can access the changelog [here](/CHANGELOG.md).
+
+## Features
+
+
+  - **Colorize**
+    - `PF2e HUD`'s `Persistent HUD`
+      
+    ![](https://github.com/user-attachments/assets/250de37f-511a-439a-b07d-3e02abe3346a)
+    ![](https://github.com/user-attachments/assets/9ea66861-1094-4a5d-bcfb-f2f701bfdb28)
+
+    - `PF2e Toolbelt`'s `Target Helper`
+
+    ![](https://github.com/user-attachments/assets/eb7b0c58-ac2b-4e85-8c0f-86f534cf8829)
+
+
+  - **Hide**
+    - `Sell All Treasure`
+    - `Default Craft Checks` (for Heroic Crafting)
+  - Highlight
+    - `Pf2e Toolbelt`'s `Target Helper` unrolled rolls and make them glow
+
+    ![highlight-save](https://github.com/user-attachments/assets/0f8e1237-da4a-4e1f-947e-df5e94294bf3)
+
+  - Minify
+    - `Simple Requests` module to minify the chat area it takes up
+      
+    ![](https://github.com/user-attachments/assets/b0d6f241-0000-4560-ab4c-077c3b5c36b3)
+
 
 ## Contributors
 
