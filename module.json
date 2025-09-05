@@ -1,12 +1,12 @@
 {
-  "id": "module",
-  "title": "New Module",
-  "description": "",
+  "id": "sundry",
+  "title": "Sundry: Small Tidbits for (Mostly) PF2e",
+  "description": "A module of all of the small tweaks, features, and tidbits that didn't deserve their own module including styling etc.",
   "version": "#{VERSION}#",
   "library": "false",
   "compatibility": {
-    "minimum": 12,
-    "verified": 12
+    "minimum": 13,
+    "verified": 13
   },
   "authors": [
     {
@@ -19,15 +19,9 @@
     "systems": [],
     "requires": []
   },
-  "esmodules": [
-    "scripts/module.js"
-  ],
-  "scripts": [
-    "scripts/lib/lib.js"
-  ],
-  "styles": [
-    "styles/module.css"
-  ],
+  "esmodules": ["scripts/module.js"],
+  "scripts": ["scripts/lib/lib.js"],
+  "styles": ["styles/module.css"],
   "languages": [
     {
       "lang": "en",
