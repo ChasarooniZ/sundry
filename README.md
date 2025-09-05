@@ -5,6 +5,7 @@
 
 ![module_banner](https://github.com/ChasarooniZ/pf2e-usage-updater/assets/79132112/3b2a4f8c-7ba1-4647-b073-d8ecac9d93a6)
 
+[![gitlocalized ](https://gitlocalize.com/repo/10447/whole_project/badge.svg)](https://gitlocalize.com/repo/10447?utm_source=badge)
 [![](https://img.shields.io/badge/ko--fi-donate-%23FF5E5B?style=flat-square&logo=ko-fi&logoColor=white)](https://ko-fi.com/Chasarooni)
 
 
