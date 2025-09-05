@@ -1,6 +1,6 @@
 {
   "id": "sundry",
-  "title": "Sundry: Small Tidbits for (Mostly) PF2e",
+  "title": "Sundry. Small Tidbits for (Mostly) PF2e",
   "description": "A module of all of the small tweaks, features, and tidbits that didn't deserve their own module including styling etc.",
   "version": "#{VERSION}#",
   "library": "false",
