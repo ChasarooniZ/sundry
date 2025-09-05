@@ -1,4 +1,4 @@
-import { MODULE_ID } from "./module.js";
+
 
 /** Sourced from Dorako UI <3 */
 export async function setupMessageUserColor() {
@@ -12,6 +12,7 @@ export async function setupMessageUserColor() {
         }
 
         html.style.setProperty("--player-color", chatMessage?.author?.color ?? "#DAC0FB");
+        themeHeader(html, chatMessage);
     });
 }
 

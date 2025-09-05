@@ -1,3 +1,55 @@
 {
-    "MODULE.hello": "hello"
+  "I18N.LANGUAGE": "English",
+  "sundry": {
+    "module-settings": {
+      "colorize": {
+        "pf2e-hud": {
+          "persistent": {
+            "name": "Colorize PF2e HUD - Persistent HUD",
+            "hint": "Colorize the 'Persistent HUD' feature of 'PF2e HUD'"
+          }
+        },
+        "pf2e-toolbelt": {
+          "target-helper": {
+            "roll": {
+              "name": "Colorize PF2e Toolbelt - Target helper Roll Types",
+              "hint": "Colorize the 'Target helper' feature of 'PF2e Toolbelt' so that each roll type is colorized"
+            }
+          }
+        }
+      },
+      "hide": {
+        "sell-all-treasure": {
+          "name": "Hide Sell All Treasure",
+          "hint": "Hides the 'Sell All Treasure' button to prevent accidentally selling key items"
+        },
+        "default-craft-checks": {
+          "name": "Hides Default Craft Checks Buttons",
+          "hint": "To Prevent players from using default crafting as opposed to the 'Heroic Crafting' Buttons if using that addon"
+        }
+      },
+      "highlight": {
+        "pf2e-toolbelt": {
+          "target-helper": {
+            "roll": {
+              "name": "Highlight PF2e Toolbelt - Target Helper Unrolled Roll",
+              "hint": "Highlight unmade rolls by making them glow in the 'Target helper' feature of 'PF2e Toolbelt' to make it more clear to roll it"
+            }
+          }
+        }
+      },
+      "message": {
+        "user-color": {
+          "name": "User Color for Message Headers",
+          "hint": "Sets the header of messages based on the user color"
+        }
+      },
+      "minify": {
+        "simple-requests": {
+          "name": "Minify Simple Requests",
+          "hint": "Makes 'Simple Requests' module HUD a bit smaller so its less in the way"
+        }
+      }
+    }
+  }
 }
