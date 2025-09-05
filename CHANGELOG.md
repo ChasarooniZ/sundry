@@ -2,6 +2,11 @@
 
 - Add User Color to Message Header
 
+## 0.1.1
+
+- **Updated**
+  - Target Helper will save colorization now matches the `Persistent HUD` colorization (🐛 @poindexter1985)
+
 ## 0.1.0
 
 - **Added**

@@ -21,18 +21,18 @@ const colorizeToolbeltMessageSavesCSS = `
     .controls {
         /* reflex toolbelt*/
         i.fa-person-running {
-            color: rgb(77, 209, 108);
+            color: #F5A623;
         }
 
         /* will toolbelt*/
         i.fa-brain {
-            color: deeppink;
+            color: #5C6BC0;
         
         }
 
         /* fort toolbelt*/
         i.fa-chess-rook {
-            color: rgb(110, 143, 54);
+            color:  #43A047;
         
         }
     }
