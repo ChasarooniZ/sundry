@@ -1,0 +1,184 @@
+:root {
+  --sundry-hp: #1fb222;
+  --sundry-temp-hp: #45b6fe;
+
+  --sundry-reflex: #f5a623;
+  --sundry-will: #5c6bc0;
+  --sundry-fortitude: #43a047;
+
+  --sundry-perception: #4680cc;
+  --sundry-stealth: #a280cc;
+  --sundry-athletics: #cd5537;
+
+  --sundry-shield: #0c71fe;
+  --sundry-shield-raise: #dba143;
+
+  --sundry-hero-points: #e4be37;
+}
+
+.sundry-pf2e-hud-persistent-colorized {
+  [data-section="hero-points"] i:not(.carret) {
+    --icon-color: var(--sundry-hero-points);
+  }
+
+  [data-panel="owned-actors"] .owned-actor .heroPoints i {
+    --icon-color: var(--sundry-hero-points);
+  }
+
+  [data-section="fortitude"] {
+    --icon-color: var(--sundry-fortitude);
+  }
+
+  [data-panel="owned-actors"] .owned-actor .statistic i.fa-chess-rook {
+    --icon-color: var(--sundry-fortitude);
+  }
+
+  [data-section="reflex"] {
+    --icon-color: var(--sundry-reflex);
+  }
+
+  [data-panel="owned-actors"] .owned-actor .statistic i.fa-person-running {
+    --icon-color: var(--sundry-reflex);
+  }
+
+  [data-section="will"] {
+    --icon-color: var(--sundry-will);
+  }
+
+  [data-panel="owned-actors"] .owned-actor .statistic i.fa-brain {
+    --icon-color: var(--sundry-will);
+  }
+
+  [data-section="dying"] i:not(.carret) {
+    --icon-color: #b01717;
+  }
+
+  [data-section="wounded"] i:not(.carret) {
+    --icon-color: #ff595e;
+  }
+
+  [data-section="hp"] {
+    --icon-color: var(--sundry-hp);
+  }
+
+  [data-panel="owned-actors"] .owned-actor .value.hp i {
+    --icon-color: var(--sundry-hp);
+  }
+
+  [data-section="temp-hp"] {
+    --icon-color: var(--sundry-temp-hp);
+  }
+
+  [data-section="ac"] {
+    --icon-color: #aab0b3;
+  }
+
+  [data-panel="owned-actors"] .owned-actor .ac i {
+    color: #aab0b3;
+  }
+
+  [data-sidebar="actions"] i {
+    --icon-color: #53c341;
+  }
+
+  [data-sidebar="items"] i {
+    --icon-color: #b87c3d;
+  }
+
+  [data-sidebar="spells"] i {
+    --icon-color: #921df2;
+  }
+
+  [data-sidebar="skills"] i {
+    --icon-color: #47a8a9;
+  }
+
+  /*
+    [data-sidebar="extras"] i {
+        --icon-color: #EF1C55;
+    }
+    */
+
+  [data-section="effects"] i {
+    --icon-color: #ff5b00;
+  }
+
+  [data-section="perception"] {
+    --icon-color: var(--sundry-perception);
+  }
+
+  [data-panel="owned-actors"] .owned-actor .statistic i.fa-eye {
+    --icon-color: var(--sundry-perception);
+  }
+
+  [data-section="stealth"] {
+    --icon-color: var(--sundry-stealth);
+  }
+
+  [data-panel="owned-actors"] .owned-actor .statistic i.fa-mask {
+    --icon-color: var(--sundry-stealth);
+  }
+
+  [data-section="athletics"] {
+    --icon-color: var(--sundry-athletics);
+  }
+
+  [data-panel="owned-actors"] .owned-actor .statistic i.fa-hand-fist {
+    --icon-color: var(--sundry-athletics);
+  }
+
+  /**[data-section="ac"] i {
+        --icon-color: #FFFFFF;
+    }*/
+
+  [data-section="shield"] {
+    i.fa-shield.fa-regular {
+      --icon-color: var(--sundry-shield);
+    }
+    i.fa-shield.fa-solid {
+      --icon-color: var(--sundry-shield-raise);
+    }
+  }
+}
+
+.sundry-pf2e-toolbelt-colorize-saves
+  .message-content
+  .pf2e-toolbelt-target-targetRows
+  .target-row
+  .target-header
+  .controls {
+  i.fa-person-running {
+    color: var(--sundry-reflex);
+  }
+
+  i.fa-brain {
+    color: var(--sundry-will);
+  }
+
+  i.fa-chess-rook {
+    color: var(--sundry-fortitude);
+  }
+}
+
+.sundry-pf2e-toolbelt-highlight-unrolled
+  .message-content
+  .pf2e-toolbelt-target-targetRows
+  .target-row
+  .target-header
+  .controls {
+  i.die {
+    animation: endTurnGlow 2.5s infinite;
+  }
+}
+
+@keyframes endTurnGlow {
+  0% {
+    color: #fff;
+  }
+  50% {
+    color: #fd782f;
+  }
+  100% {
+    color: #fff;
+  }
+}

@@ -20,3 +20,15 @@ export function getSetting(settingID) {
 export async function setSetting(settingID, value) {
     return game.settings.set(MODULE_ID, settingID, value);
 }
+
+export function addElementsClass(elements, cssClass) {
+    return elements.forEach(element => {
+        element.classList.add(cssClass);
+    });
+}
+
+export function removeElementsClass(elements, cssClass) {
+    return elements.forEach(element => {
+        element.classList.remove(cssClass);
+    });
+}

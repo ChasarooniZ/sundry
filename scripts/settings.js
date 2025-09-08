@@ -1,4 +1,4 @@
-import { colorizePersistentPF2eHUD } from "./lib/pf2eHUDColorized.js";
+import { setupColorizePersistentPF2eHUD } from "./lib/pf2eHUD.js";
 import { colorizeToolbeltMessageSaves, highlightToolbeltRollSaves } from "./lib/pf2eToolbelt.js";
 import { hideDefaultCraftChecks, hideSellAllTreasure } from "./lib/sheetTweaks.js";
 import { minifySimpleRequests } from "./lib/simpleRequests.js";
@@ -13,7 +13,7 @@ export function setupSettings() {
         default: false,
         type: Boolean,
         onChange: value => {
-            colorizePersistentPF2eHUD(value)
+            setupColorizePersistentPF2eHUD(value)
         }
     });
 
@@ -25,7 +25,7 @@ export function setupSettings() {
         default: false,
         type: Boolean,
         onChange: value => {
-            colorizeToolbeltMessageSaves(value)
+            setupColorizeToolbeltMessageSaves(value)
         }
     });
 
@@ -61,7 +61,7 @@ export function setupSettings() {
         default: false,
         type: Boolean,
         onChange: value => {
-            highlightToolbeltRollSaves(value)
+            setupHighlightToolbeltRollSaves(value)
         }
     });
 
