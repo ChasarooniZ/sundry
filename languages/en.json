@@ -49,7 +49,24 @@
           "name": "[Minify] Simple Requests",
           "hint": "Makes 'Simple Requests' module HUD a bit smaller so its less in the way"
         }
+      },
+      "notify": {
+        "spellstrike": {
+          "recharge": {
+            "name": "[Notify] Spellstrike Recharge",
+            "hint": "Adds a little ui notification when your spellstrike should be recharged"
+          } 
+        }
       }
-    }
+    },
+    "notification": {
+      "spellstrike": {
+          "recharged": "Spellstrike Recharged",
+          "conflux": "You just cast a conflux spell which allows you to recharge your spellstrike.",
+          "feature": "You used a feature that recharges your spellstrike",
+          "on-success": "You used a feature that recharges your spellstrike if you succeeded on a roll",
+          "other-option": "Alternatively you can always spend 1 action to recharge, this action has the <b>concentrate</b> trait"
+      }
+  }
   }
 }

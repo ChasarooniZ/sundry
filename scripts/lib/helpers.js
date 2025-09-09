@@ -22,13 +22,13 @@ export async function setSetting(settingID, value) {
 }
 
 export function addElementsClass(elements, cssClass) {
-    return elements.forEach(element => {
-        element.classList.add(cssClass);
+    return elements?.forEach(element => {
+        element?.classList?.add(cssClass);
     });
 }
 
 export function removeElementsClass(elements, cssClass) {
-    return elements.forEach(element => {
-        element.classList.remove(cssClass);
+    return elements?.forEach(element => {
+        element?.classList?.remove(cssClass);
     });
 }

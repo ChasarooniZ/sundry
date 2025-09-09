@@ -1,5 +1,6 @@
+import { setupNotifySpellstrikeRecharge } from "./lib/notify.js";
 import { setupColorizePersistentPF2eHUD } from "./lib/pf2eHUD.js";
-import { colorizeToolbeltMessageSaves, highlightToolbeltRollSaves } from "./lib/pf2eToolbelt.js";
+import { setupColorizeToolbeltMessageSaves, setupHighlightToolbeltRollSaves } from "./lib/pf2eToolbelt.js";
 import { hideDefaultCraftChecks, hideSellAllTreasure } from "./lib/sheetTweaks.js";
 import { minifySimpleRequests } from "./lib/simpleRequests.js";
 import { MODULE_ID } from "./module.js";
@@ -85,6 +86,18 @@ export function setupSettings() {
         type: Boolean,
         onChange: value => {
             minifySimpleRequests(value)
+        }
+    });
+
+    game.settings.register(MODULE_ID, "notify.spellstrike.recharge", {
+        name: `${MODULE_ID}.module-settings.notify.spellstrike.recharge.name`,
+        hint: `${MODULE_ID}.module-settings.notify.spellstrike.recharge.hint`,
+        scope: "world",
+        config: true,
+        default: false,
+        type: Boolean,
+        onChange: value => {
+            setupNotifySpellstrikeRecharge(value)
         }
     });
 }

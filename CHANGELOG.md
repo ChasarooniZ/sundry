@@ -5,12 +5,13 @@
 ## 0.2.0
 
 - **Added**
-  - Notify a player when they perform an action that gives them a spell slot back
+  - Notify player when they recharge their `spellstrike`
 - **Updated**
   - Reworked much of the CSS for stuff to be easier to contribute to
     - Colorize `PF2e HUD`'s `Persistent HUD`
     - Colorize `PF2e Toolbelt`'s `Target Helper`
     - Highlight `Pf2e Toolbelt`'s `Target Helper` unrolled rolls and make them glow
+  - Reworked module settings names to be more straight forward
 
 ## 0.1.1
 

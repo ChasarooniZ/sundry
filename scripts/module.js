@@ -4,6 +4,7 @@ import { setupSettings } from "./settings.js";
 import { hideDefaultCraftChecks, hideSellAllTreasure } from "./lib/sheetTweaks.js";
 import { setupColorizeToolbeltMessageSaves, setupHighlightToolbeltRollSaves } from "./lib/pf2eToolbelt.js";
 import { setupColorizePersistentPF2eHUD } from "./lib/pf2eHUD.js";
+import { setupNotifySpellstrikeRecharge } from "./lib/notify.js";
 
 export const MODULE_ID = 'sundry';
 
@@ -38,6 +39,10 @@ Hooks.once('ready', async function () {
 
     if (getSetting('minify.simple-requests'))
         minifySimpleRequests();
+
+    setupNotifySpellstrikeRecharge(
+        getSetting('notify.spellstrike.recharge')
+    )
 
 
 });
