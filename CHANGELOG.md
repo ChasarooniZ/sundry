@@ -2,6 +2,14 @@
 
 - Add User Color to Message Header
 
+## 0.3.0
+- **Added**
+  - `Reaction Tracker`
+    - This has 2 features:
+      - When a reaction is used, it creates an effect marking a character has used a reaction, or if they have already used a reaction in the last round, increments a counter showing the total number of reactions used (to helpfully track characters with multiple reactions)
+      - When combat starts you gain the Reaction Used effect until your turn starts [in line with RAW](https://2e.aonprd.com/Rules.aspx?ID=2432&Redirected=1)
+    - Note: this feature requires the GM to be active to work
+
 ## 0.2.0
 
 - **Added**
