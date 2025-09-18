@@ -2,7 +2,15 @@
 
 - Add User Color to Message Header
 
+## 0.3.1
+
+- **Updated**
+  - `Reaction Tracker`
+    - Updated setting to allow you to only enable the reaction use tracker (and not the start of combat)
+    - Added specific handling for start of combat for `Guardian's Ever Ready` ability
+
 ## 0.3.0
+
 - **Added**
   - `Reaction Tracker`
     - This has 2 features:

@@ -102,15 +102,30 @@ export function setupSettings() {
         }
     });
 
+    //TODO remove next version
     game.settings.register(MODULE_ID, "track.reactions", {
-        name: `${MODULE_ID}.module-settings.track.reactions.name`,
-        hint: `${MODULE_ID}.module-settings.track.reactions.hint`,
+        name: "",
+        hint: "",
+        scope: "world",
+        config: false,
+        default: false,
+        type: Boolean
+    });
+
+    game.settings.register(MODULE_ID, "track.reaction-usage", {
+        name: `${MODULE_ID}.module-settings.track.reaction-usage.name`,
+        hint: `${MODULE_ID}.module-settings.track.reaction-usage.hint`,
         scope: "world",
         config: game.system.id === 'pf2e',
-        default: false,
-        type: Boolean,
+        default: "off",
+        type: String,
         onChange: value => {
             setupReactionTracker(value)
+        },
+        choices: {
+            "all": `${MODULE_ID}.module-settings.track.reaction-usage.choices.all`,
+            "reaction-only": `${MODULE_ID}.module-settings.track.reaction-usage.choices.reaction-only`,
+            "off": `${MODULE_ID}.module-settings.track.reaction-usage.choices.off`
         }
     });
 }

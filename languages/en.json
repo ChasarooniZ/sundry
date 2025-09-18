@@ -59,9 +59,14 @@
         }
       },
       "track": {
-        "reactions": {
-          "name": "[Track] Reactions",
-          "hint": "This feature creates (and increments) an effect on a token that counts if a token has used a reaction. To note it also applies this effect to every token as combat starts"
+        "reaction-usage": {
+          "name": "[Track] Reaction Usage",
+          "hint": "This feature creates (and increments) an effect on a token that counts if a token has used a reaction. To note it also applies this effect to every token as combat starts",
+          "choices": {
+            "all": "All Features",
+            "reaction-only": "Only Track Sent Reactions",
+            "off": "Off"
+          }
         }
       }
     },

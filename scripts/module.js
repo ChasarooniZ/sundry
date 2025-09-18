@@ -46,7 +46,7 @@ Hooks.once('ready', async function () {
     )
 
     setupReactionTracker(
-        getSetting('track.reactions')
+        getSetting('track.reaction-usage')
     )
 
 

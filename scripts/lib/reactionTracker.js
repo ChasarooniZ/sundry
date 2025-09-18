@@ -1,13 +1,23 @@
-export function setupReactionTracker(active) {
+export function setupReactionTracker(setting) {
     if (game.user.isGM) {
-        if (active) {
-            Hooks.on("combatStart", startOfCombatReactions)
-            Hooks.on("createChatMessage", usedReaction)
-            Hooks.on("deleteCombat", removeEncounterReactions);
-        } else {
-            Hooks.off("combatStart", startOfCombatReactions)
-            Hooks.off("createChatMessage", usedReaction)
-            Hooks.off("deleteCombat", removeEncounterReactions);
+        switch (setting) {
+            case "all":
+                Hooks.on("combatStart", startOfCombatReactions)
+                Hooks.on("createChatMessage", usedReaction)
+                Hooks.on("deleteCombat", removeEncounterReactions);
+                break;
+            case "reaction-only":
+                Hooks.off("combatStart", startOfCombatReactions)
+                Hooks.on("createChatMessage", usedReaction)
+                Hooks.on("deleteCombat", removeEncounterReactions);
+                break;
+            case "off":
+                Hooks.off("combatStart", startOfCombatReactions)
+                Hooks.off("createChatMessage", usedReaction)
+                Hooks.off("deleteCombat", removeEncounterReactions);
+                break;
+            default:
+                break;
         }
     }
 }
@@ -41,7 +51,17 @@ async function reactionUsed(actors, combatStart) {
 
     const item = REACTION_USED_EFFECT(combatStart);
 
-    for (const actor of actors) {
+    const actorsToCheck = actors.filter(actor => {
+        if (combatStart) {
+            return !ROLL_OPTIONS_WITH_REACTIONS_AT_START_OF_COMBAT.some(rollOption =>
+                actor?.rollOptions?.all?.[rollOption]
+            )
+        } else {
+            return true;
+        }
+    })
+
+    for (const actor of actorsToCheck) {
         const existing = actor.itemTypes.effect.find(
             (e) => e.slug === "effect-reaction-used"
         );
@@ -91,3 +111,7 @@ const REACTION_USED_EFFECT = (combatStart) => ({
         slug: "effect-reaction-used",
     },
 });
+
+
+
+const ROLL_OPTIONS_WITH_REACTIONS_AT_START_OF_COMBAT = ["feature:guardians-techniques"]
