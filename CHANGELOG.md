@@ -2,6 +2,11 @@
 
 - Add User Color to Message Header
 
+## 0.3.3
+
+- **Updated**
+  - Added French translation (🌐 @rectulo)
+
 ## 0.3.2
 
 - **Updated**
