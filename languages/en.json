@@ -55,18 +55,31 @@
           "recharge": {
             "name": "[Notify] Spellstrike Recharge",
             "hint": "Adds a little ui notification when your spellstrike should be recharged"
-          } 
+          }
+        }
+      },
+      "track": {
+        "reactions": {
+          "name": "[Track] Reactions",
+          "hint": "This feature creates (and increments) an effect on a token that counts if a token has used a reaction. To note it also applies this effect to every token as combat starts"
         }
       }
     },
     "notification": {
       "spellstrike": {
-          "recharged": "Spellstrike Recharged",
-          "conflux": "You just cast a conflux spell which allows you to recharge your spellstrike.",
-          "feature": "You used a feature that recharges your spellstrike",
-          "on-success": "You used a feature that recharges your spellstrike if you succeeded on a roll",
-          "other-option": "Alternatively you can always spend 1 action to recharge, this action has the <b>concentrate</b> trait"
+        "recharged": "Spellstrike Recharged",
+        "conflux": "You just cast a conflux spell which allows you to recharge your spellstrike.",
+        "feature": "You used a feature that recharges your spellstrike",
+        "on-success": "You used a feature that recharges your spellstrike if you succeeded on a roll",
+        "other-option": "Alternatively you can always spend 1 action to recharge, this action has the <b>concentrate</b> trait"
       }
-  }
+    }
+  },
+  "items": {
+    "effects": {
+      "reaction-used": {
+        "name": "Effect: Reaction Used"
+      }
+    }
   }
 }
