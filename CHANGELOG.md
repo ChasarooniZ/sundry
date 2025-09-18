@@ -2,6 +2,13 @@
 
 - Add User Color to Message Header
 
+## 0.3.2
+
+- **Updated**
+  - `Reaction Tracker`
+    - Catches reaction spells now too (🐛 @boothy13)
+    - Now only adds reaction used when the actor is in combat
+
 ## 0.3.1
 
 - **Updated**
