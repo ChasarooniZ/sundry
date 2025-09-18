@@ -1,0 +1,90 @@
+{
+  "I18N.LANGUAGE": "Français",
+  "sundry": {
+    "module-settings": {
+      "colorize": {
+        "pf2e-hud": {
+          "persistent": {
+            "name": "[Colorier] PF2e HUD - HUD persistant",
+            "hint": "Colorier la fonctionnalité 'HUD persistant' de 'PF2e HUD'"
+          }
+        },
+        "pf2e-toolbelt": {
+          "target-helper": {
+            "roll": {
+              "name": "[Colorier] PF2e toolbelt - Types de jets d'aide au ciblage",
+              "hint": "Coloriez la fonction 'Aide au ciblage' de 'PF2e Toolbelt' afin que chaque type de jet soit colorié"
+            }
+          }
+        }
+      },
+      "hide": {
+        "sell-all-treasure": {
+          "name": "[Cacher] Vendre tous les trésors",
+          "hint": "Cache le bouton 'Vendre tous les trésors' pour prévenir la vente accidentelle d'objets clés"
+        },
+        "default-craft-checks": {
+          "name": "[Cacher] Boutons de tests d'artisanat par défaut",
+          "hint": "Pour empêcher les joueurs d'utiliser l'artisanat par défaut plutôt que les boutons « Artisanat héroïque » s'ils utilisent cet add-on"
+        }
+      },
+      "highlight": {
+        "pf2e-toolbelt": {
+          "target-helper": {
+            "roll": {
+              "name": "[Surligner] PF2e toolbelt - jet non lancé d'aide au ciblage",
+              "hint": "Surligner les jets non effectués en les faisant briller dans la fonction 'Aide au ciblage' de 'PF2e Toolbelt' pour qu'il soit plus évident à lancer"
+            }
+          }
+        }
+      },
+      "message": {
+        "user-color": {
+          "name": "Couleur de l'utilisateur pour les en-têtes de message",
+          "hint": "Définit l'en-tête des messages en fonction de la couleur de l'utilisateur"
+        }
+      },
+      "minify": {
+        "simple-requests": {
+          "name": "[Minifier] Simple Requests",
+          "hint": "Rend le HUD du module 'Simple Requests' un peu plus petit pour qu'il soit moins encombrant"
+        }
+      },
+      "notify": {
+        "spellstrike": {
+          "recharge": {
+            "name": "[Notifier] Recharge de Frappe de sort",
+            "hint": "Ajoute une petite notification d'IU lorsque votre frappe de sort doit être rechargée"
+          }
+        }
+      },
+      "track": {
+        "reaction-usage": {
+          "name": "[Comptabiliser] Utilisation de la réaction",
+          "hint": "Cette fonctionnalité crée (et incrémente) un effet sur un jeton qui compte si ce dernier a utilisé une réaction. À noter : cet effet s'applique également à chaque jeton au début du combat.",
+          "choices": {
+            "all": "Toutes les fonctionnalités",
+            "reaction-only": "Suivre uniquement les réactions envoyées",
+            "off": "Désactivé"
+          }
+        }
+      }
+    },
+    "notification": {
+      "spellstrike": {
+        "recharged": "Frappe de sort rechargée",
+        "conflux": "Vous venez de lancer un sort de confluence qui vous permet de recharger votre frappe magique.",
+        "feature": "Vous avez utilisé une capacité qui recharge votre frappe magique",
+        "on-success": "Vous avez utilisé une capacité qui recharge votre frappe magique si vous avez obtenu un succès",
+        "other-option": "Alternativement, vous pouvez toujours dépenser 1 action pour recharger. Cette action possède le trait <b>concentration</b>"
+      }
+    }
+  },
+  "items": {
+    "effects": {
+      "reaction-used": {
+        "name": "Effet : Réaction utilisée"
+      }
+    }
+  }
+}
