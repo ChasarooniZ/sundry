@@ -1,6 +1,7 @@
 import { setupNotifySpellstrikeRecharge } from "./lib/notify.js";
 import { setupColorizePersistentPF2eHUD } from "./lib/pf2eHUD.js";
 import { setupColorizeToolbeltMessageSaves, setupHighlightToolbeltRollSaves } from "./lib/pf2eToolbelt.js";
+import { setupReactionTracker } from "./lib/reactionTracker.js";
 import { hideDefaultCraftChecks, hideSellAllTreasure } from "./lib/sheetTweaks.js";
 import { minifySimpleRequests } from "./lib/simpleRequests.js";
 import { MODULE_ID } from "./module.js";
@@ -10,7 +11,7 @@ export function setupSettings() {
         name: `${MODULE_ID}.module-settings.colorize.pf2e-hud.persistent.name`,
         hint: `${MODULE_ID}.module-settings.colorize.pf2e-hud.persistent.hint`,
         scope: "world",
-        config: true,
+        config: game.system.id === 'pf2e',
         default: false,
         type: Boolean,
         onChange: value => {
@@ -22,7 +23,7 @@ export function setupSettings() {
         name: `${MODULE_ID}.module-settings.colorize.pf2e-toolbelt.target-helper.roll.name`,
         hint: `${MODULE_ID}.module-settings.colorize.pf2e-toolbelt.target-helper.roll.hint`,
         scope: "world",
-        config: true,
+        config: game.system.id === 'pf2e',
         default: false,
         type: Boolean,
         onChange: value => {
@@ -34,7 +35,7 @@ export function setupSettings() {
         name: `${MODULE_ID}.module-settings.hide.default-craft-checks.name`,
         hint: `${MODULE_ID}.module-settings.hide.default-craft-checks.hint`,
         scope: "world",
-        config: true,
+        config: game.system.id === 'pf2e',
         default: false,
         type: Boolean,
         onChange: value => {
@@ -46,7 +47,7 @@ export function setupSettings() {
         name: `${MODULE_ID}.module-settings.hide.sell-all-treasure.name`,
         hint: `${MODULE_ID}.module-settings.hide.sell-all-treasure.hint`,
         scope: "world",
-        config: true,
+        config: game.system.id === 'pf2e',
         default: false,
         type: Boolean,
         onChange: value => {
@@ -58,7 +59,7 @@ export function setupSettings() {
         name: `${MODULE_ID}.module-settings.highlight.pf2e-toolbelt.target-helper.roll.name`,
         hint: `${MODULE_ID}.module-settings.highlight.pf2e-toolbelt.target-helper.roll.hint`,
         scope: "world",
-        config: true,
+        config: game.system.id === 'pf2e',
         default: false,
         type: Boolean,
         onChange: value => {
@@ -93,11 +94,23 @@ export function setupSettings() {
         name: `${MODULE_ID}.module-settings.notify.spellstrike.recharge.name`,
         hint: `${MODULE_ID}.module-settings.notify.spellstrike.recharge.hint`,
         scope: "world",
-        config: true,
+        config: game.system.id === 'pf2e',
         default: false,
         type: Boolean,
         onChange: value => {
             setupNotifySpellstrikeRecharge(value)
+        }
+    });
+
+    game.settings.register(MODULE_ID, "track.reactions", {
+        name: `${MODULE_ID}.module-settings.track.reactions.name`,
+        hint: `${MODULE_ID}.module-settings.track.reactions.hint`,
+        scope: "world",
+        config: game.system.id === 'pf2e',
+        default: false,
+        type: Boolean,
+        onChange: value => {
+            setupReactionTracker(value)
         }
     });
 }
