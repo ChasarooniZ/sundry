@@ -37,6 +37,7 @@ You can access the changelog [here](/CHANGELOG.md).
 - **Display**
 
   - `Property Runes` - Displays property runes on items with them
+<img width="759" height="518" alt="image" src="https://github.com/user-attachments/assets/d77b74d0-fb79-4123-a063-f0c84d17db45" />
 
 - **Hide**
   - `Sell All Treasure`
