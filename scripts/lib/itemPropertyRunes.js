@@ -3,22 +3,19 @@ import { TEMPLATES } from "./const.js";
 
 export function setupDisplayItemPropertyRunes(active) {
     if (active) {
-        Hooks.on("renderArmorSheetPF2e", renderArmorSheetPF2e)
-        Hooks.on("renderWeaponSheetPF2e", renderWeaponSheetPF2e)
+        Hooks.on("renderArmorSheetPF2e", renderItemSheetPF2e)
+        Hooks.on("renderWeaponSheetPF2e", renderItemSheetPF2e)
     } else {
-        Hooks.off("renderArmorSheetPF2e", renderArmorSheetPF2e)
-        Hooks.off("renderWeaponSheetPF2e", renderWeaponSheetPF2e)
+        Hooks.off("renderArmorSheetPF2e", renderItemSheetPF2e)
+        Hooks.off("renderWeaponSheetPF2e", renderItemSheetPF2e)
     }
 }
 
-async function renderArmorSheetPF2e(sheet, html, info) {
-    const runeHTML = await getItemRuneHTML(info?.data?.runes?.property, 'armor')
-    insertHTML(html, runeHTML)
-}
-
-async function renderWeaponSheetPF2e(sheet, html, info) {
-    const runeHTML = await getItemRuneHTML(info?.data?.runes?.property, 'weapon')
-    insertHTML(html, runeHTML)
+async function renderItemSheetPF2e(sheet, html, info) {
+    if (info?.document?.system?.identification?.status === 'identified') {
+        const runeHTML = await getItemRuneHTML(info?.document?.system?.runes?.property, info?.document?.type)
+        insertHTML(html, runeHTML)
+    }
 }
 
 function insertHTML(sheetHTML, runeHTML) {

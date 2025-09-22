@@ -2,6 +2,13 @@
 
 - Add User Color to Message Header
 
+## 0.4.4
+
+- **Updated**
+  - `Display Property Runes`
+    - Only show property runes for identified Items
+    - Simplified the code a bit
+
 ## 0.4.3
 
 - **Updated**
