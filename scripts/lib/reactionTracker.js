@@ -46,7 +46,8 @@ async function removeEncounterReactions(encounter) {
         const existing = actor.itemTypes.effect.find(
             (e) => e.slug === "effect-reaction-used"
         );
-        existing.delete();
+        if (existing)
+            existing.delete();
     }
 }
 

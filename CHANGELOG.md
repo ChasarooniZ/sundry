@@ -2,6 +2,12 @@
 
 - Add User Color to Message Header
 
+## 0.4.2
+
+- **Updated**
+  - `Reaction Tracker`
+    - Fixed error of trying to delete a reaction used that doesn't exist
+
 ## 0.4.1
 
 - **Updated**
