@@ -2,6 +2,12 @@
 
 - Add User Color to Message Header
 
+## 0.4.3
+
+- **Updated**
+  - `Display Property Runes`
+    - Fixed `Embed` bug introduced
+
 ## 0.4.2
 
 - **Updated**
