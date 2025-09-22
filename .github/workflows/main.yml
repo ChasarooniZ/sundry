@@ -120,7 +120,7 @@ jobs:
             README.md                            \
             CHANGELOG.md                         \
             LICENSE                              \
-            templates                            \
+            templates/                           \
             scripts/                             \
             styles/                              \
             packs/                               \

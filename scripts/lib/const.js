@@ -26,3 +26,7 @@ export const QUERY = {
         }
     }
 }
+
+export const TEMPLATES = {
+    RUNES_ON_ITEM: `modules/sundry/templates/runes.hbs`
+}

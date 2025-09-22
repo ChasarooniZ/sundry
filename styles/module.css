@@ -182,3 +182,23 @@
     color: #fff;
   }
 }
+
+/** Addendum in inventory */
+.editor .addendum {
+  border-image-repeat: repeat;
+  border-image-slice: 11;
+  border-image-source: url("../../../systems/pf2e/assets/sheet/frame-elegant.svg");
+  border-image-width: 14px;
+  border-style: double;
+  background: rgba(68, 55, 48, 0.1);
+  border-radius: 2px;
+  color: var(--color-pf-alternate-darker);
+  padding: var(--space-4);
+  margin: 0 0 var(--space-8);
+
+  h4 {
+    font-weight: 700;
+    margin-bottom: var(--space-6);
+    text-align: center;
+  }
+}
