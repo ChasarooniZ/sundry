@@ -1,3 +1,4 @@
+import { TEMPLATES } from "./lib/const.js";
 import { setupNotifySpellstrikeRecharge } from "./lib/notify.js";
 import { setupColorizePersistentPF2eHUD } from "./lib/pf2eHUD.js";
 import { setupColorizeToolbeltMessageSaves, setupHighlightToolbeltRollSaves } from "./lib/pf2eToolbelt.js";
@@ -128,4 +129,10 @@ export function setupSettings() {
             "off": `${MODULE_ID}.module-settings.track.reaction-usage.choices.off`
         }
     });
+}
+
+export function loadAllTemplates() {
+    loadTemplates([
+        TEMPLATES.RUNES_ON_ITEM,
+    ]);
 }

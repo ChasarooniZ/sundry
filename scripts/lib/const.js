@@ -1,3 +1,5 @@
+import { MODULE_ID } from "../module.js"
+
 export const CLASS = {
     COLORIZE: {
         PF2E_TOOLBELT: {
@@ -25,4 +27,8 @@ export const QUERY = {
             BASE: "#pf2e-hud-persistent"
         }
     }
+}
+
+export const TEMPLATES = {
+    RUNES_ON_ITEM: `modules/${MODULE_ID}/templates/runes.hbs`
 }
