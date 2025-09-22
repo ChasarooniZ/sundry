@@ -2,11 +2,17 @@
 
 - Add User Color to Message Header
 
+## 0.4.1
+
+- **Updated**
+  - `Display Property Runes`
+    - Improved visual by using `inline` instead of `embed` (@Vauxs)
+
 ## 0.4.0
 
 - **Added**
   - `Display Property Runes`
-    - Displays property runes on items with them
+    - Displays property runes on (item sheets) for items with them
 
 ## 0.3.3
 
