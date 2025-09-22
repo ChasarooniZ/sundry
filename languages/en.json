@@ -18,6 +18,12 @@
           }
         }
       },
+      "display": {
+        "item-property-runes": {
+          "name": "[Display] Item Property Runes",
+          "hint": "When you go to look an item's sheet will add in the name and description of any Property Runes on the item"
+        }
+      },
       "hide": {
         "sell-all-treasure": {
           "name": "[Hide] Sell All Treasure",

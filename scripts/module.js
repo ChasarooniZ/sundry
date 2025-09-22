@@ -6,6 +6,7 @@ import { setupColorizeToolbeltMessageSaves, setupHighlightToolbeltRollSaves } fr
 import { setupColorizePersistentPF2eHUD } from "./lib/pf2eHUD.js";
 import { setupNotifySpellstrikeRecharge } from "./lib/notify.js";
 import { setupReactionTracker } from "./lib/reactionTracker.js";
+import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
 
 export const MODULE_ID = 'sundry';
 
@@ -50,5 +51,8 @@ Hooks.once('ready', async function () {
         getSetting('track.reaction-usage')
     )
 
+    setupDisplayItemPropertyRunes(
+        getSetting('display.item-runes')
+    )
 
 });

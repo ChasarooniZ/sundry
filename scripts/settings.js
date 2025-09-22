@@ -1,4 +1,5 @@
 import { TEMPLATES } from "./lib/const.js";
+import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
 import { setupNotifySpellstrikeRecharge } from "./lib/notify.js";
 import { setupColorizePersistentPF2eHUD } from "./lib/pf2eHUD.js";
 import { setupColorizeToolbeltMessageSaves, setupHighlightToolbeltRollSaves } from "./lib/pf2eToolbelt.js";
@@ -29,6 +30,18 @@ export function setupSettings() {
         type: Boolean,
         onChange: value => {
             setupColorizeToolbeltMessageSaves(value)
+        }
+    });
+
+    game.settings.register(MODULE_ID, "display.item-property-runes", {
+        name: `${MODULE_ID}.module-settings.display.item-property-runes.name`,
+        hint: `${MODULE_ID}.module-settings.display.item-property-runes.hint`,
+        scope: "world",
+        config: true,
+        default: false,
+        type: Boolean,
+        onChange: value => {
+            setupDisplayItemPropertyRunes(value)
         }
     });
 
