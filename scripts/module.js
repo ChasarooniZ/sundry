@@ -52,7 +52,7 @@ Hooks.once('ready', async function () {
     )
 
     setupDisplayItemPropertyRunes(
-        getSetting('display.item-runes')
+        getSetting('display.item-property-runes')
     )
 
 });

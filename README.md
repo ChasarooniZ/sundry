@@ -34,6 +34,10 @@ You can access the changelog [here](/CHANGELOG.md).
 
   ![](https://github.com/user-attachments/assets/eb7b0c58-ac2b-4e85-8c0f-86f534cf8829)
 
+- **Display**
+
+  - `Property Runes` - Displays property runes on items with them
+
 - **Hide**
   - `Sell All Treasure`
   - `Default Craft Checks` (for Heroic Crafting)

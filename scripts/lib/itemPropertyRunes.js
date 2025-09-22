@@ -13,15 +13,16 @@ export function setupDisplayItemPropertyRunes(active) {
 
 async function renderArmorSheetPF2e(sheet, html, info) {
     const runeHTML = await getItemRuneHTML(info?.data?.runes?.property, 'armor')
-    const editorHTML = html.querySelector(".description .main .editor-content");
-    console.log({ runeHTML, editorHTML });
-    editorHTML.insertAdjacentHTML('beforeend', runeHTML)
+    insertHTML(html, runeHTML)
 }
 
 async function renderWeaponSheetPF2e(sheet, html, info) {
     const runeHTML = await getItemRuneHTML(info?.data?.runes?.property, 'weapon')
-    const editorHTML = html.querySelector(".description .main .editor-content");
-    console.log({ runeHTML, editorHTML });
+    insertHTML(html, runeHTML)
+}
+
+function insertHTML(sheetHTML, runeHTML) {
+    const editorHTML = sheetHTML?.[0]?.querySelector(".description .main .editor-content");
     editorHTML.insertAdjacentHTML('beforeend', runeHTML)
 }
 
@@ -40,14 +41,14 @@ async function getItemRuneHTML(runes, type) {
 }
 
 async function getItemRuneHTMLHelper(runes) {
-    return await TextEditor.enrichHTML(renderTemplate(TEMPLATES.RUNES_ON_ITEM, { runes }))
+    return await TextEditor.enrichHTML(await renderTemplate(TEMPLATES.RUNES_ON_ITEM, { runes }));
 }
 
 function getNameLocalization(runeDropdownID, type) {
     if (type === 'armor') {
         return game.i18n.localize(`PF2E.ArmorPropertyRune${String(runeDropdownID).charAt(0).toUpperCase() + String(runeDropdownID).slice(1)}`)
     } else if (type === 'weapon') {
-        return game.i18n.localize(`PF2E.WeaponPropertyRune${runeDropdownID}.Name`)
+        return game.i18n.localize(`PF2E.WeaponPropertyRune.${runeDropdownID}.Name`)
     } else {
         return runeDropdownID;
     }
