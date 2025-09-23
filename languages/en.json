@@ -22,6 +22,10 @@
         "item-property-runes": {
           "name": "[Display] Item Property Runes",
           "hint": "When you go to look an item's sheet will add in the name and description of any Property Runes on the item"
+        },
+        "weapon": {
+          "base-damage": "[Display] Weapon Base Damage",
+          "hint": "Adds a little display below the price on weapon sheets that displays their base damage (Note: This includes any Striking runes the weapon has)"
         }
       },
       "hide": {
@@ -84,12 +88,15 @@
         "on-success": "You used a feature that recharges your spellstrike if you succeeded on a roll",
         "other-option": "Alternatively you can always spend 1 action to recharge, this action has the <b>concentrate</b> trait"
       }
-    }
-  },
-  "items": {
-    "effects": {
-      "reaction-used": {
-        "name": "Effect: Reaction Used"
+    },
+    "display": {
+      "base-damage": "Base Damage"
+    },
+    "items": {
+      "effects": {
+        "reaction-used": {
+          "name": "Effect: Reaction Used"
+        }
       }
     }
   }

@@ -5,6 +5,7 @@ import { setupColorizePersistentPF2eHUD } from "./lib/pf2eHUD.js";
 import { setupColorizeToolbeltMessageSaves, setupHighlightToolbeltRollSaves } from "./lib/pf2eToolbelt.js";
 import { setupReactionTracker } from "./lib/reactionTracker.js";
 import { hideDefaultCraftChecks, hideSellAllTreasure } from "./lib/sheetTweaks.js";
+import { setupDisplayWeaponDamage } from "./lib/showBaseDamage.js";
 import { minifySimpleRequests } from "./lib/simpleRequests.js";
 import { MODULE_ID } from "./module.js";
 
@@ -42,6 +43,18 @@ export function setupSettings() {
         type: Boolean,
         onChange: value => {
             setupDisplayItemPropertyRunes(value)
+        }
+    });
+
+    game.settings.register(MODULE_ID, "display.weapon.base-damage", {
+        name: `${MODULE_ID}.module-settings.display.weapon.base-damage.name`,
+        hint: `${MODULE_ID}.module-settings.display.weapon.base-damage.hint`,
+        scope: "world",
+        config: true,
+        default: false,
+        type: Boolean,
+        onChange: value => {
+            setupDisplayWeaponDamage(value)
         }
     });
 
@@ -147,5 +160,6 @@ export function setupSettings() {
 export function loadAllTemplates() {
     loadTemplates([
         TEMPLATES.RUNES_ON_ITEM,
+        TEMPLATES.BASE_DAMAGE,
     ]);
 }

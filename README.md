@@ -37,6 +37,7 @@ You can access the changelog [here](/CHANGELOG.md).
 - **Display**
 
   - `Property Runes` - Displays property runes on (item sheets) for items with them
+  - `Weapon Base Damage` - Adds a little display below the price on weapon sheets that displays their base damage (Note: This includes any Striking runes the weapon has)
 
 - **Hide**
   - `Sell All Treasure`

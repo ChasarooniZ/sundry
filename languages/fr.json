@@ -78,12 +78,12 @@
         "on-success": "Vous avez utilisé une capacité qui recharge votre frappe magique si vous avez obtenu un succès",
         "other-option": "Alternativement, vous pouvez toujours dépenser 1 action pour recharger. Cette action possède le trait <b>concentration</b>"
       }
-    }
-  },
-  "items": {
-    "effects": {
-      "reaction-used": {
-        "name": "Effet : Réaction utilisée"
+    },
+    "items": {
+      "effects": {
+        "reaction-used": {
+          "name": "Effet : Réaction utilisée"
+        }
       }
     }
   }
