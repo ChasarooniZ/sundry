@@ -10,6 +10,7 @@
 - **Updated**
   - `Reaction Tracker`
     - Fixed localization path
+  - Updated French translation (🌐 @rectulo)
 
 ## 0.4.4
 
