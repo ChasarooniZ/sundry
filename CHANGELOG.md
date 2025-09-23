@@ -9,7 +9,7 @@
     - Adds a little display below the price on weapon sheets that displays their base damage (Note: This includes any Striking runes the weapon has)
 - **Updated**
   - `Reaction Tracker`
-    - Fixed localization path
+    - Fixed Effect Name localization path
   - Updated French translation (🌐 @rectulo)
 
 ## 0.4.4
