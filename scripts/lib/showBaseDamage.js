@@ -19,9 +19,9 @@ async function renderItemSheetPF2e(sheet, html, info) {
     const data = {
         type: damageType,
         name: getDamageTypeLocalization(damageType),
-        damage: `${die}${dice}${modifier ? ` + ${modifier}` : ""}`,
+        damage: `${dice}${die}${modifier ? ` + ${modifier}` : ""}`,
         icon: DAMAGE_TYPE_ICONS[damageType] ?? '',
-        label: game.i18n.localize('display.base-damage')
+        label: game.i18n.localize('sundry.display.base-damage')
     }
     const damageHTML = await renderTemplate(TEMPLATES.BASE_DAMAGE, data)
 
