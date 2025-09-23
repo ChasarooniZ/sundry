@@ -18,6 +18,12 @@
           }
         }
       },
+      "display": {
+        "item-property-runes": {
+          "name": "[Afficher] Runes de propriétés des objets",
+          "hint": "Lorsque vous consultez la fiche d'un objet, le nom et la description de toutes les runes de propriété de l'objet seront ajoutés."
+        }
+      },
       "hide": {
         "sell-all-treasure": {
           "name": "[Cacher] Vendre tous les trésors",
