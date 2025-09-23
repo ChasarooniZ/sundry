@@ -12,8 +12,9 @@ export function setupDisplayItemPropertyRunes(active) {
 }
 
 async function renderItemSheetPF2e(sheet, html, info) {
-    if (info?.document?.system?.identification?.status === 'identified') {
+    if (info?.document?.system?.identification?.status === 'identified' && info?.document?.system?.runes?.property?.length > 0) {
         const runeHTML = await getItemRuneHTML(info?.document?.system?.runes?.property, info?.document?.type)
+        if (!runeHTML) return;
         insertHTML(html, runeHTML)
     }
 }

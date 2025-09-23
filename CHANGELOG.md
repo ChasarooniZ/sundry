@@ -2,6 +2,12 @@
 
 - Add User Color to Message Header
 
+## 0.5.1
+
+- **Updated**
+  - `Display Property Runes`
+    - Fixed bug where false displays on items with no property runes (🐛 @Le Chat Lunatique)
+
 ## 0.5.0
 
 - **Added**
