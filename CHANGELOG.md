@@ -7,6 +7,7 @@
 - **Updated**
   - `Display Property Runes`
     - Fixed bug where false displays on items with no property runes (🐛 @Le Chat Lunatique)
+  - Updated French translation (🌐 @rectulo)
 
 ## 0.5.0
 
