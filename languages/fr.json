@@ -22,6 +22,12 @@
         "item-property-runes": {
           "name": "[Afficher] Runes de propriétés des objets",
           "hint": "Lorsque vous consultez la fiche d'un objet, le nom et la description de toutes les runes de propriété de l'objet seront ajoutés."
+        },
+        "weapon": {
+          "base-damage": {
+            "name": "[Afficher] Dégâts de base de l'arme",
+            "hint": "Ajoute un petit affichage sous le prix sur les fiches d'armes qui présente leurs dégâts de base (Note : toutes les runes de frappe sont incluses)"
+          }
         }
       },
       "hide": {
@@ -84,6 +90,9 @@
         "on-success": "Vous avez utilisé une capacité qui recharge votre frappe magique si vous avez obtenu un succès",
         "other-option": "Alternativement, vous pouvez toujours dépenser 1 action pour recharger. Cette action possède le trait <b>concentration</b>"
       }
+    },
+    "display": {
+      "base-damage": "Dégâts de base"
     },
     "items": {
       "effects": {
