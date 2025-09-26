@@ -2,6 +2,12 @@
 
 - Add User Color to Message Header
 
+## 0.6.0
+
+- **Added**
+  - `Hide Header Button Text`
+    - Hides the text (not the icons) for sheet Header Buttons (🧠 @weepingminotaur)
+
 ## 0.5.1
 
 - **Updated**

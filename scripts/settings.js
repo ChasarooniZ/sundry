@@ -1,4 +1,5 @@
 import { TEMPLATES } from "./lib/const.js";
+import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
 import { setupNotifySpellstrikeRecharge } from "./lib/notify.js";
 import { setupColorizePersistentPF2eHUD } from "./lib/pf2eHUD.js";
@@ -67,6 +68,18 @@ export function setupSettings() {
         type: Boolean,
         onChange: value => {
             hideDefaultCraftChecks(value)
+        }
+    });
+
+    game.settings.register(MODULE_ID, "hide.header.button-text", {
+        name: `${MODULE_ID}.module-settings.hide.header.button-text.name`,
+        hint: `${MODULE_ID}.module-settings.hide.header.button-text.hint`,
+        scope: "world",
+        config: true,
+        default: false,
+        type: Boolean,
+        onChange: value => {
+            setupHideHeaderButtonText(value)
         }
     });
 

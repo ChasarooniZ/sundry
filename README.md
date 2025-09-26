@@ -37,14 +37,16 @@ You can access the changelog [here](/CHANGELOG.md).
 - **Display**
 
   - `Property Runes` - Displays property runes on (item sheets) for items with them
-<img height="250" alt="image" src="https://github.com/user-attachments/assets/13f3e51b-2941-4a9d-82f9-811e0a605201" />
+    <img height="250" alt="image" src="https://github.com/user-attachments/assets/13f3e51b-2941-4a9d-82f9-811e0a605201" />
 
   - `Weapon Base Damage` - Adds a little display below the price on weapon sheets that displays their base damage (Note: This includes any Striking runes the weapon has)
-<img width="280" height="236" alt="image" src="https://github.com/user-attachments/assets/0c3083f5-710d-43f9-b906-b87924ace4a4" />
+    <img width="280" height="236" alt="image" src="https://github.com/user-attachments/assets/0c3083f5-710d-43f9-b906-b87924ace4a4" />
 
 - **Hide**
-  - `Sell All Treasure`
   - `Default Craft Checks` (for Heroic Crafting)
+  - `Hide Header Button Text`
+    - Hides the text (not the icons) for sheet Header Buttons
+  - `Sell All Treasure`
 - **Highlight**
 
   - `Pf2e Toolbelt`'s `Target Helper` unrolled rolls and make them glow

@@ -31,13 +31,19 @@
         }
       },
       "hide": {
-        "sell-all-treasure": {
-          "name": "[Hide] Sell All Treasure",
-          "hint": "Hides the 'Sell All Treasure' button to prevent accidentally selling key items"
-        },
         "default-craft-checks": {
           "name": "[Hide] Default Craft Checks Buttons",
           "hint": "To Prevent players from using default crafting as opposed to the 'Heroic Crafting' Buttons if using that addon"
+        },
+        "header": {
+          "button-text": {
+            "name": "[Hide] Header Button Text",
+            "hint": "Hides the header buttons' text, but keeps their icons in tact for this with a lot of modules"
+          }
+        },
+        "sell-all-treasure": {
+          "name": "[Hide] Sell All Treasure",
+          "hint": "Hides the 'Sell All Treasure' button to prevent accidentally selling key items"
         }
       },
       "highlight": {

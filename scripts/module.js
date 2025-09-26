@@ -8,6 +8,7 @@ import { setupNotifySpellstrikeRecharge } from "./lib/notify.js";
 import { setupReactionTracker } from "./lib/reactionTracker.js";
 import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
 import { setupDisplayWeaponDamage } from "./lib/showBaseDamage.js";
+import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 
 export const MODULE_ID = 'sundry';
 
@@ -17,13 +18,22 @@ Hooks.once('init', async function () {
 });
 
 Hooks.once('ready', async function () {
-    //Colorization
+    // Colorize
     setupColorizeToolbeltMessageSaves(
         getSetting("colorize.pf2e-toolbelt.target-helper.roll")
     );
     setupColorizePersistentPF2eHUD(
         getSetting("colorize.pf2e-hud.persistent")
     );
+
+    // Display
+    setupDisplayItemPropertyRunes(
+        getSetting('display.item-property-runes')
+    )
+
+    setupDisplayWeaponDamage(
+        getSetting('display.weapon.base-damage')
+    )
 
     //Highlighting
     setupHighlightToolbeltRollSaves(
@@ -35,29 +45,28 @@ Hooks.once('ready', async function () {
     if (getSetting('hide.sell-all-treasure'))
         hideSellAllTreasure();
 
+    setupHideHeaderButtonText(
+        getSetting('hide.header.button-text')
+    )
+
     if (getSetting('hide.default-craft-checks'))
         hideDefaultCraftChecks();
 
     // if (getSetting('message.user-color'))
     //     setupMessageUserColor();
 
+    //Minify
     if (getSetting('minify.simple-requests'))
         minifySimpleRequests();
 
+    // Notify
     setupNotifySpellstrikeRecharge(
         getSetting('notify.spellstrike.recharge')
     )
 
+    //Track
     setupReactionTracker(
         getSetting('track.reaction-usage')
-    )
-
-    setupDisplayItemPropertyRunes(
-        getSetting('display.item-property-runes')
-    )
-
-    setupDisplayWeaponDamage(
-        getSetting('display.weapon.base-damage')
     )
 
 });
