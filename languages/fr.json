@@ -31,13 +31,19 @@
         }
       },
       "hide": {
-        "sell-all-treasure": {
-          "name": "[Cacher] Vendre tous les trésors",
-          "hint": "Cache le bouton 'Vendre tous les trésors' pour prévenir la vente accidentelle d'objets clés"
-        },
         "default-craft-checks": {
           "name": "[Cacher] Boutons de tests d'artisanat par défaut",
           "hint": "Pour empêcher les joueurs d'utiliser l'artisanat par défaut plutôt que les boutons « Artisanat héroïque » s'ils utilisent cet add-on"
+        },
+        "header": {
+          "button-text": {
+            "name": "[Cacher] Texte du bouton d'en-tête",
+            "hint": "Cache le texte des boutons d'en-tête mais conserve leurs icônes intactes pour cela avec de nombreux modules"
+          }
+        },
+        "sell-all-treasure": {
+          "name": "[Cacher] Vendre tous les trésors",
+          "hint": "Cache le bouton 'Vendre tous les trésors' pour prévenir la vente accidentelle d'objets clés"
         }
       },
       "highlight": {
