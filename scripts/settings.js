@@ -2,6 +2,7 @@ import { TEMPLATES } from "./lib/const.js";
 import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
 import { setupNotifySpellstrikeRecharge } from "./lib/notify.js";
+import { openPlayerNotes } from "./lib/openNotes.js";
 import { setupColorizePersistentPF2eHUD } from "./lib/pf2eHUD.js";
 import { setupColorizeToolbeltMessageSaves, setupHighlightToolbeltRollSaves } from "./lib/pf2eToolbelt.js";
 import { setupReactionTracker } from "./lib/reactionTracker.js";
@@ -168,6 +169,30 @@ export function setupSettings() {
             "off": `${MODULE_ID}.module-settings.track.reaction-usage.choices.off`
         }
     });
+}
+
+export function registerKeybindings() {
+    game.keybindings.register(MODULE_ID, "player-notes", {
+      name: game.i18n.localize(`${MODULE_ID}.controls.player-notes.name`),
+      hint: game.i18n.localize(`${MODULE_ID}.controls.player-notes.hint`),
+      editable: [
+        {
+          key: "KeyN",
+        },
+      ],
+      onDown: (context) => {
+        if (context.isShift) {
+        //   game.objection.api.objection({ type: "objection", flipped: true });
+        } else {
+            openPlayerNotes({open: true, edit: true});
+        }
+      },
+      onUp: () => {},
+      restricted: false, // Restrict this Keybinding to gamemaster only?
+    //   reservedModifiers: ["Shift"], // On ALT, the notification is permanent instead of temporary
+      precedence: CONST.KEYBINDING_PRECEDENCE.NORMAL,
+    });
+
 }
 
 export function loadAllTemplates() {

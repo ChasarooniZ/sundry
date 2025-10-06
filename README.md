@@ -58,6 +58,10 @@ You can access the changelog [here](/CHANGELOG.md).
 
   ![highlight-save](https://github.com/user-attachments/assets/0f8e1237-da4a-4e1f-947e-df5e94294bf3)
 
+- **Hotkey**
+
+  - `Character Campaign Notes` - Adds a new hotkey (Default `N`) to open an editable dialog of their assigned character's `Campaign Notes` field on their character sheet for quick access
+
 - **Minify**
 
   - `Simple Requests` module to minify the chat area it takes up
