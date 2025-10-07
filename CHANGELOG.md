@@ -1,6 +1,8 @@
 ## Unreleased
 
-- Add User Color to Message Header
+- **New**
+  - `Display Property Runes (Character Sheet)`
+    - Displays what property runes are on what items, from your character sheet
 
 ## 0.7.2
 
