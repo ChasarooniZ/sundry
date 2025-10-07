@@ -2,6 +2,14 @@
 
 - Add User Color to Message Header
 
+## 0.7.2
+
+- **Updated**
+  - `Character Campaign Notes`
+    - If you have no Assigned Character defaults to first selected token (so now GMs can easily stalk player notes)
+    - Added warning if no actor is found
+    - Added Actor name to the notes header to prevent confusion
+
 ## 0.7.1
 
 - **Updated**

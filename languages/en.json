@@ -103,13 +103,14 @@
         "other-option": "Alternatively you can always spend 1 action to recharge, this action has the <b>concentrate</b> trait"
       },
       "player-notes": {
-        "updated": "Campaign Notes Updated!"
+        "updated": "Campaign Notes Updated!",
+        "no-character": "No Notes to open as you have no assigned character nor selected character"
       }
     },
     "display": {
       "base-damage": "Base Damage",
       "player-notes": {
-        "title": "Campaign Notes Editor"
+        "title": "Campaign Notes"
       }
     },
     "items": {

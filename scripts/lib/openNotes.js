@@ -1,22 +1,31 @@
 export async function openPlayerNotes({ open, edit }) {
-    const actor = game.user?.character;
-    if (!actor) return;
+    const actor = game.user?.character ?? canvas.tokens.controlled?.[0]?.actor;
+    if (!actor || actor.type !== 'character') {
+        ui.notifications.warn(
+            game.i18n.localize(`${MODULE_ID}.notification.player-notes.no-character`)
+        )
+        return;
+    }
     const noteInfo = actor?.system?.details?.biography.campaignNotes;
+
+    const actorName = actor?.name
 
     // Create dialog with ProseMirror editor
     const display = await TextEditor.enrichHTML(noteInfo);
     const content = `
-        <prose-mirror
-            name="biography"
-            value="${noteInfo}"
-            style="height: 390px">
-                ${display}
-        </prose-mirror>
+        <div>
+            <prose-mirror
+                name="biography"
+                value="${noteInfo}"
+                style="height: 390px">
+                    ${display}
+            </prose-mirror>
+        </div>
     `;
 
     const dialog = await foundry.applications.api.DialogV2.wait({
         window: {
-            title: game.i18n.localize(`${MODULE_ID}.display.player-notes.title`)
+            title: `${game.i18n.localize(`${MODULE_ID}.display.player-notes.title`)} (${actorName})`
         },
         content,
         position: {
