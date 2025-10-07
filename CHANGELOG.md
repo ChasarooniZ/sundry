@@ -2,6 +2,13 @@
 
 - Add User Color to Message Header
 
+## 0.7.1
+
+- **Updated**
+  - `Character Campaign Notes`
+    - Fixed Possible bug where closing out via the `X` causes the notes to become null
+  - Updated French translation (🌐 @rectulo)
+
 ## 0.7.0
 
 - **Added**
