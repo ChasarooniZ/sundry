@@ -88,6 +88,12 @@
         }
       }
     },
+    "controls": {
+      "player-notes": {
+        "name": "Open Character 'Campaign Notes'",
+        "description": "Opens an editable version of the player's assigned character's 'Campaign Notes' section of their character sheet"
+      }
+    },
     "notification": {
       "spellstrike": {
         "recharged": "Spellstrike Recharged",
@@ -95,10 +101,16 @@
         "feature": "You used a feature that recharges your spellstrike",
         "on-success": "You used a feature that recharges your spellstrike if you succeeded on a roll",
         "other-option": "Alternatively you can always spend 1 action to recharge, this action has the <b>concentrate</b> trait"
+      },
+      "player-notes": {
+        "updated": "Campaign Notes Updated!"
       }
     },
     "display": {
-      "base-damage": "Base Damage"
+      "base-damage": "Base Damage",
+      "player-notes": {
+        "title": "Campaign Notes Editor"
+      }
     },
     "items": {
       "effects": {

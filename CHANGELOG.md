@@ -2,6 +2,12 @@
 
 - Add User Color to Message Header
 
+## 0.7.0
+
+- **Added**
+  - `Character Campaign Notes`
+    - Adds a new hotkey (Default `N`) to open an editable dialog of their assigned character's `Campaign Notes` field on their character sheet for quick access
+
 ## 0.6.0
 
 - **Added**
