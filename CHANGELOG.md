@@ -6,9 +6,10 @@
 
 - **Updated**
   - `Character Campaign Notes`
-    - If you have no Assigned Character defaults to first selected token (so now GMs can easily stalk player notes)
+    - Added fallback if you have no Assigned Character defaults to first selected token (so now GMs can easily stalk player notes)
     - Added warning if no actor is found
     - Added Actor name to the notes header to prevent confusion
+    - Fixed some styling issues
 
 ## 0.7.1
 
