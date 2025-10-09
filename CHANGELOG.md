@@ -2,6 +2,10 @@
 
 - Add User Color to Message Header
 
+## 0.7.3
+
+- Fixed bug with campaign notes fialing due to missing import (🐛 @DoritoBob)
+
 ## 0.7.2
 
 - **Updated**
