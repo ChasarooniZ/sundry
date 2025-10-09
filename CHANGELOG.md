@@ -2,9 +2,16 @@
 
 - Add User Color to Message Header
 
+## 0.7.4
+
+- **Updated**
+  - Changed `manifest` to allow `v12` installation (and added note on module page about possible non compatability of features
+  - Updated French translation (🌐 @rectulo)
+  - Updated Polish translation (🌐 @rLioheart)
+
 ## 0.7.3
 
-- Fixed bug with campaign notes fialing due to missing import (🐛 @DoritoBob)
+- Fixed bug with campaign notes failing due to missing import (🐛 @DoritoBob)
 
 ## 0.7.2
 
