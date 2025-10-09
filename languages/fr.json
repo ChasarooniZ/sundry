@@ -88,6 +88,12 @@
         }
       }
     },
+    "controls": {
+      "player-notes": {
+        "name": "Ouvrir les 'Notes de campagne' du personnage",
+        "description": "Ouvre une version modifiable de la section 'Notes de campagne' de la feuille de personnage du personnage assigné au joueur"
+      }
+    },
     "notification": {
       "spellstrike": {
         "recharged": "Frappe de sort rechargée",
@@ -95,10 +101,17 @@
         "feature": "Vous avez utilisé une capacité qui recharge votre frappe magique",
         "on-success": "Vous avez utilisé une capacité qui recharge votre frappe magique si vous avez obtenu un succès",
         "other-option": "Alternativement, vous pouvez toujours dépenser 1 action pour recharger. Cette action possède le trait <b>concentration</b>"
+      },
+      "player-notes": {
+        "updated": "Notes de campagne mises à jour !",
+        "no-character": "Aucune note à ouvrir car vous n'avez aucun personnage attribué ni sélectionné"
       }
     },
     "display": {
-      "base-damage": "Dégâts de base"
+      "base-damage": "Dégâts de base",
+      "player-notes": {
+        "title": "Notes de campagne"
+      }
     },
     "items": {
       "effects": {
