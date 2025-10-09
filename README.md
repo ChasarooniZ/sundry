@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Foundry-v13-informational)
+![](https://img.shields.io/badge/Foundry-v12-orange) ![](https://img.shields.io/badge/Foundry-v13-informational)
 ![All Downloads](https://img.shields.io/github/downloads/ChasarooniZ/sundry/total?color=5e0000&label=All%20Downloads)
 ![Latest Release Download Count](https://img.shields.io/github/downloads/ChasarooniZ/sundry/latest/module.zip)
 ![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Fsundry&colorB=4aa94a)
@@ -10,12 +10,17 @@
 
 # Sundry. Toggleable Tweaks for mainly Pf2e
 
-Message Headers
+> [!NOTE]  
+> This module is intended to be a grab bag of useful features which are all intended to be **toggleable** and off by default. IE you can choose which ones you like to turn on! Maybe one day i'll add a sort of gui setup process or something but that's a later me problem :)
+
+> [!WARNING]  
+> While v12 is technically supported, support for some features may fail as this module is developed primarily for FVTT v13
+
 
 ## Table of Contents
 
 - [Changelog](#changelog)
-- [Contributors](#contributors)
+- [Features](#features)
 
 ## Changelog
 
