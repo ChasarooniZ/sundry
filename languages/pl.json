@@ -1,0 +1,124 @@
+{
+  "I18N.LANGUAGE": "Polski",
+  "sundry": {
+    "module-settings": {
+      "colorize": {
+        "pf2e-hud": {
+          "persistent": {
+            "name": "[Koloryzacja] PF2e HUD — trwały HUD",
+            "hint": "Koloryzacja funkcji 'Trwały HUD' w 'PF2e HUD'"
+          }
+        },
+        "pf2e-toolbelt": {
+          "target-helper": {
+            "roll": {
+              "name": "[Koloryzacja] PF2e Toolbelt – typy rzutów pomocniczych celów",
+              "hint": "Koloryzacja funkcji 'Pomocnik celowania' narzędzia 'PF2e Toolbelt', tak aby każdy typ rzutu był pokolorowany"
+            }
+          }
+        }
+      },
+      "display": {
+        "item-property-runes": {
+          "name": "[Wyświetlanie] Runy właściwości przedmiotu",
+          "hint": "Kiedy przejdziesz do karty przedmiotu, zostanie dodana nazwa i opis wszystkich run właściwości znajdujących się na tym przedmiocie"
+        },
+        "weapon": {
+          "base-damage": {
+            "name": "[Wyświetlanie] Podstawowe obrażenia broni",
+            "hint": "Dodaje niewielki wyświetlacz poniżej ceny na kartach broni, który pokazuje ich podstawowe obrażenia (uwaga: obejmuje to wszystkie runy uderzeń, które posiada broń)"
+          }
+        }
+      },
+      "hide": {
+        "default-craft-checks": {
+          "name": "[Ukrycie] Domyślne przyciski testów Rzemiosła",
+          "hint": "Aby uniemożliwić graczom korzystanie z domyślnego Rzemiosła zamiast przycisków 'Heroiczne Rzemiosło' w przypadku korzystania z tego dodatku"
+        },
+        "header": {
+          "button-text": {
+            "name": "[Ukrycie] Tekst przycisków na karcie tytułowej",
+            "hint": "Ukrywa tekst przycisków nagłówka, ale zachowuje ich ikony w nienaruszonym stanie dla wielu modułów"
+          }
+        },
+        "sell-all-treasure": {
+          "name": "[Ukrycie] Sprzedaj wszystkie skarby",
+          "hint": "Ukrywa przycisk 'Sprzedaj wszystkie skarby', aby zapobiec przypadkowej sprzedaży kluczowych przedmiotów"
+        }
+      },
+      "highlight": {
+        "pf2e-toolbelt": {
+          "target-helper": {
+            "roll": {
+              "name": "[Podświetlenie] PF2e Toolbelt – Pomocnik celowania rozwinięty przycisk rzutu",
+              "hint": "Podświetl niezrobione rzuty, sprawiając, że będą świecić w funkcji 'Pomocnik celowania' w 'PF2e Toolbelt', aby było bardziej oczywiste, że należy je wykonać"
+            }
+          }
+        }
+      },
+      "message": {
+        "user-color": {
+          "name": "Kolor użytkownika dla nagłówków wiadomości",
+          "hint": "Ustawia nagłówek wiadomości na podstawie koloru użytkownika"
+        }
+      },
+      "minify": {
+        "simple-requests": {
+          "name": "[Minimalizacja] Simple Requests",
+          "hint": "Zmniejsza nieco rozmiar modułu HUD 'Simple Requests', aby nie przeszkadzał tak bardzo"
+        }
+      },
+      "notify": {
+        "spellstrike": {
+          "recharge": {
+            "name": "[Powiadomienie] Ładowanie Ciosu Zaklęciem",
+            "hint": "Dodaje małe powiadomienie w interfejsie użytkownika, gdy twój Cios Zaklęciem powinien zostać ponownie naładowany"
+          }
+        }
+      },
+      "track": {
+        "reaction-usage": {
+          "name": "[Śledzenie] Wykorzystanie reakcji",
+          "hint": "Ta funkcja tworzy (i zwiększa) efekt na token, który liczy, czy token użył reakcji. Należy zauważyć, że efekt ten stosuje się również do każdego tokena w momencie rozpoczęcia walki",
+          "choices": {
+            "all": "Wszystkie funkcje",
+            "reaction-only": "Śledź wyłącznie wysłane reakcje",
+            "off": "Wyłączone"
+          }
+        }
+      }
+    },
+    "controls": {
+      "player-notes": {
+        "name": "Otwórz „Notatki dotyczące kampanii” postaci",
+        "description": "Otwiera edytowalną wersję sekcji „Notatki z kampanii” przypisanej postaci gracza w jej karcie postaci"
+      }
+    },
+    "notification": {
+      "spellstrike": {
+        "recharged": "Cios Zaklęciem naładowany",
+        "conflux": "Właśnie rzuciłeś zaklęcie konfluencji, które pozwala ci naładować Cios Zaklęciem.",
+        "feature": "Użyłeś zdolności, która ładuje twój Cios Zaklęciem",
+        "on-success": "Użyłeś zdolności, która ładuje twój Cios Zaklęciem, jeśli rzut się powiódł",
+        "other-option": "Alternatywnie zawsze możesz wydać 1 akcję, aby się naładować. Ta akcja ma cechę <b>koncentracji</b>"
+      },
+      "player-notes": {
+        "updated": "Zaktualizowano Notatki dotyczące kampanii!",
+        "no-character": "Nie ma żadnych notatek do otwarcia, ponieważ nie masz przypisanej ani wybranej postaci"
+      }
+    },
+    "display": {
+      "base-damage": "Obrażenia podstawowe",
+      "player-notes": {
+        "title": "Notatki dotyczące kampanii"
+      }
+    },
+    "items": {
+      "effects": {
+        "reaction-used": {
+          "name": "Efekt: Użyto reakcji"
+        }
+      }
+    }
+  }
+}

@@ -2,12 +2,23 @@
 
 - Add User Color to Message Header
 
-## 0.7.3
+## 0.7.5
 
 - **Updated**
   - `Reaction Tracker`
     - Updated hint for settings to be a bit clearer
     - Don't apply reaction used to the first combatant anymore to fix a bug where the effect isn't removed
+
+## 0.7.4
+
+- **Updated**
+  - Changed `manifest` to allow `v12` installation (and added note on module page about possible non compatability of features
+  - Updated French translation (🌐 @rectulo)
+  - Updated Polish translation (🌐 @rLioheart)
+
+## 0.7.3
+
+- Fixed bug with campaign notes failing due to missing import (🐛 @DoritoBob)
 
 ## 0.7.2
 

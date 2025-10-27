@@ -1,3 +1,5 @@
+import { MODULE_ID } from "../module.js";
+
 export async function openPlayerNotes({ open, edit }) {
     const actor = game.user?.character ?? canvas.tokens.controlled?.[0]?.actor;
     if (!actor || actor.type !== 'character') {
