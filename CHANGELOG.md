@@ -2,6 +2,13 @@
 
 - Add User Color to Message Header
 
+## 0.7.3
+
+- **Updated**
+  - `Reaction Tracker`
+    - Updated hint for settings to be a bit clearer
+    - Don't apply reaction used to the first combatant anymore to fix a bug where the effect isn't removed
+
 ## 0.7.2
 
 - **Updated**
