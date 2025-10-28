@@ -79,12 +79,22 @@
       "track": {
         "reaction-usage": {
           "name": "[Śledzenie] Wykorzystanie reakcji",
-          "hint": "Ta funkcja tworzy (i zwiększa) efekt na token, który liczy, czy token użył reakcji. Należy zauważyć, że efekt ten stosuje się również do każdego tokena w momencie rozpoczęcia walki",
+          "hint": "Ta funkcja tworzy (i zwiększa) efekt na tokenie, który liczy, czy token użył reakcji. Należy zauważyć, że efekt ten stosuje się również do każdego tokenu na początku walki, jeśli wszystkie są włączone",
           "choices": {
             "all": "Wszystkie funkcje",
             "reaction-only": "Śledź wyłącznie wysłane reakcje",
             "off": "Wyłączone"
           }
+        }
+      },
+      "replace": {
+        "pause-text": {
+          "name": "[Zastąp] Tekst pauzy",
+          "hint": "Pozwala na zastąpienie podstawowego tekstu pauzy. Obsługuje wiele opcji tekstu pauzy, z których wybierane są losowo. Poszczególne opcje należy oddzielić znakiem „|” lub „;”. (Aby uzyskać oryginalny tekst pauzy, pozostaw to pole puste)"
+        },
+        "pause-img": {
+          "name": "[Zastąp] Obraz pauzy",
+          "hint": "Pozwala na zastąpienie podstawowego obrazu pauzy."
         }
       }
     },
