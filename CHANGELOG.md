@@ -2,6 +2,10 @@
 
 - Add User Color to Message Header
 
+## 0.8.3
+- **Update**
+  - Fix Polish translation not being loaded by the `module.json` (🐛 @Lioheart)
+
 ## 0.8.2
 
 - **Update**
