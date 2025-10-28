@@ -86,6 +86,16 @@
             "off": "Off"
           }
         }
+      },
+      "replace": {
+        "pause-text": {
+          "name": "[Replace] Pause Text",
+          "hint": "Allows you to override the base pause text. This supports multiple pause text options from which it will pick randomly, separate each option with either '|' or ';'. (Set this setting blank to get the original pause text)"
+        },
+        "pause-img": {
+          "name": "[Replace] Pause Image",
+          "hint": "Allows you to override the base pause image."
+        }
       }
     },
     "controls": {

@@ -16,7 +16,6 @@
 > [!WARNING]  
 > While v12 is technically supported, support for some features may fail as this module is developed primarily for FVTT v13
 
-
 ## Table of Contents
 
 - [Changelog](#changelog)
@@ -42,21 +41,23 @@ You can access the changelog [here](/CHANGELOG.md).
 - **Display**
 
   - `Property Runes` - Displays property runes on (item sheets) for items with them
-  
+
     <img height="250" alt="image" src="https://github.com/user-attachments/assets/13f3e51b-2941-4a9d-82f9-811e0a605201" />
 
   - `Weapon Base Damage` - Adds a little display below the price on weapon sheets that displays their base damage (Note: This includes any Striking runes the weapon has)
-  
+
     <img width="280" height="236" alt="image" src="https://github.com/user-attachments/assets/0c3083f5-710d-43f9-b906-b87924ace4a4" />
 
 - **Hide**
+
   - `Default Craft Checks` (for Heroic Crafting)
   - `Hide Header Button Text`
     - Hides the text (not the icons) for sheet Header Buttons
-    
+
   <img width="669" height="213" alt="image" src="https://github.com/user-attachments/assets/a5881f19-e376-4a37-aa4a-f44e68527053" />
 
   - `Sell All Treasure`
+
 - **Highlight**
 
   - `Pf2e Toolbelt`'s `Target Helper` unrolled rolls and make them glow
@@ -81,6 +82,11 @@ You can access the changelog [here](/CHANGELOG.md).
       - When a reaction is used, it creates an effect marking a character has used a reaction, or if they have already used a reaction in the last round, increments a counter showing the total number of reactions used (to helpfully track characters with multiple reactions)
       - When combat starts you gain the Reaction Used effect until your turn starts [in line with RAW](https://2e.aonprd.com/Rules.aspx?ID=2432&Redirected=1)
     - Note: this feature requires the GM to be active to work
+- **Replace**
+  - `Pause Image`
+    - Allows you to replace the pause image
+  - `Pause Text`
+    - Allows you to replace the pause text (Can be replaced with multiple messages separate them with '|' or ';')
 
 ## Contributors
 

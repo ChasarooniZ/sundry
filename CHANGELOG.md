@@ -2,6 +2,15 @@
 
 - Add User Color to Message Header
 
+## 0.8.0
+
+- **New**
+  - `Replace`
+    - **Pause Image**
+      - Allows you to replace the pause image
+    - **Pause Text**
+      - Allows you to replace the pause text (Can be replaced with multiple messages separate them with '|' or ';')
+
 ## 0.7.5
 
 - **Updated**
