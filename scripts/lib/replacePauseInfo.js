@@ -9,13 +9,14 @@ export function setupPauseImgReplacement(active) {
 }
 
 const pauseSplitRegex = /\||;/;
+const MS_TO_MINUTE = 1000 * 60;
 
 async function replacePauseText(_pause, element) {
   const text = getSetting("replace.pause-text");
   if (text) {
     const options = text.split(pauseSplitRegex);
-
-    const replacement = options[Math.floor(Math.random() * options.length)];
+    const replacement =
+      options[Math.floor(new Date().getTime() / MS_TO_MINUTE) % options.length];
     const pauseTextHTML = element.querySelector("#pause figcaption");
     pauseTextHTML.innerText = replacement.replaceAll(/\\n/g, "\n\n");
   }

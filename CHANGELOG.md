@@ -2,6 +2,12 @@
 
 - Add User Color to Message Header
 
+## 0.8.1
+
+- **Update**
+  - `Replace Pause Text`
+    - Change random message grabbing method to be based on the current minute (this provides a hacky way to sync up the messages for now)
+
 ## 0.8.0
 
 - **New**
