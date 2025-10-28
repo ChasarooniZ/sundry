@@ -2,6 +2,11 @@
 
 - Add User Color to Message Header
 
+## 0.8.2
+
+- **Update**
+  - Updated Polish translation (🌐 @Lioheart)
+
 ## 0.8.1
 
 - **Update**
@@ -29,7 +34,7 @@
 - **Updated**
   - Changed `manifest` to allow `v12` installation (and added note on module page about possible non compatability of features
   - Updated French translation (🌐 @rectulo)
-  - Updated Polish translation (🌐 @rLioheart)
+  - Updated Polish translation (🌐 @Lioheart)
 
 ## 0.7.3
 
