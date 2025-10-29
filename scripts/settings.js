@@ -211,6 +211,24 @@ export function setupSettings() {
       setupPauseImgReplacement(!!value && value !== "ui/pause.svg");
     },
   });
+
+  game.settings.register(MODULE_ID, "replace.pause-img-class", {
+    name: `${MODULE_ID}.module-settings.replace.pause-img-class.name`,
+    hint: `${MODULE_ID}.module-settings.replace.pause-img-class.hint`,
+    scope: "world",
+    config: true,
+    default: "fa-beat",
+    type: String,
+  });
+
+  // game.settings.register(MODULE_ID, "replace.pause-size", {
+  //   name: `${MODULE_ID}.module-settings.replace.pause-size.name`,
+  //   hint: `${MODULE_ID}.module-settings.replace.pause-size.hint`,
+  //   scope: "world",
+  //   config: true,
+  //   default: 0,
+  //   type: Number,
+  // });
 }
 
 export function registerKeybindings() {

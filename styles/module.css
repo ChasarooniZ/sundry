@@ -203,11 +203,16 @@
   }
 }
 
-
 body.game .app.window-app.sundry-hide-button-text .flexrow.window-header a {
   font-size: 0;
 }
 
 body.game .app.window-app.sundry-hide-button-text .flexrow.window-header a i {
-  font-size: var(--font-size-14)
+  font-size: var(--font-size-14);
+}
+
+/** Remove Video Border for Pause Stuff */
+figure#pause video {
+  border: none;
+  box-shadow: none;
 }

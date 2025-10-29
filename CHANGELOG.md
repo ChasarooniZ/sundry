@@ -2,6 +2,13 @@
 
 - Add User Color to Message Header
 
+## 0.8.3
+
+- **Update**
+  - `Replace Pause Image`
+    - **Pause Image Class.** New setting to change the pause image class, can be used to change up the animation (see Font Awesome animations)
+    - **Webm Support.** Now handles `.webm` specifically
+
 ## 0.8.2
 
 - **Update**

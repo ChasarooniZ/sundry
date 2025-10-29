@@ -95,6 +95,10 @@
         "pause-img": {
           "name": "[Replace] Pause Image",
           "hint": "Allows you to override the base pause image."
+        },
+        "pause-img-class": {
+          "name": "[Replace] Pause Image Class",
+          "hint": "Allows you to replace the class for the pause image (animation) see the options here on fontawesome (https://docs.fontawesome.com/web/style/animate)"
         }
       }
     },
