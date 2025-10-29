@@ -98,7 +98,7 @@
         },
         "pause-img-class": {
           "name": "[Replace] Pause Image Class",
-          "hint": "Allows you to replace the class for the pause image (animation) see the options here on fontawesome (https://docs.fontawesome.com/web/style/animate)"
+          "hint": "Allows you to replace the class for the pause image (animation) see the options here (https://docs.fontawesome.com/web/style/animate) on fontawesome (Default is 'fa-beat')"
         }
       }
     },
