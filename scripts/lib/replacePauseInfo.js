@@ -44,5 +44,5 @@ function getVideoPauseHTML(faClass, video) {
 }
 
 function isVideo(filepath) {
-  filepath.endsWith(".webm");
+  return filepath.endsWith(".webm");
 }
