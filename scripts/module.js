@@ -19,10 +19,7 @@ import { setupReactionTracker } from "./lib/reactionTracker.js";
 import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
 import { setupDisplayWeaponDamage } from "./lib/showBaseDamage.js";
 import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
-import {
-  setupPauseImgReplacement,
-  setupPauseTextReplacement,
-} from "./lib/replacePauseInfo.js";
+import { setupPauseReplacement } from "./lib/replacePauseInfo.js";
 
 export const MODULE_ID = "sundry";
 
@@ -66,8 +63,7 @@ Hooks.once("ready", async function () {
   setupNotifySpellstrikeRecharge(getSetting("notify.spellstrike.recharge"));
 
   // Replace
-  setupPauseTextReplacement(!!getSetting("replace.pause-text"));
-  setupPauseImgReplacement(!!getSetting("replace.pause-img"));
+  setupPauseReplacement();
 
   //Track
   setupReactionTracker(getSetting("track.reaction-usage"));

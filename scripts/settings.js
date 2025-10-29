@@ -3,10 +3,6 @@ import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
 import { setupNotifySpellstrikeRecharge } from "./lib/notify.js";
 import { openPlayerNotes } from "./lib/openNotes.js";
-import {
-  setupPauseImgReplacement,
-  setupPauseTextReplacement,
-} from "./lib/replacePauseInfo.js";
 import { setupColorizePersistentPF2eHUD } from "./lib/pf2eHUD.js";
 import {
   setupColorizeToolbeltMessageSaves,
@@ -194,9 +190,6 @@ export function setupSettings() {
     config: true,
     default: "",
     type: String,
-    onChange: (value) => {
-      setupPauseTextReplacement(!!value);
-    },
   });
 
   game.settings.register(MODULE_ID, "replace.pause-img", {
@@ -207,10 +200,25 @@ export function setupSettings() {
     default: "ui/pause.svg",
     filePicker: "imagevideo",
     type: String,
-    onChange: (value) => {
-      setupPauseImgReplacement(!!value && value !== "ui/pause.svg");
-    },
   });
+
+  game.settings.register(MODULE_ID, "replace.pause-img-class", {
+    name: `${MODULE_ID}.module-settings.replace.pause-img-class.name`,
+    hint: `${MODULE_ID}.module-settings.replace.pause-img-class.hint`,
+    scope: "world",
+    config: true,
+    default: "fa-beat",
+    type: String,
+  });
+
+  // game.settings.register(MODULE_ID, "replace.pause-size", {
+  //   name: `${MODULE_ID}.module-settings.replace.pause-size.name`,
+  //   hint: `${MODULE_ID}.module-settings.replace.pause-size.hint`,
+  //   scope: "world",
+  //   config: true,
+  //   default: 0,
+  //   type: Number,
+  // });
 }
 
 export function registerKeybindings() {
