@@ -79,12 +79,22 @@
       "track": {
         "reaction-usage": {
           "name": "[Comptabiliser] Utilisation de la réaction",
-          "hint": "Cette fonctionnalité crée (et incrémente) un effet sur un jeton qui compte si ce dernier a utilisé une réaction. À noter : cet effet s'applique également à chaque jeton au début du combat.",
+          "hint": "Cette fonctionnalité crée (et incrémente) un effet sur un jeton qui compte si ce dernier a utilisé une réaction. À noter : cet effet s'applique également à chaque jeton au début du combat, si vous avez tous activé cette fonctionnalité.",
           "choices": {
             "all": "Toutes les fonctionnalités",
             "reaction-only": "Suivre uniquement les réactions envoyées",
             "off": "Désactivé"
           }
+        }
+      },
+      "replace": {
+        "pause-text": {
+          "name": "[Remplacer] Texte de la pause",
+          "hint": "Permet de remplacer le texte de pause de base. Plusieurs options de texte de pause peuvent être aléatoirement affichés, séparées par un '|' ou ';'. (Désactivez ce paramètre pour afficher le texte de pause d'origine.)"
+        },
+        "pause-img": {
+          "name": "[Remplacer] Image de pause",
+          "hint": "Permet de remplacer l'image de base de la pause."
         }
       }
     },
