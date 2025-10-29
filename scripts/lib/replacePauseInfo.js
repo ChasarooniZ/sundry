@@ -1,15 +1,7 @@
 import { getSetting } from "./helpers.js";
 
-export function setupPauseReplacement(active) {
-  Hooks[active ? "on" : "off"]("renderGamePause", pauseReplacement);
-}
-
-export function setupPauseTextReplacement(active) {
-  Hooks[active ? "on" : "off"]("renderGamePause", replacePauseText);
-}
-
-export function setupPauseImgReplacement(active) {
-  Hooks[active ? "on" : "off"]("renderGamePause", replacePauseImg);
+export function setupPauseReplacement() {
+  Hooks.on("renderGamePause", pauseReplacement);
 }
 
 const pauseSplitRegex = /\||;/;
