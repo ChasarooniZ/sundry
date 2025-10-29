@@ -2,6 +2,12 @@
 
 - Add User Color to Message Header
 
+## 0.8.5
+
+- **Update**
+  - `Replace Pause Text`
+    - Now Supports `Roll Table` UUID as the input to pull from that for its options (🧠 @TangledLion)
+
 ## 0.8.4
 
 - **Update**

@@ -90,7 +90,7 @@
       "replace": {
         "pause-text": {
           "name": "[Replace] Pause Text",
-          "hint": "Allows you to override the base pause text. This supports multiple pause text options from which it will pick randomly, separate each option with either '|' or ';'. (Set this setting blank to get the original pause text)"
+          "hint": "Allows you to override the base pause text. This supports multiple pause text options from which it will pick randomly, separate each option with either '|' or ';'. (Set this setting blank to get the original pause text) (Also supports a Rolltable of options by setting this to the Table's UUID)"
         },
         "pause-img": {
           "name": "[Replace] Pause Image",

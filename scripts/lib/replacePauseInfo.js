@@ -10,7 +10,9 @@ const MS_TO_MINUTE = 1000 * 60;
 async function pauseReplacement(_pause, element) {
   const text = getSetting("replace.pause-text");
   if (text) {
-    const options = text.split(pauseSplitRegex);
+    const options = text.includes("RollTable.")
+      ? getRollTableElements(text)
+      : text.split(pauseSplitRegex);
     const replacement =
       options[Math.floor(new Date().getTime() / MS_TO_MINUTE) % options.length];
     const pauseTextHTML = element.querySelector("#pause figcaption");
@@ -45,4 +47,9 @@ function getVideoPauseHTML(faClass, video) {
 
 function isVideo(filepath) {
   return filepath.endsWith(".webm");
+}
+
+async function getRollTableElements(uuid) {
+  const table = await fromUuid(uuid);
+  return table?.results?.contents?.map((result) => result?.name) ?? [];
 }

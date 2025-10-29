@@ -85,8 +85,10 @@ You can access the changelog [here](/CHANGELOG.md).
 - **Replace**
   - `Pause Image`
     - Allows you to replace the pause image
+  - `Pause Image Class`
+    - Allows you to replace the class for the pause image (animation) see the options [here](https://docs.fontawesome.com/web/style/animate)
   - `Pause Text`
-    - Allows you to replace the pause text (Can be replaced with multiple messages separate them with '|' or ';')
+    - Allows you to replace the pause text (Can be replaced with multiple messages separate them with '|' or ';') (Also supports a Rolltable of options by setting this to the Table's UUID)
 
 ## Contributors
 
