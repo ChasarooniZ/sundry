@@ -11,12 +11,12 @@ async function pauseReplacement(_pause, element) {
   const text = getSetting("replace.pause-text");
   if (text) {
     const options = text.includes("RollTable.")
-      ? getRollTableElements(text)
+      ? await getRollTableElements(text)
       : text.split(pauseSplitRegex);
     const replacement =
       options[Math.floor(new Date().getTime() / MS_TO_MINUTE) % options.length];
     const pauseTextHTML = element.querySelector("#pause figcaption");
-    pauseTextHTML.innerText = replacement.replaceAll(/\\n/g, "\n\n");
+    pauseTextHTML.innerText = replacement?.replaceAll(/\\n/g, "\n\n");
   }
 
   const img = getSetting("replace.pause-img");

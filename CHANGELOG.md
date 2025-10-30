@@ -2,6 +2,12 @@
 
 - Add User Color to Message Header
 
+## 0.8.6
+
+- **Update**
+  - `Replace Pause Text`
+    - Fixed bug causing `Roll Table` mode to fail
+
 ## 0.8.5
 
 - **Update**
