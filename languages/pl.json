@@ -90,11 +90,15 @@
       "replace": {
         "pause-text": {
           "name": "[Zastąp] Tekst pauzy",
-          "hint": "Pozwala na zastąpienie podstawowego tekstu pauzy. Obsługuje wiele opcji tekstu pauzy, z których wybierane są losowo. Poszczególne opcje należy oddzielić znakiem „|” lub „;”. (Aby uzyskać oryginalny tekst pauzy, pozostaw to pole puste)"
+          "hint": "Pozwala na zastąpienie podstawowego tekstu pauzy. Obsługuje wiele opcji tekstu pauzy, z których wybiera losowo, oddzielając każdą opcję znakiem „|” lub „;”. (Aby uzyskać oryginalny tekst pauzy, pozostaw to pole puste). (Obsługuje również tabelę opcji Rolltable poprzez ustawienie tego pola na UUID tabeli)."
         },
         "pause-img": {
           "name": "[Zastąp] Obraz pauzy",
           "hint": "Pozwala na zastąpienie podstawowego obrazu pauzy."
+        },
+        "pause-img-class": {
+          "name": "[Zastąp] Klasa obrazu pauzy",
+          "hint": "Pozwala zastąpić klasę obrazu pauzy (animacji). Opcje można znaleźć tutaj (https://docs.fontawesome.com/web/style/animate) na stronie fontawesome (domyślnie jest to „fa-beat”)."
         }
       }
     },
