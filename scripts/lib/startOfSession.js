@@ -28,6 +28,10 @@ async function startOfSessionNotification() {
   const journal = await fromUuid(journalUUID);
   if (!journal) return null;
 
+  ui.notifications.notify(
+    game.i18n.localize(`${MODULE_ID}.notification.session-start.active`)
+  );
+
   if (journal.parent) {
     const journalEntryID = journal.id;
     journal?.parent?.sheet?.goToPage(journalEntryID)?.render(true);
