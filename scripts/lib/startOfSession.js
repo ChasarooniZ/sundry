@@ -2,7 +2,7 @@ import { getSetting } from "./helpers.js";
 
 export function setupStartOfSession() {
   if (!game.user.isGM) return;
-  if (active && getPlayerAmountEnough("login")) {
+  if (getPlayerAmountEnough("login")) {
     startOfSessionNotification();
   }
   Hooks.on("userConnected", userConnectionStartOfSessionHook);

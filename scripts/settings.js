@@ -171,11 +171,11 @@ export function setupSettings() {
     hint: `${MODULE_ID}.module-settings.notify.start-session.players-needed.hint`,
     scope: "world",
     config: true,
-    default: game.users.players.length - 1,
+    default: 4,
     range: {
       min: 0,
       step: 1,
-      max: game.users.players.length
+      max: 10,
     },
     type: Number,
   });
