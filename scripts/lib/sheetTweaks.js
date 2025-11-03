@@ -25,4 +25,7 @@ const hideDefaultCraftChecksCSS = `
 .actor.sheet .tab.crafting section.window-content button.blue {
 	display: none;
 }
+.actor.sheet .tab.crafting section.window-content button.craft {
+	display: none;
+}
 `

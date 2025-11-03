@@ -76,6 +76,7 @@ You can access the changelog [here](/CHANGELOG.md).
 
 - **Notify**
   - Notify when you have recharged your `spellstrike`
+  - Start of session reminder (open a journal)
 - **Track**
   - `Reaction Tracker`
     - This has 2 features:

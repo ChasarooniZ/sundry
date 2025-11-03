@@ -2,6 +2,15 @@
 
 - Add User Color to Message Header
 
+## 0.9.0
+
+- **New**
+  - `Notify`
+    - **Start of Session Reminders**
+      - Allows you to set a Journal or Journal Page to open at the start of a session (IE when enough players are in the world) which you could fill with reminders of what to do at the start of a session
+- **Update**
+  - Hide `Default Craft Checks` (for Heroic Crafting)
+
 ## 0.8.6
 
 - **Update**
