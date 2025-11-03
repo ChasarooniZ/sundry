@@ -74,6 +74,16 @@
             "name": "[Notifier] Recharge de Frappe de sort",
             "hint": "Ajoute une petite notification d'IU lorsque votre frappe de sort doit être rechargée"
           }
+        },
+        "start-session": {
+          "journal": {
+            "name": "[Notifier] Liste de début de session (Journal)",
+            "hint": "Lorsque suffisamment de joueurs se connectent, cette fonctionnalité affichera une liste de vérification en début de session pour vous assurer de ne rien oublier. (Pour activer cette fonctionnalité, fixez ce paramètre sur un identifiant unique de journal ou de page de journal)"
+          },
+          "players-needed": {
+            "name": "[Notification] Liste de début de session (Joueurs requis)",
+            "hint": "C'est le nombre minimum de joueurs non-MJ requis pour que la liste s'affiche (par défaut : nombre de joueurs -1)."
+          }
         }
       },
       "track": {
@@ -90,11 +100,15 @@
       "replace": {
         "pause-text": {
           "name": "[Remplacer] Texte de la pause",
-          "hint": "Permet de remplacer le texte de pause de base. Plusieurs options de texte de pause peuvent être aléatoirement affichés, séparées par un '|' ou ';'. (Désactivez ce paramètre pour afficher le texte de pause d'origine.)"
+          "hint": "Permet de remplacer le texte de pause par défaut. Plusieurs options de texte de pause sont disponibles ; le système en choisira une au hasard, séparées par '|' ou ';' (Laissez ce champ vide pour conserver le texte de pause d'origine). Il est également possible d'utiliser une table aléatoire en spécifiant l'UUID de la table."
         },
         "pause-img": {
           "name": "[Remplacer] Image de pause",
           "hint": "Permet de remplacer l'image de base de la pause."
+        },
+        "pause-img-class": {
+          "name": "[Remplacer] Classe d'image de Pause",
+          "hint": "Permet de remplacer la classe de l'image de pause (animation). Voir les options ici (https://docs.fontawesome.com/web/style/animate) sur fontawesome (la valeur par défaut est 'fa-beat')."
         }
       }
     },
@@ -105,16 +119,19 @@
       }
     },
     "notification": {
+      "player-notes": {
+        "updated": "Notes de campagne mises à jour !",
+        "no-character": "Aucune note à ouvrir car vous n'avez aucun personnage attribué ni sélectionné"
+      },
+      "session-start": {
+        "active": "[Début de session] Assez de joueurs ont rejoint l'accueil pour vous montrer la liste de début de session !"
+      },
       "spellstrike": {
         "recharged": "Frappe de sort rechargée",
         "conflux": "Vous venez de lancer un sort de confluence qui vous permet de recharger votre frappe magique.",
         "feature": "Vous avez utilisé une capacité qui recharge votre frappe magique",
         "on-success": "Vous avez utilisé une capacité qui recharge votre frappe magique si vous avez obtenu un succès",
         "other-option": "Alternativement, vous pouvez toujours dépenser 1 action pour recharger. Cette action possède le trait <b>concentration</b>"
-      },
-      "player-notes": {
-        "updated": "Notes de campagne mises à jour !",
-        "no-character": "Aucune note à ouvrir car vous n'avez aucun personnage attribué ni sélectionné"
       }
     },
     "display": {
