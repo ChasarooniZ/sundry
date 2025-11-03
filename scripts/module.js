@@ -20,6 +20,7 @@ import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
 import { setupDisplayWeaponDamage } from "./lib/showBaseDamage.js";
 import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 import { setupPauseReplacement } from "./lib/replacePauseInfo.js";
+import { setupStartOfSession } from "./lib/startOfSession.js";
 
 export const MODULE_ID = "sundry";
 
@@ -61,6 +62,8 @@ Hooks.once("ready", async function () {
 
   // Notify
   setupNotifySpellstrikeRecharge(getSetting("notify.spellstrike.recharge"));
+
+  setupStartOfSession(getSetting("notify.start-session.journal"))
 
   // Replace
   setupPauseReplacement();

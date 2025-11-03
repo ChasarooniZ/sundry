@@ -15,6 +15,7 @@ import {
 } from "./lib/sheetTweaks.js";
 import { setupDisplayWeaponDamage } from "./lib/showBaseDamage.js";
 import { minifySimpleRequests } from "./lib/simpleRequests.js";
+import { setupStartOfSession } from "./lib/startOfSession.js";
 import { MODULE_ID } from "./module.js";
 
 export function setupSettings() {
@@ -77,9 +78,6 @@ export function setupSettings() {
     config: game.system.id === "pf2e",
     default: false,
     type: Boolean,
-    onChange: (value) => {
-      hideDefaultCraftChecks(value);
-    },
   });
 
   game.settings.register(MODULE_ID, "hide.header.button-text", {
@@ -154,6 +152,32 @@ export function setupSettings() {
     onChange: (value) => {
       setupNotifySpellstrikeRecharge(value);
     },
+  });
+
+  game.settings.register(MODULE_ID, "notify.start-session.journal", {
+    name: `${MODULE_ID}.module-settings.notify.start-session.journal.name`,
+    hint: `${MODULE_ID}.module-settings.notify.start-session.journal.hint`,
+    scope: "world",
+    config: true,
+    default: "",
+    type: String,
+    onChange: (value) => {
+      setupStartOfSession(value);
+    },
+  });
+
+  game.settings.register(MODULE_ID, "notify.start-session.players-needed", {
+    name: `${MODULE_ID}.module-settings.notify.start-session.players-needed.name`,
+    hint: `${MODULE_ID}.module-settings.notify.start-session.players-needed.hint`,
+    scope: "world",
+    config: true,
+    default: game.users.players.length - 1,
+    range: {
+      min: 0,
+      step: 1,
+      max: game.users.players.length
+    },
+    type: Number,
   });
 
   //TODO remove next version

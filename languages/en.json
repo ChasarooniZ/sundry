@@ -74,6 +74,16 @@
             "name": "[Notify] Spellstrike Recharge",
             "hint": "Adds a little ui notification when your spellstrike should be recharged"
           }
+        },
+        "start-session": {
+          "journal": {
+            "name": "[Notify] Start of Session Checklist (Journal)",
+            "hint": "This feature when enough players join will open a start of session checklist to ensure you don't forget anything. (To activate this feature set this setting to a Journal or Journal Page UUID)"
+          },
+          "players-needed": {
+            "name": "[Notify] Start of Session Checklist (Players Needed)",
+            "hint": "This is the minimum amount of Non-GM players needed to be active in the game for the checklist to show up (defaults to Player count - 1)"
+          }
         }
       },
       "track": {
