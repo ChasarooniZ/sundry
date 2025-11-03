@@ -216,3 +216,18 @@ figure#pause video {
   border: none;
   box-shadow: none;
 }
+
+/** Better format Pause so it actually fits bigger text */
+figure.paused {
+  height: fit-content;
+  padding: 1rem;
+}
+
+figure.paused img {
+  margin-top: .5rem;
+}
+
+figure.paused figcaption {
+  width: 70%;
+  line-height: 1.5rem;
+}
