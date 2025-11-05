@@ -2,6 +2,17 @@
 
 - Add User Color to Message Header
 
+## 0.9.3
+
+- **Update**
+  - Fixed  code error causing `Pause` Features to not work (👩‍💻 @thejoestar)
+  - Updated French translation (🌐 @rectulo)
+  - Updated Polish translation (🌐 @Lioheart)
+
+## 0.9.2
+
+- Repushing Version as the previous release errored for an odd reason
+
 ## 0.9.1
 
 - **Update**
