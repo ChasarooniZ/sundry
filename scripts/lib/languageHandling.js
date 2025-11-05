@@ -1,4 +1,4 @@
-function setuplanguageHandling(active) {
+export function setuplanguageHandling(active) {
   Hooks[active ? "on" : "off"](
     "renderCreatureSheetPF2e",
     showRelevantLanguages
@@ -6,6 +6,11 @@ function setuplanguageHandling(active) {
 }
 
 async function showRelevantLanguages(_sheet, html, info) {
+  const commonLanguage = game.settings.get(
+    "pf2e",
+    "homebrew.languageRarities"
+  )?.commonLanguage;
+
   const languages = info?.languages?.map((lang) => lang?.slug);
   const partyMembers = game.actors.party.members.filter(
     (m) => m.type === "character"
@@ -16,10 +21,16 @@ async function showRelevantLanguages(_sheet, html, info) {
 
   const partyLanguages = partyMembers.map((act) => ({
     name: act.name,
-    langauges: act.system.details.languages.value,
+    langauges: [
+      ...act.system.details.languages.value,
+      ...(commonLanguage &&
+      act.system.details.languages.value?.includes("common")
+        ? [commonLanguage]
+        : []),
+    ],
   }));
 
-  for (const languageSlug in languages) {
+  for (const languageSlug of languages) {
     const langItem = html?.[0]?.querySelector(
       `.languages .comma-separated li[data-slug="${languageSlug}"]`
     );
@@ -45,6 +56,7 @@ async function showRelevantLanguages(_sheet, html, info) {
     });
 
     langItem.classList.add(style);
+    langItem.dataset.tooltip = tooltip;
   }
 }
 
@@ -66,11 +78,16 @@ function getLanguageTooltip({
     partyCount,
   ]} members</div>
     <hr>
-    <div class="know'>
-    ${knowLangugeMembers.join("<br>")}
-    </div>
-    ${knowLangugeMembersCount !== partyCount ? "<hr>" : ""}
-    <div class="not-know'>
-    ${notKnowLanguageMembers.join("<br>")}
-    </div>`;
+
+    ${knowLangugeMembersCount > 0 ? '<ul class="know"><li>' : ""}
+    ${knowLangugeMembers.join("</li><li>")}
+    ${knowLangugeMembersCount > 0 ? "</ul" : ""}
+
+    ${
+      knowLangugeMembersCount !== partyCount
+        ? "<hr><div class='not-know'><li>"
+        : ""
+    }
+    ${notKnowLanguageMembers.join("</li><li>")}
+    ${knowLangugeMembersCount !== partyCount ? "</ul" : ""}`;
 }

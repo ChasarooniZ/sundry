@@ -1,6 +1,7 @@
 import { TEMPLATES } from "./lib/const.js";
 import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
+import { setuplanguageHandling } from "./lib/languageHandling.js";
 import { setupNotifySpellstrikeRecharge } from "./lib/notify.js";
 import { openPlayerNotes } from "./lib/openNotes.js";
 import { setupColorizePersistentPF2eHUD } from "./lib/pf2eHUD.js";
@@ -258,7 +259,7 @@ export function setupSettings() {
 
   game.settings.register(MODULE_ID, "version", {
     scope: "world",
-    config: true,
+    config: false,
     type: String,
     default: "0.0.0",
   });

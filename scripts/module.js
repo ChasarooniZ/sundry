@@ -21,6 +21,7 @@ import { setupDisplayWeaponDamage } from "./lib/showBaseDamage.js";
 import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 import { setupPauseReplacement } from "./lib/replacePauseInfo.js";
 import { setupStartOfSession } from "./lib/startOfSession.js";
+import { setuplanguageHandling } from "./lib/languageHandling.js";
 
 export const MODULE_ID = "sundry";
 
