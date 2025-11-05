@@ -1,4 +1,4 @@
-import { getSetting } from "./lib/helpers.js";
+import { getSetting, versionMigration } from "./lib/helpers.js";
 import { minifySimpleRequests } from "./lib/simpleRequests.js";
 import {
   loadAllTemplates,
@@ -28,6 +28,7 @@ Hooks.once("init", async function () {
   setupSettings();
   registerKeybindings();
   loadAllTemplates();
+  versionMigration()
 });
 
 Hooks.once("ready", async function () {

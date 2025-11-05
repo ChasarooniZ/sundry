@@ -231,7 +231,7 @@ export function setupSettings() {
     hint: `${MODULE_ID}.module-settings.replace.pause-img-class.hint`,
     scope: "world",
     config: true,
-    default: "fa-beat",
+    default: "fa-spin",
     type: String,
   });
 
@@ -243,6 +243,13 @@ export function setupSettings() {
   //   default: 0,
   //   type: Number,
   // });
+
+  game.settings.register(MODULE_ID, 'version', {
+    scope: "world",
+    config: true,
+    type: String,
+    default: "0.0.0"
+  })
 }
 
 export function registerKeybindings() {

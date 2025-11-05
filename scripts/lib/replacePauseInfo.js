@@ -27,7 +27,7 @@ async function pauseReplacement(_pause, element) {
     const videoHTML = getVideoPauseHTML(faClass, img);
     pauseImgHTML.outerHTML = videoHTML;
   } else {
-    if (faClass !== "fa-beat") {
+    if (faClass !== "fa-spin") {
       pauseImgHTML.className = faClass;
     }
     if (!!img && img !== "ui/pause.svg") {

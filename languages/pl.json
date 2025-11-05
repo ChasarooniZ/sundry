@@ -108,7 +108,7 @@
         },
         "pause-img-class": {
           "name": "[Zastąp] Klasa obrazu pauzy",
-          "hint": "Pozwala zastąpić klasę obrazu pauzy (animacji). Opcje można znaleźć tutaj (https://docs.fontawesome.com/web/style/animate) na stronie fontawesome (domyślnie jest to „fa-beat”)."
+          "hint": "Pozwala zastąpić klasę obrazu pauzy (animacji). Opcje można znaleźć tutaj (https://docs.fontawesome.com/web/style/animate) na stronie fontawesome (domyślnie jest to „fa-spin”)."
         }
       }
     },

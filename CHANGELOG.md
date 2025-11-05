@@ -2,6 +2,11 @@
 
 - Add User Color to Message Header
 
+## 0.9.4
+
+- **Update**
+  - Fixed bug where the assumed default pause animation was `fa-beat` not `fa-spin` (also updated translations to match and added a migration for any that had the old default)
+
 ## 0.9.3
 
 - **Update**
