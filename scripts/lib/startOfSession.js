@@ -1,4 +1,5 @@
 import { getSetting } from "./helpers.js";
+import { MODULE_ID } from "../module.js";
 
 export function setupStartOfSession() {
   if (!game.user.isGM) return;
