@@ -104,6 +104,18 @@ export function setupSettings() {
     },
   });
 
+  game.settings.register(MODULE_ID, "highlight.languages-known", {
+    name: `${MODULE_ID}.module-settings.highlight.languages-known.name`,
+    hint: `${MODULE_ID}.module-settings.highlight.languages-known.hint`,
+    scope: "world",
+    config: game.system.id === "pf2e",
+    default: false,
+    type: Boolean,
+    onChange: (value) => {
+      setuplanguageHandling(value);
+    },
+  });
+
   game.settings.register(
     MODULE_ID,
     "highlight.pf2e-toolbelt.target-helper.roll",
@@ -244,12 +256,12 @@ export function setupSettings() {
   //   type: Number,
   // });
 
-  game.settings.register(MODULE_ID, 'version', {
+  game.settings.register(MODULE_ID, "version", {
     scope: "world",
     config: true,
     type: String,
-    default: "0.0.0"
-  })
+    default: "0.0.0",
+  });
 }
 
 export function registerKeybindings() {

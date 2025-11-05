@@ -224,10 +224,29 @@ figure.paused {
 }
 
 figure.paused img {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 figure.paused figcaption {
   width: 70%;
   line-height: 1.5rem;
+}
+
+/** For Showing known Languages */
+.languages .comma-separated li {
+  all {
+    color: var(--color-pf-text-critical-success);
+  }
+
+  half {
+    color: var(--color-pf-text-success);
+  }
+
+  some {
+    color: var(--color-pf-text-failure);
+  }
+
+  none {
+    color: var(--color-pf-text-critical-failure);
+  }
 }
