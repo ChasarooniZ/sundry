@@ -5,7 +5,7 @@
 ## 0.9.3
 
 - **Update**
-  - Fixed  code error causing `Pause` Features to not work (👩‍💻 @thejoestar)
+  - Fixed code error causing `Pause` Features to not work (💻 @thejoestar)
   - Updated French translation (🌐 @rectulo)
   - Updated Polish translation (🌐 @Lioheart)
 
