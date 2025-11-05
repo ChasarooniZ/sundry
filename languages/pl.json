@@ -74,6 +74,16 @@
             "name": "[Powiadomienie] Ładowanie Ciosu Zaklęciem",
             "hint": "Dodaje małe powiadomienie w interfejsie użytkownika, gdy twój Cios Zaklęciem powinien zostać ponownie naładowany"
           }
+        },
+        "start-session": {
+          "journal": {
+            "name": "[Powiadomienie] Lista kontrolna na rozpoczęcie sesji (dziennik)",
+            "hint": "Ta funkcja, gdy dołączy wystarczająca liczba graczy, otworzy listę kontrolną na początku sesji, aby upewnić się, że niczego nie zapomnisz. (Aby aktywować tę funkcję, ustaw to ustawienie na UUID dziennika lub strony dziennika)."
+          },
+          "players-needed": {
+            "name": "[Powiadomienie] Lista kontrolna przed rozpoczęciem sesji (potrzebni gracze)",
+            "hint": "Jest to minimalna liczba graczy niebędących MG, którzy muszą być aktywni w grze, aby lista kontrolna została wyświetlona (domyślnie liczba graczy - 1)."
+          }
         }
       },
       "track": {
@@ -109,16 +119,19 @@
       }
     },
     "notification": {
+      "player-notes": {
+        "updated": "Zaktualizowano Notatki dotyczące kampanii!",
+        "no-character": "Nie ma żadnych notatek do otwarcia, ponieważ nie masz przypisanej ani wybranej postaci"
+      },
+      "session-start": {
+        "active": "[Rozpoczęcie sesji] Do lobby dołączyła wystarczająca liczba graczy, aby wyświetlić listę kontrolną rozpoczęcia sesji!"
+      },
       "spellstrike": {
         "recharged": "Cios Zaklęciem naładowany",
         "conflux": "Właśnie rzuciłeś zaklęcie konfluencji, które pozwala ci naładować Cios Zaklęciem.",
         "feature": "Użyłeś zdolności, która ładuje twój Cios Zaklęciem",
         "on-success": "Użyłeś zdolności, która ładuje twój Cios Zaklęciem, jeśli rzut się powiódł",
         "other-option": "Alternatywnie zawsze możesz wydać 1 akcję, aby się naładować. Ta akcja ma cechę <b>koncentracji</b>"
-      },
-      "player-notes": {
-        "updated": "Zaktualizowano Notatki dotyczące kampanii!",
-        "no-character": "Nie ma żadnych notatek do otwarcia, ponieważ nie masz przypisanej ani wybranej postaci"
       }
     },
     "display": {
