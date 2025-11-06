@@ -54,6 +54,10 @@
               "hint": "Highlight unmade rolls by making them glow in the 'Target helper' feature of 'PF2e Toolbelt' to make it more clear to roll it"
             }
           }
+        },
+        "languages-known": {
+          "name": "[Highlight] Which party Members know Creature Languages",
+          "hint": "Highlights which languages (on NPC stat block pages) are known by the current active party as well as adds a tooltip to make sure its clear"
         }
       },
       "message": {
@@ -138,7 +142,8 @@
       "base-damage": "Base Damage",
       "player-notes": {
         "title": "Campaign Notes"
-      }
+      },
+      "team-members": "members"
     },
     "items": {
       "effects": {

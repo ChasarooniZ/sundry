@@ -64,6 +64,11 @@ You can access the changelog [here](/CHANGELOG.md).
 
   ![highlight-save](https://github.com/user-attachments/assets/0f8e1237-da4a-4e1f-947e-df5e94294bf3)
 
+  - `Known Languages on Creatures` Highlights which languages (on NPC stat block pages) are known by the current active party as well as adds a tooltip to make sure its clear
+
+  <img width="280" height="171" alt="image" src="https://github.com/user-attachments/assets/0bf22994-8524-47f1-9e16-ce9104f5534e" />
+
+
 - **Hotkey**
 
   - `Character Campaign Notes` - Adds a new hotkey (Default `N`) to open an editable dialog of their assigned character's `Campaign Notes` field on their character sheet for quick access

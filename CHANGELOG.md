@@ -2,6 +2,15 @@
 
 - Add User Color to Message Header
 
+## 0.10.0
+
+- **New**
+  - `Highlight`
+    - **Known Languages on Creatures**
+      - Highlights which languages (on NPC stat block pages) are known by the current active party as well as adds a tooltip to make sure its clear
+- **Update**
+  - Hide the previous version setting from being displayed
+
 ## 0.9.4
 
 - **Update**

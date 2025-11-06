@@ -1,6 +1,7 @@
 import { TEMPLATES } from "./lib/const.js";
 import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
+import { setuplanguageHandling } from "./lib/languageHandling.js";
 import { setupNotifySpellstrikeRecharge } from "./lib/notify.js";
 import { openPlayerNotes } from "./lib/openNotes.js";
 import { setupColorizePersistentPF2eHUD } from "./lib/pf2eHUD.js";
@@ -101,6 +102,18 @@ export function setupSettings() {
     type: Boolean,
     onChange: (value) => {
       hideSellAllTreasure(value);
+    },
+  });
+
+  game.settings.register(MODULE_ID, "highlight.languages-known", {
+    name: `${MODULE_ID}.module-settings.highlight.languages-known.name`,
+    hint: `${MODULE_ID}.module-settings.highlight.languages-known.hint`,
+    scope: "world",
+    config: game.system.id === "pf2e",
+    default: false,
+    type: Boolean,
+    onChange: (value) => {
+      setuplanguageHandling(value);
     },
   });
 
@@ -244,12 +257,12 @@ export function setupSettings() {
   //   type: Number,
   // });
 
-  game.settings.register(MODULE_ID, 'version', {
+  game.settings.register(MODULE_ID, "version", {
     scope: "world",
-    config: true,
+    config: false,
     type: String,
-    default: "0.0.0"
-  })
+    default: "0.0.0",
+  });
 }
 
 export function registerKeybindings() {
