@@ -233,20 +233,24 @@ figure.paused figcaption {
 }
 
 /** For Showing known Languages */
-.languages .comma-separated li {
-  all {
-    color: var(--color-pf-text-critical-success);
+.languages .comma-separated {
+  li.all {
+    text-shadow: 0 0 10px var(--color-pf-text-critical-success);
+    .header {
+      color: var(--color-pf-text-critical-success);
+    }
+  }
+  li.some {
+    text-shadow: 0 0 10px var(--color-pf-text-success);
+    .header {
+      color: var(--color-pf-text-success);
+    }
   }
 
-  half {
-    color: var(--color-pf-text-success);
-  }
-
-  some {
-    color: var(--color-pf-text-failure);
-  }
-
-  none {
-    color: var(--color-pf-text-critical-failure);
+  li.none {
+    text-shadow: 0 0 10px var(--color-pf-text-critical-failure);
+    .header {
+      color: var(--color-pf-text-critical-failure);
+    }
   }
 }

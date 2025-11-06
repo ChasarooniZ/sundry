@@ -142,7 +142,8 @@
       "base-damage": "Base Damage",
       "player-notes": {
         "title": "Campaign Notes"
-      }
+      },
+      "team-members": "members"
     },
     "items": {
       "effects": {

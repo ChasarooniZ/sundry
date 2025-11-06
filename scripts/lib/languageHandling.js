@@ -17,8 +17,6 @@ async function showRelevantLanguages(_sheet, html, info) {
   );
   const partyCount = partyMembers?.length;
 
-  const halfThreshold = Math.round(partyCount / 2);
-
   const partyLanguages = partyMembers.map((act) => ({
     name: act.name,
     langauges: [
@@ -45,7 +43,7 @@ async function showRelevantLanguages(_sheet, html, info) {
 
     const knowLangugeMembersCount = knowLangugeMembers.length;
 
-    const style = getStyle(partyCount, knowLangugeMembersCount, halfThreshold);
+    const style = getStyle(partyCount, knowLangugeMembersCount);
 
     const tooltip = getLanguageTooltip({
       partyCount,
@@ -60,9 +58,8 @@ async function showRelevantLanguages(_sheet, html, info) {
   }
 }
 
-function getStyle(partyCount, knowLangugeMembersCount, halfThreshold) {
+function getStyle(partyCount, knowLangugeMembersCount) {
   if (partyCount === knowLangugeMembersCount) return "all";
-  if (knowLangugeMembersCount >= halfThreshold) return "half";
   if (knowLangugeMembersCount > 0) return "some";
   return "none";
 }
@@ -72,22 +69,19 @@ function getLanguageTooltip({
   knowLangugeMembersCount,
   knowLangugeMembers,
   notKnowLanguageMembers,
-  style,
 }) {
-  return `<div class='${style}'>${knowLangugeMembersCount} / ${[
+  return `<div class='header' style='font-weight: 900;'>${knowLangugeMembersCount} / ${[
     partyCount,
-  ]} members</div>
-    <hr>
-
-    ${knowLangugeMembersCount > 0 ? '<ul class="know"><li>' : ""}
-    ${knowLangugeMembers.join("</li><li>")}
-    ${knowLangugeMembersCount > 0 ? "</ul" : ""}
+  ]} ${game.i18n.localize("sundry.display.team-members")}</div>
+    ${knowLangugeMembersCount > 0 ? '<div class="know">' : ""}
+    ${knowLangugeMembers.join("<br>")}
+    ${knowLangugeMembersCount > 0 ? "</div>" : ""}
 
     ${
       knowLangugeMembersCount !== partyCount
-        ? "<hr><div class='not-know'><li>"
+        ? "<div class='not-know' style='color: var(--color-text-subtle);'>"
         : ""
     }
-    ${notKnowLanguageMembers.join("</li><li>")}
-    ${knowLangugeMembersCount !== partyCount ? "</ul" : ""}`;
+    ${notKnowLanguageMembers.join("<br>")}
+    ${knowLangugeMembersCount !== partyCount ? "</div>" : ""}`;
 }
