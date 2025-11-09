@@ -17,7 +17,7 @@ async function userConnectionStartOfSessionHook(_user, isLogin) {
 
 function getPlayerAmountEnough(situation) {
   return situation === "login"
-    ? game.users.players.filter((p) => p.active).length <=
+    ? game.users.players.filter((p) => p.active).length >=
         getSetting("notify.start-session.players-needed")
     : game.users.players.filter((p) => p.active).length ===
         getSetting("notify.start-session.players-needed");

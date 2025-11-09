@@ -2,6 +2,10 @@
 
 - Add User Color to Message Header
 
+## 0.10.1
+
+- Fixed bug with **Start of Session Reminders** where the logic check if there were _less_ players than the value inputted not _more_ (@thebigham)
+
 ## 0.10.0
 
 - **New**
