@@ -54,6 +54,10 @@
               "hint": "Surligner les jets non effectués en les faisant briller dans la fonction 'Aide au ciblage' de 'PF2e Toolbelt' pour qu'il soit plus évident à lancer"
             }
           }
+        },
+        "languages-known": {
+          "name": "[Surligner] Les membres du groupes connaissant les langues de la créature",
+          "hint": "Indique, dans les blocs de statistiques des PNJ, les langues connues par le groupe actif et ajoute une infobulle pour plus de clarté."
         }
       },
       "message": {
@@ -138,7 +142,8 @@
       "base-damage": "Dégâts de base",
       "player-notes": {
         "title": "Notes de campagne"
-      }
+      },
+      "team-members": "membres"
     },
     "items": {
       "effects": {
