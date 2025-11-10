@@ -254,3 +254,7 @@ figure.paused figcaption {
     }
   }
 }
+
+div#players-active.hidden {
+  display: none;
+}
