@@ -37,6 +37,11 @@
         "lang": "pl",
         "name": "Polish",
         "path": "languages/pl.json"
+    },
+    {
+        "lang": "cn",
+        "name": "简体中文",
+        "path": "languages/cn.json"
     }
   ],
   "url": "#{URL}#",
