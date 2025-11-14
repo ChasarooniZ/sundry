@@ -54,6 +54,10 @@
               "hint": "Podświetl niezrobione rzuty, sprawiając, że będą świecić w funkcji 'Pomocnik celowania' w 'PF2e Toolbelt', aby było bardziej oczywiste, że należy je wykonać"
             }
           }
+        },
+        "languages-known": {
+          "name": "[Wyróżnienie] Znajomość języków stworzeń przez drużynę",
+          "hint": "Wyróżnia języki (na stronach statystyk BN), które zna aktualnie aktywna drużyna, a także dodaje podpowiedź, aby zapewnić jasność."
         }
       },
       "message": {
@@ -138,7 +142,8 @@
       "base-damage": "Obrażenia podstawowe",
       "player-notes": {
         "title": "Notatki dotyczące kampanii"
-      }
+      },
+      "team-members": "członkowie"
     },
     "items": {
       "effects": {
