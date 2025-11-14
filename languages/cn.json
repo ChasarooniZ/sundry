@@ -1,0 +1,156 @@
+{
+    "sundry": {
+        "module-settings": {
+            "colorize": {
+                "pf2e-hud": {
+                    "persistent": {
+                        "hint": "为PF2e HUD的受控HUD元素上色",
+                        "name": "[上色] PF2e HUD - 受控HUD元素"
+                    }
+                },
+                "pf2e-toolbelt": {
+                    "target-helper": {
+                        "roll": {
+                            "name": "[上色] PF2e Toolbelt - 目标助手掷骰类型",
+                            "hint": "为PF2e Toolbelt中目标助手的掷骰选项上色，以使每种掷骰类型呈现不同的鲜明颜色"
+                        }
+                    }
+                }
+            },
+            "display": {
+                "item-property-runes": {
+                    "name": "[显示] 物品性能符文",
+                    "hint": "当你查看某一物品时，模组会在物品的名称及描述中添加其性能符文的信息"
+                },
+                "weapon": {
+                    "base-damage": {
+                        "name": "[显示] 武器基础伤害",
+                        "hint": "在武器信息的价格下方添加一个小显示框，用于显示其基础伤害骰（注意：这包含武器所具备的强击符文）"
+                    }
+                }
+            },
+            "hide": {
+                "default-craft-checks": {
+                    "name": "[隐藏] 默认手艺检定按钮",
+                    "hint": "防止玩家在使用该插件时，使用默认制作而非“英雄制作”按钮"
+                },
+                "header": {
+                    "button-text": {
+                        "name": "[隐藏] 标题栏按钮文本",
+                        "hint": "隐藏标题栏按钮的文本，但保留其按钮图标。适用于开启多个标题栏功能模组的情形"
+                    }
+                },
+                "sell-all-treasure": {
+                    "name": "[隐藏] 出售全部财宝",
+                    "hint": "隐藏“出售全部财宝”按钮，以防止不小心出售重要物品"
+                }
+            },
+            "highlight": {
+                "pf2e-toolbelt": {
+                    "target-helper": {
+                        "roll": {
+                            "name": "[高亮] PF2e Toolbelt - 目标助手的未掷骰项目",
+                            "hint": "通过使PF2e Toolbelt的“目标助手”功能中的掷骰图标闪烁光芒，来高亮显示未掷骰项目，以更便捷明晰地进行掷骰操作"
+                        }
+                    }
+                },
+                "languages-known": {
+                    "hint": "高亮显示当前活跃队伍所掌握的语言种类（在NPC数据块页面），并添加提示框确保信息一目了然",
+                    "name": "[高亮] 队伍成员所掌握的生物语言"
+                }
+            },
+            "message": {
+                "user-color": {
+                    "name": "设置聊天信息标题栏为用户颜色",
+                    "hint": "根据用户颜色设置聊天信息标题栏"
+                }
+            },
+            "track": {
+                "reaction-usage": {
+                    "name": "[追踪] 反应动作消耗",
+                    "hint": "该功能可以在指示物上创建（并递增）一个效果，如果指示物使用反应动作则该效果将生效。需要注意的是，若你启用全部功能，则该效果将在战斗开始时应用于所有指示物上",
+                    "choices": {
+                        "reaction-only": "仅追踪发送至聊天的反应动作",
+                        "off": "关闭",
+                        "all": "全部特性"
+                    }
+                }
+            },
+            "notify": {
+                "spellstrike": {
+                    "recharge": {
+                        "name": "[通知] 法术打击再充能",
+                        "hint": "当你的法术打击需要再充能时，会显示一段简短的UI通知信息"
+                    }
+                },
+                "start-session": {
+                    "journal": {
+                        "name": "[通知] 团期开始前检查清单（日志）",
+                        "hint": "当加入世界的玩家人数达到一定数量时，该功能将会打开一个团期开始前检查清单，以确保你没有遗漏任何事项。（要启用此功能，请在该设置填入对应日志或日志页面的UUID）"
+                    },
+                    "players-needed": {
+                        "name": "[通知] 团期开始前检查清单（玩家需求）",
+                        "hint": "显示检查清单时，加入世界的非GM玩家的最低人数（默认为玩家数量-1）"
+                    }
+                }
+            },
+            "minify": {
+                "simple-requests": {
+                    "name": "[简化] 简单请求 Simple Requests",
+                    "hint": "将“Simple Requests”模组HUD缩小点，使其占用的界面空间变小"
+                }
+            },
+            "replace": {
+                "pause-img": {
+                    "name": "[更换] 暂停图像",
+                    "hint": "允许你替换默认的暂停图像。"
+                },
+                "pause-img-class": {
+                    "name": "[替换] 暂停图像类别",
+                    "hint": "允许你更换暂停图像（动画）的种类，详情见此网址（https://docs.fontawesome.com/web/style/animate）的 Font Awesome 文档（默认值为“fa-spin”）"
+                },
+                "pause-text": {
+                    "name": "[更换] 暂停文本",
+                    "hint": "允许你替换默认的暂停文本。该功能支持多条暂停文本随机切换，每条文本用“|”或“;”隔开即可。（若该设置为空则为原始的暂停文本）（且该功能支持填入选项表UUID以使用表内文本）"
+                }
+            }
+        },
+        "notification": {
+            "spellstrike": {
+                "recharged": "法术打击已再充能",
+                "feature": "你使用特性再充能法术打击",
+                "conflux": "你刚刚施展了一个汇聚法术，这使你再充能了法术打击。",
+                "on-success": "你使用特性，若你掷骰成功则再充能法术打击",
+                "other-option": "或者你也可以使用1动作进行再充能，该动作具备<b>专注</b>特征"
+            },
+            "session-start": {
+                "active": "[团期开始] 游戏大厅的玩家已满员，现在向你展示团期开始的检查清单！"
+            },
+            "player-notes": {
+                "updated": "战役笔记已更新！",
+                "no-character": "由于你未被分配也未选择任何角色，所以无法打开任何笔记"
+            }
+        },
+        "controls": {
+            "player-notes": {
+                "name": "打开角色“战役笔记”",
+                "description": "打开玩家角色卡中“战役笔记”部分的可编辑版本"
+            }
+        },
+        "display": {
+            "base-damage": "基础伤害骰",
+            "player-notes": {
+                "title": "战役笔记"
+            },
+            "team-members": "成员"
+        },
+        "items": {
+            "effects": {
+                "reaction-used": {
+                    "name": "效果：反应已使用"
+                }
+            }
+        }
+    },
+    "I18N.LANGUAGE": "简体中文"
+}
