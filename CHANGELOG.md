@@ -10,6 +10,9 @@
       - Players
       - GM
     - Both of these use the same trigger (IE player count)
+  - Added Chinese translation (🌐 @AlphaStarguide)
+  - **Updated**
+- Updated French translation (🌐 @rectulo)
 
 ## 0.10.2
 
