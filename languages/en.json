@@ -81,8 +81,12 @@
         },
         "start-session": {
           "journal": {
-            "name": "[Notify] Start of Session Checklist (Journal)",
-            "hint": "This feature when enough players join will open a start of session checklist to ensure you don't forget anything. (To activate this feature set this setting to a Journal or Journal Page UUID)"
+            "name": "[Notify] GM Start of Session Checklist (Journal)",
+            "hint": "This feature when enough players join will open a start of session checklist for the GM to ensure you don't forget anything. (To activate this feature set this setting to a Journal or Journal Page UUID)"
+          },
+          "journal-players": {
+            "name": "[Notify] Players Start of Session Checklist (Journal)",
+            "hint": "This feature when enough players join will open a start of session checklist for players to ensure the players don't forget anything. (To activate this feature set this setting to a Journal or Journal Page UUID)"
           },
           "players-needed": {
             "name": "[Notify] Start of Session Checklist (Players Needed)",
