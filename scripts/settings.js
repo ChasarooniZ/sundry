@@ -167,18 +167,6 @@ export function setupSettings() {
     },
   });
 
-  game.settings.register(MODULE_ID, "notify.start-session.journal", {
-    name: `${MODULE_ID}.module-settings.notify.start-session.journal.name`,
-    hint: `${MODULE_ID}.module-settings.notify.start-session.journal.hint`,
-    scope: "world",
-    config: true,
-    default: "",
-    type: String,
-    onChange: (value) => {
-      setupStartOfSession(value);
-    },
-  });
-
   game.settings.register(MODULE_ID, "notify.start-session.players-needed", {
     name: `${MODULE_ID}.module-settings.notify.start-session.players-needed.name`,
     hint: `${MODULE_ID}.module-settings.notify.start-session.players-needed.hint`,
@@ -191,6 +179,30 @@ export function setupSettings() {
       max: 10,
     },
     type: Number,
+  });
+
+  game.settings.register(MODULE_ID, "notify.start-session.journal", {
+    name: `${MODULE_ID}.module-settings.notify.start-session.journal.name`,
+    hint: `${MODULE_ID}.module-settings.notify.start-session.journal.hint`,
+    scope: "world",
+    config: true,
+    default: "",
+    type: String,
+    onChange: (value) => {
+      setupStartOfSession(value);
+    },
+  });
+
+  game.settings.register(MODULE_ID, "notify.start-session.journal-players", {
+    name: `${MODULE_ID}.module-settings.notify.start-session.journal-players.name`,
+    hint: `${MODULE_ID}.module-settings.notify.start-session.journal-players.hint`,
+    scope: "world",
+    config: true,
+    default: "",
+    type: String,
+    onChange: (value) => {
+      setupStartOfSession(value);
+    },
   });
 
   //TODO remove next version

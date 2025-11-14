@@ -2,16 +2,23 @@ import { getSetting } from "./helpers.js";
 import { MODULE_ID } from "../module.js";
 
 export function setupStartOfSession() {
-  if (!game.user.isGM) return;
   if (getPlayerAmountEnough("login")) {
-    startOfSessionNotification();
+    if (game.user.isGM) {
+      startOfSessionNotification('gm');
+    } else {
+      startOfSessionNotification('player');
+    }
   }
   Hooks.on("userConnected", userConnectionStartOfSessionHook);
 }
 
 async function userConnectionStartOfSessionHook(_user, isLogin) {
   if (isLogin && getPlayerAmountEnough("hook")) {
-    startOfSessionNotification();
+    if (game.user.isGM) {
+      startOfSessionNotification('gm');
+    } else {
+      startOfSessionNotification('player');
+    }
   }
 }
 
@@ -23,8 +30,8 @@ function getPlayerAmountEnough(situation) {
         getSetting("notify.start-session.players-needed");
 }
 
-async function startOfSessionNotification() {
-  const journalUUID = getSetting("notify.start-session.journal");
+async function startOfSessionNotification(type = 'gm') {
+  const journalUUID = type === 'gm' ? getSetting("notify.start-session.journal") : getSetting("notify.start-session.journal-players");
   if (!journalUUID) return null;
   const journal = await fromUuid(journalUUID);
   if (!journal) return null;

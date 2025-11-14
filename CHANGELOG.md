@@ -2,6 +2,18 @@
 
 - Add User Color to Message Header
 
+## 0.11.0
+
+- **New**
+  - `Start of Session Reminders`
+    - This feature has been split out into two separate reminder journal options: (🧠 @thebigham, @TheJoester)
+      - Players
+      - GM
+    - Both of these use the same trigger (IE player count)
+  - Added Chinese translation (🌐 @AlphaStarguide)
+  - **Updated**
+- Updated French translation (🌐 @rectulo)
+
 ## 0.10.2
 
 - Updated French translation (🌐 @rectulo)
