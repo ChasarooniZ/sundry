@@ -81,8 +81,12 @@
         },
         "start-session": {
           "journal": {
-            "name": "[Notifier] Liste de début de session (Journal)",
-            "hint": "Lorsque suffisamment de joueurs se connectent, cette fonctionnalité affichera une liste de vérification en début de session pour vous assurer de ne rien oublier. (Pour activer cette fonctionnalité, fixez ce paramètre sur un identifiant unique de journal ou de page de journal)"
+            "name": "[Notifier] Liste de vérification de début de partie pour le MJ (Journal)",
+            "hint": "Lorsque suffisamment de joueurs seront connectés, cette fonctionnalité affichera une liste de vérification de début de partie pour le MJ afin de s'assurer que rien n'est oublié. (Pour activer cette fonctionnalité, définissez ce paramètre sur un UUID de journal ou de page de journal.)"
+          },
+          "journal-players": {
+            "name": "[Notifier] Liste de vérification de début de partie pour les joueurs (Journal)",
+            "hint": "Lorsque suffisamment de joueurs se sont connectés, cette fonctionnalité affichera une liste de vérification en début de partie afin de s'assurer que les joueurs n'oublient rien. (Pour activer cette fonctionnalité, définissez ce paramètre sur un UUID de journal ou de page de journal.)"
           },
           "players-needed": {
             "name": "[Notification] Liste de début de session (Joueurs requis)",
