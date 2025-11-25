@@ -147,7 +147,8 @@
       "player-notes": {
         "title": "Campaign Notes"
       },
-      "team-members": "members"
+      "team-members": "members",
+      "property-runes": "Property Runes"
     },
     "items": {
       "effects": {

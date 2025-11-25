@@ -2,6 +2,11 @@
 
 - Add User Color to Message Header
 
+## 0.11.4
+
+- **Updated**
+  - `Display Property Runes` - Add localization of title
+
 ## 0.11.3
 
 - **Updated**
