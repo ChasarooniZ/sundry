@@ -1,20 +1,13 @@
 ## Unreleased
 
 - Add User Color to Message Header
-
-## 0.11.4
-
-- **Updated**
-  - `Display Property Runes` - Add localization of title
-
-## 0.11.3
-
 - **Updated**
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
 
 ## 0.11.2
 
 - **Updated**
+  - `Display Property Runes` - Add localization of title
   - Updated French translation (🌐 @rectulo)
   - Updated Chinese translation (🌐 @AlphaStarguide)
   - Updated Polish translation (🌐 @Lioheart)
