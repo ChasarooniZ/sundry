@@ -6,10 +6,12 @@ export function setupDisplayItemPropertyRunes(active) {
     if (active) {
         Hooks.on("renderArmorSheetPF2e", renderItemSheetPF2e)
         Hooks.on("renderWeaponSheetPF2e", renderItemSheetPF2e)
+        Hooks.on("renderActorSheetPF2e", renderActorSheetPF2e)
         Hooks.on("updateItem", clearItemCache)
     } else {
         Hooks.off("renderArmorSheetPF2e", renderItemSheetPF2e)
         Hooks.off("renderWeaponSheetPF2e", renderItemSheetPF2e)
+        Hooks.on("renderActorSheetPF2e", renderActorSheetPF2e)
         Hooks.off("updateItem", clearItemCache)
         runeHTMLCache.clear()
     }
@@ -21,6 +23,17 @@ function clearItemCache(item) {
         if (key.startsWith(itemUuid)) {
             runeHTMLCache.delete(key);
         }
+    }
+}
+
+async function renderActorSheetPF2e(sheet, html, info) {
+    const weapons = info.actor.items.documentsByType.weapon.filter(item => item?.system?.identification?.status === 'identified' && item?.system?.runes?.property?.length > 0);
+
+    for (const weapon of weapons) {
+        const runeHTML = await getItemRuneHTML(weapon?.system?.runes?.property, weapon?.type, weapon.uuid)
+        const descriptionHTML = html.querySelector(`ul[data-item-types="weapon,shield"] li[data-uuid='${weapon.uuid}'] div.description`)
+        if (!runeHTML) return;
+        descriptionHTML.insertAdjacentHTML('beforeend', runeHTML)
     }
 }
 
