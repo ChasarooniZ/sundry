@@ -2,6 +2,13 @@
 
 - Add User Color to Message Header
 
+## 0.11.2
+
+- **Updated**
+  - Updated French translation (🌐 @rectulo)
+  - Updated Chinese translation (🌐 @AlphaStarguide)
+  - Updated Polish translation (🌐 @Lioheart)
+
 ## 0.11.1
 
 - **Updated**
@@ -17,7 +24,7 @@
     - Both of these use the same trigger (IE player count)
   - Added Chinese translation (🌐 @AlphaStarguide)
   - **Updated**
-- Updated French translation (🌐 @rectulo)
+    - Updated French translation (🌐 @rectulo)
 
 ## 0.10.2
 
