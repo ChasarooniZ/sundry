@@ -2,6 +2,11 @@
 
 - Add User Color to Message Header
 
+## 0.11.1
+
+- **Updated**
+  - `Display Property Runes` - added a caching mechanism for the runes
+
 ## 0.11.0
 
 - **New**

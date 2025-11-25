@@ -1,19 +1,32 @@
 import { TEMPLATES } from "./const.js";
 
+const runeHTMLCache = new Map();
 
 export function setupDisplayItemPropertyRunes(active) {
     if (active) {
         Hooks.on("renderArmorSheetPF2e", renderItemSheetPF2e)
         Hooks.on("renderWeaponSheetPF2e", renderItemSheetPF2e)
+        Hooks.on("updateItem", clearItemCache)
     } else {
         Hooks.off("renderArmorSheetPF2e", renderItemSheetPF2e)
         Hooks.off("renderWeaponSheetPF2e", renderItemSheetPF2e)
+        Hooks.off("updateItem", clearItemCache)
+        runeHTMLCache.clear()
+    }
+}
+
+function clearItemCache(item) {
+    const itemUuid = item.uuid;
+    for (const key of runeHTMLCache.keys()) {
+        if (key.startsWith(itemUuid)) {
+            runeHTMLCache.delete(key);
+        }
     }
 }
 
 async function renderItemSheetPF2e(sheet, html, info) {
     if (info?.document?.system?.identification?.status === 'identified' && info?.document?.system?.runes?.property?.length > 0) {
-        const runeHTML = await getItemRuneHTML(info?.document?.system?.runes?.property, info?.document?.type)
+        const runeHTML = await getItemRuneHTML(info?.document?.system?.runes?.property, info?.document?.type, info.document.uuid)
         if (!runeHTML) return;
         insertHTML(html, runeHTML)
     }
@@ -25,14 +38,30 @@ function insertHTML(sheetHTML, runeHTML) {
 }
 
 
-async function getItemRuneHTML(runes, type) {
+async function getItemRuneHTML(runes, type, itemUuid) {
     if (runes?.length > 0) {
-        return await getItemRuneHTMLHelper(
+        const runesKey = runes.join(',');
+        const cacheKey = `${itemUuid}-${runesKey}`;
+
+        if (runeHTMLCache.has(cacheKey)) {
+            return runeHTMLCache.get(cacheKey);
+        }
+
+        const html = await getItemRuneHTMLHelper(
             runes.map(rune => ({
                 name: getNameLocalization(rune, type),
                 uuid: RUNE_LIST[rune] ?? rune
             }))
-        )
+        );
+
+        runeHTMLCache.set(cacheKey, html);
+
+        if (runeHTMLCache.size > 100) {
+            const firstKey = runeHTMLCache.keys().next().value;
+            runeHTMLCache.delete(firstKey);
+        }
+
+        return html;
     } else {
         return false;
     }
