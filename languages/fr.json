@@ -13,7 +13,7 @@
           "target-helper": {
             "roll": {
               "name": "[Colorier] PF2e toolbelt - Types de jets d'aide au ciblage",
-              "hint": "Coloriez la fonction 'Aide au ciblage' de 'PF2e Toolbelt' afin que chaque type de jet soit colorié"
+              "hint": "Coloriez la fonction 'Aide au ciblage' de 'PF2e Toolbelt' afin que chaque type de jet soit en couleur"
             }
           }
         }
@@ -33,12 +33,12 @@
       "hide": {
         "default-craft-checks": {
           "name": "[Cacher] Boutons de tests d'artisanat par défaut",
-          "hint": "Pour empêcher les joueurs d'utiliser l'artisanat par défaut plutôt que les boutons « Artisanat héroïque » s'ils utilisent cet add-on"
+          "hint": "Pour empêcher les joueurs d'utiliser l'artisanat par défaut plutôt que les boutons « Artisanat héroïque » en cas d'utilisation de cet ajout"
         },
         "header": {
           "button-text": {
             "name": "[Cacher] Texte du bouton d'en-tête",
-            "hint": "Cache le texte des boutons d'en-tête mais conserve leurs icônes intactes pour cela avec de nombreux modules"
+            "hint": "Cache le texte des boutons d'en-tête mais garde les icônes de nombreux modules"
           }
         },
         "sell-all-treasure": {
@@ -51,7 +51,7 @@
           "target-helper": {
             "roll": {
               "name": "[Surligner] PF2e toolbelt - jet non lancé d'aide au ciblage",
-              "hint": "Surligner les jets non effectués en les faisant briller dans la fonction 'Aide au ciblage' de 'PF2e Toolbelt' pour qu'il soit plus évident à lancer"
+              "hint": "Surligner les jets non effectués en les faisant briller dans la fonction 'Aide au ciblage' de 'PF2e Toolbelt' pour qu'il soit plus évident de les utiliser"
             }
           }
         },
@@ -81,8 +81,12 @@
         },
         "start-session": {
           "journal": {
-            "name": "[Notifier] Liste de début de session (Journal)",
-            "hint": "Lorsque suffisamment de joueurs se connectent, cette fonctionnalité affichera une liste de vérification en début de session pour vous assurer de ne rien oublier. (Pour activer cette fonctionnalité, fixez ce paramètre sur un identifiant unique de journal ou de page de journal)"
+            "name": "[Notifier] Liste de vérification de début de partie pour le MJ (Journal)",
+            "hint": "Lorsque suffisamment de joueurs seront connectés, cette fonctionnalité affichera une liste de vérification de début de partie pour le MJ afin de s'assurer que rien n'est oublié. (Pour activer cette fonctionnalité, définissez ce paramètre sur un UUID de journal ou de page de journal.)"
+          },
+          "journal-players": {
+            "name": "[Notifier] Liste de vérification de début de partie pour les joueurs (Journal)",
+            "hint": "Lorsque suffisamment de joueurs se sont connectés, cette fonctionnalité affichera une liste de vérification en début de partie afin de s'assurer que les joueurs n'oublient rien. (Pour activer cette fonctionnalité, définissez ce paramètre sur un UUID de journal ou de page de journal.)"
           },
           "players-needed": {
             "name": "[Notification] Liste de début de session (Joueurs requis)",
