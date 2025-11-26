@@ -1,6 +1,6 @@
 export function setuplanguageHandling(active) {
   Hooks[active ? "on" : "off"](
-    "renderCreatureSheetPF2e",
+    "renderNPCSheetPF2e",
     showRelevantLanguages
   );
 }
