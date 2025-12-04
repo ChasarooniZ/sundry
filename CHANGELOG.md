@@ -4,6 +4,10 @@
 - **Updated**
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
 
+## 0.11.3
+
+- Fixed error showing when languages couldn't be highlighted
+
 ## 0.11.2
 
 - **Updated**

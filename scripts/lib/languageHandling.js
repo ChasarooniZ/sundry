@@ -52,7 +52,7 @@ async function showRelevantLanguages(_sheet, html, info) {
       notKnowLanguageMembers,
       style,
     });
-
+    if (!langItem) return;
     langItem.classList.add(style);
     langItem.dataset.tooltip = tooltip;
   }
