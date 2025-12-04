@@ -6,7 +6,7 @@
 
 ## 0.11.3
 
-- Fixed error showing when languages couldn't be highlighted
+- Fixed error showing when languages couldn't be highlighted (💻 @Nythz)
 
 ## 0.11.2
 
