@@ -254,3 +254,57 @@ figure.paused figcaption {
     }
   }
 }
+
+.hero-point-picker .form-group {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.hero-point-picker .radio-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+  flex: 1 0 16%;
+  line-height: normal;
+  margin: 5px;
+}
+
+.hero-point-picker input[type="radio"] {
+  display: none;
+}
+
+.hero-point-picker img {
+  border: 0px;
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+  transition: outline 0.2s ease;
+}
+
+.hero-point-picker .item-name {
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  word-wrap: break-word;
+  max-width: 80px;
+}
+
+.hero-point-picker img.selected {
+  outline: 3px solid #4caf50;
+}
+
+.hero-point-picker img:hover {
+  outline: 2px solid #ccc;
+}
+
+.hero-point-picker img.selected:hover {
+  outline: 3px solid #4caf50;
+}
+
+.hero-point-picker progress {
+  margin-top: 3px;
+}

@@ -1,4 +1,14 @@
-export async function heroPointOnTheHour() {
+function heroPointSetterUpper() {
+  const heroPointConfig = {
+    random: true, // Picks a random Player
+    handout: true, // Pick a random player who can hand out a hero Point
+    voted: true, // Players all Vote
+    gmHandout: true, // GM gives it out
+  };
+  heroPointOnTheHour(heroPointConfig);
+}
+
+async function heroPointOnTheHour(cfg) {
   if (!game.user.isGM) return;
   // Get all users who are not GMs and not named "zCamera"
   const eligibleUsers = game.users.filter(
@@ -9,34 +19,31 @@ export async function heroPointOnTheHour() {
   if (eligibleUsers.length === 0) {
     ui.notifications.warn("No eligible players found!");
   } else {
+    const picked = {};
     // Hero Point Random
-    const randomUser2 =
-      eligibleUsers[Math.floor(Math.random() * eligibleUsers.length)];
-    const actor = randomUser2.character;
-    actor.update({
-      "system.resources.heroPoints.value": Math.min(
-        actor.system.resources.heroPoints.value + 1,
-        actor.system.resources.heroPoints.max
-      ),
-    });
+    if (cfg.random) {
+      picked.random = await heroPointRandomCharacter(eligibleUsers);
+    }
 
     // Pick a random user for granting a Hero point
-    const randomUser =
-      eligibleUsers[Math.floor(Math.random() * eligibleUsers.length)];
-    giveAllyHeroPoint(randomUser);
+    if (cfg.handout) {
+      picked.handout =
+        eligibleUsers[Math.floor(Math.random() * eligibleUsers.length)];
+      giveAllyHeroPoint(picked.handout);
+    }
 
     // Send their name to chat
     ChatMessage.create({
       content: `<h3>Hero Points!</h3>
       <b><img src="${
-        randomUser2?.character?.prototypeToken.texture.src
+        picked.random?.character?.prototypeToken.texture.src
       }" height="30">${
-        randomUser2?.character?.name ?? randomUser2?.name
+        picked.random?.character?.name ?? picked.random?.name
       }</b> is the luckiest <u>+1 Hero Point</u><hr>
         <b><img src="${
-          randomUser?.character?.prototypeToken.texture.src
+          picked.handout?.character?.prototypeToken.texture.src
         }" height="30">${
-        randomUser?.character?.name ?? randomUser?.name
+        picked.handout?.character?.name ?? picked.handout?.name
       }</b> has been granted the awesome power to give a hero point
       </ul>`,
     });
@@ -77,67 +84,12 @@ async function giveAllyHeroPoint(user) {
     .join("");
 
   const content = `
-<style>
-    .item-picker .form-group {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        align-items: flex-start;
-    }
-
-    .item-picker .radio-label {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        justify-items: center;
-        flex: 1 0 16%;
-        line-height: normal;
-        margin: 5px;
-    }
-
-    .item-picker input[type="radio"] {
-        display: none;
-    }
-
-    .item-picker img {
-        border: 0px;
-        width: 75px;
-        height: 75px;
-        cursor: pointer;
-        transition: outline 0.2s ease;
-    }
-
-    .item-picker .item-name {
-        margin-top: 5px;
-        font-size: 12px;
-        font-weight: bold;
-        word-wrap: break-word;
-        max-width: 80px;
-    }
-
-    .item-picker img.selected {
-        outline: 3px solid #4CAF50;
-    }
-
-    .item-picker img:hover {
-        outline: 2px solid #ccc;
-    }
-
-    .item-picker img.selected:hover {
-        outline: 3px solid #4CAF50;
-    }
-
-    .item-picker progress {
-        margin-top: 3px;
-    }
-</style>
-<form class="item-picker">
-    <div class="item-picker form-group" id="characters">
-        ${radioOptions}
-    </div>
-</form>
-`;
+    <form class="hero-point-picker">
+        <div class="hero-point-picker form-group" id="characters">
+            ${radioOptions}
+        </div>
+    </form>
+  `;
 
   const res = await foundry.applications.api.DialogV2.query(user, "wait", {
     window: {
@@ -161,8 +113,7 @@ async function giveAllyHeroPoint(user) {
       },
       {
         action: "cancel",
-        label: "Cancel",
-        callback: () => null,
+        label: "Cancel"
       },
     ],
     render: (event) => {
@@ -191,7 +142,19 @@ async function giveAllyHeroPoint(user) {
   });
 
   const actor = await fromUuid(res);
-  actor.update({
+  giveActorHeroPoint(actor)
+}
+
+async function heroPointRandomCharacter(params) {
+  const { eligibleUsers } = params;
+  const user = eligibleUsers[Math.floor(Math.random() * eligibleUsers.length)];
+  const actor = picked.random.character;
+  giveActorHeroPoint(actor);
+  return user;
+}
+
+async function giveActorHeroPoint(actor) {
+  return await actor.update({
     "system.resources.heroPoints.value": Math.min(
       actor.system.resources.heroPoints.value + 1,
       actor.system.resources.heroPoints.max
