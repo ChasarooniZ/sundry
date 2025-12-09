@@ -155,6 +155,51 @@ export function setupSettings() {
     },
   });
 
+  game.settings.register(MODULE_ID, "notify.hero-points.time-between", {
+    name: `${MODULE_ID}.module-settings.notify.hero-points.time-between.name`,
+    hint: `${MODULE_ID}.module-settings.notify.hero-points.time-between.hint`,
+    scope: "world",
+    config: game.system.id === "pf2e",
+    default: 60,
+    type: Number,
+  });
+
+  game.settings.register(MODULE_ID, "notify.hero-points.random", {
+    name: `${MODULE_ID}.module-settings.notify.hero-points.random.name`,
+    hint: `${MODULE_ID}.module-settings.notify.hero-points.random.hint`,
+    scope: "world",
+    config: game.system.id === "pf2e",
+    default: false,
+    type: Boolean,
+  });
+
+  game.settings.register(MODULE_ID, "notify.hero-points.handout", {
+    name: `${MODULE_ID}.module-settings.notify.hero-points.handout.name`,
+    hint: `${MODULE_ID}.module-settings.notify.hero-points.handout.hint`,
+    scope: "world",
+    config: game.system.id === "pf2e",
+    default: false,
+    type: Boolean,
+  });
+
+  game.settings.register(MODULE_ID, "notify.hero-points.gm-handout", {
+    name: `${MODULE_ID}.module-settings.notify.hero-points.gm-handout.name`,
+    hint: `${MODULE_ID}.module-settings.notify.hero-points.gm-handout.hint`,
+    scope: "world",
+    config: game.system.id === "pf2e",
+    default: false,
+    type: Boolean,
+  });
+
+  game.settings.register(MODULE_ID, "notify.hero-points.voted", {
+    name: `${MODULE_ID}.module-settings.notify.hero-points.voted.name`,
+    hint: `${MODULE_ID}.module-settings.notify.hero-points.voted.hint`,
+    scope: "world",
+    config: game.system.id === "pf2e",
+    default: false,
+    type: Boolean,
+  });
+
   game.settings.register(MODULE_ID, "notify.spellstrike.recharge", {
     name: `${MODULE_ID}.module-settings.notify.spellstrike.recharge.name`,
     hint: `${MODULE_ID}.module-settings.notify.spellstrike.recharge.hint`,
@@ -301,5 +346,5 @@ export function registerKeybindings() {
 }
 
 export function loadAllTemplates() {
-  loadTemplates([TEMPLATES.RUNES_ON_ITEM, TEMPLATES.BASE_DAMAGE]);
+  loadTemplates(Object.values(TEMPLATES));
 }

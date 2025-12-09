@@ -1,0 +1,28 @@
+<div>
+    <h3>{{localize "sundry.message.hero-point.title"}}</h3>
+      {{#if picked.random}}
+        <img src="{{
+            picked.random?.character?.prototypeToken.texture.src
+        }}" height="30">
+        {{localize "sundry.message.hero-point.random-message" name=picked.random?.character?.name ?? picked.random?.name}}
+        <hr>
+      {{/if}}
+      {{#if picked.handout}}
+        <img src="${
+          picked.handout?.character?.prototypeToken.texture.src
+        }" height="30">
+        {{localize "sundry.message.hero-point.handout-message" name=picked.handout?.character?.name ?? picked.handout?.name target=name=picked.handoutReceiver?.character?.name ?? picked.handoutReceiver?.name}}
+      {{/if}}
+      {{#if picked.gmHandout}}
+        <img src="${
+          picked.handout?.character?.prototypeToken.texture.src
+        }" height="30">
+        {{localize "sundry.message.hero-point.gm-handout-message" name=picked.gmHandout?.character?.name ?? picked.gmHandout?.name}}
+      {{/if}}
+      {{#if picked.voted}}
+        <img src="${
+          picked.handout?.character?.prototypeToken.texture.src
+        }" height="30">
+        {{localize "sundry.message.hero-point.gm-handout-message" name=picked.voted?.character?.name ?? picked.voted?.name}}
+      {{/if}}
+</div>

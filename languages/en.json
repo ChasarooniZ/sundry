@@ -92,6 +92,28 @@
             "name": "[Notify] Start of Session Checklist (Players Needed)",
             "hint": "This is the minimum amount of Non-GM players needed to be active in the game for the checklist to show up (defaults to Player count - 1)"
           }
+        },
+        "hero-points": {
+          "time-between": {
+            "name": "[Notify] Hero Point Handout - Time Between",
+            "hint": "How long should the game wait before doing another hero point handout (in seconds). Note the handout delay will be reset if it is manually triggered. And if goes to activate and there aren't enough players it will cancel out"
+          },
+          "random": {
+            "name": "[Notify] Hero Point Handout - Do Random",
+            "hint": "Picks an assigned character to a player at random to hand out a hero point to"
+          },
+          "handout": {
+            "name": "[Notify] Hero Point Handout - Do Handout",
+            "hint": "Picks a player at random to handout a hero point to another player"
+          },
+          "gm-handout": {
+            "name": "[Notify] Hero Point Handout - Do GM Handout",
+            "hint": "Prompts the GM to hand out a hero point to a player"
+          },
+          "voted": {
+            "name": "[Notify] Hero Point Handout - Do Vote",
+            "hint": "Prompts all players with assigned characters to vote for who should receive the hero point, and then if there is a tie randomly selected between the highest voted "
+          }
         }
       },
       "track": {
@@ -149,6 +171,14 @@
       },
       "team-members": "members",
       "property-runes": "Property Runes"
+    },
+    "message": {
+      "hero-point": {
+        "title": "Hero Points!",
+        "random-message": "<b>{name}</b> is the luckiest <u>+1 Hero Point</u>",
+        "handout-message": "<b>{name}</b> has been granted the awesome power to give a hero point, which they gave to <b>{target}</b>",
+        "gm-handout-message": "<b>{name}</b> has been given a hero point"
+      }
     },
     "items": {
       "effects": {

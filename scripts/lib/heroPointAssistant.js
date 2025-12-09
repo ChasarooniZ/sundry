@@ -1,4 +1,6 @@
-function heroPointSetterUpper() {
+import { TEMPLATES } from "./const.js";
+
+export function heroPointSetterUpper() {
   const heroPointConfig = {
     random: true, // Picks a random Player
     handout: true, // Pick a random player who can hand out a hero Point
@@ -29,28 +31,50 @@ async function heroPointOnTheHour(cfg) {
     if (cfg.handout) {
       picked.handout =
         eligibleUsers[Math.floor(Math.random() * eligibleUsers.length)];
-      giveAllyHeroPoint(picked.handout);
+      picked.handoutReceiver = giveAllyHeroPoint(picked.handout);
     }
 
-    // Send their name to chat
+    // GM Picks someone to give the Hero Point to
+    if (cfg.gmHandout) {
+      picked.gmHandoutReceiver = giveAllyHeroPoint(game.user);
+    }
+
+    // Team Picks Hero Point
+    if (cfg.voted) {
+      picked.voted = voteToGiveAllyHeroPoint();
+    }
+
+    // Send their names to chat
     ChatMessage.create({
-      content: `<h3>Hero Points!</h3>
-      <b><img src="${
-        picked.random?.character?.prototypeToken.texture.src
-      }" height="30">${
-        picked.random?.character?.name ?? picked.random?.name
-      }</b> is the luckiest <u>+1 Hero Point</u><hr>
-        <b><img src="${
-          picked.handout?.character?.prototypeToken.texture.src
-        }" height="30">${
-        picked.handout?.character?.name ?? picked.handout?.name
-      }</b> has been granted the awesome power to give a hero point
-      </ul>`,
+      content: await renderTemplate(TEMPLATES.HERO_POINT_MESSAGE, cfg),
     });
   }
 }
 
-async function giveAllyHeroPoint(user) {
+async function voteToGiveAllyHeroPoint(includeGM = false) {
+  let users = game.users.filter((u) => u.character);
+  const votePromises = [];
+  for (const user of users) {
+    votePromises.push(giveAllyHeroPoint(user, true));
+  }
+  const res = await Promise.all(votePromises);
+  const count = [];
+  for (const actor of res) {
+    const prevIndex = count.findIndex((it) => it.actor.uuid === actor.uuid);
+    if (prev !== -1) {
+      count[prevIndex].amt = count[prevIndex].amt + 1;
+    } else {
+      count.push({ amt: 1, actor });
+    }
+  }
+  const maxAmt = Math.max(...count.map((it) => it.amt));
+  const actors = count.filter((it) => it.amt === maxAmt).map((it) => it.actor);
+  const winner = actors[Math.floor(Math.random() * actors.length)];
+  giveActorHeroPoint(winner);
+  return winner;
+}
+
+async function giveAllyHeroPoint(user, giveHeroPoint = true) {
   let users = game.users.filter((u) => u.character);
   let choices = users
     .sort(
@@ -113,7 +137,7 @@ async function giveAllyHeroPoint(user) {
       },
       {
         action: "cancel",
-        label: "Cancel"
+        label: "Cancel",
       },
     ],
     render: (event) => {
@@ -142,7 +166,10 @@ async function giveAllyHeroPoint(user) {
   });
 
   const actor = await fromUuid(res);
-  giveActorHeroPoint(actor)
+  if (giveHeroPoint) {
+    giveActorHeroPoint(actor);
+  }
+  return actor;
 }
 
 async function heroPointRandomCharacter(params) {

@@ -29,5 +29,6 @@ export const QUERY = {
 
 export const TEMPLATES = {
     RUNES_ON_ITEM: `modules/sundry/templates/runes.hbs`,
-    BASE_DAMAGE: `modules/sundry/templates/baseDamage.hbs`
+    BASE_DAMAGE: `modules/sundry/templates/baseDamage.hbs`,
+    HERO_POINT_MESSAGE: `modules/sundry/templates/heroPointMessage.hbs`
 }
