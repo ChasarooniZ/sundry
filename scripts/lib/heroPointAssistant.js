@@ -1,11 +1,12 @@
 import { TEMPLATES } from "./const.js";
+import { getSetting } from "./helpers.js";
 
 export function heroPointSetterUpper() {
   const heroPointConfig = {
-    random: true, // Picks a random Player
-    handout: true, // Pick a random player who can hand out a hero Point
-    voted: true, // Players all Vote
-    gmHandout: true, // GM gives it out
+    random: getSetting("notify.hero-points.random"), // Picks a random Player
+    handout: getSetting("notify.hero-points.handout"), // Pick a random player who can hand out a hero Point
+    voted: getSetting("notify.hero-points.voted"), // Players all Vote
+    gmHandout: getSetting("notify.hero-points.gm-handout"), // GM gives it out
   };
   heroPointOnTheHour(heroPointConfig);
 }
