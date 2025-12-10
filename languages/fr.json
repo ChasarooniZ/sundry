@@ -123,7 +123,7 @@
     "controls": {
       "player-notes": {
         "name": "Ouvrir les 'Notes de campagne' du personnage",
-        "description": "Ouvre une version modifiable de la section 'Notes de campagne' de la feuille de personnage du personnage assigné au joueur"
+        "hint": "Ouvre une version modifiable de la section 'Notes de campagne' de la feuille de personnage du personnage assigné au joueur"
       }
     },
     "notification": {

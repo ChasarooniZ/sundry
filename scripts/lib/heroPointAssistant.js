@@ -1,7 +1,7 @@
 import { TEMPLATES } from "./const.js";
 import { getSetting } from "./helpers.js";
 
-export function heroPointSetterUpper() {
+export function deliverHeroPoints() {
   const heroPointConfig = {
     random: getSetting("notify.hero-points.random"), // Picks a random Player
     handout: getSetting("notify.hero-points.handout"), // Pick a random player who can hand out a hero Point

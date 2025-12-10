@@ -123,7 +123,7 @@
     "controls": {
       "player-notes": {
         "name": "Otwórz „Notatki dotyczące kampanii” postaci",
-        "description": "Otwiera edytowalną wersję sekcji „Notatki z kampanii” przypisanej postaci gracza w jej karcie postaci"
+        "hint": "Otwiera edytowalną wersję sekcji „Notatki z kampanii” przypisanej postaci gracza w jej karcie postaci"
       }
     },
     "notification": {

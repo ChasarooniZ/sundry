@@ -1,4 +1,5 @@
 import { TEMPLATES } from "./lib/const.js";
+import { deliverHeroPoints } from "./lib/heroPointAssistant.js";
 import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
 import { setuplanguageHandling } from "./lib/languageHandling.js";
@@ -10,10 +11,7 @@ import {
   setupHighlightToolbeltRollSaves,
 } from "./lib/pf2eToolbelt.js";
 import { setupReactionTracker } from "./lib/reactionTracker.js";
-import {
-  hideDefaultCraftChecks,
-  hideSellAllTreasure,
-} from "./lib/sheetTweaks.js";
+import { hideSellAllTreasure } from "./lib/sheetTweaks.js";
 import { setupDisplayWeaponDamage } from "./lib/showBaseDamage.js";
 import { minifySimpleRequests } from "./lib/simpleRequests.js";
 import { setupStartOfSession } from "./lib/startOfSession.js";
@@ -343,6 +341,35 @@ export function registerKeybindings() {
     //   reservedModifiers: ["Shift"], // On ALT, the notification is permanent instead of temporary
     precedence: CONST.KEYBINDING_PRECEDENCE.NORMAL,
   });
+
+  game.keybindings.register(MODULE_ID, "hero-points", {
+    name: game.i18n.localize(`${MODULE_ID}.controls.hero-points.name`),
+    hint: game.i18n.localize(`${MODULE_ID}.controls.hero-points.hint`),
+    editable: [
+      {
+        key: "KeyH",
+        modifiers: "Alt",
+      },
+    ],
+    onDown: (context) => {
+      if (context.isShift) {
+        deliverHeroPoints();
+      }
+    },
+    onUp: () => {},
+    restricted: false, // Restrict this Keybinding to gamemaster only?
+    //   reservedModifiers: ["Shift"], // On ALT, the notification is permanent instead of temporary
+    precedence: CONST.KEYBINDING_PRECEDENCE.NORMAL,
+  });
+}
+
+export function setupAPI() {
+  game[MODULE_ID] = {
+    api: {
+      deliverHeroPoints,
+      openPlayerNotes,
+    },
+  };
 }
 
 export function loadAllTemplates() {

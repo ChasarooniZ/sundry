@@ -14,6 +14,10 @@
   --sundry-shield-raise: #dba143;
 
   --sundry-hero-points: #e4be37;
+
+  --sundry-disposition-party: #33bc4e;
+  --sundry-disposition-neutral: #f1d836;
+  --sundry-disposition-opposition: #e72124;
 }
 
 .sundry-pf2e-hud-persistent-colorized {
@@ -86,11 +90,33 @@
   }
 
   [data-sidebar="spells"] i {
-    --icon-color: #921df2;
+    --icon-color: #a14fe4;
   }
 
   [data-sidebar="skills"] i {
     --icon-color: #47a8a9;
+  }
+
+  [data-sidebar="feats"] i {
+    --icon-color: #2e5ddf;
+  }
+
+  [data-panel="details"] [data-section="speeds"] {
+    &[data-speed="climb"] i {
+      --icon-color: #ca9df0;
+    }
+
+    &[data-speed="swim"] i {
+      --icon-color: #9dedf0;
+    }
+
+    &[data-speed="fly"] i {
+      --icon-color: #f0ea9d;
+    }
+
+    &[data-speed="burrow"] i {
+      --icon-color: #d8ac7b;
+    }
   }
 
   /*
@@ -127,9 +153,26 @@
     --icon-color: var(--sundry-athletics);
   }
 
-  /**[data-section="ac"] i {
-        --icon-color: #FFFFFF;
-    }*/
+  /** Party */
+  [data-section="alliance"][data-value="1"] i {
+    --icon-color: var(--sundry-disposition-party);
+  }
+
+  /** Neutral */
+  [data-section="alliance"][data-value="2"] i {
+    --icon-color: var(--sundry-disposition-neutral);
+  }
+
+  /** Opposition */
+  [data-section="alliance"][data-value="3"] i {
+    --icon-color: var(--sundry-disposition-opposition);
+  }
+
+  [data-section="ac"] {
+    i.fa-solid.fa-helmet-battle {
+      --icon-color: var(--sundry-shield-raise);
+    }
+  }
 
   [data-section="shield"] {
     i.fa-shield.fa-regular {

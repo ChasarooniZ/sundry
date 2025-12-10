@@ -4,6 +4,14 @@
 - **Updated**
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
 
+## 0.12.0
+
+- **Updated**
+  - `Colorize PF2e HUD`
+    - Added some more colors to some sections
+  - `Controls`
+    - Fixed issue where description wasn't being localized
+
 ## 0.11.3
 
 - Fixed error showing when languages couldn't be highlighted (💻 @Nythz)
