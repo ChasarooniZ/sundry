@@ -25,7 +25,7 @@ async function heroPointOnTheHour(cfg) {
     const picked = {};
     // Hero Point Random
     if (cfg.random) {
-      picked.random = await heroPointRandomCharacter(eligibleUsers);
+      picked.random = await heroPointRandomCharacter({ eligibleUsers });
     }
 
     // Pick a random user for granting a Hero point
@@ -141,20 +141,24 @@ async function giveAllyHeroPoint(user, giveHeroPoint = true) {
         label: "Cancel",
       },
     ],
+
     render: (event) => {
       const html = event.target.element;
 
-      $(html)
-        .find("img")
-        .on("click", function () {
-          const uuid = $(this).data("uuid");
+      html.addEventListener("click", (e) => {
+        const img = e.target.closest("img");
+        if (!img) return;
 
-          const radio = $(html).find(`input[value="${uuid}"]`);
-          radio.prop("checked", true);
+        const uuid = img.dataset.uuid;
+        const radio = html.querySelector(`input[value="${uuid}"]`);
 
-          $(html).find("img").removeClass("selected");
-          $(this).addClass("selected");
-        });
+        if (radio) radio.checked = true;
+
+        html
+          .querySelectorAll("img")
+          .forEach((i) => i.classList.remove("selected"));
+        img.classList.add("selected");
+      });
     },
     submit: async (result) => {
       if (result) {
@@ -176,7 +180,7 @@ async function giveAllyHeroPoint(user, giveHeroPoint = true) {
 async function heroPointRandomCharacter(params) {
   const { eligibleUsers } = params;
   const user = eligibleUsers[Math.floor(Math.random() * eligibleUsers.length)];
-  const actor = picked.random.character;
+  const actor = user.character;
   giveActorHeroPoint(actor);
   return user;
 }

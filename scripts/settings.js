@@ -153,15 +153,6 @@ export function setupSettings() {
     },
   });
 
-  game.settings.register(MODULE_ID, "notify.hero-points.time-between", {
-    name: `${MODULE_ID}.module-settings.notify.hero-points.time-between.name`,
-    hint: `${MODULE_ID}.module-settings.notify.hero-points.time-between.hint`,
-    scope: "world",
-    config: game.system.id === "pf2e",
-    default: 60,
-    type: Number,
-  });
-
   game.settings.register(MODULE_ID, "notify.hero-points.random", {
     name: `${MODULE_ID}.module-settings.notify.hero-points.random.name`,
     hint: `${MODULE_ID}.module-settings.notify.hero-points.random.hint`,
@@ -196,6 +187,15 @@ export function setupSettings() {
     config: game.system.id === "pf2e",
     default: false,
     type: Boolean,
+  });
+
+    game.settings.register(MODULE_ID, "notify.hero-points.time-between", {
+    name: `${MODULE_ID}.module-settings.notify.hero-points.time-between.name`,
+    hint: `${MODULE_ID}.module-settings.notify.hero-points.time-between.hint`,
+    scope: "world",
+    config: game.system.id === "pf2e",
+    default: 60,
+    type: Number,
   });
 
   game.settings.register(MODULE_ID, "notify.spellstrike.recharge", {
