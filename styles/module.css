@@ -6,7 +6,7 @@
   --sundry-will: #5c6bc0;
   --sundry-fortitude: #43a047;
 
-  --sundry-perception: #4680cc;
+  --sundry-perception: #548ad1;
   --sundry-stealth: #a280cc;
   --sundry-athletics: #cd5537;
 
@@ -98,7 +98,7 @@
   }
 
   [data-sidebar="feats"] i {
-    --icon-color: #2e5ddf;
+    --icon-color: #4f74db;
   }
 
   [data-panel="details"] [data-section="speeds"] {

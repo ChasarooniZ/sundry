@@ -348,16 +348,14 @@ export function registerKeybindings() {
     editable: [
       {
         key: "KeyH",
-        modifiers: "Alt",
+        modifiers: ["Alt"],
       },
     ],
     onDown: (context) => {
-      if (context.isShift) {
-        deliverHeroPoints();
-      }
+      deliverHeroPoints();
     },
     onUp: () => {},
-    restricted: false, // Restrict this Keybinding to gamemaster only?
+    restricted: true, // Restrict this Keybinding to gamemaster only?
     //   reservedModifiers: ["Shift"], // On ALT, the notification is permanent instead of temporary
     precedence: CONST.KEYBINDING_PRECEDENCE.NORMAL,
   });
