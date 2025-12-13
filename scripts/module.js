@@ -22,6 +22,7 @@ import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 import { setupPauseReplacement } from "./lib/replacePauseInfo.js";
 import { setupStartOfSession } from "./lib/startOfSession.js";
 import { setuplanguageHandling } from "./lib/languageHandling.js";
+import { setupDuelHooks } from "./lib/duel.js";
 
 export const MODULE_ID = "sundry";
 
@@ -60,6 +61,9 @@ Hooks.once("ready", async function () {
 
   // if (getSetting('message.user-color'))
   //     setupMessageUserColor();
+
+  // Handling
+  setupDuelHooks();
 
   //Minify
   if (getSetting("minify.simple-requests")) minifySimpleRequests();
