@@ -3,6 +3,11 @@
 - Add User Color to Message Header
 - **Updated**
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
+ 
+## 0.11.5
+
+- **Updated**
+  - Updated French translation (🌐 @rectulo)
 
 ## 0.11.4
 
