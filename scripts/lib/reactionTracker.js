@@ -41,7 +41,8 @@ async function usedReaction(message) {
     (message?.item?.system?.actionType?.value === "reaction" ||
       message?.item?.system?.time?.value === "reaction") &&
     message?.actor?.combatant &&
-    !message?.flags?.pf2e?.context?.type &&
+    (message?.flags?.pf2e?.context?.type === "self-effect" ||
+      !message?.flags?.pf2e?.context?.type) &&
     message.actor
   ) {
     reactionUsed([message.actor], false);

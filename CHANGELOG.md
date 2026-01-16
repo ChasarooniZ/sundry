@@ -4,6 +4,11 @@
 - **Updated**
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
 
+## 0.11.4
+
+- **Updated**
+  - `Reaction Checker` now checks `self-effects` as well
+
 ## 0.11.3
 
 - Fixed error showing when languages couldn't be highlighted (💻 @Nythz)
