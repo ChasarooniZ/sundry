@@ -3,11 +3,10 @@
 - Add User Color to Message Header
 - **Updated**
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
- 
-## 0.11.5
 
-- **Updated**
-  - Updated French translation (🌐 @rectulo)
+## 0.12.1
+
+- Actually included the packs
 
 ## 0.12.0
 
@@ -23,6 +22,11 @@
           - **Mummy**
           - **Ghost** (flight speed adjustment is WIP)
           - **Zombie** (does not adjust Max Health atm)
+
+## 0.11.5
+
+- **Updated**
+  - Updated French translation (🌐 @rectulo)
 
 ## 0.11.4
 
