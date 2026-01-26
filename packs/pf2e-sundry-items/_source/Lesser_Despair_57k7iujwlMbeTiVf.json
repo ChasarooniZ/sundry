@@ -1,95 +1,95 @@
 {
-  "name": "Lesser Despair",
-  "type": "action",
-  "effects": [],
-  "system": {
-    "description": {
-      "gm": "",
-      "value": "<p>30 feet. Living creatures of the mummy creature's level or lower are @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{frightened 1} while in its despair aura. They can't naturally recover from this fear while in the area but recover instantly once they leave.</p>"
-    },
-    "rules": [
-      {
-        "key": "Aura",
-        "radius": 30,
-        "appearance": {
-          "border": {
-            "alpha": 0.7
-          }
-        },
-        "traits": [
-          "aura",
-          "mental",
-          "divine",
-          "emotion",
-          "fear"
-        ],
-        "effects": [
-          {
-            "uuid": "Compendium.sundry.pf2e-sundry-items.Item.73Ge0wMHWA1SuneD",
-            "affects": "enemies"
-          }
-        ]
-      }
-    ],
-    "slug": null,
-    "_migration": {
-      "version": 0.954,
-      "previous": {
-        "schema": 0.932,
-        "foundry": "13.351",
-        "system": "7.9.1"
-      }
-    },
-    "traits": {
-      "otherTags": [],
-      "value": [
-        "aura",
-        "divine",
-        "emotion",
-        "fear",
-        "mental"
-      ]
-    },
-    "publication": {
-      "title": "",
-      "authors": "",
-      "license": "OGL",
-      "remaster": false
-    },
-    "actionType": {
-      "value": "passive"
-    },
-    "category": "offensive",
-    "actions": {
-      "value": null
-    },
-    "deathNote": false
-  },
-  "img": "systems/pf2e/icons/default-icons/action.svg",
-  "folder": "ErSkeeSWJRup5u2m",
-  "flags": {
-    "scene-packer": {
-      "hash": "e17070b0f3ad9e6dcf93923b48a7146daad6847b",
-      "sourceId": "Item.7MvZ4caOu1wUS11z"
-    },
-    "core": {}
-  },
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "coreVersion": "13.351",
-    "systemId": "pf2e",
-    "systemVersion": "7.9.1",
-    "createdTime": 1769467185762,
-    "modifiedTime": 1769467401869,
-    "lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
-  },
-  "ownership": {
-    "default": 0,
-    "vj8VUT8j7Wtzy3Y2": 3
-  },
-  "_id": "57k7iujwlMbeTiVf",
-  "sort": 0,
-  "_key": "!items!57k7iujwlMbeTiVf"
+	"name": "Lesser Despair",
+	"type": "action",
+	"effects": [],
+	"system": {
+		"description": {
+			"gm": "",
+			"value": "<p>30 feet. Living creatures of the mummy creature's level or lower are @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{frightened 1} while in its despair aura. They can't naturally recover from this fear while in the area but recover instantly once they leave.</p>"
+		},
+		"rules": [
+			{
+				"key": "Aura",
+				"radius": 30,
+				"appearance": {
+					"border": {
+						"alpha": 0.7
+					}
+				},
+				"traits": [
+					"aura",
+					"mental",
+					"divine",
+					"emotion",
+					"fear"
+				],
+				"effects": [
+					{
+						"uuid": "Compendium.sundry.pf2e-sundry-items.Item.73Ge0wMHWA1SuneD",
+						"affects": "enemies"
+					}
+				]
+			}
+		],
+		"slug": null,
+		"_migration": {
+			"version": 0.954,
+			"previous": {
+				"schema": 0.932,
+				"foundry": "13.351",
+				"system": "7.9.1"
+			}
+		},
+		"traits": {
+			"otherTags": [],
+			"value": [
+				"aura",
+				"divine",
+				"emotion",
+				"fear",
+				"mental"
+			]
+		},
+		"publication": {
+			"title": "",
+			"authors": "",
+			"license": "OGL",
+			"remaster": false
+		},
+		"actionType": {
+			"value": "passive"
+		},
+		"category": "offensive",
+		"actions": {
+			"value": null
+		},
+		"deathNote": false
+	},
+	"img": "systems/pf2e/icons/default-icons/action.svg",
+	"folder": "ErSkeeSWJRup5u2m",
+	"flags": {
+		"scene-packer": {
+			"hash": "e17070b0f3ad9e6dcf93923b48a7146daad6847b",
+			"sourceId": "Item.7MvZ4caOu1wUS11z"
+		},
+		"core": {}
+	},
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.9.1",
+		"createdTime": 1769467185762,
+		"modifiedTime": 1769467401869,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"_id": "57k7iujwlMbeTiVf",
+	"sort": 0,
+	"_key": "!items!57k7iujwlMbeTiVf"
 }

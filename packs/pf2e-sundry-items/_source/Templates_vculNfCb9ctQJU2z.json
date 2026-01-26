@@ -1,23 +1,23 @@
 {
-  "type": "Item",
-  "folder": null,
-  "name": "Templates",
-  "color": "#d08d2f",
-  "sorting": "a",
-  "_id": "vculNfCb9ctQJU2z",
-  "description": "",
-  "sort": 0,
-  "flags": {},
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "coreVersion": "13.351",
-    "systemId": "pf2e",
-    "systemVersion": "7.9.1",
-    "createdTime": 1769448405541,
-    "modifiedTime": 1769448405541,
-    "lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
-  },
-  "_key": "!folders!vculNfCb9ctQJU2z"
+	"type": "Item",
+	"folder": null,
+	"name": "Templates",
+	"color": "#d08d2f",
+	"sorting": "a",
+	"_id": "vculNfCb9ctQJU2z",
+	"description": "",
+	"sort": 0,
+	"flags": {},
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.9.1",
+		"createdTime": 1769448405541,
+		"modifiedTime": 1769448405541,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"_key": "!folders!vculNfCb9ctQJU2z"
 }

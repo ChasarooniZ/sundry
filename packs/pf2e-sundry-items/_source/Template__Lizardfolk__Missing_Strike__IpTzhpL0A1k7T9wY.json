@@ -1,84 +1,84 @@
 {
-  "folder": "P80OGINhj6xM6f4M",
-  "name": "Template: Lizardfolk (Missing Strike)",
-  "type": "action",
-  "effects": [],
-  "system": {
-    "_migration": {
-      "version": 0.954,
-      "previous": null
-    },
-    "description": {
-      "value": "<p>Lizardfolk recently began to discover and adapt to different cultures while bringing in their own. Lizardfolk value patience and seek guidance in the stars above. They are able to adapt to almost any environment, but generally prefer to be near the water.</p><ul><li>Replace the human trait with the lizardfolk trait.</li><li>Add the Iruxi language.</li><li>Add a swim Speed of 15 feet.</li><li>Replace any fist attacks with claw attacks. They deal slashing damage instead of bludgeoning.</li><li>Add the following abilities.</li><li><p>@UUID[Compendium.sundry.pf2e-sundry-items.Item.tt77ZEGEiA1USpnL]</p></li></ul>",
-      "gm": ""
-    },
-    "publication": {
-      "title": "Pathfinder NPC Core",
-      "authors": "",
-      "license": "ORC",
-      "remaster": true
-    },
-    "rules": [
-      {
-        "key": "ActiveEffectLike",
-        "mode": "add",
-        "path": "system.traits.value",
-        "value": "lizardfolk"
-      },
-      {
-        "key": "ActiveEffectLike",
-        "mode": "remove",
-        "path": "system.traits.value",
-        "value": "human"
-      },
-      {
-        "key": "ActiveEffectLike",
-        "mode": "add",
-        "path": "system.details.languages.value",
-        "value": "iruxi"
-      },
-      {
-        "key": "BaseSpeed",
-        "selector": "swim",
-        "value": 15
-      },
-      {
-        "key": "GrantItem",
-        "uuid": "Compendium.sundry.pf2e-sundry-items.Item.tt77ZEGEiA1USpnL"
-      }
-    ],
-    "slug": "template-kobold",
-    "traits": {
-      "otherTags": [],
-      "value": []
-    },
-    "actionType": {
-      "value": "passive"
-    },
-    "actions": {
-      "value": null
-    },
-    "category": "defensive",
-    "deathNote": false
-  },
-  "img": "systems/pf2e/icons/ancestries/lizardfolk.webp",
-  "ownership": {
-    "default": 0,
-    "vj8VUT8j7Wtzy3Y2": 3
-  },
-  "flags": {},
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "coreVersion": "13.351",
-    "systemId": "pf2e",
-    "systemVersion": "7.9.1",
-    "createdTime": 1769459489307,
-    "modifiedTime": 1769460330968,
-    "lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
-  },
-  "_id": "IpTzhpL0A1k7T9wY",
-  "sort": 700000,
-  "_key": "!items!IpTzhpL0A1k7T9wY"
+	"folder": "P80OGINhj6xM6f4M",
+	"name": "Template: Lizardfolk (Missing Strike)",
+	"type": "action",
+	"effects": [],
+	"system": {
+		"_migration": {
+			"version": 0.954,
+			"previous": null
+		},
+		"description": {
+			"value": "<p>Lizardfolk recently began to discover and adapt to different cultures while bringing in their own. Lizardfolk value patience and seek guidance in the stars above. They are able to adapt to almost any environment, but generally prefer to be near the water.</p><ul><li>Replace the human trait with the lizardfolk trait.</li><li>Add the Iruxi language.</li><li>Add a swim Speed of 15 feet.</li><li>Replace any fist attacks with claw attacks. They deal slashing damage instead of bludgeoning.</li><li>Add the following abilities.</li><li><p>@UUID[Compendium.sundry.pf2e-sundry-items.Item.tt77ZEGEiA1USpnL]</p></li></ul>",
+			"gm": ""
+		},
+		"publication": {
+			"title": "Pathfinder NPC Core",
+			"authors": "",
+			"license": "ORC",
+			"remaster": true
+		},
+		"rules": [
+			{
+				"key": "ActiveEffectLike",
+				"mode": "add",
+				"path": "system.traits.value",
+				"value": "lizardfolk"
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "remove",
+				"path": "system.traits.value",
+				"value": "human"
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "add",
+				"path": "system.details.languages.value",
+				"value": "iruxi"
+			},
+			{
+				"key": "BaseSpeed",
+				"selector": "swim",
+				"value": 15
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.tt77ZEGEiA1USpnL"
+			}
+		],
+		"slug": "template-kobold",
+		"traits": {
+			"otherTags": [],
+			"value": []
+		},
+		"actionType": {
+			"value": "passive"
+		},
+		"actions": {
+			"value": null
+		},
+		"category": "defensive",
+		"deathNote": false
+	},
+	"img": "systems/pf2e/icons/ancestries/lizardfolk.webp",
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"flags": {},
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.9.1",
+		"createdTime": 1769459489307,
+		"modifiedTime": 1769460330968,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"_id": "IpTzhpL0A1k7T9wY",
+	"sort": 700000,
+	"_key": "!items!IpTzhpL0A1k7T9wY"
 }

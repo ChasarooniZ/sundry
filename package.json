@@ -6,7 +6,7 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "extract": "node macros/extract.mjs && eslint ./data --fix",
+    "extract": "node macros/extract.mjs && eslint ./packs --fix",
     "lint": "eslint . --cache",
     "lint:fix": "eslint . --fix --cache",
     "pack": "node macros/pack.mjs",

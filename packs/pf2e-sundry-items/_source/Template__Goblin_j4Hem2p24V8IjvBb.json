@@ -1,83 +1,83 @@
 {
-  "folder": "P80OGINhj6xM6f4M",
-  "name": "Template: Goblin",
-  "type": "action",
-  "effects": [],
-  "system": {
-    "_migration": {
-      "version": 0.954,
-      "previous": null
-    },
-    "description": {
-      "value": "<p>Goblins are excellent at picking up new skills and finding their own creative ways of implementing them. Goblins prefer to live solely in the present, often caring very little about the wars and wisdom of the past. They strive for big creative dreams or small methodical advancement.</p><ul><li>Change size to Small.</li><li>Replace the human trait with the goblin trait.</li><li>Add the Goblin language.</li><li>Add the following abilities.</li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6]{Darkvision}</p></li></ul>",
-      "gm": ""
-    },
-    "publication": {
-      "title": "Pathfinder NPC Core",
-      "authors": "",
-      "license": "ORC",
-      "remaster": true
-    },
-    "rules": [
-      {
-        "key": "CreatureSize",
-        "value": "small"
-      },
-      {
-        "key": "ActiveEffectLike",
-        "mode": "add",
-        "path": "system.traits.value",
-        "value": "goblin"
-      },
-      {
-        "key": "ActiveEffectLike",
-        "mode": "remove",
-        "path": "system.traits.value",
-        "value": "human"
-      },
-      {
-        "key": "ActiveEffectLike",
-        "mode": "add",
-        "path": "system.details.languages.value",
-        "value": "goblin"
-      },
-      {
-        "key": "GrantItem",
-        "uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
-      }
-    ],
-    "slug": "template-goblin",
-    "traits": {
-      "otherTags": [],
-      "value": []
-    },
-    "actionType": {
-      "value": "passive"
-    },
-    "actions": {
-      "value": null
-    },
-    "category": "defensive",
-    "deathNote": false
-  },
-  "img": "systems/pf2e/icons/ancestries/goblin.webp",
-  "ownership": {
-    "default": 0,
-    "vj8VUT8j7Wtzy3Y2": 3
-  },
-  "flags": {},
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "coreVersion": "13.351",
-    "systemId": "pf2e",
-    "systemVersion": "7.9.1",
-    "createdTime": 1769458215550,
-    "modifiedTime": 1769460330968,
-    "lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
-  },
-  "_id": "j4Hem2p24V8IjvBb",
-  "sort": 1100000,
-  "_key": "!items!j4Hem2p24V8IjvBb"
+	"folder": "P80OGINhj6xM6f4M",
+	"name": "Template: Goblin",
+	"type": "action",
+	"effects": [],
+	"system": {
+		"_migration": {
+			"version": 0.954,
+			"previous": null
+		},
+		"description": {
+			"value": "<p>Goblins are excellent at picking up new skills and finding their own creative ways of implementing them. Goblins prefer to live solely in the present, often caring very little about the wars and wisdom of the past. They strive for big creative dreams or small methodical advancement.</p><ul><li>Change size to Small.</li><li>Replace the human trait with the goblin trait.</li><li>Add the Goblin language.</li><li>Add the following abilities.</li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6]{Darkvision}</p></li></ul>",
+			"gm": ""
+		},
+		"publication": {
+			"title": "Pathfinder NPC Core",
+			"authors": "",
+			"license": "ORC",
+			"remaster": true
+		},
+		"rules": [
+			{
+				"key": "CreatureSize",
+				"value": "small"
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "add",
+				"path": "system.traits.value",
+				"value": "goblin"
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "remove",
+				"path": "system.traits.value",
+				"value": "human"
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "add",
+				"path": "system.details.languages.value",
+				"value": "goblin"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+			}
+		],
+		"slug": "template-goblin",
+		"traits": {
+			"otherTags": [],
+			"value": []
+		},
+		"actionType": {
+			"value": "passive"
+		},
+		"actions": {
+			"value": null
+		},
+		"category": "defensive",
+		"deathNote": false
+	},
+	"img": "systems/pf2e/icons/ancestries/goblin.webp",
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"flags": {},
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.9.1",
+		"createdTime": 1769458215550,
+		"modifiedTime": 1769460330968,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"_id": "j4Hem2p24V8IjvBb",
+	"sort": 1100000,
+	"_key": "!items!j4Hem2p24V8IjvBb"
 }

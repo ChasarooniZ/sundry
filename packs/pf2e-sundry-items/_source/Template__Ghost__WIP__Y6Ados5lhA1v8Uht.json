@@ -1,180 +1,180 @@
 {
-  "folder": "13UAzWrxkUuZ9jwZ",
-  "name": "Template: Ghost (WIP)",
-  "type": "action",
-  "effects": [],
-  "system": {
-    "_migration": {
-      "version": 0.954,
-      "previous": null
-    },
-    "description": {
-      "value": "<p>The ephemeral form of a ghostly creature lets it pass through solid objects and float in the air. For simplicity, a creature with these adjustments isn't truly incorporeal, nor does it necessarily return after being destroyed.</p><ul><li>Add the ghost, spirit, and undead traits.</li><li>Add the Necril language.</li><li>Add the following immunities: death effects, disease, paralyzed, poison, precision, unconscious.</li><li>Add the following weaknesses, with a value based on the creature's level: force, ghost touch, positive.</li><li>If the creature can't fly, change its highest Speed to a fly Speed. Remove all other Speeds.</li><li>The damage of the creature's physical Strikes changes to negative damage, and those Strikes are magical.</li><li><p>Add the following abilities.</p></li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.qCCLZhnp2HhP3Ex6]{Darkvision}</p></li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x]{Negative Healing}</p></li><li><p>@UUID[Compendium.sundry.pf2e-sundry-items.Item.sZ4Zf7XjhbsBQlBx]{Ghostly Passage}</p></li></ul><table><caption><h3>Ghost Adjustment</h3></caption><thead><tr><th>Level</th><th>Weaknesses</th></tr></thead><tbody><tr><th>3 or lower</th><th>3</th></tr><tr><th>4 - 8</th><th>5</th></tr><tr><th>9 - 13</th><th>10</th></tr><tr><th>14+</th><th>15</th></tr></tbody></table>",
-      "gm": ""
-    },
-    "publication": {
-      "title": "Book of the Dead",
-      "authors": "",
-      "license": "OGL",
-      "remaster": false
-    },
-    "rules": [
-      {
-        "key": "ActiveEffectLike",
-        "mode": "add",
-        "path": "system.traits.value",
-        "value": "ghost"
-      },
-      {
-        "key": "ActiveEffectLike",
-        "mode": "add",
-        "path": "system.traits.value",
-        "value": "spirit"
-      },
-      {
-        "key": "ActiveEffectLike",
-        "mode": "add",
-        "path": "system.traits.value",
-        "value": "undead"
-      },
-      {
-        "key": "ActiveEffectLike",
-        "mode": "add",
-        "path": "system.details.languages.value",
-        "value": "necril"
-      },
-      {
-        "key": "Immunity",
-        "type": "death-effects"
-      },
-      {
-        "key": "Immunity",
-        "type": "disease"
-      },
-      {
-        "key": "Immunity",
-        "type": "paralyzed"
-      },
-      {
-        "key": "Immunity",
-        "type": "poison"
-      },
-      {
-        "key": "Immunity",
-        "type": "precision"
-      },
-      {
-        "key": "Immunity",
-        "type": "unconscious"
-      },
-      {
-        "key": "Weakness",
-        "type": "force",
-        "value": "match(when(lte(@actor.level, 3), 3),when(btwn(@actor.level, 4, 8), 5),when(btwn(@actor.level, 9, 13), 10),when(gte(@actor.level, 14), 15))"
-      },
-      {
-        "key": "Weakness",
-        "type": "ghost-touch",
-        "value": "match(when(lte(@actor.level, 3), 3),when(btwn(@actor.level, 4, 8), 5),when(btwn(@actor.level, 9, 13), 10),when(gte(@actor.level, 14), 15))"
-      },
-      {
-        "key": "Weakness",
-        "type": "vitality",
-        "value": "match(when(lte(@actor.level, 3), 3),when(btwn(@actor.level, 4, 8), 5),when(btwn(@actor.level, 9, 13), 10),when(gte(@actor.level, 14), 15))"
-      },
-      {
-        "key": "AdjustStrike",
-        "mode": "add",
-        "property": "weapon-traits",
-        "value": "magical"
-      },
-      {
-        "key": "BaseSpeed",
-        "value": "@actor.system.attributes.speed.total",
-        "selector": "fly"
-      },
-      {
-        "key": "DamageAlteration",
-        "mode": "override",
-        "property": "damage-type",
-        "selectors": [
-          "strike-damage"
-        ],
-        "value": "void"
-      },
-      {
-        "key": "GrantItem",
-        "uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.qCCLZhnp2HhP3Ex6"
-      },
-      {
-        "key": "GrantItem",
-        "uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x"
-      },
-      {
-        "key": "GrantItem",
-        "uuid": "Compendium.sundry.pf2e-sundry-items.Item.sZ4Zf7XjhbsBQlBx"
-      },
-      {
-        "key": "FlatModifier",
-        "value": "-@actor.system.attributes.speed.total",
-        "selector": [
-          "climb-speed"
-        ]
-      },
-      {
-        "key": "FlatModifier",
-        "value": "-@actor.system.attributes.speed.total",
-        "selector": [
-          "land-speed"
-        ]
-      },
-      {
-        "key": "FlatModifier",
-        "value": "-@actor.system.attributes.speed.total",
-        "selector": [
-          "burrow-speed"
-        ]
-      },
-      {
-        "key": "FlatModifier",
-        "value": "-@actor.system.attributes.speed.total",
-        "selector": [
-          "swim-speed"
-        ]
-      }
-    ],
-    "slug": "template-zombie",
-    "traits": {
-      "otherTags": [],
-      "value": []
-    },
-    "actionType": {
-      "value": "passive"
-    },
-    "actions": {
-      "value": null
-    },
-    "category": "defensive",
-    "deathNote": false
-  },
-  "img": "icons/magic/death/undead-ghost-scream-teal.webp",
-  "ownership": {
-    "default": 0,
-    "vj8VUT8j7Wtzy3Y2": 3
-  },
-  "flags": {},
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "coreVersion": "13.351",
-    "systemId": "pf2e",
-    "systemVersion": "7.9.1",
-    "createdTime": 1769466718719,
-    "modifiedTime": 1769467308001,
-    "lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
-  },
-  "_id": "Y6Ados5lhA1v8Uht",
-  "sort": 0,
-  "_key": "!items!Y6Ados5lhA1v8Uht"
+	"folder": "13UAzWrxkUuZ9jwZ",
+	"name": "Template: Ghost (WIP)",
+	"type": "action",
+	"effects": [],
+	"system": {
+		"_migration": {
+			"version": 0.954,
+			"previous": null
+		},
+		"description": {
+			"value": "<p>The ephemeral form of a ghostly creature lets it pass through solid objects and float in the air. For simplicity, a creature with these adjustments isn't truly incorporeal, nor does it necessarily return after being destroyed.</p><ul><li>Add the ghost, spirit, and undead traits.</li><li>Add the Necril language.</li><li>Add the following immunities: death effects, disease, paralyzed, poison, precision, unconscious.</li><li>Add the following weaknesses, with a value based on the creature's level: force, ghost touch, positive.</li><li>If the creature can't fly, change its highest Speed to a fly Speed. Remove all other Speeds.</li><li>The damage of the creature's physical Strikes changes to negative damage, and those Strikes are magical.</li><li><p>Add the following abilities.</p></li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.qCCLZhnp2HhP3Ex6]{Darkvision}</p></li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x]{Negative Healing}</p></li><li><p>@UUID[Compendium.sundry.pf2e-sundry-items.Item.sZ4Zf7XjhbsBQlBx]{Ghostly Passage}</p></li></ul><table><caption><h3>Ghost Adjustment</h3></caption><thead><tr><th>Level</th><th>Weaknesses</th></tr></thead><tbody><tr><th>3 or lower</th><th>3</th></tr><tr><th>4 - 8</th><th>5</th></tr><tr><th>9 - 13</th><th>10</th></tr><tr><th>14+</th><th>15</th></tr></tbody></table>",
+			"gm": ""
+		},
+		"publication": {
+			"title": "Book of the Dead",
+			"authors": "",
+			"license": "OGL",
+			"remaster": false
+		},
+		"rules": [
+			{
+				"key": "ActiveEffectLike",
+				"mode": "add",
+				"path": "system.traits.value",
+				"value": "ghost"
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "add",
+				"path": "system.traits.value",
+				"value": "spirit"
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "add",
+				"path": "system.traits.value",
+				"value": "undead"
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "add",
+				"path": "system.details.languages.value",
+				"value": "necril"
+			},
+			{
+				"key": "Immunity",
+				"type": "death-effects"
+			},
+			{
+				"key": "Immunity",
+				"type": "disease"
+			},
+			{
+				"key": "Immunity",
+				"type": "paralyzed"
+			},
+			{
+				"key": "Immunity",
+				"type": "poison"
+			},
+			{
+				"key": "Immunity",
+				"type": "precision"
+			},
+			{
+				"key": "Immunity",
+				"type": "unconscious"
+			},
+			{
+				"key": "Weakness",
+				"type": "force",
+				"value": "match(when(lte(@actor.level, 3), 3),when(btwn(@actor.level, 4, 8), 5),when(btwn(@actor.level, 9, 13), 10),when(gte(@actor.level, 14), 15))"
+			},
+			{
+				"key": "Weakness",
+				"type": "ghost-touch",
+				"value": "match(when(lte(@actor.level, 3), 3),when(btwn(@actor.level, 4, 8), 5),when(btwn(@actor.level, 9, 13), 10),when(gte(@actor.level, 14), 15))"
+			},
+			{
+				"key": "Weakness",
+				"type": "vitality",
+				"value": "match(when(lte(@actor.level, 3), 3),when(btwn(@actor.level, 4, 8), 5),when(btwn(@actor.level, 9, 13), 10),when(gte(@actor.level, 14), 15))"
+			},
+			{
+				"key": "AdjustStrike",
+				"mode": "add",
+				"property": "weapon-traits",
+				"value": "magical"
+			},
+			{
+				"key": "BaseSpeed",
+				"value": "@actor.system.attributes.speed.total",
+				"selector": "fly"
+			},
+			{
+				"key": "DamageAlteration",
+				"mode": "override",
+				"property": "damage-type",
+				"selectors": [
+					"strike-damage"
+				],
+				"value": "void"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.qCCLZhnp2HhP3Ex6"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.sZ4Zf7XjhbsBQlBx"
+			},
+			{
+				"key": "FlatModifier",
+				"value": "-@actor.system.attributes.speed.total",
+				"selector": [
+					"climb-speed"
+				]
+			},
+			{
+				"key": "FlatModifier",
+				"value": "-@actor.system.attributes.speed.total",
+				"selector": [
+					"land-speed"
+				]
+			},
+			{
+				"key": "FlatModifier",
+				"value": "-@actor.system.attributes.speed.total",
+				"selector": [
+					"burrow-speed"
+				]
+			},
+			{
+				"key": "FlatModifier",
+				"value": "-@actor.system.attributes.speed.total",
+				"selector": [
+					"swim-speed"
+				]
+			}
+		],
+		"slug": "template-zombie",
+		"traits": {
+			"otherTags": [],
+			"value": []
+		},
+		"actionType": {
+			"value": "passive"
+		},
+		"actions": {
+			"value": null
+		},
+		"category": "defensive",
+		"deathNote": false
+	},
+	"img": "icons/magic/death/undead-ghost-scream-teal.webp",
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"flags": {},
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.9.1",
+		"createdTime": 1769466718719,
+		"modifiedTime": 1769467308001,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"_id": "Y6Ados5lhA1v8Uht",
+	"sort": 0,
+	"_key": "!items!Y6Ados5lhA1v8Uht"
 }

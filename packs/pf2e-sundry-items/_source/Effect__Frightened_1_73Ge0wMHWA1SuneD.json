@@ -1,78 +1,78 @@
 {
-  "folder": "ErSkeeSWJRup5u2m",
-  "name": "Effect: Frightened 1",
-  "type": "effect",
-  "effects": [],
-  "system": {
-    "_migration": {
-      "version": 0.954,
-      "previous": null
-    },
-    "description": {
-      "value": "",
-      "gm": ""
-    },
-    "publication": {
-      "title": "",
-      "authors": "",
-      "license": "OGL",
-      "remaster": false
-    },
-    "rules": [
-      {
-        "key": "GrantItem",
-        "uuid": "Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL",
-        "onDeleteActions": {
-          "grantee": "restrict"
-        },
-        "alterations": [],
-        "flag": "frightened"
-      }
-    ],
-    "slug": null,
-    "traits": {
-      "otherTags": [],
-      "value": []
-    },
-    "level": {
-      "value": 1
-    },
-    "duration": {
-      "value": -1,
-      "unit": "unlimited",
-      "expiry": null,
-      "sustained": false
-    },
-    "tokenIcon": {
-      "show": true
-    },
-    "unidentified": false,
-    "start": {
-      "value": 0,
-      "initiative": null
-    },
-    "badge": null,
-    "fromSpell": false,
-    "context": null
-  },
-  "_id": "73Ge0wMHWA1SuneD",
-  "img": "systems/pf2e/icons/conditions/frightened.webp",
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "vj8VUT8j7Wtzy3Y2": 3
-  },
-  "flags": {},
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "coreVersion": "13.351",
-    "systemId": "pf2e",
-    "systemVersion": "7.9.1",
-    "createdTime": 1769467007595,
-    "modifiedTime": 1769467117022,
-    "lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
-  },
-  "_key": "!items!73Ge0wMHWA1SuneD"
+	"folder": "ErSkeeSWJRup5u2m",
+	"name": "Effect: Frightened 1",
+	"type": "effect",
+	"effects": [],
+	"system": {
+		"_migration": {
+			"version": 0.954,
+			"previous": null
+		},
+		"description": {
+			"value": "",
+			"gm": ""
+		},
+		"publication": {
+			"title": "",
+			"authors": "",
+			"license": "OGL",
+			"remaster": false
+		},
+		"rules": [
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL",
+				"onDeleteActions": {
+					"grantee": "restrict"
+				},
+				"alterations": [],
+				"flag": "frightened"
+			}
+		],
+		"slug": null,
+		"traits": {
+			"otherTags": [],
+			"value": []
+		},
+		"level": {
+			"value": 1
+		},
+		"duration": {
+			"value": -1,
+			"unit": "unlimited",
+			"expiry": null,
+			"sustained": false
+		},
+		"tokenIcon": {
+			"show": true
+		},
+		"unidentified": false,
+		"start": {
+			"value": 0,
+			"initiative": null
+		},
+		"badge": null,
+		"fromSpell": false,
+		"context": null
+	},
+	"_id": "73Ge0wMHWA1SuneD",
+	"img": "systems/pf2e/icons/conditions/frightened.webp",
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"flags": {},
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.9.1",
+		"createdTime": 1769467007595,
+		"modifiedTime": 1769467117022,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"_key": "!items!73Ge0wMHWA1SuneD"
 }

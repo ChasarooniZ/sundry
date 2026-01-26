@@ -1,56 +1,56 @@
 {
-  "folder": "ErSkeeSWJRup5u2m",
-  "name": "Deep Breath",
-  "type": "action",
-  "effects": [],
-  "system": {
-    "_migration": {
-      "version": 0.954,
-      "previous": null
-    },
-    "description": {
-      "value": "<p>The iruxi can hold their breath for 15 minutes.</p>",
-      "gm": ""
-    },
-    "publication": {
-      "title": "",
-      "authors": "",
-      "license": "OGL",
-      "remaster": false
-    },
-    "rules": [],
-    "slug": "deep-breath",
-    "traits": {
-      "otherTags": [],
-      "value": []
-    },
-    "actionType": {
-      "value": "passive"
-    },
-    "actions": {
-      "value": null
-    },
-    "category": "defensive",
-    "deathNote": false
-  },
-  "_id": "tt77ZEGEiA1USpnL",
-  "img": "systems/pf2e/icons/default-icons/action.svg",
-  "sort": 300000,
-  "ownership": {
-    "default": 0,
-    "vj8VUT8j7Wtzy3Y2": 3
-  },
-  "flags": {},
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "coreVersion": "13.351",
-    "systemId": "pf2e",
-    "systemVersion": "7.9.1",
-    "createdTime": 1769459329990,
-    "modifiedTime": 1769465613808,
-    "lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
-  },
-  "_key": "!items!tt77ZEGEiA1USpnL"
+	"folder": "ErSkeeSWJRup5u2m",
+	"name": "Deep Breath",
+	"type": "action",
+	"effects": [],
+	"system": {
+		"_migration": {
+			"version": 0.954,
+			"previous": null
+		},
+		"description": {
+			"value": "<p>The iruxi can hold their breath for 15 minutes.</p>",
+			"gm": ""
+		},
+		"publication": {
+			"title": "",
+			"authors": "",
+			"license": "OGL",
+			"remaster": false
+		},
+		"rules": [],
+		"slug": "deep-breath",
+		"traits": {
+			"otherTags": [],
+			"value": []
+		},
+		"actionType": {
+			"value": "passive"
+		},
+		"actions": {
+			"value": null
+		},
+		"category": "defensive",
+		"deathNote": false
+	},
+	"_id": "tt77ZEGEiA1USpnL",
+	"img": "systems/pf2e/icons/default-icons/action.svg",
+	"sort": 300000,
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"flags": {},
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.9.1",
+		"createdTime": 1769459329990,
+		"modifiedTime": 1769465613808,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"_key": "!items!tt77ZEGEiA1USpnL"
 }

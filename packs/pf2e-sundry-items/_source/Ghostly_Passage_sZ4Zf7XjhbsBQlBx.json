@@ -1,66 +1,66 @@
 {
-  "name": "Ghostly Passage",
-  "type": "action",
-  "effects": [],
-  "system": {
-    "description": {
-      "gm": "",
-      "value": "<p>The creature @UUID[Compendium.pf2e.actionspf2e.Item.cS9nfDRGD83bNU1p]{Flies} and, during this movement, can pass through walls, creatures, and other material obstacles as though incorporeal. It must begin and end its movement outside of any physical obstacles, and passing through solid material is difficult terrain.</p>"
-    },
-    "rules": [],
-    "slug": "ghostly-passage",
-    "_migration": {
-      "version": 0.954,
-      "previous": {
-        "schema": 0.932,
-        "foundry": "13.351",
-        "system": "7.9.1"
-      }
-    },
-    "traits": {
-      "otherTags": [],
-      "value": []
-    },
-    "publication": {
-      "title": "",
-      "authors": "",
-      "license": "OGL",
-      "remaster": false
-    },
-    "actionType": {
-      "value": "action"
-    },
-    "category": "interaction",
-    "actions": {
-      "value": 1
-    },
-    "deathNote": false
-  },
-  "img": "systems/pf2e/icons/default-icons/action.svg",
-  "folder": "ErSkeeSWJRup5u2m",
-  "flags": {
-    "scene-packer": {
-      "hash": "ac9b48d1ce08345be27bb350426a6cb9ce1fa1ac",
-      "sourceId": "Item.o5Nxg7NrPxzJa62O"
-    },
-    "core": {}
-  },
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "coreVersion": "13.351",
-    "systemId": "pf2e",
-    "systemVersion": "7.9.1",
-    "createdTime": 1769465613734,
-    "modifiedTime": 1769465618827,
-    "lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
-  },
-  "ownership": {
-    "default": 0,
-    "vj8VUT8j7Wtzy3Y2": 3
-  },
-  "_id": "sZ4Zf7XjhbsBQlBx",
-  "sort": 200000,
-  "_key": "!items!sZ4Zf7XjhbsBQlBx"
+	"name": "Ghostly Passage",
+	"type": "action",
+	"effects": [],
+	"system": {
+		"description": {
+			"gm": "",
+			"value": "<p>The creature @UUID[Compendium.pf2e.actionspf2e.Item.cS9nfDRGD83bNU1p]{Flies} and, during this movement, can pass through walls, creatures, and other material obstacles as though incorporeal. It must begin and end its movement outside of any physical obstacles, and passing through solid material is difficult terrain.</p>"
+		},
+		"rules": [],
+		"slug": "ghostly-passage",
+		"_migration": {
+			"version": 0.954,
+			"previous": {
+				"schema": 0.932,
+				"foundry": "13.351",
+				"system": "7.9.1"
+			}
+		},
+		"traits": {
+			"otherTags": [],
+			"value": []
+		},
+		"publication": {
+			"title": "",
+			"authors": "",
+			"license": "OGL",
+			"remaster": false
+		},
+		"actionType": {
+			"value": "action"
+		},
+		"category": "interaction",
+		"actions": {
+			"value": 1
+		},
+		"deathNote": false
+	},
+	"img": "systems/pf2e/icons/default-icons/action.svg",
+	"folder": "ErSkeeSWJRup5u2m",
+	"flags": {
+		"scene-packer": {
+			"hash": "ac9b48d1ce08345be27bb350426a6cb9ce1fa1ac",
+			"sourceId": "Item.o5Nxg7NrPxzJa62O"
+		},
+		"core": {}
+	},
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.9.1",
+		"createdTime": 1769465613734,
+		"modifiedTime": 1769465618827,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"_id": "sZ4Zf7XjhbsBQlBx",
+	"sort": 200000,
+	"_key": "!items!sZ4Zf7XjhbsBQlBx"
 }
