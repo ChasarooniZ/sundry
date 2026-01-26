@@ -1,0 +1,79 @@
+{
+  "folder": "P80OGINhj6xM6f4M",
+  "name": "Template: Orc",
+  "type": "action",
+  "effects": [],
+  "system": {
+    "_migration": {
+      "version": 0.954,
+      "previous": null
+    },
+    "description": {
+      "value": "<p>An orc's life is often short and violent. While they do make excellent mercenaries, orcs are more than capable of succeeding in non-violent professions as well. Orcs are eager to prove themselves both on the battlefield and off.</p><ul><li>Replace the human trait with the orc trait.</li><li>Add the Orcish language.</li><li>Add the following abilities.</li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6]{Darkvision}</p></li></ul>",
+      "gm": ""
+    },
+    "publication": {
+      "title": "Pathfinder NPC Core",
+      "authors": "",
+      "license": "ORC",
+      "remaster": true
+    },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.traits.value",
+        "value": "orc"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "remove",
+        "path": "system.traits.value",
+        "value": "human"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.details.languages.value",
+        "value": "orcish"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+      }
+    ],
+    "slug": "template-orc",
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "defensive",
+    "deathNote": false
+  },
+  "img": "systems/pf2e/icons/ancestries/orc.webp",
+  "ownership": {
+    "default": 0,
+    "vj8VUT8j7Wtzy3Y2": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "pf2e",
+    "systemVersion": "7.9.1",
+    "createdTime": 1769449552978,
+    "modifiedTime": 1769460330968,
+    "lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+  },
+  "_id": "sOtGOmnehQ0kpNQo",
+  "sort": 1500000,
+  "_key": "!items!sOtGOmnehQ0kpNQo"
+}

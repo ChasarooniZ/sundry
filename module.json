@@ -49,6 +49,19 @@
   "download": "#{DOWNLOAD}#",
   "license": "LICENSE",
   "readme": "README.md",
+  "packs": [
+    {
+      "name": "pf2e-sundry-template",
+      "label": "Sundry: PF2e Templates",
+      "path": "packs/pf2e-sundry-template",
+      "type": "Item",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
   "media": [
     {
       "type": "icon",

@@ -4,6 +4,14 @@
 - **Updated**
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
 
+## 0.12.0
+
+- **New**
+  - `Templates`
+    - Started adding some of the templates so you can actually just add them to your NPCs
+      - **Custom**
+        - `Minion` - Implements an attempt at turning creatures into 4e style minions (just sets their health to level / 4)
+
 ## 0.11.4
 
 - **Updated**

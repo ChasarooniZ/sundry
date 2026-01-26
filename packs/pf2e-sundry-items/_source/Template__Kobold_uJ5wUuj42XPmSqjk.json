@@ -1,0 +1,83 @@
+{
+  "folder": "P80OGINhj6xM6f4M",
+  "name": "Template: Kobold",
+  "type": "action",
+  "effects": [],
+  "system": {
+    "_migration": {
+      "version": 0.954,
+      "previous": null
+    },
+    "description": {
+      "value": "<p>Kobolds constantly hunt for security and powerful entities, but the path they take can lead to unexpected destinations.</p><ul><li>Change size to Small.</li><li>Replace the human trait with the kobold trait.</li><li>Add the Sakvroth language.</li><li>Add the following abilities.</li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6]{Darkvision}</p></li></ul>",
+      "gm": ""
+    },
+    "publication": {
+      "title": "Pathfinder NPC Core",
+      "authors": "",
+      "license": "ORC",
+      "remaster": true
+    },
+    "rules": [
+      {
+        "key": "CreatureSize",
+        "value": "small"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.traits.value",
+        "value": "kobold"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "remove",
+        "path": "system.traits.value",
+        "value": "human"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.details.languages.value",
+        "value": "sakvroth"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+      }
+    ],
+    "slug": "template-kobold",
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "defensive",
+    "deathNote": false
+  },
+  "img": "systems/pf2e/icons/ancestries/kobold.webp",
+  "ownership": {
+    "default": 0,
+    "vj8VUT8j7Wtzy3Y2": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "pf2e",
+    "systemVersion": "7.9.1",
+    "createdTime": 1769458668429,
+    "modifiedTime": 1769460330968,
+    "lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+  },
+  "_id": "uJ5wUuj42XPmSqjk",
+  "sort": 500000,
+  "_key": "!items!uJ5wUuj42XPmSqjk"
+}

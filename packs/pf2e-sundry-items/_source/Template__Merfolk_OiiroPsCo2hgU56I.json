@@ -1,0 +1,128 @@
+{
+  "folder": "P80OGINhj6xM6f4M",
+  "name": "Template: Merfolk",
+  "type": "action",
+  "effects": [],
+  "system": {
+    "_migration": {
+      "version": 0.954,
+      "previous": null
+    },
+    "description": {
+      "value": "<p>Merfolk have humanlike torsos, fish tails, and fins.</p><ul><li>Replace the human trait with the merfolk trait and add the amphibious trait.</li><li>Add the Thalassic language.</li><li>Change Speed to 5 feet with a 25-foot swim Speed. You can add a supramarine chair item to give the merfolk a land Speed equal to their swim Speed. Use the rules for a wheelchair.</li><li>Add the following abilities.</li><li>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.fFu2sZz4KB01fVRc]{Low-Light Vision}</li></ul>",
+      "gm": ""
+    },
+    "publication": {
+      "title": "Pathfinder NPC Core",
+      "authors": "",
+      "license": "ORC",
+      "remaster": true
+    },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.traits.value",
+        "value": "merfolk"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.traits.value",
+        "value": "amphibious"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "remove",
+        "path": "system.traits.value",
+        "value": "human"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.details.languages.value",
+        "value": "thalassic"
+      },
+      {
+        "key": "BaseSpeed",
+        "selector": "swim",
+        "value": 25
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          {
+            "label": "Yes. Has a Supramarine Chair",
+            "value": "yes"
+          },
+          {
+            "label": "No. Has no Chair",
+            "value": "no"
+          }
+        ],
+        "prompt": "Has a Supramarine Chair? (Gives Land Speed)",
+        "flag": "supramarine-chair",
+        "rollOption": "supramarine-chair"
+      },
+      {
+        "key": "FlatModifier",
+        "value": "-@actor.system.attributes.speed.total + 5",
+        "selector": [
+          "land-speed"
+        ],
+        "predicate": [
+          "supramarine-chair:no"
+        ]
+      },
+      {
+        "key": "BaseSpeed",
+        "selector": "swim",
+        "value": "@actor.system.attributes.speed.total",
+        "predicate": [
+          "supramarine-chair:yes"
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.equipment-srd.Item.4aK5kCliPesu3nIK"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.fFu2sZz4KB01fVRc"
+      }
+    ],
+    "slug": "template-merfolk",
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "defensive",
+    "deathNote": false
+  },
+  "img": "systems/pf2e/icons/ancestries/merfolk.webp",
+  "ownership": {
+    "default": 0,
+    "vj8VUT8j7Wtzy3Y2": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "pf2e",
+    "systemVersion": "7.9.1",
+    "createdTime": 1769460181533,
+    "modifiedTime": 1769460330968,
+    "lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+  },
+  "_id": "OiiroPsCo2hgU56I",
+  "sort": 800000,
+  "_key": "!items!OiiroPsCo2hgU56I"
+}

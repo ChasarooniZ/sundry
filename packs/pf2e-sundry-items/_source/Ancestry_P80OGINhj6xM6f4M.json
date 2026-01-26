@@ -1,0 +1,22 @@
+{
+  "type": "Item",
+  "folder": "vculNfCb9ctQJU2z",
+  "name": "Ancestry",
+  "color": "#2d722c",
+  "sorting": "a",
+  "_id": "P80OGINhj6xM6f4M",
+  "description": "",
+  "sort": 100000,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "pf2e",
+    "systemVersion": "7.9.1",
+    "lastModifiedBy": "vj8VUT8j7Wtzy3Y2",
+    "modifiedTime": 1769449088272
+  },
+  "_key": "!folders!P80OGINhj6xM6f4M"
+}
