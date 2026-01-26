@@ -51,9 +51,9 @@
   "readme": "README.md",
   "packs": [
     {
-      "name": "pf2e-sundry-template",
+      "name": "pf2e-sundry-items",
       "label": "Sundry: PF2e Templates",
-      "path": "packs/pf2e-sundry-template",
+      "path": "packs/pf2e-sundry-items",
       "type": "Item",
       "system": "pf2e",
       "ownership": {

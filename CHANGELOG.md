@@ -11,6 +11,13 @@
     - Started adding some of the templates so you can actually just add them to your NPCs
       - **Custom**
         - `Minion` - Implements an attempt at turning creatures into 4e style minions (just sets their health to level / 4)
+      - **Official**
+        - `Ancestry`
+          - All implemented, with the exception of any strikes added
+        - `Undead`
+          - **Mummy**
+          - **Ghost** (flight speed adjustment is WIP)
+          - **Zombie** (does not adjust Max Health atm)
 
 ## 0.11.4
 

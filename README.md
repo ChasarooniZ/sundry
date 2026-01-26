@@ -28,18 +28,19 @@ You can access the changelog [here](/CHANGELOG.md).
 ## Features
 
 - **Colorize**
-
   - `PF2e HUD`'s `Persistent HUD`
 
   ![](https://github.com/user-attachments/assets/250de37f-511a-439a-b07d-3e02abe3346a)
   ![](https://github.com/user-attachments/assets/9ea66861-1094-4a5d-bcfb-f2f701bfdb28)
-
   - `PF2e Toolbelt`'s `Target Helper`
 
   ![](https://github.com/user-attachments/assets/eb7b0c58-ac2b-4e85-8c0f-86f534cf8829)
 
-- **Display**
+- **Data**
+  - Added [Templates](https://2e.aonprd.com/MonsterTemplates.aspx) implementation
+  - Also added a custom `Minion` template for 4e style minions
 
+- **Display**
   - `Property Runes` - Displays property runes on (item sheets) for items with them
 
     <img height="250" alt="image" src="https://github.com/user-attachments/assets/13f3e51b-2941-4a9d-82f9-811e0a605201" />
@@ -49,32 +50,25 @@ You can access the changelog [here](/CHANGELOG.md).
     <img width="280" height="236" alt="image" src="https://github.com/user-attachments/assets/0c3083f5-710d-43f9-b906-b87924ace4a4" />
 
 - **Hide**
-
   - `Default Craft Checks` (for Heroic Crafting)
   - `Hide Header Button Text`
     - Hides the text (not the icons) for sheet Header Buttons
 
   <img width="669" height="213" alt="image" src="https://github.com/user-attachments/assets/a5881f19-e376-4a37-aa4a-f44e68527053" />
-
   - `Sell All Treasure`
 
 - **Highlight**
-
   - `Pf2e Toolbelt`'s `Target Helper` unrolled rolls and make them glow
 
   ![highlight-save](https://github.com/user-attachments/assets/0f8e1237-da4a-4e1f-947e-df5e94294bf3)
-
   - `Known Languages on Creatures` Highlights which languages (on NPC stat block pages) are known by the current active party as well as adds a tooltip to make sure its clear
 
   <img width="280" height="171" alt="image" src="https://github.com/user-attachments/assets/0bf22994-8524-47f1-9e16-ce9104f5534e" />
 
-
 - **Hotkey**
-
   - `Character Campaign Notes` - Adds a new hotkey (Default `N`) to open an editable dialog of their assigned character's `Campaign Notes` field on their character sheet for quick access
 
 - **Minify**
-
   - `Simple Requests` module to minify the chat area it takes up
 
   ![](https://github.com/user-attachments/assets/b0d6f241-0000-4560-ab4c-077c3b5c36b3)
