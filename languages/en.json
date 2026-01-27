@@ -156,6 +156,33 @@
           "name": "Effect: Reaction Used"
         }
       }
+    },
+    "hero-points": {
+      "dialog": {
+        "title": "Award Hero Points",
+        "apply": "Apply",
+        "cancel": "Cancel",
+        "mode": {
+          "add": "Add",
+          "set": "Set"
+        }
+      },
+      "notify": {
+        "gm-only": "Only the GM can award Hero Points.",
+        "no-party": "No party members found in the Party group.",
+        "no-eligible": "No eligible actors in party."
+      },
+      "image": {
+        "title": "Hero Points!!",
+        "handout": "Handout"
+      },
+      "chat": {
+        "headline": "HEROIC INSPIRATION",
+        "tagline": "Fortune favors the bold.<br>The tale shifts, a second chance emerges...",
+        "footer": "Their destinies are not yet sealed.",
+        "award-line": "Awarded <strong>{amount}</strong> Hero Point{plural} to each:",
+        "set-line": "Set Hero Points to <strong>{amount}</strong> for each:"
+      }
     }
   }
 }

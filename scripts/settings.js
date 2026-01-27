@@ -275,6 +275,7 @@ export function setupSettings() {
     type: String,
     default: "0.0.0",
   });
+
 }
 
 export function registerKeybindings() {

@@ -22,6 +22,7 @@ import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 import { setupPauseReplacement } from "./lib/replacePauseInfo.js";
 import { setupStartOfSession } from "./lib/startOfSession.js";
 import { setuplanguageHandling } from "./lib/languageHandling.js";
+import { setupHeroPoints } from "./lib/heroPoints.js";
 
 export const MODULE_ID = "sundry";
 
@@ -30,6 +31,7 @@ Hooks.once("init", async function () {
   registerKeybindings();
   loadAllTemplates();
   versionMigration();
+  setupHeroPoints();
 });
 
 Hooks.once("ready", async function () {
