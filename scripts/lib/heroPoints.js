@@ -65,7 +65,7 @@ function _pickRandomHeroPointImage() {
 function _registerHeroPointImageSocket() {
 	game.socket.on(MODULE_SOCKET, (data) => {
 		if (!data || data.command !== "showImage") return;
-
+		console.log("Sundry hero-points socket received", { user: game.user.name, data });
 		const users = Array.isArray(data.users) ? data.users : [];
 		if (!users.includes(game.user.id)) return;
 
@@ -222,7 +222,7 @@ export async function heroPointMacro() {
 		const title = _hpLocalize("image.title");
 
 		// Send to everyone active
-		const userIds = game.users.filter(u => u.active).map(u => u.id);
+		const userIds = game.users.map(u => u.id);
 
 		_emitHeroPointImage({
 			imageUrl: imagePath,
