@@ -1,5 +1,4 @@
-import { MODULE_ID } from "../module.js";
-
+const MODULE_ID = "sundry";
 const MODULE_SOCKET = `module.${MODULE_ID}`;
 
 function _hpLocalize(path) {
@@ -10,10 +9,6 @@ function _hpFormat(path, data = {}) {
 	return game.i18n.format(`sundry.hero-points.${path}`, data);
 }
 
-/**
- * Your exact init.js showImageDialog, moved into Sundry.
- * Now defaults to localized title if none is provided.
- */
 export function showImageDialog(imageUrl, duration = 5000, imgTitle) {
 	const title = imgTitle ?? _hpLocalize("image.handout");
 
@@ -56,10 +51,7 @@ export function showImageDialog(imageUrl, duration = 5000, imgTitle) {
 
 function _pickRandomHeroPointImage() {
 	// IMPORTANT: These must exist inside the Sundry module folder:
-	// /sundry/assets/memes/*.webp
-	//
-	// In Foundry, module file paths are referenced as:
-	// modules/<module-id>/...
+	// /sundry/assets/heroPointMemes/*.webp
 	const heroPointImages = [
 		`modules/${MODULE_ID}/assets/heroPointMemes/1.webp`,
 		`modules/${MODULE_ID}/assets/heroPointMemes/2.webp`,
@@ -102,7 +94,6 @@ function _emitHeroPointImage({ imageUrl, users, duration = 7000, imgTitle }) {
 }
 
 function _awardHeroPointsDialog() {
-	// Per your preference: constructor style DialogV2, not DialogV2.prompt().
 	return new Promise((resolve, reject) => {
 		const dialogTitle = _hpLocalize("dialog.title");
 		const labelApply = _hpLocalize("dialog.apply");
@@ -188,10 +179,33 @@ export async function heroPointMacro() {
 		awarded.push(`<strong>${actor.name}</strong>: ${current} → ${newTotal}`);
 		updatedActorIds.add(actor.id);
 
-		const tbmodule = game.modules.get("pf2e-toolbelt");
-		if (tbmodule?.api?.heroActions) {
-			drawPromises.push(tbmodule.api.heroActions.drawHeroActions(actor));
-		}
+        // check for Toolbelt integration
+		const tbModule = game.modules.get("pf2e-toolbelt"); 
+        const toolbeltEnabled =
+            tbModule?.active === true &&
+            tbModule?.api?.heroActions?.drawHeroActions instanceof Function;
+
+        let heroActionsSettingEnabled = false;
+
+        if (toolbeltEnabled) {
+            try {
+                // check if hero actions setting is enabled
+                heroActionsSettingEnabled = game.settings.get(
+                    "pf2e-toolbelt",
+                    "heroActions"
+                ) === true;
+            } catch {
+                heroActionsSettingEnabled = false;
+            }
+        }
+
+        // If both Toolbelt and the setting are enabled, redraw hero actions
+        if (toolbeltEnabled && heroActionsSettingEnabled) {
+            drawPromises.push(
+                tbModule.api.heroActions.drawHeroActions(actor)
+            );
+        }
+
 	}
 
 	await Promise.all(drawPromises);
@@ -201,13 +215,13 @@ export async function heroPointMacro() {
 		return;
 	}
 
-	// Only send image popup when ADDING (matches your original behavior)
+	// Only send image popup when ADDING
 	if (mode === "add") {
 		const imagePath = _pickRandomHeroPointImage();
 		const duration = 7000;
 		const title = _hpLocalize("image.title");
 
-		// Send to everyone active (including GM, matching your old behavior)
+		// Send to everyone active
 		const userIds = game.users.filter(u => u.active).map(u => u.id);
 
 		_emitHeroPointImage({
