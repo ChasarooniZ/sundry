@@ -248,38 +248,160 @@ export async function heroPointMacro() {
 
 	const flavorText = `
 		<div style="
-			background-color:#1d1c1a;
-			border: 2px solid #5f574e;
-			box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
-			border-radius: 12px;
-			padding: 16px;
-			color: #e4ddc7;
-			font-family: 'serif';
-			max-width: 500px;
-			margin: auto;
+			max-width: 520px;
+			margin: 0 auto;
+			padding: 16px 16px 14px;
+			border-radius: 10px;
+			background:
+				linear-gradient(180deg, rgba(255,255,255,0.06), rgba(0,0,0,0.08)),
+				linear-gradient(135deg, #f2e6c8 0%, #e7d6ad 38%, #f1e1c0 100%);
+			border: 2px solid #5b3f1c;
+			box-shadow:
+				0 0 0 2px rgba(240, 220, 170, 0.35) inset,
+				0 6px 16px rgba(0,0,0,0.55);
+			color: #2b1b0d;
+			font-family: serif;
+			position: relative;
+			overflow: hidden;
 		">
-			<div style="display: flex; justify-content: center; margin-bottom: 10px;">
-				<img src="systems/pf2e/icons/features/feats/heroic-recovery.webp" width="64" height="64" style="border: none;">
+
+			<div style="
+				position: absolute;
+				inset: 8px;
+				border-radius: 8px;
+				border: 1px solid rgba(91, 63, 28, 0.35);
+				pointer-events: none;
+			"></div>
+
+			<div style="
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				height: 10px;
+				background: repeating-linear-gradient(
+					90deg,
+					rgba(91, 63, 28, 0.30) 0px,
+					rgba(91, 63, 28, 0.30) 10px,
+					rgba(0, 0, 0, 0) 10px,
+					rgba(0, 0, 0, 0) 18px
+				);
+				opacity: 0.55;
+				pointer-events: none;
+			"></div>
+
+			<div style="
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: 10px;
+				background: repeating-linear-gradient(
+					90deg,
+					rgba(91, 63, 28, 0.30) 0px,
+					rgba(91, 63, 28, 0.30) 10px,
+					rgba(0, 0, 0, 0) 10px,
+					rgba(0, 0, 0, 0) 18px
+				);
+				opacity: 0.55;
+				pointer-events: none;
+			"></div>
+
+			<div style="display:flex; justify-content:center; margin: 4px 0 10px;">
+				<div style="
+					width: 72px;
+					height: 72px;
+					border-radius: 50%;
+					background: radial-gradient(circle at 30% 30%, #9b1c1c 0%, #5b0d0d 55%, #2a0707 100%);
+					border: 2px solid #3a0a0a;
+					box-shadow:
+						0 0 0 2px rgba(240, 220, 170, 0.25) inset,
+						0 8px 18px rgba(0,0,0,0.55);
+					display:flex;
+					align-items:center;
+					justify-content:center;
+				">
+					<img src="systems/pf2e/icons/features/feats/heroic-recovery.webp"
+						width="40" height="40"
+						style="
+							border: none;
+							filter: drop-shadow(0 0 6px rgba(255, 215, 120, 0.75));
+						"
+					/>
+				</div>
 			</div>
-			<div style="text-align: center; font-weight: bold; font-size: 16px; letter-spacing: 1px; color: #c7b26f; margin-bottom: 12px;">
+
+			<div style="
+				text-align:center;
+				font-weight: 700;
+				letter-spacing: 3px;
+				font-size: 18px;
+				text-transform: uppercase;
+				color: #3a2410;
+				text-shadow: 0 1px 0 rgba(255,255,255,0.35);
+				margin-bottom: 8px;
+			">
 				${chatHeadline}
 			</div>
-			<div style="font-size: 14px; font-style: italic; margin-bottom: 12px; text-align: center;">
+
+			<div style="
+				text-align:center;
+				font-style: italic;
+				font-size: 14px;
+				line-height: 1.45;
+				color: #3d2a16;
+				margin: 0 8px 12px;
+			">
 				${chatTagline}
 			</div>
-			<hr style="border: 1px solid #5f574e;">
-			<div style="font-size: 15px; text-align: center; margin: 12px 0;">
+
+			<div style="
+				margin: 10px 0 12px;
+				height: 1px;
+				background: linear-gradient(to right, transparent, rgba(91,63,28,0.75), transparent);
+			"></div>
+
+			<div style="
+				text-align:center;
+				font-size: 15px;
+				font-weight: 600;
+				color: #2b1b0d;
+				margin: 10px 0 12px;
+			">
 				${actionLine}
 			</div>
-			<div style="text-align: center; font-size: 14px; margin-bottom: 10px;">
+
+			<div style="
+				text-align:center;
+				font-size: 14px;
+				color: #2b1b0d;
+				padding: 8px 10px;
+				border-radius: 8px;
+				background: rgba(91,63,28,0.10);
+				border: 1px solid rgba(91,63,28,0.22);
+				margin-bottom: 12px;
+			">
 				${awarded.join("<br>")}
 			</div>
-			<hr style="border: 1px solid #5f574e;">
-			<div style="font-size: 12px; font-style: italic; text-align: center; color: #a09888; margin-top: 6px;">
+
+			<div style="
+				margin: 12px 0 10px;
+				height: 1px;
+				background: linear-gradient(to right, transparent, rgba(91,63,28,0.75), transparent);
+			"></div>
+
+			<div style="
+				text-align:center;
+				font-style: italic;
+				font-size: 12px;
+				color: rgba(43,27,13,0.75);
+				margin-top: 6px;
+			">
 				${chatFooter}
 			</div>
 		</div>
 	`;
+
 
 	setTimeout(() => {
 		ChatMessage.create({ content: flavorText });
