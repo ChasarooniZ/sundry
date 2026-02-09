@@ -124,6 +124,10 @@
       "player-notes": {
         "name": "Open Character 'Campaign Notes'",
         "description": "Opens an editable version of the player's assigned character's 'Campaign Notes' section of their character sheet"
+      },
+      "toggle-disposition": {
+        "name": "Toggle Disposition",
+        "hint": "Toggles the disposition of the hovered token (starting with indifferent), Use Shift + button to decrease disposition, and the default to increase it"
       }
     },
     "notification": {

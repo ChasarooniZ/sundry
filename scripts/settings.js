@@ -1,4 +1,5 @@
 import { TEMPLATES } from "./lib/const.js";
+import { isF2eSystem } from "./lib/helpers.js";
 import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
 import { setuplanguageHandling } from "./lib/languageHandling.js";
@@ -17,6 +18,7 @@ import {
 import { setupDisplayWeaponDamage } from "./lib/showBaseDamage.js";
 import { minifySimpleRequests } from "./lib/simpleRequests.js";
 import { setupStartOfSession } from "./lib/startOfSession.js";
+import { toggleDispositionStates } from "./lib/toggleDisposition.js";
 import { MODULE_ID } from "./module.js";
 
 export function setupSettings() {
@@ -24,7 +26,7 @@ export function setupSettings() {
     name: `${MODULE_ID}.module-settings.colorize.pf2e-hud.persistent.name`,
     hint: `${MODULE_ID}.module-settings.colorize.pf2e-hud.persistent.hint`,
     scope: "world",
-    config: game.system.id === "pf2e",
+    config: isF2eSystem(),
     default: false,
     type: Boolean,
     onChange: (value) => {
@@ -39,13 +41,13 @@ export function setupSettings() {
       name: `${MODULE_ID}.module-settings.colorize.pf2e-toolbelt.target-helper.roll.name`,
       hint: `${MODULE_ID}.module-settings.colorize.pf2e-toolbelt.target-helper.roll.hint`,
       scope: "world",
-      config: game.system.id === "pf2e",
+      config: isF2eSystem(),
       default: false,
       type: Boolean,
       onChange: (value) => {
         setupColorizeToolbeltMessageSaves(value);
       },
-    }
+    },
   );
 
   game.settings.register(MODULE_ID, "display.item-property-runes", {
@@ -76,7 +78,7 @@ export function setupSettings() {
     name: `${MODULE_ID}.module-settings.hide.default-craft-checks.name`,
     hint: `${MODULE_ID}.module-settings.hide.default-craft-checks.hint`,
     scope: "world",
-    config: game.system.id === "pf2e",
+    config: isF2eSystem(),
     default: false,
     type: Boolean,
   });
@@ -97,7 +99,7 @@ export function setupSettings() {
     name: `${MODULE_ID}.module-settings.hide.sell-all-treasure.name`,
     hint: `${MODULE_ID}.module-settings.hide.sell-all-treasure.hint`,
     scope: "world",
-    config: game.system.id === "pf2e",
+    config: isF2eSystem(),
     default: false,
     type: Boolean,
     onChange: (value) => {
@@ -109,7 +111,7 @@ export function setupSettings() {
     name: `${MODULE_ID}.module-settings.highlight.languages-known.name`,
     hint: `${MODULE_ID}.module-settings.highlight.languages-known.hint`,
     scope: "world",
-    config: game.system.id === "pf2e",
+    config: isF2eSystem(),
     default: false,
     type: Boolean,
     onChange: (value) => {
@@ -124,13 +126,13 @@ export function setupSettings() {
       name: `${MODULE_ID}.module-settings.highlight.pf2e-toolbelt.target-helper.roll.name`,
       hint: `${MODULE_ID}.module-settings.highlight.pf2e-toolbelt.target-helper.roll.hint`,
       scope: "world",
-      config: game.system.id === "pf2e",
+      config: isF2eSystem(),
       default: false,
       type: Boolean,
       onChange: (value) => {
         setupHighlightToolbeltRollSaves(value);
       },
-    }
+    },
   );
 
   // game.settings.register(MODULE_ID, "message.user-color", {
@@ -159,7 +161,7 @@ export function setupSettings() {
     name: `${MODULE_ID}.module-settings.notify.spellstrike.recharge.name`,
     hint: `${MODULE_ID}.module-settings.notify.spellstrike.recharge.hint`,
     scope: "world",
-    config: game.system.id === "pf2e",
+    config: isF2eSystem(),
     default: false,
     type: Boolean,
     onChange: (value) => {
@@ -219,7 +221,7 @@ export function setupSettings() {
     name: `${MODULE_ID}.module-settings.track.reaction-usage.name`,
     hint: `${MODULE_ID}.module-settings.track.reaction-usage.hint`,
     scope: "world",
-    config: game.system.id === "pf2e",
+    config: isF2eSystem(),
     default: "off",
     type: String,
     onChange: (value) => {
@@ -296,6 +298,27 @@ export function registerKeybindings() {
     onUp: () => {},
     restricted: false, // Restrict this Keybinding to gamemaster only?
     //   reservedModifiers: ["Shift"], // On ALT, the notification is permanent instead of temporary
+    precedence: CONST.KEYBINDING_PRECEDENCE.NORMAL,
+  });
+
+  game.keybindings.register(MODULE_ID, "toggle-disposition", {
+    name: game.i18n.localize(`${MODULE_ID}.controls.toggle-disposition.name`),
+    hint: game.i18n.localize(`${MODULE_ID}.controls.toggle-disposition.hint`),
+    editable: [
+      {
+        key: "KeyI",
+      },
+    ],
+    onDown: (context) => {
+      if (context.isAlt) {
+        toggleDispositionStates(false);
+      } else {
+        toggleDispositionStates(true);
+      }
+    },
+    onUp: () => {},
+    restricted: true, // Restrict this Keybinding to gamemaster only?
+    reservedModifiers: ["Alt"],
     precedence: CONST.KEYBINDING_PRECEDENCE.NORMAL,
   });
 }
