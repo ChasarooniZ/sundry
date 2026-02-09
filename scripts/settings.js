@@ -310,7 +310,7 @@ export function registerKeybindings() {
       },
     ],
     onDown: (context) => {
-      if (context.isShift) {
+      if (context.isAlt) {
         toggleDispositionStates(false);
       } else {
         toggleDispositionStates(true);
@@ -318,7 +318,7 @@ export function registerKeybindings() {
     },
     onUp: () => {},
     restricted: true, // Restrict this Keybinding to gamemaster only?
-    reservedModifiers: ["Shift"],
+    reservedModifiers: ["Alt"],
     precedence: CONST.KEYBINDING_PRECEDENCE.NORMAL,
   });
 }
