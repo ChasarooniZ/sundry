@@ -127,7 +127,7 @@
       },
       "toggle-disposition": {
         "name": "Toggle Disposition",
-        "description": "Toggles the disposition of the hovered token (starting with indifferent), Use Shift + button to decrease disposition, and the default to increase it"
+        "hint": "Toggles the disposition of the hovered token (starting with indifferent), Use Shift + button to decrease disposition, and the default to increase it"
       }
     },
     "notification": {
