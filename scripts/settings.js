@@ -17,6 +17,7 @@ import {
 import { setupDisplayWeaponDamage } from "./lib/showBaseDamage.js";
 import { minifySimpleRequests } from "./lib/simpleRequests.js";
 import { setupStartOfSession } from "./lib/startOfSession.js";
+import { toggleDispositionStates } from "./lib/toggleDisposition.js";
 import { MODULE_ID } from "./module.js";
 
 export function setupSettings() {
@@ -45,7 +46,7 @@ export function setupSettings() {
       onChange: (value) => {
         setupColorizeToolbeltMessageSaves(value);
       },
-    }
+    },
   );
 
   game.settings.register(MODULE_ID, "display.item-property-runes", {
@@ -130,7 +131,7 @@ export function setupSettings() {
       onChange: (value) => {
         setupHighlightToolbeltRollSaves(value);
       },
-    }
+    },
   );
 
   // game.settings.register(MODULE_ID, "message.user-color", {
@@ -296,6 +297,27 @@ export function registerKeybindings() {
     onUp: () => {},
     restricted: false, // Restrict this Keybinding to gamemaster only?
     //   reservedModifiers: ["Shift"], // On ALT, the notification is permanent instead of temporary
+    precedence: CONST.KEYBINDING_PRECEDENCE.NORMAL,
+  });
+
+  game.keybindings.register(MODULE_ID, "toggle-disposition", {
+    name: game.i18n.localize(`${MODULE_ID}.controls.toggle-disposition.name`),
+    hint: game.i18n.localize(`${MODULE_ID}.controls.toggle-disposition.hint`),
+    editable: [
+      {
+        key: "KeyI",
+      },
+    ],
+    onDown: (context) => {
+      if (context.isShift) {
+        toggleDispositionStates(false);
+      } else {
+        toggleDispositionStates(true);
+      }
+    },
+    onUp: () => {},
+    restricted: true, // Restrict this Keybinding to gamemaster only?
+    reservedModifiers: ["Shift"],
     precedence: CONST.KEYBINDING_PRECEDENCE.NORMAL,
   });
 }
