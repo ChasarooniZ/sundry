@@ -1,4 +1,5 @@
 import { TEMPLATES } from "./lib/const.js";
+import { isF2eSystem } from "./lib/helpers.js";
 import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
 import { setuplanguageHandling } from "./lib/languageHandling.js";
@@ -25,7 +26,7 @@ export function setupSettings() {
     name: `${MODULE_ID}.module-settings.colorize.pf2e-hud.persistent.name`,
     hint: `${MODULE_ID}.module-settings.colorize.pf2e-hud.persistent.hint`,
     scope: "world",
-    config: game.system.id === "pf2e",
+    config: isF2eSystem(),
     default: false,
     type: Boolean,
     onChange: (value) => {
@@ -40,7 +41,7 @@ export function setupSettings() {
       name: `${MODULE_ID}.module-settings.colorize.pf2e-toolbelt.target-helper.roll.name`,
       hint: `${MODULE_ID}.module-settings.colorize.pf2e-toolbelt.target-helper.roll.hint`,
       scope: "world",
-      config: game.system.id === "pf2e",
+      config: isF2eSystem(),
       default: false,
       type: Boolean,
       onChange: (value) => {
@@ -77,7 +78,7 @@ export function setupSettings() {
     name: `${MODULE_ID}.module-settings.hide.default-craft-checks.name`,
     hint: `${MODULE_ID}.module-settings.hide.default-craft-checks.hint`,
     scope: "world",
-    config: game.system.id === "pf2e",
+    config: isF2eSystem(),
     default: false,
     type: Boolean,
   });
@@ -98,7 +99,7 @@ export function setupSettings() {
     name: `${MODULE_ID}.module-settings.hide.sell-all-treasure.name`,
     hint: `${MODULE_ID}.module-settings.hide.sell-all-treasure.hint`,
     scope: "world",
-    config: game.system.id === "pf2e",
+    config: isF2eSystem(),
     default: false,
     type: Boolean,
     onChange: (value) => {
@@ -110,7 +111,7 @@ export function setupSettings() {
     name: `${MODULE_ID}.module-settings.highlight.languages-known.name`,
     hint: `${MODULE_ID}.module-settings.highlight.languages-known.hint`,
     scope: "world",
-    config: game.system.id === "pf2e",
+    config: isF2eSystem(),
     default: false,
     type: Boolean,
     onChange: (value) => {
@@ -125,7 +126,7 @@ export function setupSettings() {
       name: `${MODULE_ID}.module-settings.highlight.pf2e-toolbelt.target-helper.roll.name`,
       hint: `${MODULE_ID}.module-settings.highlight.pf2e-toolbelt.target-helper.roll.hint`,
       scope: "world",
-      config: game.system.id === "pf2e",
+      config: isF2eSystem(),
       default: false,
       type: Boolean,
       onChange: (value) => {
@@ -160,7 +161,7 @@ export function setupSettings() {
     name: `${MODULE_ID}.module-settings.notify.spellstrike.recharge.name`,
     hint: `${MODULE_ID}.module-settings.notify.spellstrike.recharge.hint`,
     scope: "world",
-    config: game.system.id === "pf2e",
+    config: isF2eSystem(),
     default: false,
     type: Boolean,
     onChange: (value) => {
@@ -220,7 +221,7 @@ export function setupSettings() {
     name: `${MODULE_ID}.module-settings.track.reaction-usage.name`,
     hint: `${MODULE_ID}.module-settings.track.reaction-usage.hint`,
     scope: "world",
-    config: game.system.id === "pf2e",
+    config: isF2eSystem(),
     default: "off",
     type: String,
     onChange: (value) => {

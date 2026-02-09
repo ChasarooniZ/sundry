@@ -67,6 +67,7 @@ You can access the changelog [here](/CHANGELOG.md).
 
 - **Hotkey**
   - `Character Campaign Notes` - Adds a new hotkey (Default `N`) to open an editable dialog of their assigned character's `Campaign Notes` field on their character sheet for quick access
+  - `Disposition Toggling` - Using a new hotkey (I) allow you to easily toggle the disposition of the hovered token
 
 - **Minify**
   - `Simple Requests` module to minify the chat area it takes up

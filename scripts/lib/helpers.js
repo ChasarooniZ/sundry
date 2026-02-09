@@ -36,12 +36,12 @@ export function versionMigration() {
   if (
     foundry.utils.isNewerVersion(
       game.settings.get(MODULE_ID, "version"),
-      "0.9.4"
+      "0.9.4",
     )
   ) {
     const oldPauseClass = game.settings.get(
       MODULE_ID,
-      "sundry.replace.pause-img-class"
+      "sundry.replace.pause-img-class",
     );
     if (oldPauseClass === "fa-beat") {
       game.settings.set(MODULE_ID, "sundry.replace.pause-img-class", "fa-spin");
@@ -49,4 +49,8 @@ export function versionMigration() {
   }
 
   game.settings.get(MODULE_ID, "version", game.modules?.get("sundry")?.version);
+}
+
+export function isF2eSystem() {
+  return game.system.id === "pf2e" || game.system.id === "sf2e";
 }
