@@ -124,6 +124,10 @@
       "player-notes": {
         "name": "Otwórz „Notatki dotyczące kampanii” postaci",
         "description": "Otwiera edytowalną wersję sekcji „Notatki z kampanii” przypisanej postaci gracza w jej karcie postaci"
+      },
+      "toggle-disposition": {
+        "name": "Przełącznik nastawienia",
+        "hint": "Przełącza nastawienie tokenu, nad którym znajduje się kursor (zaczynając od obojętnego). Użyj Shift + przycisk, aby zmniejszyć nastawienie, a domyślnie, aby je zwiększyć."
       }
     },
     "notification": {
