@@ -139,6 +139,10 @@
             "player-notes": {
                 "name": "打开角色“战役笔记”",
                 "description": "打开玩家角色卡中“战役笔记”部分的可编辑版本"
+            },
+            "toggle-disposition": {
+                "name": "切换态度",
+                "hint": "切换悬停指示物的态度（从不关心开始），使用Alt+绑定键以使态度下降，而默认为提升态度"
             }
         },
         "display": {
@@ -146,7 +150,8 @@
             "player-notes": {
                 "title": "战役笔记"
             },
-            "team-members": "成员"
+            "team-members": "成员",
+            "property-runes": "性能符文"
         },
         "items": {
             "effects": {
