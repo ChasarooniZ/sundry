@@ -124,6 +124,10 @@
       "player-notes": {
         "name": "Ouvrir les 'Notes de campagne' du personnage",
         "description": "Ouvre une version modifiable de la section 'Notes de campagne' de la feuille de personnage du personnage assigné au joueur"
+      },
+      "toggle-disposition": {
+        "name": "Basculer la disposition",
+        "hint": "Bascule l'état du jeton survolé (débutant à indifférent). Utilisez Maj + bouton si l'état empire et la valeur par défaut pour l'améliorer."
       }
     },
     "notification": {
