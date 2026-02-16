@@ -1,6 +1,6 @@
 {
 	"folder": "13UAzWrxkUuZ9jwZ",
-	"name": "Template: Ghost (WIP)",
+	"name": "Template: Ghost",
 	"type": "action",
 	"effects": [],
 	"system": {
@@ -13,7 +13,7 @@
 			}
 		},
 		"description": {
-			"value": "<p>The ephemeral form of a ghostly creature lets it pass through solid objects and float in the air. For simplicity, a creature with these adjustments isn't truly incorporeal, nor does it necessarily return after being destroyed.</p><ul><li>Add the ghost, spirit, and undead traits.</li><li>Add the Necril language.</li><li>Add the following immunities: death effects, disease, paralyzed, poison, precision, unconscious.</li><li>Add the following weaknesses, with a value based on the creature's level: force, ghost touch, positive.</li><li>If the creature can't fly, change its highest Speed to a fly Speed. Remove all other Speeds.</li><li>The damage of the creature's physical Strikes changes to negative damage, and those Strikes are magical.</li><li><p>Add the following abilities.<br />Darkvision<br />Negative Healing<br />Ghostly Passage [one-action] The creature Flies and, during this movement, can pass through walls, creatures, and other material obstacles as though incorporeal. It must begin and end its movement outside of any physical obstacles, and passing through solid material is difficult terrain.</p></li></ul><table><caption><h3>Ghost Adjustment</h3></caption><thead><tr><th>Level</th><th>Weaknesses</th></tr></thead><tbody><tr><th>3 or lower</th><th>3</th></tr><tr><th>4 - 8</th><th>5</th></tr><tr><th>9 - 13</th><th>10</th></tr><tr><th>14+</th><th>15</th></tr></tbody></table>",
+			"value": "<p>The ephemeral form of a ghostly creature lets it pass through solid objects and float in the air. For simplicity, a creature with these adjustments isn't truly incorporeal, nor does it necessarily return after being destroyed.</p><ul><li>Add the ghost, spirit, and undead traits.</li><li>Add the Necril language.</li><li>Add the following immunities: death effects, disease, paralyzed, poison, precision, unconscious.</li><li>Add the following weaknesses, with a value based on the creature's level: force, ghost touch, positive.</li><li>If the creature can't fly, change its highest Speed to a fly Speed. Remove all other Speeds.</li><li>The damage of the creature's physical Strikes changes to negative damage, and those Strikes are magical.</li><li><p>Add the following abilities.</p></li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6]{Darkvision}</p></li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.TTCw5NusiSSkJU1x]{Void Healing}</p></li><li><p>@UUID[Compendium.sundry.pf2e-sundry-items.Item.Jcjsn3LWGZiTZpfn]</p></li></ul><table><caption><h3>Ghost Adjustment</h3></caption><thead><tr><th>Level</th><th>Weaknesses</th></tr></thead><tbody><tr><th>3 or lower</th><th>3</th></tr><tr><th>4 - 8</th><th>5</th></tr><tr><th>9 - 13</th><th>10</th></tr><tr><th>14+</th><th>15</th></tr></tbody></table>",
 			"gm": ""
 		},
 		"publication": {
@@ -93,11 +93,6 @@
 				"value": "magical"
 			},
 			{
-				"key": "BaseSpeed",
-				"value": "@actor.system.attributes.speed.total",
-				"selector": "fly"
-			},
-			{
 				"key": "DamageAlteration",
 				"mode": "override",
 				"property": "damage-type",
@@ -116,7 +111,7 @@
 			},
 			{
 				"key": "GrantItem",
-				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.sZ4Zf7XjhbsBQlBx"
+				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.Jcjsn3LWGZiTZpfn"
 			},
 			{
 				"key": "FlatModifier",
@@ -145,9 +140,20 @@
 				"selector": [
 					"swim-speed"
 				]
+			},
+			{
+				"key": "BaseSpeed",
+				"selector": "fly",
+				"value": "@actor.flags.sundry.preSpeed"
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "override",
+				"path": "flags.sundry.preSpeed",
+				"value": "@actor.system.attributes.speed.total"
 			}
 		],
-		"slug": "template-zombie",
+		"slug": "template-ghost",
 		"traits": {
 			"otherTags": [],
 			"value": []
@@ -162,23 +168,23 @@
 		"deathNote": false
 	},
 	"img": "icons/magic/death/undead-ghost-scream-teal.webp",
-	"sort": 100000,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
 	},
 	"flags": {},
 	"_stats": {
-		"compendiumSource": "Item.4cgO8nEFD3Tt6iLe",
-		"duplicateSource": "Item.K9hNf3rdoxLoJVkI",
+		"compendiumSource": null,
+		"duplicateSource": null,
 		"exportSource": null,
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
-		"createdTime": 1771262072845,
-		"modifiedTime": 1771262319078,
+		"createdTime": 1771280951325,
+		"modifiedTime": 1771283490678,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_id": "RivHx0kiiXd0muwu",
-	"_key": "!items!RivHx0kiiXd0muwu"
+	"_id": "5wxau6kiKeN0Ir4p",
+	"sort": 0,
+	"_key": "!items!5wxau6kiKeN0Ir4p"
 }

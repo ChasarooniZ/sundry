@@ -1,0 +1,63 @@
+{
+	"img": "systems/pf2e/icons/default-icons/action.svg",
+	"name": "Slink in Shadows",
+	"system": {
+		"description": {
+			"gm": "",
+			"value": "<p>The shadow can @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Hide} or end its @UUID[Compendium.pf2e.actionspf2e.Item.VMozDqMMuK5kpoX4]{Sneak} in a creature's or object's shadow.</p>"
+		},
+		"rules": [],
+		"slug": "slink-in-shadows",
+		"_migration": {
+			"version": 0.955,
+			"previous": {
+				"schema": 0.932,
+				"foundry": "13.351",
+				"system": "7.10.1"
+			}
+		},
+		"traits": {
+			"otherTags": [],
+			"value": []
+		},
+		"publication": {
+			"title": "",
+			"authors": "",
+			"license": "ORC",
+			"remaster": true
+		},
+		"actionType": {
+			"value": "passive"
+		},
+		"category": "offensive",
+		"actions": {
+			"value": null
+		},
+		"deathNote": false
+	},
+	"type": "action",
+	"effects": [],
+	"folder": "UnFDXm81p6tXZpYd",
+	"ownership": {
+		"default": 0,
+		"HShcH53gfTrrSBR1": 3,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"flags": {
+		"core": {}
+	},
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.10.1",
+		"createdTime": 1771283109204,
+		"modifiedTime": 1771283118345,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"_id": "S8vSIh3GFM7pl29C",
+	"sort": 500000,
+	"_key": "!items!S8vSIh3GFM7pl29C"
+}

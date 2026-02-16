@@ -1,0 +1,56 @@
+{
+	"folder": "UnFDXm81p6tXZpYd",
+	"img": "systems/pf2e/icons/actions/Passive.webp",
+	"name": "Fast Healing",
+	"system": {
+		"actionType": {
+			"value": "passive"
+		},
+		"actions": {
+			"value": null
+		},
+		"category": "offensive",
+		"description": {
+			"value": "<p><strong>Note</strong> The actual fast healing rule element is stored on the template granting the fast healing</p>",
+			"gm": ""
+		},
+		"publication": {
+			"license": "OGL",
+			"remaster": false,
+			"title": "Pathfinder Bestiary 3",
+			"authors": ""
+		},
+		"rules": [],
+		"traits": {
+			"value": [],
+			"otherTags": []
+		},
+		"slug": "fast-healing",
+		"_migration": {
+			"version": 0.955,
+			"previous": null
+		},
+		"deathNote": false
+	},
+	"type": "action",
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.10.1",
+		"createdTime": 1771266827051,
+		"modifiedTime": 1771283109276,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"effects": [],
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"flags": {},
+	"_id": "OoeNhajZh5yLYpAT",
+	"sort": 200000,
+	"_key": "!items!OoeNhajZh5yLYpAT"
+}

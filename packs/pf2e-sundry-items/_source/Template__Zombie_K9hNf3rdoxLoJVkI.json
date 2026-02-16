@@ -110,7 +110,7 @@
 		"deathNote": false
 	},
 	"img": "icons/magic/death/undead-zombie-grave-green.webp",
-	"sort": 100000,
+	"sort": 500000,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
@@ -124,7 +124,7 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771262072845,
-		"modifiedTime": 1771262247805,
+		"modifiedTime": 1771274820546,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_id": "K9hNf3rdoxLoJVkI",

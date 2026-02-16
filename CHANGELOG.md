@@ -9,6 +9,13 @@
 - **New**
   - `Template Helpers`
     - Added hooks to update `HP` when `Max HP` is updated by a template
+  - `Templates`
+    - **Undead**
+      - `Jiang-shi`
+      - `Jiang-shi Minister`
+      - `Ghoul` - Missing Attacks
+      - `Ghost`
+      - `Shadow` - No Skill change, no  Spells
 - **Updated**
   - Fixed issues with the Sundry Templates Compendium
 

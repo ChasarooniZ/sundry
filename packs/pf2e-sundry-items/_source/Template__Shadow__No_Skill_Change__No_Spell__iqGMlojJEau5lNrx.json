@@ -1,0 +1,178 @@
+{
+	"folder": "13UAzWrxkUuZ9jwZ",
+	"name": "Template: Shadow (No Skill Change, No Spell)",
+	"type": "action",
+	"effects": [],
+	"system": {
+		"_migration": {
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.0"
+			}
+		},
+		"description": {
+			"value": "<p>A shadow creature is little more than a sentient shadow powered by negative energy. Shadows can easily travel to and from the Shadow Plane.</p><ul><li>Add undead trait</li><li>Add the Necril language.</li><li>Add Stealth with a modifier equal to its highest skill modifier.</li><li>Add the following immunities: death effects, disease, paralyzed, poison, precision, unconscious.</li><li>Add the following weaknesses, with a value based on the creature's level: force, ghost touch, positive.</li><li>If the creature can't fly, change its highest Speed to a fly Speed. Remove all other Speeds.</li><li>The damage of the creature's physical Strikes changes to negative damage, and those Strikes are magical.</li><li><p>Add the following abilities.</p></li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6]{Darkvision}</p></li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.TTCw5NusiSSkJU1x]{Void Healing}</p></li><li><p>@UUID[Compendium.sundry.pf2e-sundry-items.Item.S8vSIh3GFM7pl29C]</p></li></ul><table><caption><h3>Shadow Adjustment</h3></caption><thead><tr><th>Level</th><th>Weaknesses</th></tr></thead><tbody><tr><th>3 or lower</th><th>3</th></tr><tr><th>4 - 8</th><th>5</th></tr><tr><th>9 - 13</th><th>10</th></tr><tr><th>14+</th><th>15</th></tr></tbody></table>",
+			"gm": ""
+		},
+		"publication": {
+			"title": "Book of the Dead",
+			"authors": "",
+			"license": "OGL",
+			"remaster": false
+		},
+		"rules": [
+			{
+				"key": "ActiveEffectLike",
+				"mode": "add",
+				"path": "system.traits.value",
+				"value": "undead"
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "add",
+				"path": "system.details.languages.value",
+				"value": "necril"
+			},
+			{
+				"key": "Immunity",
+				"type": "death-effects"
+			},
+			{
+				"key": "Immunity",
+				"type": "disease"
+			},
+			{
+				"key": "Immunity",
+				"type": "paralyzed"
+			},
+			{
+				"key": "Immunity",
+				"type": "poison"
+			},
+			{
+				"key": "Immunity",
+				"type": "precision"
+			},
+			{
+				"key": "Immunity",
+				"type": "unconscious"
+			},
+			{
+				"key": "Weakness",
+				"type": "force",
+				"value": "match(when(lte(@actor.level, 3), 3),when(btwn(@actor.level, 4, 8), 5),when(btwn(@actor.level, 9, 13), 10),when(gte(@actor.level, 14), 15))"
+			},
+			{
+				"key": "Weakness",
+				"type": "ghost-touch",
+				"value": "match(when(lte(@actor.level, 3), 3),when(btwn(@actor.level, 4, 8), 5),when(btwn(@actor.level, 9, 13), 10),when(gte(@actor.level, 14), 15))"
+			},
+			{
+				"key": "Weakness",
+				"type": "vitality",
+				"value": "match(when(lte(@actor.level, 3), 3),when(btwn(@actor.level, 4, 8), 5),when(btwn(@actor.level, 9, 13), 10),when(gte(@actor.level, 14), 15))"
+			},
+			{
+				"key": "AdjustStrike",
+				"mode": "add",
+				"property": "weapon-traits",
+				"value": "magical"
+			},
+			{
+				"key": "DamageAlteration",
+				"mode": "override",
+				"property": "damage-type",
+				"selectors": [
+					"strike-damage"
+				],
+				"value": "void"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.qCCLZhnp2HhP3Ex6"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.Jcjsn3LWGZiTZpfn"
+			},
+			{
+				"key": "FlatModifier",
+				"value": "-@actor.system.attributes.speed.total",
+				"selector": [
+					"climb-speed"
+				]
+			},
+			{
+				"key": "FlatModifier",
+				"value": "-@actor.system.attributes.speed.total",
+				"selector": [
+					"land-speed"
+				]
+			},
+			{
+				"key": "FlatModifier",
+				"value": "-@actor.system.attributes.speed.total",
+				"selector": [
+					"burrow-speed"
+				]
+			},
+			{
+				"key": "FlatModifier",
+				"value": "-@actor.system.attributes.speed.total",
+				"selector": [
+					"swim-speed"
+				]
+			},
+			{
+				"key": "BaseSpeed",
+				"selector": "fly",
+				"value": "@actor.flags.sundry.preSpeed"
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "override",
+				"path": "flags.sundry.preSpeed",
+				"value": "@actor.system.attributes.speed.total"
+			}
+		],
+		"slug": "template-shadow",
+		"traits": {
+			"otherTags": [],
+			"value": []
+		},
+		"actionType": {
+			"value": "passive"
+		},
+		"actions": {
+			"value": null
+		},
+		"category": "defensive",
+		"deathNote": false
+	},
+	"img": "icons/creatures/magical/humanoid-silhouette-glowing-pink.webp",
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"flags": {},
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.10.1",
+		"createdTime": 1771283535535,
+		"modifiedTime": 1771283535535,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"_id": "iqGMlojJEau5lNrx",
+	"sort": 0,
+	"_key": "!items!iqGMlojJEau5lNrx"
+}

@@ -51,10 +51,10 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771263589045,
-		"modifiedTime": 1771263589045,
+		"modifiedTime": 1771283109276,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_id": "oOSgapASLtrcVhwQ",
-	"sort": 0,
+	"sort": 100000,
 	"_key": "!items!oOSgapASLtrcVhwQ"
 }

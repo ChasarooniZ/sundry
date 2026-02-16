@@ -1,0 +1,438 @@
+{
+	"folder": "13UAzWrxkUuZ9jwZ",
+	"name": "Template: Jiang-shi",
+	"type": "action",
+	"effects": [],
+	"system": {
+		"_migration": {
+			"version": 0.955,
+			"previous": null
+		},
+		"description": {
+			"value": "<p>Increase the creature's level by 1 and change its statistics as follows.</p><ul><li>It gains the undead and vampire traits, and usually becomes evil.</li><li>Increase the creature's AC, attack modifiers, DCs, saving throws, and skill modifiers by 1.</li><li>Reduce the creature's Speed by 10 feet, to a minimum of 15 feet.</li><li>Increase the creature's damage with Strikes and other offensive abilities by 1. If an ability can be used only a small number of times (such as a dragon's breath weapon), increase the damage by 2 instead.</li><li>Reduce the creature's HP by the amount listed on the table.</li><li>The jiang-shi gains fast healing and resistance to physical damage (except darkwood) as indicated in the table. These abilities are the reason the jiang-shi has less HP.</li></ul><table><caption><h3>Jiangshi Adjustment</h3></caption><thead><tr><th>Level</th><th>HP Decrease</th><th>Fast Healing</th></tr></thead><tbody><tr><th>3 - 4</th><th>-20</th><th>5</th></tr><tr><th>5 - 7</th><th>-30</th><th>7</th></tr><tr><th>8 - 14</th><th>-40</th><th>10</th></tr><tr><th>15+</th><th>-60</th><th>15</th></tr></tbody></table><p>If the base creature becoming a jiang-shi has any abilities that specifically come from it being a living creature, it loses them. It also loses any traits that represented its life as a living creature, such as human and humanoid. You might also need to adjust abilities that conflict with the jiang-shi's theme. All jiang-shi gain the following abilities.</p><ul><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6]{Darkvision}</p></li><li><p>@UUID[Compendium.pf2e.bestiary-family-ability-glossary.OSnNiMdqgARyEVuv]{Breathsense 60 feet}</p></li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.TTCw5NusiSSkJU1x]{Void Healing}</p></li><li><p><strong>Immunities</strong> death effects, disease, paralyzed, poison, sleep, prone</p></li><li><p>@UUID[Compendium.pf2e.bestiary-family-ability-glossary.BBqjQN5Gbe4PWP56]{One More Breath}</p></li><li><p>@UUID[Compendium.sundry.pf2e-sundry-items.TbfN5a4mj5bjDpzb]{Jiangshi Revulsion}</p></li><li><p>@UUID[Compendium.sundry.pf2e-sundry-items.bZsQVTuHhz5FxixF]{Bitter Epiphany}</p></li><li><p>@UUID[Compendium.pf2e.bestiary-family-ability-glossary.hwrZQSADT36TjDdv]{Warped Fulu}</p></li><li><p>@UUID[Compendium.pf2e.bestiary-family-ability-glossary.O6AXB9aZB0K14sS5]{Rigor Mortis}</p></li><li><p><strong>Claws</strong> If the base creature had hands, its fingernails thicken and grow to terrible proportions, granting it an unarmed claw Strike that deals slashing damage, has the agile trait, and can Grab. Use the moderate damage for the creature's level on the Strike Damage table.</p></li><li><p>@UUID[Compendium.pf2e.bestiary-family-ability-glossary.QMlQ5AvcunCvjlfM]{Drain Qi}</p></li></ul>",
+			"gm": ""
+		},
+		"publication": {
+			"title": "",
+			"authors": "",
+			"license": "OGL",
+			"remaster": false
+		},
+		"rules": [
+			{
+				"key": "ActiveEffectLike",
+				"mode": "add",
+				"path": "system.traits.value",
+				"value": "undead"
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "add",
+				"path": "system.traits.value",
+				"value": "vampire"
+			},
+			{
+				"key": "FlatModifier",
+				"value": 1,
+				"selector": [
+					"all",
+					"damage"
+				]
+			},
+			{
+				"key": "FlatModifier",
+				"selector": [
+					"land-speed"
+				],
+				"value": -10
+			},
+			{
+				"key": "FlatModifier",
+				"selector": [
+					"damage"
+				],
+				"value": 2,
+				"predicate": [
+					"item:frequency:limited"
+				],
+				"label": "Jiangshi Limited Use"
+			},
+			{
+				"key": "FlatModifier",
+				"selector": [
+					"hp"
+				],
+				"value": "match(when(btwn(@actor.level, 3, 4), -20),when(btwn(@actor.level, 5, 7), -30),when(btwn(@actor.level, 8, 14), -40),when(gte(@actor.level, 15), -60))"
+			},
+			{
+				"key": "FastHealing",
+				"value": "match(when(btwn(@actor.level, 3, 4), 5),when(btwn(@actor.level, 5, 7), 7),when(btwn(@actor.level, 8, 14), 10),when(gte(@actor.level, 15), 15))"
+			},
+			{
+				"exceptions": [
+					"duskwood"
+				],
+				"key": "Resistance",
+				"type": "physical",
+				"value": "match(when(btwn(@actor.level, 3, 4), 5),when(btwn(@actor.level, 5, 7), 7),when(btwn(@actor.level, 8, 14), 10),when(gte(@actor.level, 15), 15))"
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "remove",
+				"path": "system.traits.value",
+				"value": "human"
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "remove",
+				"path": "system.traits.value",
+				"value": "humanoid"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.qCCLZhnp2HhP3Ex6"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-family-ability-glossary.Item.OSnNiMdqgARyEVuv"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x"
+			},
+			{
+				"key": "Immunity",
+				"type": "death-effects"
+			},
+			{
+				"key": "Immunity",
+				"type": "disease"
+			},
+			{
+				"key": "Immunity",
+				"type": "paralyzed"
+			},
+			{
+				"key": "Immunity",
+				"type": "poison"
+			},
+			{
+				"key": "Immunity",
+				"type": "sleep"
+			},
+			{
+				"key": "Immunity",
+				"type": "prone"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-family-ability-glossary.Item.BBqjQN5Gbe4PWP56"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.TbfN5a4mj5bjDpzb"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.bZsQVTuHhz5FxixF"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-family-ability-glossary.Item.hwrZQSADT36TjDdv"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-family-ability-glossary.Item.O6AXB9aZB0K14sS5"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-family-ability-glossary.Item.QMlQ5AvcunCvjlfM"
+			},
+			{
+				"baseType": "claw",
+				"category": "unarmed",
+				"damage": {
+					"base": {
+						"damageType": "slashing",
+						"dice": "match(when(lte(@actor.level, 3), 1),when(btwn(@actor.level, 4, 11), 2),when(btwn(@actor.level, 12, 18), 3),when(gte(@actor.level, 19), 4))",
+						"die": "d4"
+					}
+				},
+				"group": "brawling",
+				"key": "Strike",
+				"label": "PF2E.Weapon.Base.claw",
+				"range": null,
+				"slug": "claw",
+				"traits": [
+					"agile",
+					"unarmed"
+				],
+				"predicate": [
+					{
+						"lte": [
+							"self:level",
+							0
+						]
+					}
+				]
+			},
+			{
+				"baseType": "claw",
+				"category": "unarmed",
+				"damage": {
+					"base": {
+						"damageType": "slashing",
+						"dice": "match(when(lte(@actor.level, 3), 1),when(btwn(@actor.level, 4, 11), 2),when(btwn(@actor.level, 12, 18), 3),when(gte(@actor.level, 19), 4))",
+						"die": "d6"
+					}
+				},
+				"group": "brawling",
+				"key": "Strike",
+				"label": "PF2E.Weapon.Base.claw",
+				"range": null,
+				"slug": "claw",
+				"traits": [
+					"agile",
+					"unarmed"
+				],
+				"predicate": [
+					{
+						"or": [
+							"self:level:1",
+							{
+								"and": [
+									{
+										"gte": [
+											"self:level",
+											4
+										]
+									},
+									{
+										"lte": [
+											"self:level",
+											6
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"baseType": "claw",
+				"category": "unarmed",
+				"damage": {
+					"base": {
+						"damageType": "slashing",
+						"dice": "match(when(lte(@actor.level, 3), 1),when(btwn(@actor.level, 4, 11), 2),when(btwn(@actor.level, 12, 18), 3),when(gte(@actor.level, 19), 4))",
+						"die": "d8"
+					}
+				},
+				"additionalEffects": [
+					{
+						"tag": "grab",
+						"label": "PF2E.AttackEffectGrab"
+					}
+				],
+				"group": "brawling",
+				"key": "Strike",
+				"label": "PF2E.Weapon.Base.claw",
+				"range": null,
+				"slug": "claw",
+				"traits": [
+					"agile",
+					"unarmed"
+				],
+				"predicate": [
+					{
+						"or": [
+							{
+								"and": [
+									{
+										"gte": [
+											"self:level",
+											2
+										]
+									},
+									{
+										"lte": [
+											"self:level",
+											3
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"gte": [
+											"self:level",
+											7
+										]
+									},
+									{
+										"lte": [
+											"self:level",
+											9
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"gte": [
+											"self:level",
+											12
+										]
+									},
+									{
+										"lte": [
+											"self:level",
+											14
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"gte": [
+											"self:level",
+											19
+										]
+									},
+									{
+										"lte": [
+											"self:level",
+											22
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"baseType": "claw",
+				"category": "unarmed",
+				"damage": {
+					"base": {
+						"damageType": "slashing",
+						"dice": "match(when(lte(@actor.level, 3), 1),when(btwn(@actor.level, 4, 11), 2),when(btwn(@actor.level, 12, 18), 3),when(gte(@actor.level, 19), 4))",
+						"die": "d10"
+					}
+				},
+				"group": "brawling",
+				"key": "Strike",
+				"label": "PF2E.Weapon.Base.claw",
+				"range": null,
+				"slug": "claw",
+				"traits": [
+					"agile",
+					"unarmed"
+				],
+				"predicate": [
+					{
+						"or": [
+							{
+								"and": [
+									{
+										"gte": [
+											"self:level",
+											10
+										]
+									},
+									{
+										"lte": [
+											"self:level",
+											11
+										]
+									}
+								]
+							},
+							{
+								"and": [
+									{
+										"gte": [
+											"self:level",
+											15
+										]
+									},
+									{
+										"lte": [
+											"self:level",
+											18
+										]
+									}
+								]
+							},
+							{
+								"gte": [
+									"self:level",
+									23
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.Tkd8sH4pwFIPzqTr"
+			},
+			{
+				"key": "Note",
+				"text": "<span class=\"action-glyph\">A</span> @Localize[PF2E.NPC.Abilities.Glossary.Grab]",
+				"selector": [
+					"claw-attack"
+				],
+				"title": "PF2E.AttackEffectGrab",
+				"visibility": "owner"
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "add",
+				"path": "system.details.level.value",
+				"phase": "afterDerived",
+				"value": 1,
+				"priority": 105
+			}
+		],
+		"slug": "template-jiang-shi",
+		"traits": {
+			"otherTags": [],
+			"value": []
+		},
+		"actionType": {
+			"value": "passive"
+		},
+		"actions": {
+			"value": null
+		},
+		"category": "defensive",
+		"deathNote": false
+	},
+	"img": "icons/sundries/scrolls/scroll-symbol-triangle-tan.webp",
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"flags": {},
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.10.1",
+		"createdTime": 1771274471969,
+		"modifiedTime": 1771281766889,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"_id": "isqraUMy0oZlCGu4",
+	"sort": 100000,
+	"_key": "!items!isqraUMy0oZlCGu4"
+}

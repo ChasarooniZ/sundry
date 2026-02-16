@@ -1,0 +1,191 @@
+{
+	"folder": "13UAzWrxkUuZ9jwZ",
+	"name": "Template: Ghoul (No Attacks)",
+	"type": "action",
+	"effects": [],
+	"system": {
+		"_migration": {
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.0"
+			}
+		},
+		"description": {
+			"value": "<p>You can also turn a living creature into a ghoul by completing the following steps. First, increase the creature's level by 1 and change its statistics as follows.</p><ul><li>Increase its AC, attack bonuses, DCs, saving throws, Perception, and skill modifiers by 1.</li><li>Increase its damage with Strikes and other offensive abilities by 1. If the creature is limited in how often it can use an ability (such as dragon breath), increase that ability's damage by 2 instead.</li><li>A ghoul gains the undead and ghoul traits, and it usually becomes unholy.</li><li>If the base creature has any abilities that come from it being a living creature, it loses them. It also loses any traits that represent its life as a living creature, such as human and humanoid</li><li>Add the following immunities: bleed, death effects, disease, paralyzed, poison, unconscious.</li><li><p><strong>Burrow</strong> The ghoul gains a burrow speed of 5 feet.</p></li><li><p><strong>Claws</strong> If the creature had hands, it gains a claw Strike (an agile unarmed attack that deals slashing damage plus Grab). If it had any agile attacks, the damage dealt by its claws should be roughly the same as the damage dealt by those attacks. If it had only non-agile attacks, its claws should deal three-quarters that damage.</p></li><li><p><strong>Jaws</strong> If the creature had a mouth, it gains a jaws Strike (an unarmed attack that deals slashing damage). The damage amount should be the same as the creature's non-agile attacks.</p></li><li><p>@UUID[Compendium.pf2e.bestiary-family-ability-glossary.ixPqVlqLaYTB1b23]{Consume Flesh}</p></li><li><p>@UUID[Compendium.sundry.pf2e-sundry-items.Item.vGlrCyD35FtywJjM]{Ghoul Whispers}</p></li><li><p>@UUID[Compendium.pf2e.bestiary-family-ability-glossary.227zB1x6U0TyU1nd]{Grave Knowledge}</p></li><li><p>The ghoul can instead automatically learn something specific known by a creature it consumed in the last 7 days, like the location of a hidden treasure or the name of a loved one. The ghoul can do this only once for a given creature, no matter how much of its flesh the ghoul consumed.</p></li><li><p>@UUID[Compendium.pf2e.bestiary-family-ability-glossary.UU1Fp3PRuTFONjC9]{Swift Leap}</p></li></ul>",
+			"gm": ""
+		},
+		"publication": {
+			"title": "Book of the Dead",
+			"authors": "",
+			"license": "OGL",
+			"remaster": false
+		},
+		"rules": [
+			{
+				"key": "ActiveEffectLike",
+				"mode": "add",
+				"path": "system.traits.value",
+				"value": "ghoul"
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "add",
+				"path": "system.traits.value",
+				"value": "undead"
+			},
+			{
+				"key": "Immunity",
+				"type": "death-effects"
+			},
+			{
+				"key": "Immunity",
+				"type": "disease"
+			},
+			{
+				"key": "Immunity",
+				"type": "paralyzed"
+			},
+			{
+				"key": "Immunity",
+				"type": "poison"
+			},
+			{
+				"key": "Immunity",
+				"type": "unconscious"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.qCCLZhnp2HhP3Ex6"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x"
+			},
+			{
+				"key": "FlatModifier",
+				"value": 1,
+				"selector": [
+					"all",
+					"damage"
+				]
+			},
+			{
+				"key": "FlatModifier",
+				"selector": [
+					"damage"
+				],
+				"value": 2,
+				"predicate": [
+					"item:frequency:limited"
+				],
+				"label": "Ghoul Limited Use"
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "add",
+				"path": "system.details.level.value",
+				"phase": "afterDerived",
+				"value": 1,
+				"priority": 105
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "remove",
+				"path": "system.traits.value",
+				"value": "human"
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "remove",
+				"path": "system.traits.value",
+				"value": "humanoid"
+			},
+			{
+				"key": "Immunity",
+				"type": "bleed"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.qNsNvUt7E3BxCP96"
+			},
+			{
+				"choices": [
+					{
+						"label": "Unholy",
+						"value": "unholy"
+					},
+					{
+						"label": "Neutral",
+						"value": ""
+					}
+				],
+				"key": "ChoiceSet",
+				"flag": "isUnholy",
+				"prompt": "Is Unholy?",
+				"priority": 10
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "add",
+				"path": "system.traits.value",
+				"value": "{item|flags.pf2e.rulesSelections.isUnholy}"
+			},
+			{
+				"key": "BaseSpeed",
+				"selector": "burrow",
+				"value": 5
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-family-ability-glossary.Item.ixPqVlqLaYTB1b23"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-family-ability-glossary.Item.UU1Fp3PRuTFONjC9"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-family-ability-glossary.Item.227zB1x6U0TyU1nd"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.vGlrCyD35FtywJjM"
+			}
+		],
+		"slug": "template-ghoul",
+		"traits": {
+			"otherTags": [],
+			"value": []
+		},
+		"actionType": {
+			"value": "passive"
+		},
+		"actions": {
+			"value": null
+		},
+		"category": "defensive",
+		"deathNote": false
+	},
+	"img": "icons/creatures/claws/claw-talons-yellow-red.webp",
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"flags": {},
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.10.1",
+		"createdTime": 1771282962753,
+		"modifiedTime": 1771283067664,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"_id": "XqdCziedcXNc8ld5",
+	"sort": 0,
+	"_key": "!items!XqdCziedcXNc8ld5"
+}
