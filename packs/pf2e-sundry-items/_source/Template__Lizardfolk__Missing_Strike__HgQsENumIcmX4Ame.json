@@ -5,11 +5,15 @@
 	"effects": [],
 	"system": {
 		"_migration": {
-			"version": 0.954,
-			"previous": null
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.0"
+			}
 		},
 		"description": {
-			"value": "<p>Lizardfolk recently began to discover and adapt to different cultures while bringing in their own. Lizardfolk value patience and seek guidance in the stars above. They are able to adapt to almost any environment, but generally prefer to be near the water.</p><ul><li>Replace the human trait with the lizardfolk trait.</li><li>Add the Iruxi language.</li><li>Add a swim Speed of 15 feet.</li><li>Replace any fist attacks with claw attacks. They deal slashing damage instead of bludgeoning.</li><li>Add the following abilities.</li><li><p>@UUID[Compendium.sundry.pf2e-sundry-items.Item.tt77ZEGEiA1USpnL]</p></li></ul>",
+			"value": "<p>Lizardfolk recently began to discover and adapt to different cultures while bringing in their own. Lizardfolk value patience and seek guidance in the stars above. They are able to adapt to almost any environment, but generally prefer to be near the water.</p><ul><li>Replace the human trait with the lizardfolk trait.</li><li>Add the Iruxi language.</li><li>Add a swim Speed of 15 feet.</li><li>Replace any fist attacks with claw attacks. They deal slashing damage instead of bludgeoning.</li><li>Add the following abilities.</li><li><p>@UUID[Compendium.sundry.pf2e-sundry-items.Item.oOSgapASLtrcVhwQ]</p></li></ul>",
 			"gm": ""
 		},
 		"publication": {
@@ -44,7 +48,7 @@
 			},
 			{
 				"key": "GrantItem",
-				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.tt77ZEGEiA1USpnL"
+				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.oOSgapASLtrcVhwQ"
 			}
 		],
 		"slug": "template-kobold",
@@ -62,23 +66,23 @@
 		"deathNote": false
 	},
 	"img": "systems/pf2e/icons/ancestries/lizardfolk.webp",
+	"sort": 0,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
 	},
 	"flags": {},
 	"_stats": {
-		"compendiumSource": null,
-		"duplicateSource": null,
+		"compendiumSource": "Item.jI9SnnV51LVMw3zl",
+		"duplicateSource": "Item.LmfxulMjOV4V6DBy",
 		"exportSource": null,
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
-		"systemVersion": "7.9.1",
-		"createdTime": 1769459489307,
-		"modifiedTime": 1769460330968,
+		"systemVersion": "7.10.1",
+		"createdTime": 1771262072845,
+		"modifiedTime": 1771263621664,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_id": "IpTzhpL0A1k7T9wY",
-	"sort": 700000,
-	"_key": "!items!IpTzhpL0A1k7T9wY"
+	"_id": "HgQsENumIcmX4Ame",
+	"_key": "!items!HgQsENumIcmX4Ame"
 }

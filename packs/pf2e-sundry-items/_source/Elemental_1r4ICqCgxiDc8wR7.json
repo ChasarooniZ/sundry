@@ -1,12 +1,12 @@
 {
 	"type": "Item",
 	"folder": "WtpUUakpGE7vOSJM",
-	"name": "Undead",
-	"color": "#272968",
+	"name": "Elemental",
+	"color": "#388485",
 	"sorting": "a",
-	"_id": "13UAzWrxkUuZ9jwZ",
+	"_id": "1r4ICqCgxiDc8wR7",
 	"description": "",
-	"sort": 0,
+	"sort": 100000,
 	"flags": {},
 	"_stats": {
 		"compendiumSource": null,
@@ -19,5 +19,5 @@
 		"modifiedTime": 1771262072796,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_key": "!folders!13UAzWrxkUuZ9jwZ"
+	"_key": "!folders!1r4ICqCgxiDc8wR7"
 }

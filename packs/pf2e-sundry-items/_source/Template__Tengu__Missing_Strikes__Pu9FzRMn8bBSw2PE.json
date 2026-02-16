@@ -5,8 +5,12 @@
 	"effects": [],
 	"system": {
 		"_migration": {
-			"version": 0.954,
-			"previous": null
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.0"
+			}
 		},
 		"description": {
 			"value": "<p>Tengu traveled from their ancestral home in search of a better life. They love collecting all kinds of things. They often pick up traditions as they travel and integrate them into their own. Most tengu consider their companions to be their most valuable collection.</p><ul><li><p>Replace the human trait with the tengu trait.</p></li><li><p>Add the Tengu language.</p></li><li><p>Add a beak Strike. It deals damage equal to the creature's lowest melee Strike and has the finesse trait.</p></li><li><p>Add the following abilities.</p></li><li>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.fFu2sZz4KB01fVRc]{Low-Light Vision}</li></ul>",
@@ -57,23 +61,23 @@
 		"deathNote": false
 	},
 	"img": "systems/pf2e/icons/ancestries/tengu.webp",
+	"sort": 0,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
 	},
 	"flags": {},
 	"_stats": {
-		"compendiumSource": null,
-		"duplicateSource": null,
+		"compendiumSource": "Item.4cgO8nEFD3Tt6iLe",
+		"duplicateSource": "Item.sZf76AvI0Th2yMgC",
 		"exportSource": null,
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
-		"systemVersion": "7.9.1",
-		"createdTime": 1769460468127,
-		"modifiedTime": 1769460468127,
+		"systemVersion": "7.10.1",
+		"createdTime": 1771262072845,
+		"modifiedTime": 1771262072845,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_id": "MqJ5ZfPy4gVTQfrN",
-	"sort": 0,
-	"_key": "!items!MqJ5ZfPy4gVTQfrN"
+	"_id": "Pu9FzRMn8bBSw2PE",
+	"_key": "!items!Pu9FzRMn8bBSw2PE"
 }

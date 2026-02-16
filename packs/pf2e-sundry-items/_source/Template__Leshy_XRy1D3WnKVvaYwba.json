@@ -5,8 +5,12 @@
 	"effects": [],
 	"system": {
 		"_migration": {
-			"version": 0.954,
-			"previous": null
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.0"
+			}
 		},
 		"description": {
 			"value": "<p>Leshies are nature spirits who have been granted a physical form. They have little tolerance for those who despoil natural places but can find family with anyone. For a fungus leshy, change references to plants to fungi.</p><ul><li>Change size to Small.</li><li>Replace the human and humanoid traits with the</li><li>leshy and plant traits.</li><li>Add the Fey language.</li><li>Add the following abilities.</li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.fFu2sZz4KB01fVRc]{Low-Light Vision}</p></li><li><p>@UUID[Compendium.pf2e.bestiary-family-ability-glossary.mMfvpqD6hqrjqKEz]{Verdant Burst}</p></li></ul>",
@@ -77,23 +81,23 @@
 		"deathNote": false
 	},
 	"img": "systems/pf2e/icons/ancestries/leshy.webp",
+	"sort": 0,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
 	},
 	"flags": {},
 	"_stats": {
-		"compendiumSource": null,
-		"duplicateSource": null,
+		"compendiumSource": "Item.4cgO8nEFD3Tt6iLe",
+		"duplicateSource": "Item.gu9zrM7MIkVIbVfA",
 		"exportSource": null,
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
-		"systemVersion": "7.9.1",
-		"createdTime": 1769459235767,
-		"modifiedTime": 1769460330968,
+		"systemVersion": "7.10.1",
+		"createdTime": 1771262072845,
+		"modifiedTime": 1771262072845,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_id": "JrTxVODggkZWC7hO",
-	"sort": 600000,
-	"_key": "!items!JrTxVODggkZWC7hO"
+	"_id": "XRy1D3WnKVvaYwba",
+	"_key": "!items!XRy1D3WnKVvaYwba"
 }

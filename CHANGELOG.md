@@ -4,6 +4,14 @@
 - **Updated**
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
 
+## 0.14.0
+
+- **New**
+  - `Template Helpers`
+    - Added hooks to update `HP` when `Max HP` is updated by a template
+- **Updated**
+  - Fixed issues with the Sundry Templates Compendium
+
 ## 0.13.0
 
 - **New**

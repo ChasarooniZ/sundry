@@ -5,8 +5,12 @@
 	"effects": [],
 	"system": {
 		"_migration": {
-			"version": 0.954,
-			"previous": null
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.0"
+			}
 		},
 		"description": {
 			"value": "<p>While some dwarves can be set in their ways, many strive to break the mold and explore less traditional avenues of life. They can be steadfast workers who possess an unnatural zeal for the intricacies of their work.</p><ul><li>Replace the human trait with the dwarf trait.</li><li>Add the Dwarven language.</li><li>Add a clan dagger to their items. Optionally, add a clan dagger melee Strike that deals damage equal to the creature's lowest melee Strike.</li><li>Change Speed to 20 feet if higher.</li><li>Add the following abilities.</li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6]{Darkvision}</p></li></ul>",
@@ -66,23 +70,23 @@
 		"deathNote": false
 	},
 	"img": "systems/pf2e/icons/ancestries/dwarf.webp",
+	"sort": 0,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
 	},
 	"flags": {},
 	"_stats": {
-		"compendiumSource": null,
-		"duplicateSource": null,
+		"compendiumSource": "Item.4cgO8nEFD3Tt6iLe",
+		"duplicateSource": "Item.4cgO8nEFD3Tt6iLe",
 		"exportSource": null,
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
-		"systemVersion": "7.9.1",
-		"createdTime": 1769457764765,
-		"modifiedTime": 1769460330968,
+		"systemVersion": "7.10.1",
+		"createdTime": 1771262072845,
+		"modifiedTime": 1771262072845,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_id": "RS7WI9lib1n1kQQy",
-	"sort": 1000000,
-	"_key": "!items!RS7WI9lib1n1kQQy"
+	"_id": "VmcSRhony3vEqnk3",
+	"_key": "!items!VmcSRhony3vEqnk3"
 }

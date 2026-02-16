@@ -1,12 +1,16 @@
 {
-	"folder": "vculNfCb9ctQJU2z",
+	"folder": "WtpUUakpGE7vOSJM",
 	"name": "Template: Minion",
 	"type": "action",
 	"effects": [],
 	"system": {
 		"_migration": {
-			"version": 0.954,
-			"previous": null
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.0"
+			}
 		},
 		"description": {
 			"value": "<p>This creature is a minion and has the following adjsutments.</p><p><strong>Hit Points</strong> ([[ ceil(@actor.level / 4)]]) Actor level / 4 rounded up</p>",
@@ -40,7 +44,9 @@
 		"category": "defensive",
 		"deathNote": false
 	},
+	"_id": "pTKDQZYip5bfGHkA",
 	"img": "systems/pf2e/icons/default-icons/action.svg",
+	"sort": 0,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
@@ -52,12 +58,10 @@
 		"exportSource": null,
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
-		"systemVersion": "7.9.1",
-		"createdTime": 1769449238125,
-		"modifiedTime": 1769449238125,
+		"systemVersion": "7.10.1",
+		"createdTime": 1771262072845,
+		"modifiedTime": 1771262072845,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_id": "LPdUb2KSuSxOhizc",
-	"sort": 0,
-	"_key": "!items!LPdUb2KSuSxOhizc"
+	"_key": "!items!pTKDQZYip5bfGHkA"
 }

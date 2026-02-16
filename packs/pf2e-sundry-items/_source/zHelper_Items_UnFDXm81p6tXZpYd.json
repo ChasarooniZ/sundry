@@ -1,10 +1,10 @@
 {
 	"type": "Item",
-	"folder": "WtpUUakpGE7vOSJM",
-	"name": "Undead",
-	"color": "#272968",
+	"folder": null,
+	"name": "zHelper Items",
+	"color": "#383838",
 	"sorting": "a",
-	"_id": "13UAzWrxkUuZ9jwZ",
+	"_id": "UnFDXm81p6tXZpYd",
 	"description": "",
 	"sort": 0,
 	"flags": {},
@@ -15,9 +15,9 @@
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
-		"createdTime": 1771262072796,
-		"modifiedTime": 1771262072796,
+		"createdTime": 1771262177718,
+		"modifiedTime": 1771262190690,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_key": "!folders!13UAzWrxkUuZ9jwZ"
+	"_key": "!folders!UnFDXm81p6tXZpYd"
 }

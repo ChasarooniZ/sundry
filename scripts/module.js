@@ -22,6 +22,7 @@ import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 import { setupPauseReplacement } from "./lib/replacePauseInfo.js";
 import { setupStartOfSession } from "./lib/startOfSession.js";
 import { setuplanguageHandling } from "./lib/languageHandling.js";
+import { setupTemplateHooks } from "./lib/templateHelpers.js";
 
 export const MODULE_ID = "sundry";
 
@@ -33,9 +34,11 @@ Hooks.once("init", async function () {
 });
 
 Hooks.once("ready", async function () {
+  setupTemplateHooks();
+
   // Colorize
   setupColorizeToolbeltMessageSaves(
-    getSetting("colorize.pf2e-toolbelt.target-helper.roll")
+    getSetting("colorize.pf2e-toolbelt.target-helper.roll"),
   );
   setupColorizePersistentPF2eHUD(getSetting("colorize.pf2e-hud.persistent"));
 
@@ -46,7 +49,7 @@ Hooks.once("ready", async function () {
 
   //Highlighting
   setupHighlightToolbeltRollSaves(
-    getSetting("highlight.pf2e-toolbelt.target-helper.roll")
+    getSetting("highlight.pf2e-toolbelt.target-helper.roll"),
   );
 
   setuplanguageHandling(getSetting("highlight.languages-known"));

@@ -5,8 +5,12 @@
 	"effects": [],
 	"system": {
 		"_migration": {
-			"version": 0.954,
-			"previous": null
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.0"
+			}
 		},
 		"description": {
 			"value": "<p>Hobgoblins have only recently begun to polish their tarnished reputation as a purely warmongering people, taking up more mundane professions.</p><ul><li>Replace the human trait with the hobgoblin trait.</li><li>Add the Goblin language.</li><li>Add the following abilities.</li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6]{Darkvision}</p></li></ul>",
@@ -57,6 +61,7 @@
 		"deathNote": false
 	},
 	"img": "systems/pf2e/icons/ancestries/hobgoblin.webp",
+	"sort": 0,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
@@ -64,16 +69,15 @@
 	"flags": {},
 	"_stats": {
 		"compendiumSource": null,
-		"duplicateSource": null,
+		"duplicateSource": "Item.4cgO8nEFD3Tt6iLe",
 		"exportSource": null,
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
-		"systemVersion": "7.9.1",
-		"createdTime": 1769458429509,
-		"modifiedTime": 1769460330968,
+		"systemVersion": "7.10.1",
+		"createdTime": 1771262072845,
+		"modifiedTime": 1771262072845,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_id": "NHomXXQShQ4YSVs7",
-	"sort": 200000,
-	"_key": "!items!NHomXXQShQ4YSVs7"
+	"_id": "jI9SnnV51LVMw3zl",
+	"_key": "!items!jI9SnnV51LVMw3zl"
 }

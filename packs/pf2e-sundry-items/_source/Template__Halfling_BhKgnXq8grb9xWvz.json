@@ -5,8 +5,12 @@
 	"effects": [],
 	"system": {
 		"_migration": {
-			"version": 0.954,
-			"previous": null
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.0"
+			}
 		},
 		"description": {
 			"value": "<p>A halfling's wanderlust can lead them to all sorts of places and situations where they are often least expected to be. Halflings possess an uncanny luck that they use to pull off all sorts of mischievous and daring deeds.</p><ul><li>Change size to Small.</li><li>Replace the human trait with the halfling trait.</li><li>Add the Halfling language.</li><li>Add the following abilities.</li><li><p>@UUID[Compendium.pf2e.bestiary-family-ability-glossary.mrFrAaCFB4ZhnkCT]{Keen Eyes}</p></li></ul>",
@@ -61,23 +65,23 @@
 		"deathNote": false
 	},
 	"img": "systems/pf2e/icons/ancestries/halfling.webp",
+	"sort": 0,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
 	},
 	"flags": {},
 	"_stats": {
-		"compendiumSource": null,
-		"duplicateSource": null,
+		"compendiumSource": "Item.4cgO8nEFD3Tt6iLe",
+		"duplicateSource": "Item.Dz2YbzLDmzfRTJPF",
 		"exportSource": null,
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
-		"systemVersion": "7.9.1",
-		"createdTime": 1769458365121,
-		"modifiedTime": 1769460330968,
+		"systemVersion": "7.10.1",
+		"createdTime": 1771262072845,
+		"modifiedTime": 1771262072845,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_id": "5mKaaK82zarVy2nh",
-	"sort": 100000,
-	"_key": "!items!5mKaaK82zarVy2nh"
+	"_id": "BhKgnXq8grb9xWvz",
+	"_key": "!items!BhKgnXq8grb9xWvz"
 }

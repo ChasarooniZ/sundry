@@ -5,11 +5,15 @@
 	"effects": [],
 	"system": {
 		"_migration": {
-			"version": 0.954,
-			"previous": null
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.0"
+			}
 		},
 		"description": {
-			"value": "<p>All types of creatures can have their corpses preserved and rise as mummies.</p><ol><li>Add the mummy and undead traits.</li><li>Add the Necril language.</li><li>Add the following immunities: death effects, disease, paralyzed, poison, unconscious.</li><li>Add weakness to fire, with a value depending on the creature's level.</li><li>Add the following abilities.</li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.qCCLZhnp2HhP3Ex6]{Darkvision}</p></li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x]{Negative Healing}</p></li><li><p>@UUID[Compendium.sundry.pf2e-sundry-items.Item.UVsyXdYcMtmdKZoY]{Slow}</p></li></ol><table><caption><h3>Mummy Adjustment</h3></caption><thead><tr><th>Level</th><th>Weakness to Fire</th></tr></thead><tbody><tr><th>3 or lower</th><th>3</th></tr><tr><th>4 - 8</th><th>5</th></tr><tr><th>9 - 13</th><th>10</th></tr><tr><th>14+</th><th>15</th></tr></tbody></table>",
+			"value": "<p>All types of creatures can have their corpses preserved and rise as mummies.</p><ul><li>Add the mummy and undead traits.</li><li>Add the Necril language.</li><li>Add the following immunities: death effects, disease, paralyzed, poison, unconscious.</li><li>Add weakness to fire, with a value depending on the creature's level.</li><li>Add the following abilities.</li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.qCCLZhnp2HhP3Ex6]{Darkvision}</p></li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x]{Negative Healing}</p></li><li><p>@UUID[Compendium.sundry.pf2e-sundry-items.qQgQ3QTvVDq61hW9]{Slow}</p></li></ul><table><caption><h3>Mummy Adjustment</h3></caption><thead><tr><th>Level</th><th>Weakness to Fire</th></tr></thead><tbody><tr><th>3 or lower</th><th>3</th></tr><tr><th>4 - 8</th><th>5</th></tr><tr><th>9 - 13</th><th>10</th></tr><tr><th>14+</th><th>15</th></tr></tbody></table>",
 			"gm": ""
 		},
 		"publication": {
@@ -72,7 +76,7 @@
 			},
 			{
 				"key": "GrantItem",
-				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.57k7iujwlMbeTiVf"
+				"uuid": "Compendium.sundry.pf2e-sundry-items.qQgQ3QTvVDq61hW9"
 			}
 		],
 		"slug": "template-zombie",
@@ -90,23 +94,23 @@
 		"deathNote": false
 	},
 	"img": "icons/creatures/magical/spirit-undead-ghost-tan-teal.webp",
+	"sort": 100000,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
 	},
 	"flags": {},
 	"_stats": {
-		"compendiumSource": null,
-		"duplicateSource": null,
+		"compendiumSource": "Item.4cgO8nEFD3Tt6iLe",
+		"duplicateSource": "Item.K9hNf3rdoxLoJVkI",
 		"exportSource": null,
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
-		"systemVersion": "7.9.1",
-		"createdTime": 1769467362476,
-		"modifiedTime": 1769467362476,
+		"systemVersion": "7.10.1",
+		"createdTime": 1771262072845,
+		"modifiedTime": 1771262233449,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_id": "eqEhjmcK1tzcSNlq",
-	"sort": 0,
-	"_key": "!items!eqEhjmcK1tzcSNlq"
+	"_id": "dOKx1uIFFLIzaC4Y",
+	"_key": "!items!dOKx1uIFFLIzaC4Y"
 }

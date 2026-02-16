@@ -5,8 +5,12 @@
 	"effects": [],
 	"system": {
 		"_migration": {
-			"version": 0.954,
-			"previous": null
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.0"
+			}
 		},
 		"description": {
 			"value": "<p>An orc's life is often short and violent. While they do make excellent mercenaries, orcs are more than capable of succeeding in non-violent professions as well. Orcs are eager to prove themselves both on the battlefield and off.</p><ul><li>Replace the human trait with the orc trait.</li><li>Add the Orcish language.</li><li>Add the following abilities.</li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6]{Darkvision}</p></li></ul>",
@@ -42,7 +46,7 @@
 				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
 			}
 		],
-		"slug": "template-orc",
+		"slug": null,
 		"traits": {
 			"otherTags": [],
 			"value": []
@@ -56,7 +60,9 @@
 		"category": "defensive",
 		"deathNote": false
 	},
+	"_id": "4cgO8nEFD3Tt6iLe",
 	"img": "systems/pf2e/icons/ancestries/orc.webp",
+	"sort": 0,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
@@ -68,12 +74,10 @@
 		"exportSource": null,
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
-		"systemVersion": "7.9.1",
-		"createdTime": 1769449552978,
-		"modifiedTime": 1769460330968,
+		"systemVersion": "7.10.1",
+		"createdTime": 1771262072845,
+		"modifiedTime": 1771262072845,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_id": "sOtGOmnehQ0kpNQo",
-	"sort": 1500000,
-	"_key": "!items!sOtGOmnehQ0kpNQo"
+	"_key": "!items!4cgO8nEFD3Tt6iLe"
 }

@@ -5,8 +5,12 @@
 	"effects": [],
 	"system": {
 		"_migration": {
-			"version": 0.954,
-			"previous": null
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.0"
+			}
 		},
 		"description": {
 			"value": "<p>Constantly seeking new thrills and experiences, gnomes can be found just about anywhere doing just about anything. Gnomes who fail to dream, innovate, and experience new things will succumb to the Bleaching. The color will drain from the gnome, and they will enter a state of deep depression. Those who survive are often morose but wise.</p><ul><li>Change size to Small.</li><li>Replace the human trait with the gnome trait.</li><li>Add the Fey and Gnomish languages.</li><li>Add the following abilities.</li><li>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.fFu2sZz4KB01fVRc]{Low-Light Vision}</li></ul>",
@@ -67,23 +71,23 @@
 		"deathNote": false
 	},
 	"img": "systems/pf2e/icons/ancestries/gnome.webp",
+	"sort": 0,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
 	},
 	"flags": {},
 	"_stats": {
-		"compendiumSource": null,
-		"duplicateSource": null,
+		"compendiumSource": "Item.4cgO8nEFD3Tt6iLe",
+		"duplicateSource": "Item.gu9zrM7MIkVIbVfA",
 		"exportSource": null,
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
-		"systemVersion": "7.9.1",
-		"createdTime": 1769457917056,
-		"modifiedTime": 1769460330968,
+		"systemVersion": "7.10.1",
+		"createdTime": 1771262072845,
+		"modifiedTime": 1771262072845,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_id": "9pDJPDMsdQBrXbDG",
-	"sort": 900000,
-	"_key": "!items!9pDJPDMsdQBrXbDG"
+	"_id": "RYbGuaU6Eye7L7YD",
+	"_key": "!items!RYbGuaU6Eye7L7YD"
 }

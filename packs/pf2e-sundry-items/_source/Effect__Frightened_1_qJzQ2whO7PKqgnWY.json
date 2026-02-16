@@ -1,12 +1,16 @@
 {
-	"folder": "ErSkeeSWJRup5u2m",
+	"folder": "UnFDXm81p6tXZpYd",
 	"name": "Effect: Frightened 1",
 	"type": "effect",
 	"effects": [],
 	"system": {
 		"_migration": {
-			"version": 0.954,
-			"previous": null
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.1"
+			}
 		},
 		"description": {
 			"value": "",
@@ -55,9 +59,7 @@
 		"fromSpell": false,
 		"context": null
 	},
-	"_id": "73Ge0wMHWA1SuneD",
 	"img": "systems/pf2e/icons/conditions/frightened.webp",
-	"sort": 0,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
@@ -69,10 +71,12 @@
 		"exportSource": null,
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
-		"systemVersion": "7.9.1",
-		"createdTime": 1769467007595,
-		"modifiedTime": 1769467117022,
+		"systemVersion": "7.10.1",
+		"createdTime": 1771263552192,
+		"modifiedTime": 1771263555528,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_key": "!items!73Ge0wMHWA1SuneD"
+	"_id": "qJzQ2whO7PKqgnWY",
+	"sort": 300000,
+	"_key": "!items!qJzQ2whO7PKqgnWY"
 }

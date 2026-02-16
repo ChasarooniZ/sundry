@@ -1,10 +1,10 @@
 {
 	"type": "Item",
-	"folder": null,
-	"name": "Helper Items",
-	"color": "#787878",
+	"folder": "WtpUUakpGE7vOSJM",
+	"name": "NPC Style",
+	"color": "#255f31",
 	"sorting": "a",
-	"_id": "ErSkeeSWJRup5u2m",
+	"_id": "u9fTxOOGenFA3wTz",
 	"description": "",
 	"sort": 0,
 	"flags": {},
@@ -14,10 +14,10 @@
 		"exportSource": null,
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
-		"systemVersion": "7.9.1",
-		"createdTime": 1769459314372,
-		"modifiedTime": 1769465347023,
+		"systemVersion": "7.10.1",
+		"createdTime": 1771262072796,
+		"modifiedTime": 1771262072796,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_key": "!folders!ErSkeeSWJRup5u2m"
+	"_key": "!folders!u9fTxOOGenFA3wTz"
 }

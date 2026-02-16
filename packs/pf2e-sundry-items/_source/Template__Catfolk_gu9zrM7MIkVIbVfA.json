@@ -1,15 +1,19 @@
 {
 	"folder": "P80OGINhj6xM6f4M",
-	"name": "Template: Athamaru",
+	"name": "Template: Catfolk",
 	"type": "action",
 	"effects": [],
 	"system": {
 		"_migration": {
-			"version": 0.954,
-			"previous": null
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.0"
+			}
 		},
 		"description": {
-			"value": "<p>The deep sea is home to the fishlike athamarus, who tend to be skilled hunters.</p><ul><li>Replace the human trait with the athamaru trait and add the amphibious trait.</li><li>Add the Thalassic language.</li><li>Add a swim Speed of 25 feet.</li><li>Add the following abilities.</li><li>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.fFu2sZz4KB01fVRc]{Low-Light Vision}</li></ul>",
+			"value": "<p>Catfolk are often avid travelers who will keep a collection of trinkets from their various journeys. They can often be extremely social, both within their community and with strangers. They tend to be quick on their feet.</p><ul><li>Replace the human trait with the catfolk trait.</li><li>Add the Amurrun language.</li><li>Add the following abilities.</li><li>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.fFu2sZz4KB01fVRc]{Low-Light Vision}</li></ul>",
 			"gm": ""
 		},
 		"publication": {
@@ -27,12 +31,6 @@
 			},
 			{
 				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "amphibious"
-			},
-			{
-				"key": "ActiveEffectLike",
 				"mode": "remove",
 				"path": "system.traits.value",
 				"value": "human"
@@ -41,19 +39,14 @@
 				"key": "ActiveEffectLike",
 				"mode": "add",
 				"path": "system.details.languages.value",
-				"value": "thalassic"
-			},
-			{
-				"key": "BaseSpeed",
-				"selector": "swim",
-				"value": 25
+				"value": "amurrun"
 			},
 			{
 				"key": "GrantItem",
 				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.fFu2sZz4KB01fVRc"
 			}
 		],
-		"slug": "template-athamaru",
+		"slug": null,
 		"traits": {
 			"otherTags": [],
 			"value": []
@@ -67,24 +60,24 @@
 		"category": "defensive",
 		"deathNote": false
 	},
-	"img": "systems/pf2e/icons/ancestries/athamaru.webp",
+	"img": "systems/pf2e/icons/ancestries/catfolk.webp",
+	"sort": 0,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
 	},
 	"flags": {},
 	"_stats": {
-		"compendiumSource": null,
-		"duplicateSource": null,
+		"compendiumSource": "Item.4cgO8nEFD3Tt6iLe",
+		"duplicateSource": "Item.4cgO8nEFD3Tt6iLe",
 		"exportSource": null,
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
-		"systemVersion": "7.9.1",
-		"createdTime": 1769450216916,
-		"modifiedTime": 1769460330968,
+		"systemVersion": "7.10.1",
+		"createdTime": 1771262072845,
+		"modifiedTime": 1771262072845,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_id": "xgoCN4ySW8BHBGO1",
-	"sort": 1400000,
-	"_key": "!items!xgoCN4ySW8BHBGO1"
+	"_id": "gu9zrM7MIkVIbVfA",
+	"_key": "!items!gu9zrM7MIkVIbVfA"
 }

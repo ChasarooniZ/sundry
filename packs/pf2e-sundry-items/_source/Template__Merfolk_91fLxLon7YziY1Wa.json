@@ -5,8 +5,12 @@
 	"effects": [],
 	"system": {
 		"_migration": {
-			"version": 0.954,
-			"previous": null
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.0"
+			}
 		},
 		"description": {
 			"value": "<p>Merfolk have humanlike torsos, fish tails, and fins.</p><ul><li>Replace the human trait with the merfolk trait and add the amphibious trait.</li><li>Add the Thalassic language.</li><li>Change Speed to 5 feet with a 25-foot swim Speed. You can add a supramarine chair item to give the merfolk a land Speed equal to their swim Speed. Use the rules for a wheelchair.</li><li>Add the following abilities.</li><li>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.fFu2sZz4KB01fVRc]{Low-Light Vision}</li></ul>",
@@ -106,23 +110,23 @@
 		"deathNote": false
 	},
 	"img": "systems/pf2e/icons/ancestries/merfolk.webp",
+	"sort": 0,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
 	},
 	"flags": {},
 	"_stats": {
-		"compendiumSource": null,
-		"duplicateSource": null,
+		"compendiumSource": "Item.4cgO8nEFD3Tt6iLe",
+		"duplicateSource": "Item.aRD5bnZXpjLeXGkJ",
 		"exportSource": null,
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
-		"systemVersion": "7.9.1",
-		"createdTime": 1769460181533,
-		"modifiedTime": 1769460330968,
+		"systemVersion": "7.10.1",
+		"createdTime": 1771262072845,
+		"modifiedTime": 1771262072845,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_id": "OiiroPsCo2hgU56I",
-	"sort": 800000,
-	"_key": "!items!OiiroPsCo2hgU56I"
+	"_id": "91fLxLon7YziY1Wa",
+	"_key": "!items!91fLxLon7YziY1Wa"
 }

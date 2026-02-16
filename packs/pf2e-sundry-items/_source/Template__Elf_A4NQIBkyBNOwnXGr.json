@@ -5,8 +5,12 @@
 	"effects": [],
 	"system": {
 		"_migration": {
-			"version": 0.954,
-			"previous": null
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.0"
+			}
 		},
 		"description": {
 			"value": "<p>Elves are long-lived and use their vast wealth of experience to fill many roles in society. Elves tend to be rather private people, often finding it difficult to form close bonds with shorter-lived ancestries.</p><ul><li>Replace the human trait with the elf trait.</li><li>Add the Elven language.</li><li>Optionally change Speed to 30 feet if lower.</li><li>Add the following abilities.</li><li>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.fFu2sZz4KB01fVRc]{Low-Light Vision}</li></ul>",
@@ -66,7 +70,7 @@
 				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.fFu2sZz4KB01fVRc"
 			}
 		],
-		"slug": "template-elf",
+		"slug": null,
 		"traits": {
 			"otherTags": [],
 			"value": []
@@ -81,23 +85,23 @@
 		"deathNote": false
 	},
 	"img": "systems/pf2e/icons/ancestries/elf.webp",
+	"sort": 0,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
 	},
 	"flags": {},
 	"_stats": {
-		"compendiumSource": null,
-		"duplicateSource": null,
+		"compendiumSource": "Item.4cgO8nEFD3Tt6iLe",
+		"duplicateSource": "Item.gu9zrM7MIkVIbVfA",
 		"exportSource": null,
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
-		"systemVersion": "7.9.1",
-		"createdTime": 1769457477132,
-		"modifiedTime": 1769460330968,
+		"systemVersion": "7.10.1",
+		"createdTime": 1771262072845,
+		"modifiedTime": 1771262072845,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_id": "dl8mFSEeMHiGW3fy",
-	"sort": 1200000,
-	"_key": "!items!dl8mFSEeMHiGW3fy"
+	"_id": "A4NQIBkyBNOwnXGr",
+	"_key": "!items!A4NQIBkyBNOwnXGr"
 }

@@ -1,15 +1,19 @@
 {
-	"folder": "ErSkeeSWJRup5u2m",
-	"name": "Official Bully",
+	"folder": "UnFDXm81p6tXZpYd",
+	"name": "Deep Breath",
 	"type": "action",
 	"effects": [],
 	"system": {
 		"_migration": {
-			"version": 0.954,
-			"previous": null
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.1"
+			}
 		},
 		"description": {
-			"value": "<p>The creature can use the chosen skill to @UUID[Compendium.pf2e.actionspf2e.Item.tHCqgwjtQtzNqVvd]{Coerce} or @UUID[Compendium.pf2e.actionspf2e.2u915NdUyQan6uKF]{Demoralize} in place of Intimidation.</p>",
+			"value": "<p>The iruxi can hold their breath for 15 minutes.</p>",
 			"gm": ""
 		},
 		"publication": {
@@ -19,7 +23,7 @@
 			"remaster": false
 		},
 		"rules": [],
-		"slug": "official-bully",
+		"slug": "deep-breath",
 		"traits": {
 			"otherTags": [],
 			"value": []
@@ -30,12 +34,10 @@
 		"actions": {
 			"value": null
 		},
-		"category": null,
+		"category": "defensive",
 		"deathNote": false
 	},
-	"_id": "FgEQMlTw0aFxk21N",
 	"img": "systems/pf2e/icons/default-icons/action.svg",
-	"sort": 100000,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
@@ -47,10 +49,12 @@
 		"exportSource": null,
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
-		"systemVersion": "7.9.1",
-		"createdTime": 1769461045388,
-		"modifiedTime": 1769465613808,
+		"systemVersion": "7.10.1",
+		"createdTime": 1771263589045,
+		"modifiedTime": 1771263589045,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_key": "!items!FgEQMlTw0aFxk21N"
+	"_id": "oOSgapASLtrcVhwQ",
+	"sort": 0,
+	"_key": "!items!oOSgapASLtrcVhwQ"
 }

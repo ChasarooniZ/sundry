@@ -5,8 +5,12 @@
 	"effects": [],
 	"system": {
 		"_migration": {
-			"version": 0.954,
-			"previous": null
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.0"
+			}
 		},
 		"description": {
 			"value": "<p>A ratfolk's adaptability and love of travel benefit from their innate ability to take on many different roles anywhere they go. They often form quick friendships and value teamwork and community.</p><ul><li>Change size to Small.</li><li>Replace the human trait with the ratfolk trait.</li><li>Add the Ysoki language.</li><li>Add a jaws Strike. It deals damage equal to the creature's lowest melee Strike and has the agile and finesse traits.</li><li>Add the following abilities.</li><li>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.fFu2sZz4KB01fVRc]{Low-Light Vision}</li></ul>",
@@ -61,23 +65,23 @@
 		"deathNote": false
 	},
 	"img": "systems/pf2e/icons/ancestries/ratfolk.webp",
+	"sort": 0,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
 	},
 	"flags": {},
 	"_stats": {
-		"compendiumSource": null,
-		"duplicateSource": null,
+		"compendiumSource": "Item.4cgO8nEFD3Tt6iLe",
+		"duplicateSource": "Item.A4NQIBkyBNOwnXGr",
 		"exportSource": null,
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
-		"systemVersion": "7.9.1",
-		"createdTime": 1769460330889,
-		"modifiedTime": 1769460330968,
+		"systemVersion": "7.10.1",
+		"createdTime": 1771262072845,
+		"modifiedTime": 1771262072845,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_id": "HsdDEDl03VRGG9oU",
-	"sort": 400000,
-	"_key": "!items!HsdDEDl03VRGG9oU"
+	"_id": "sZf76AvI0Th2yMgC",
+	"_key": "!items!sZf76AvI0Th2yMgC"
 }
