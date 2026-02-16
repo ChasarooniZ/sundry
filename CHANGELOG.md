@@ -15,7 +15,7 @@
       - `Jiang-shi Minister`
       - `Ghoul` - Missing Attacks
       - `Ghost`
-      - `Shadow` - No Skill change, no  Spells
+      - `Shadow` - No Skill change, no Spells
 - **Updated**
   - Fixed issues with the Sundry Templates Compendium
 
