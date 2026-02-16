@@ -4,6 +4,13 @@
 - **Updated**
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
 
+## 0.13.0
+
+- **New**
+  - `Disposition Toggling` - Using a new hotkey (I) allow you to easily toggle the disposition of the hovered token
+- **Update**
+  - Enabled `PF2e` features for `SF2e`
+
 ## 0.12.1
 
 - Actually included the packs
