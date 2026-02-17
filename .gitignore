@@ -1,6 +1,2 @@
-*.log
+debug.log
 node_modules
-CURRENT
-LOCK
-LOG*
-MANIFEST*
