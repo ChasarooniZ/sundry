@@ -5,6 +5,16 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
+## 0.14.2
+
+- **New**
+  - `Templates`
+    - `Undead`
+    - `Skeleton`
+    - `Guerrilla`
+- **Updated**
+  - Migrated the `Templates Compendium` to prevent empty compendium issue
+
 ## 0.14.1
 
 - **Updates**

@@ -1,0 +1,157 @@
+{
+	"folder": "13UAzWrxkUuZ9jwZ",
+	"name": "Template: Skeleton",
+	"type": "action",
+	"effects": [],
+	"system": {
+		"_migration": {
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.0"
+			}
+		},
+		"description": {
+			"value": "<p>Most skeletons are mindless and follow either the basic instincts they had in life or orders given by their creator.</p><ul><li>Add the skeleton and undead traits and, optionally, the mindless trait.</li><li>Add the Necril language if it isn't mindless.</li><li>Decrease the creature's HP based on its level.</li><li>Add the following immunities: death effects, disease, paralyzed, poison, unconscious. If it's mindless, add mental as well.</li><li>Add the following resistances with a value based on the creature's level: cold, electricity, fire, piercing, slashing.</li><li><p>Add the following abilities.<br />@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6]{Darkvision}<br />@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.TTCw5NusiSSkJU1x]{Void Healing}</p></li></ul><table><caption><h3>Skeleton Adjustment</h3></caption><thead><tr><th>Level</th><th>HP Decrease</th><th>Resistances</th></tr></thead><tbody><tr><th>-1</th><th>-2</th><th>2</th></tr><tr><th>0 - 1</th><th>-4</th><th>2</th></tr><tr><th>2 - 5</th><th>-10</th><th>3</th></tr><tr><th>6 - 10</th><th>-20</th><th>5</th></tr><tr><th>11+</th><th>-40</th><th>10</th></tr></tbody></table>",
+			"gm": ""
+		},
+		"publication": {
+			"title": "Book of the Dead",
+			"authors": "",
+			"license": "OGL",
+			"remaster": false
+		},
+		"rules": [
+			{
+				"key": "ActorTraits",
+				"add": [
+					"undead",
+					"{item|flags.pf2e.rulesSelections.isMindless.trait}",
+					"skeleton"
+				]
+			},
+			{
+				"key": "Immunity",
+				"type": "death-effects"
+			},
+			{
+				"key": "Immunity",
+				"type": "disease"
+			},
+			{
+				"key": "Immunity",
+				"type": "paralyzed"
+			},
+			{
+				"key": "Immunity",
+				"type": "poison"
+			},
+			{
+				"key": "Immunity",
+				"type": "unconscious"
+			},
+			{
+				"choices": [
+					{
+						"label": "Mindless",
+						"value": {
+							"language": "",
+							"trait": "mindless"
+						}
+					},
+					{
+						"label": "Has A Mind",
+						"value": {
+							"language": "necril",
+							"trait": ""
+						}
+					}
+				],
+				"key": "ChoiceSet",
+				"flag": "isMindless",
+				"prompt": "Is Mindless?",
+				"priority": 10
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "add",
+				"path": "system.details.languages.value",
+				"value": "{item|flags.pf2e.rulesSelections.isMindless.language}"
+			},
+			{
+				"key": "FlatModifier",
+				"selector": [
+					"hp"
+				],
+				"value": "match(when(lte(@actor.level, -1), -2),when(btwn(@actor.level, 0, 1), -4),when(btwn(@actor.level, 2, 5), -10),when(btwn(@actor.level, 6, 10), -20),when(gte(@actor.level, 11), -40))"
+			},
+			{
+				"key": "Resistance",
+				"type": "cold",
+				"value": "match(when(lte(@actor.level, 1), 2),when(btwn(@actor.level, 2, 5), 3),when(btwn(@actor.level, 6, 10), 5),when(gte(@actor.level, 11), 10))"
+			},
+			{
+				"key": "Resistance",
+				"type": "electricity",
+				"value": "match(when(lte(@actor.level, 1), 2),when(btwn(@actor.level, 2, 5), 3),when(btwn(@actor.level, 6, 10), 5),when(gte(@actor.level, 11), 10))"
+			},
+			{
+				"key": "Resistance",
+				"type": "fire",
+				"value": "match(when(lte(@actor.level, 1), 2),when(btwn(@actor.level, 2, 5), 3),when(btwn(@actor.level, 6, 10), 5),when(gte(@actor.level, 11), 10))"
+			},
+			{
+				"key": "Resistance",
+				"type": "piercing",
+				"value": "match(when(lte(@actor.level, 1), 2),when(btwn(@actor.level, 2, 5), 3),when(btwn(@actor.level, 6, 10), 5),when(gte(@actor.level, 11), 10))"
+			},
+			{
+				"key": "Resistance",
+				"type": "slashing",
+				"value": "match(when(lte(@actor.level, 1), 2),when(btwn(@actor.level, 2, 5), 3),when(btwn(@actor.level, 6, 10), 5),when(gte(@actor.level, 11), 10))"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.qCCLZhnp2HhP3Ex6"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x"
+			}
+		],
+		"slug": "template-skeleton",
+		"traits": {
+			"otherTags": [],
+			"value": []
+		},
+		"actionType": {
+			"value": "passive"
+		},
+		"actions": {
+			"value": null
+		},
+		"category": "defensive",
+		"deathNote": false
+	},
+	"img": "icons/magic/death/undead-skeleton-energy-green.webp",
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"flags": {},
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.10.1",
+		"createdTime": 1771309594801,
+		"modifiedTime": 1771310272135,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"_id": "Drztp97ZahXpvqOm",
+	"sort": 0,
+	"_key": "!items!Drztp97ZahXpvqOm"
+}

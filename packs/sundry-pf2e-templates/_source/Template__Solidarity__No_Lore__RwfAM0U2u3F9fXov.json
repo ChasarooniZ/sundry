@@ -1,6 +1,6 @@
 {
 	"folder": "u9fTxOOGenFA3wTz",
-	"name": "Template: Solidarity (WIP)",
+	"name": "Template: Solidarity (No Lore)",
 	"type": "action",
 	"effects": [],
 	"system": {
@@ -26,6 +26,26 @@
 			{
 				"key": "GrantItem",
 				"uuid": "Compendium.pf2e.bestiary-family-ability-glossary.Item.EDjWNsh3EbT7nAIB"
+			},
+			{
+				"key": "FlatModifier",
+				"selector": [
+					"diplomacy"
+				],
+				"value": "max(@actor.skills.acrobatics.mod,@actor.skills.arcana.mod,@actor.skills.athletics.mod,@actor.skills.crafting.mod,@actor.skills.deception.mod,@actor.skills.diplomacy.mod,@actor.skills.intimidation.mod,@actor.skills.medicine.mod,@actor.skills.nature.mod,@actor.skills.occultism.mod,@actor.skills.performance.mod,@actor.skills.religion.mod,@actor.skills.society.mod,@actor.skills.stealth.mod,@actor.skills.survival.mod,@actor.skills.thievery.mod)"
+			},
+			{
+				"key": "AdjustModifier",
+				"selector": "diplomacy",
+				"slug": "base",
+				"suppress": true
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "override",
+				"path": "system.skills.diplomacy.visible",
+				"value": true,
+				"phase": "afterDerived"
 			}
 		],
 		"slug": "template-corrupt",
@@ -43,23 +63,23 @@
 		"deathNote": false
 	},
 	"img": "systems/pf2e/icons/default-icons/action.svg",
-	"sort": 0,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
 	},
 	"flags": {},
 	"_stats": {
-		"compendiumSource": "Item.3d22wuwh93xD6liu",
-		"duplicateSource": "Item.3d22wuwh93xD6liu",
+		"compendiumSource": null,
+		"duplicateSource": null,
 		"exportSource": null,
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
-		"createdTime": 1771262072845,
-		"modifiedTime": 1771262096889,
+		"createdTime": 1771310481964,
+		"modifiedTime": 1771313312026,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_id": "H4ShbxKRlwry37Go",
-	"_key": "!items!H4ShbxKRlwry37Go"
+	"_id": "RwfAM0U2u3F9fXov",
+	"sort": 0,
+	"_key": "!items!RwfAM0U2u3F9fXov"
 }

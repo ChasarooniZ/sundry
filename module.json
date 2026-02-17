@@ -51,15 +51,15 @@
   "readme": "README.md",
   "packs": [
     {
-      "name": "pf2e-sundry-items",
-      "label": "Sundry: PF2e Templates",
-      "path": "packs/pf2e-sundry-items",
+      "name": "sundry-pf2e-templates",
+      "label": "[Sundry] PF2e Templates",
+      "path": "packs/sundry-pf2e-templates",
       "type": "Item",
-      "system": "pf2e",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      }
+      },
+      "system": "pf2e"
     }
   ],
   "media": [

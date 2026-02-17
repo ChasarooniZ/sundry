@@ -13,7 +13,7 @@
 			}
 		},
 		"description": {
-			"value": "<p>You can also turn a living creature into a ghoul by completing the following steps. First, increase the creature's level by 1 and change its statistics as follows.</p><ul><li>Increase its AC, attack bonuses, DCs, saving throws, Perception, and skill modifiers by 1.</li><li>Increase its damage with Strikes and other offensive abilities by 1. If the creature is limited in how often it can use an ability (such as dragon breath), increase that ability's damage by 2 instead.</li><li>A ghoul gains the undead and ghoul traits, and it usually becomes unholy.</li><li>If the base creature has any abilities that come from it being a living creature, it loses them. It also loses any traits that represent its life as a living creature, such as human and humanoid</li><li>Add the following immunities: bleed, death effects, disease, paralyzed, poison, unconscious.</li><li><p><strong>Burrow</strong> The ghoul gains a burrow speed of 5 feet.</p></li><li><p><strong>Claws</strong> If the creature had hands, it gains a claw Strike (an agile unarmed attack that deals slashing damage plus Grab). If it had any agile attacks, the damage dealt by its claws should be roughly the same as the damage dealt by those attacks. If it had only non-agile attacks, its claws should deal three-quarters that damage.</p></li><li><p><strong>Jaws</strong> If the creature had a mouth, it gains a jaws Strike (an unarmed attack that deals slashing damage). The damage amount should be the same as the creature's non-agile attacks.</p></li><li><p>@UUID[Compendium.pf2e.bestiary-family-ability-glossary.ixPqVlqLaYTB1b23]{Consume Flesh}</p></li><li><p>@UUID[Compendium.sundry.pf2e-sundry-items.Item.vGlrCyD35FtywJjM]{Ghoul Whispers}</p></li><li><p>@UUID[Compendium.pf2e.bestiary-family-ability-glossary.227zB1x6U0TyU1nd]{Grave Knowledge}</p></li><li><p>The ghoul can instead automatically learn something specific known by a creature it consumed in the last 7 days, like the location of a hidden treasure or the name of a loved one. The ghoul can do this only once for a given creature, no matter how much of its flesh the ghoul consumed.</p></li><li><p>@UUID[Compendium.pf2e.bestiary-family-ability-glossary.UU1Fp3PRuTFONjC9]{Swift Leap}</p></li></ul>",
+			"value": "<p>You can also turn a living creature into a ghoul by completing the following steps. First, increase the creature's level by 1 and change its statistics as follows.</p><ul><li>Increase its AC, attack bonuses, DCs, saving throws, Perception, and skill modifiers by 1.</li><li>Increase its damage with Strikes and other offensive abilities by 1. If the creature is limited in how often it can use an ability (such as dragon breath), increase that ability's damage by 2 instead.</li><li>A ghoul gains the undead and ghoul traits, and it usually becomes unholy.</li><li>If the base creature has any abilities that come from it being a living creature, it loses them. It also loses any traits that represent its life as a living creature, such as human and humanoid</li><li>Add the following immunities: bleed, death effects, disease, paralyzed, poison, unconscious.</li><li><p><strong>Burrow</strong> The ghoul gains a burrow speed of 5 feet.</p></li><li><p><strong>Claws</strong> If the creature had hands, it gains a claw Strike (an agile unarmed attack that deals slashing damage plus Grab). If it had any agile attacks, the damage dealt by its claws should be roughly the same as the damage dealt by those attacks. If it had only non-agile attacks, its claws should deal three-quarters that damage.</p></li><li><p><strong>Jaws</strong> If the creature had a mouth, it gains a jaws Strike (an unarmed attack that deals slashing damage). The damage amount should be the same as the creature's non-agile attacks.</p></li><li><p>@UUID[Compendium.pf2e.bestiary-family-ability-glossary.ixPqVlqLaYTB1b23]{Consume Flesh}</p></li><li><p>@UUID[Compendium.sundry.sundry-pf2e-templates.Item.vGlrCyD35FtywJjM]{Ghoul Whispers}</p></li><li><p>@UUID[Compendium.pf2e.bestiary-family-ability-glossary.227zB1x6U0TyU1nd]{Grave Knowledge}</p></li><li><p>The ghoul can instead automatically learn something specific known by a creature it consumed in the last 7 days, like the location of a hidden treasure or the name of a loved one. The ghoul can do this only once for a given creature, no matter how much of its flesh the ghoul consumed.</p></li><li><p>@UUID[Compendium.pf2e.bestiary-family-ability-glossary.UU1Fp3PRuTFONjC9]{Swift Leap}</p></li></ul>",
 			"gm": ""
 		},
 		"publication": {
@@ -127,7 +127,7 @@
 			},
 			{
 				"key": "GrantItem",
-				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.qNsNvUt7E3BxCP96"
+				"uuid": "Compendium.sundry.sundry-pf2e-templates.Item.qNsNvUt7E3BxCP96"
 			},
 			{
 				"choices": [
@@ -170,7 +170,7 @@
 			},
 			{
 				"key": "GrantItem",
-				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.vGlrCyD35FtywJjM"
+				"uuid": "Compendium.sundry.sundry-pf2e-templates.Item.vGlrCyD35FtywJjM"
 			},
 			{
 				"itemType": "action",

@@ -13,7 +13,7 @@
 			}
 		},
 		"description": {
-			"value": "<p>A zombified creature is a mindless, rotting corpse that attacks everything it perceives.</p><ul><li>Add the mindless, undead, and zombie traits.</li><li>Increase the creature's HP based on its level.</li><li>Add the following immunities: death effects, disease, mental, paralyzed, poison, unconscious.</li><li>Add the following weaknesses, with a value based on its level: positive, slashing.</li><li><p>Add the following abilities.</p></li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.qCCLZhnp2HhP3Ex6]{Darkvision}</p></li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x]{Negative Healing}</p></li><li><p>@UUID[Compendium.sundry.pf2e-sundry-items.qQgQ3QTvVDq61hW9]{Slow}</p></li></ul><p></p><table><caption><h3>Zombie Adjustment</h3></caption><thead><tr><th>Level</th><th>HP Increase</th><th>Weaknesses</th></tr></thead><tbody><tr><th>1 or lower</th><th>10</th><th>5</th></tr><tr><th>2 - 5</th><th>20</th><th>5</th></tr><tr><th>6 - 10</th><th>50</th><th>10</th></tr><tr><th>11 - 15</th><th>75</th><th>15</th></tr><tr><th>16 - 19</th><th>100</th><th>20</th></tr><tr><th>20+</th><th>150</th><th>25</th></tr></tbody></table>",
+			"value": "<p>A zombified creature is a mindless, rotting corpse that attacks everything it perceives.</p><ul><li>Add the mindless, undead, and zombie traits.</li><li>Increase the creature's HP based on its level.</li><li>Add the following immunities: death effects, disease, mental, paralyzed, poison, unconscious.</li><li>Add the following weaknesses, with a value based on its level: positive, slashing.</li><li><p>Add the following abilities.</p></li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.qCCLZhnp2HhP3Ex6]{Darkvision}</p></li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x]{Negative Healing}</p></li><li><p>@UUID[Compendium.sundry.sundry-pf2e-templates.qQgQ3QTvVDq61hW9]{Slow}</p></li></ul><p></p><table><caption><h3>Zombie Adjustment</h3></caption><thead><tr><th>Level</th><th>HP Increase</th><th>Weaknesses</th></tr></thead><tbody><tr><th>1 or lower</th><th>10</th><th>5</th></tr><tr><th>2 - 5</th><th>20</th><th>5</th></tr><tr><th>6 - 10</th><th>50</th><th>10</th></tr><tr><th>11 - 15</th><th>75</th><th>15</th></tr><tr><th>16 - 19</th><th>100</th><th>20</th></tr><tr><th>20+</th><th>150</th><th>25</th></tr></tbody></table>",
 			"gm": ""
 		},
 		"publication": {
@@ -65,7 +65,7 @@
 			},
 			{
 				"key": "GrantItem",
-				"uuid": "Compendium.sundry.pf2e-sundry-items.qQgQ3QTvVDq61hW9"
+				"uuid": "Compendium.sundry.sundry-pf2e-templates.qQgQ3QTvVDq61hW9"
 			},
 			{
 				"key": "Weakness",

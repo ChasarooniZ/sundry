@@ -1,0 +1,103 @@
+{
+	"folder": "u9fTxOOGenFA3wTz",
+	"name": "Template: Guerrilla",
+	"type": "action",
+	"effects": [],
+	"system": {
+		"_migration": {
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.0"
+			}
+		},
+		"description": {
+			"value": "<p>Most military engagements take place in large areas, such as plains or cities, where there is the most territory or resources to be gained. However, guerrilla units fight in forests, swamps, and other tough locations, where they set up traps, ambushes, and use other surprise tactics.You can use these adjustments to turn a military NPC or troop into a guerrilla. These can also be useful for mercenaries or other non-military NPCs.</p><ul><li>Give the creature a Stealth modifier equal to the high skill value for its level.</li><li>If the creature has the Athletics skill, reduce its modifier by 2.</li><li><p>Reduce the damage of the creature's Strikes by 2, but give it the @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.AWvNPE4U0kEJSL1T]{Sneak Attack} ability.</p></li><li><p>Adds the @UUID[Compendium.sundry.sundry-pf2e-templates.Item.PmvUw4CICJ0tbN4C] ability</p></li></ul>",
+			"gm": ""
+		},
+		"publication": {
+			"title": "Pathfinder NPC Core",
+			"authors": "",
+			"license": "ORC",
+			"remaster": true
+		},
+		"rules": [
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.AWvNPE4U0kEJSL1T"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.sundry.sundry-pf2e-templates.Item.PmvUw4CICJ0tbN4C"
+			},
+			{
+				"key": "AdjustModifier",
+				"mode": "add",
+				"selector": "athletics",
+				"slug": "base",
+				"value": -2
+			},
+			{
+				"key": "FlatModifier",
+				"selector": [
+					"strike-damage"
+				],
+				"value": -2
+			},
+			{
+				"key": "AdjustModifier",
+				"selector": "stealth",
+				"slug": "base",
+				"suppress": true
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "override",
+				"path": "system.skills.stealth.visible",
+				"value": true,
+				"phase": "afterDerived"
+			},
+			{
+				"key": "FlatModifier",
+				"value": "match(when(eq(@actor.level, -1), 5),when(eq(@actor.level, 0), 6),when(eq(@actor.level, 1), 7),when(eq(@actor.level, 2), 8),when(eq(@actor.level, 3), 10),when(eq(@actor.level, 4), 12),when(eq(@actor.level, 5), 13),when(eq(@actor.level, 6), 15),when(eq(@actor.level, 7), 17),when(eq(@actor.level, 8), 18),when(eq(@actor.level, 9), 20),when(eq(@actor.level, 10), 22),when(eq(@actor.level, 11), 23),when(eq(@actor.level, 12), 25),when(eq(@actor.level, 13), 27),when(eq(@actor.level, 14), 28),when(eq(@actor.level, 15), 30),when(eq(@actor.level, 16), 32),when(eq(@actor.level, 17), 33),when(eq(@actor.level, 18), 35),when(eq(@actor.level, 19), 37),when(eq(@actor.level, 20), 38),when(eq(@actor.level, 21), 40),when(eq(@actor.level, 22), 42),when(eq(@actor.level, 23), 43),when(eq(@actor.level, 24), 45))",
+				"selector": [
+					"stealth"
+				]
+			}
+		],
+		"slug": "template-guerrilla",
+		"traits": {
+			"otherTags": [],
+			"value": []
+		},
+		"actionType": {
+			"value": "passive"
+		},
+		"actions": {
+			"value": null
+		},
+		"category": "defensive",
+		"deathNote": false
+	},
+	"img": "icons/magic/nature/stealth-hide-beast-eyes-green.webp",
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"flags": {},
+	"_stats": {
+		"compendiumSource": "Item.3d22wuwh93xD6liu",
+		"duplicateSource": "Item.3d22wuwh93xD6liu",
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.10.1",
+		"createdTime": 1771262072845,
+		"modifiedTime": 1771312780505,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"_id": "H4ShbxKRlwry37Go",
+	"_key": "!items!H4ShbxKRlwry37Go"
+}

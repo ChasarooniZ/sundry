@@ -13,7 +13,7 @@
 			}
 		},
 		"description": {
-			"value": "<p>Lizardfolk recently began to discover and adapt to different cultures while bringing in their own. Lizardfolk value patience and seek guidance in the stars above. They are able to adapt to almost any environment, but generally prefer to be near the water.</p><ul><li>Replace the human trait with the lizardfolk trait.</li><li>Add the Iruxi language.</li><li>Add a swim Speed of 15 feet.</li><li>Replace any fist attacks with claw attacks. They deal slashing damage instead of bludgeoning.</li><li>Add the following abilities.</li><li><p>@UUID[Compendium.sundry.pf2e-sundry-items.Item.oOSgapASLtrcVhwQ]</p></li></ul>",
+			"value": "<p>Lizardfolk recently began to discover and adapt to different cultures while bringing in their own. Lizardfolk value patience and seek guidance in the stars above. They are able to adapt to almost any environment, but generally prefer to be near the water.</p><ul><li>Replace the human trait with the lizardfolk trait.</li><li>Add the Iruxi language.</li><li>Add a swim Speed of 15 feet.</li><li>Replace any fist attacks with claw attacks. They deal slashing damage instead of bludgeoning.</li><li>Add the following abilities.</li><li><p>@UUID[Compendium.sundry.sundry-pf2e-templates.Item.oOSgapASLtrcVhwQ]</p></li></ul>",
 			"gm": ""
 		},
 		"publication": {
@@ -45,7 +45,7 @@
 			},
 			{
 				"key": "GrantItem",
-				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.oOSgapASLtrcVhwQ"
+				"uuid": "Compendium.sundry.sundry-pf2e-templates.Item.oOSgapASLtrcVhwQ"
 			}
 		],
 		"slug": "template-kobold",

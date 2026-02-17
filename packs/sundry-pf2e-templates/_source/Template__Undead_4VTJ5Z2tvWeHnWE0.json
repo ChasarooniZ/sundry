@@ -1,6 +1,6 @@
 {
 	"folder": "13UAzWrxkUuZ9jwZ",
-	"name": "Template: Undead (WIP)",
+	"name": "Template: Undead",
 	"type": "action",
 	"effects": [],
 	"system": {
@@ -26,7 +26,8 @@
 			{
 				"key": "ActorTraits",
 				"add": [
-					"undead"
+					"undead",
+					"{item|flags.pf2e.rulesSelections.isMindless.trait}"
 				]
 			},
 			{
@@ -53,11 +54,17 @@
 				"choices": [
 					{
 						"label": "Mindless",
-						"value": "unholy"
+						"value": {
+							"language": "",
+							"trait": "mindless"
+						}
 					},
 					{
 						"label": "Has A Mind",
-						"value": ""
+						"value": {
+							"language": "necril",
+							"trait": ""
+						}
 					}
 				],
 				"key": "ChoiceSet",
@@ -68,32 +75,11 @@
 			{
 				"key": "ActiveEffectLike",
 				"mode": "add",
-				"path": "system.traits.value",
-				"value": "{item|flags.pf2e.rulesSelections.isUnholy}"
-			},
-			{
-				"key": "BaseSpeed",
-				"selector": "burrow",
-				"value": 5
-			},
-			{
-				"key": "GrantItem",
-				"uuid": "Compendium.pf2e.bestiary-family-ability-glossary.Item.ixPqVlqLaYTB1b23"
-			},
-			{
-				"key": "GrantItem",
-				"uuid": "Compendium.pf2e.bestiary-family-ability-glossary.Item.UU1Fp3PRuTFONjC9"
-			},
-			{
-				"key": "GrantItem",
-				"uuid": "Compendium.pf2e.bestiary-family-ability-glossary.Item.227zB1x6U0TyU1nd"
-			},
-			{
-				"key": "GrantItem",
-				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.vGlrCyD35FtywJjM"
+				"path": "system.details.languages.value",
+				"value": "{item|flags.pf2e.rulesSelections.isMindless.language}"
 			}
 		],
-		"slug": "template-ghoul",
+		"slug": "template-undead",
 		"traits": {
 			"otherTags": [],
 			"value": []
@@ -121,7 +107,7 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771308589109,
-		"modifiedTime": 1771308813559,
+		"modifiedTime": 1771309599539,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_id": "4VTJ5Z2tvWeHnWE0",

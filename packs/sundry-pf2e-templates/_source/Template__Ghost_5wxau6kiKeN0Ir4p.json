@@ -1,6 +1,6 @@
 {
 	"folder": "13UAzWrxkUuZ9jwZ",
-	"name": "Template: Shadow (No Skill Change, No Spell)",
+	"name": "Template: Ghost",
 	"type": "action",
 	"effects": [],
 	"system": {
@@ -13,7 +13,7 @@
 			}
 		},
 		"description": {
-			"value": "<p>A shadow creature is little more than a sentient shadow powered by negative energy. Shadows can easily travel to and from the Shadow Plane.</p><ul><li>Add undead trait</li><li>Add the Necril language.</li><li>Add Stealth with a modifier equal to its highest skill modifier.</li><li>Add the following immunities: death effects, disease, paralyzed, poison, precision, unconscious.</li><li>Add the following weaknesses, with a value based on the creature's level: force, ghost touch, positive.</li><li>If the creature can't fly, change its highest Speed to a fly Speed. Remove all other Speeds.</li><li>The damage of the creature's physical Strikes changes to negative damage, and those Strikes are magical.</li><li><p>Add the following abilities.</p></li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6]{Darkvision}</p></li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.TTCw5NusiSSkJU1x]{Void Healing}</p></li><li><p>@UUID[Compendium.sundry.pf2e-sundry-items.Item.S8vSIh3GFM7pl29C]</p></li></ul><table><caption><h3>Shadow Adjustment</h3></caption><thead><tr><th>Level</th><th>Weaknesses</th></tr></thead><tbody><tr><th>3 or lower</th><th>3</th></tr><tr><th>4 - 8</th><th>5</th></tr><tr><th>9 - 13</th><th>10</th></tr><tr><th>14+</th><th>15</th></tr></tbody></table>",
+			"value": "<p>The ephemeral form of a ghostly creature lets it pass through solid objects and float in the air. For simplicity, a creature with these adjustments isn't truly incorporeal, nor does it necessarily return after being destroyed.</p><ul><li>Add the ghost, spirit, and undead traits.</li><li>Add the Necril language.</li><li>Add the following immunities: death effects, disease, paralyzed, poison, precision, unconscious.</li><li>Add the following weaknesses, with a value based on the creature's level: force, ghost touch, positive.</li><li>If the creature can't fly, change its highest Speed to a fly Speed. Remove all other Speeds.</li><li>The damage of the creature's physical Strikes changes to negative damage, and those Strikes are magical.</li><li><p>Add the following abilities.</p></li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6]{Darkvision}</p></li><li><p>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.TTCw5NusiSSkJU1x]{Void Healing}</p></li><li><p>@UUID[Compendium.sundry.sundry-pf2e-templates.Item.Jcjsn3LWGZiTZpfn]</p></li></ul><table><caption><h3>Ghost Adjustment</h3></caption><thead><tr><th>Level</th><th>Weaknesses</th></tr></thead><tbody><tr><th>3 or lower</th><th>3</th></tr><tr><th>4 - 8</th><th>5</th></tr><tr><th>9 - 13</th><th>10</th></tr><tr><th>14+</th><th>15</th></tr></tbody></table>",
 			"gm": ""
 		},
 		"publication": {
@@ -26,6 +26,8 @@
 			{
 				"key": "ActorTraits",
 				"add": [
+					"ghost",
+					"spirit",
 					"undead"
 				]
 			},
@@ -99,7 +101,7 @@
 			},
 			{
 				"key": "GrantItem",
-				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.S8vSIh3GFM7pl29C"
+				"uuid": "Compendium.sundry.sundry-pf2e-templates.Item.Jcjsn3LWGZiTZpfn"
 			},
 			{
 				"key": "FlatModifier",
@@ -141,7 +143,7 @@
 				"value": "@actor.system.attributes.speed.total"
 			}
 		],
-		"slug": "template-shadow",
+		"slug": "template-ghost",
 		"traits": {
 			"otherTags": [],
 			"value": []
@@ -155,7 +157,7 @@
 		"category": "defensive",
 		"deathNote": false
 	},
-	"img": "icons/creatures/magical/humanoid-silhouette-glowing-pink.webp",
+	"img": "icons/magic/death/undead-ghost-scream-teal.webp",
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
@@ -168,11 +170,11 @@
 		"coreVersion": "13.351",
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
-		"createdTime": 1771283535535,
-		"modifiedTime": 1771307900113,
+		"createdTime": 1771280951325,
+		"modifiedTime": 1771307308697,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
-	"_id": "iqGMlojJEau5lNrx",
+	"_id": "5wxau6kiKeN0Ir4p",
 	"sort": 0,
-	"_key": "!items!iqGMlojJEau5lNrx"
+	"_key": "!items!5wxau6kiKeN0Ir4p"
 }
