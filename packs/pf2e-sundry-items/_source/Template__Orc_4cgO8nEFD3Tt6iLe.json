@@ -24,16 +24,13 @@
 		},
 		"rules": [
 			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "orc"
-			},
-			{
-				"key": "ActiveEffectLike",
-				"mode": "remove",
-				"path": "system.traits.value",
-				"value": "human"
+				"key": "ActorTraits",
+				"remove": [
+					"human"
+				],
+				"add": [
+					"orc"
+				]
 			},
 			{
 				"key": "ActiveEffectLike",
@@ -46,7 +43,7 @@
 				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
 			}
 		],
-		"slug": null,
+		"slug": "template-orc",
 		"traits": {
 			"otherTags": [],
 			"value": []
@@ -76,7 +73,7 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771262072845,
-		"modifiedTime": 1771262072845,
+		"modifiedTime": 1771307226878,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_key": "!items!4cgO8nEFD3Tt6iLe"

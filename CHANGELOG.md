@@ -3,6 +3,22 @@
 - Add User Color to Message Header
 - **Updated**
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
+  - Added Localization where possible for some names
+
+## 0.14.1
+
+- **Updates**
+  - Fixed issue causing Module to crash (🐛 @Icarus)
+  - `Templates`
+    - Simplified actors traits to use `ActorTrait` RE
+    - Overwrote Some Action names for better readability
+    - Fixed misc Entry errors for some templates:
+      - `Mummy`
+      - `Athamaru`
+  - `Languages`
+    - Updated French translation (🌐 @rectulo)
+    - Updated Chinese translation (🌐 @AlphaStarguide)
+    - Updated Polish translation (🌐 @Lioheart)
 
 ## 0.14.0
 

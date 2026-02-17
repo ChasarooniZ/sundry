@@ -20,16 +20,15 @@
 		},
 		"rules": [
 			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "undead"
-			},
-			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "vampire"
+				"key": "ActorTraits",
+				"add": [
+					"undead",
+					"vampire"
+				],
+				"remove": [
+					"human",
+					"humanoid"
+				]
 			},
 			{
 				"key": "FlatModifier",
@@ -75,18 +74,6 @@
 				"key": "Resistance",
 				"type": "physical",
 				"value": "match(when(btwn(@actor.level, 3, 4), 5),when(btwn(@actor.level, 5, 7), 7),when(btwn(@actor.level, 8, 14), 10),when(gte(@actor.level, 15), 15))"
-			},
-			{
-				"key": "ActiveEffectLike",
-				"mode": "remove",
-				"path": "system.traits.value",
-				"value": "human"
-			},
-			{
-				"key": "ActiveEffectLike",
-				"mode": "remove",
-				"path": "system.traits.value",
-				"value": "humanoid"
 			},
 			{
 				"key": "GrantItem",
@@ -429,7 +416,7 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771274471969,
-		"modifiedTime": 1771281766889,
+		"modifiedTime": 1771307730444,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_id": "isqraUMy0oZlCGu4",

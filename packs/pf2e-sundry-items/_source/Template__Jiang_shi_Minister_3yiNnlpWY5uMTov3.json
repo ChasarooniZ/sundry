@@ -20,16 +20,15 @@
 		},
 		"rules": [
 			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "undead"
-			},
-			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "vampire"
+				"key": "ActorTraits",
+				"add": [
+					"undead",
+					"vampire"
+				],
+				"remove": [
+					"human",
+					"humanoid"
+				]
 			},
 			{
 				"key": "FlatModifier",
@@ -81,18 +80,6 @@
 				"key": "Resistance",
 				"type": "physical",
 				"value": "match(when(btwn(@actor.level, 3, 4), 5),when(btwn(@actor.level, 5, 7), 7),when(btwn(@actor.level, 8, 14), 10),when(gte(@actor.level, 15), 15))"
-			},
-			{
-				"key": "ActiveEffectLike",
-				"mode": "remove",
-				"path": "system.traits.value",
-				"value": "human"
-			},
-			{
-				"key": "ActiveEffectLike",
-				"mode": "remove",
-				"path": "system.traits.value",
-				"value": "humanoid"
 			},
 			{
 				"key": "GrantItem",
@@ -417,6 +404,16 @@
 				"phase": "afterDerived",
 				"value": 1,
 				"priority": 105
+			},
+			{
+				"itemType": "action",
+				"key": "ItemAlteration",
+				"mode": "override",
+				"predicate": [
+					"item:slug:vampire-jiang-shi-basic-breathsense-60-feet"
+				],
+				"property": "name",
+				"value": "Breath Sense"
 			}
 		],
 		"slug": "template-jiang-shi-minister",
@@ -447,7 +444,7 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771274820470,
-		"modifiedTime": 1771281782449,
+		"modifiedTime": 1771307815108,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_id": "3yiNnlpWY5uMTov3",

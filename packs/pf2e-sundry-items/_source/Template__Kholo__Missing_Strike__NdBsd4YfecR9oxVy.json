@@ -24,16 +24,13 @@
 		},
 		"rules": [
 			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "kholo"
-			},
-			{
-				"key": "ActiveEffectLike",
-				"mode": "remove",
-				"path": "system.traits.value",
-				"value": "human"
+				"key": "ActorTraits",
+				"remove": [
+					"human"
+				],
+				"add": [
+					"gnoll"
+				]
 			},
 			{
 				"key": "ActiveEffectLike",
@@ -46,7 +43,7 @@
 				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
 			}
 		],
-		"slug": "template-hobgoblin",
+		"slug": "template-kholo",
 		"traits": {
 			"otherTags": [],
 			"value": []
@@ -75,7 +72,7 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771262072845,
-		"modifiedTime": 1771262072845,
+		"modifiedTime": 1771306820863,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_id": "NdBsd4YfecR9oxVy",

@@ -24,10 +24,10 @@
 		},
 		"rules": [
 			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "undead"
+				"key": "ActorTraits",
+				"add": [
+					"undead"
+				]
 			},
 			{
 				"key": "ActiveEffectLike",
@@ -99,7 +99,7 @@
 			},
 			{
 				"key": "GrantItem",
-				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.Jcjsn3LWGZiTZpfn"
+				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.S8vSIh3GFM7pl29C"
 			},
 			{
 				"key": "FlatModifier",
@@ -169,7 +169,7 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771283535535,
-		"modifiedTime": 1771283535535,
+		"modifiedTime": 1771307900113,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_id": "iqGMlojJEau5lNrx",

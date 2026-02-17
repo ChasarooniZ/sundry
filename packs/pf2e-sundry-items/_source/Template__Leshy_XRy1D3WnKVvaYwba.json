@@ -28,28 +28,15 @@
 				"value": "small"
 			},
 			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "leshy"
-			},
-			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "plant"
-			},
-			{
-				"key": "ActiveEffectLike",
-				"mode": "remove",
-				"path": "system.traits.value",
-				"value": "human"
-			},
-			{
-				"key": "ActiveEffectLike",
-				"mode": "remove",
-				"path": "system.traits.value",
-				"value": "humanoid"
+				"key": "ActorTraits",
+				"remove": [
+					"human",
+					"humanoid"
+				],
+				"add": [
+					"plant",
+					"leshy"
+				]
 			},
 			{
 				"key": "ActiveEffectLike",
@@ -64,6 +51,16 @@
 			{
 				"key": "GrantItem",
 				"uuid": "Compendium.pf2e.bestiary-family-ability-glossary.Item.mMfvpqD6hqrjqKEz"
+			},
+			{
+				"itemType": "action",
+				"key": "ItemAlteration",
+				"mode": "override",
+				"predicate": [
+					"item:slug:leshy-verdant-burst"
+				],
+				"property": "name",
+				"value": "Verdant Burst"
 			}
 		],
 		"slug": "template-leshy",
@@ -95,7 +92,7 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771262072845,
-		"modifiedTime": 1771262072845,
+		"modifiedTime": 1771307170512,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_id": "XRy1D3WnKVvaYwba",

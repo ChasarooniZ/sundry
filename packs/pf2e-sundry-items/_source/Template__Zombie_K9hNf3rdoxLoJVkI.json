@@ -24,22 +24,12 @@
 		},
 		"rules": [
 			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "mindless"
-			},
-			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "undead"
-			},
-			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "zombie"
+				"key": "ActorTraits",
+				"add": [
+					"undead",
+					"mindless",
+					"zombie"
+				]
 			},
 			{
 				"key": "GrantItem",
@@ -124,7 +114,7 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771262072845,
-		"modifiedTime": 1771274820546,
+		"modifiedTime": 1771307995078,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_id": "K9hNf3rdoxLoJVkI",

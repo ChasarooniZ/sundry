@@ -17,17 +17,36 @@
 			"gm": ""
 		},
 		"publication": {
-			"title": "Book of the Dead",
+			"title": "Monster Core",
 			"authors": "",
-			"license": "OGL",
-			"remaster": false
+			"license": "ORC",
+			"remaster": true
 		},
 		"rules": [
 			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "ghoul"
+				"key": "ActorTraits",
+				"add": [
+					"ghoul",
+					"undead"
+				],
+				"remove": [
+					"human",
+					"humanoid",
+					"tengu",
+					"grippli",
+					"orc",
+					"ratfolk",
+					"leshy",
+					"merfolk",
+					"kobold",
+					"halfling",
+					"goblin",
+					"gnome",
+					"elf",
+					"dwarf",
+					"catfolk",
+					"athamaru"
+				]
 			},
 			{
 				"key": "ActiveEffectLike",
@@ -152,6 +171,36 @@
 			{
 				"key": "GrantItem",
 				"uuid": "Compendium.sundry.pf2e-sundry-items.Item.vGlrCyD35FtywJjM"
+			},
+			{
+				"itemType": "action",
+				"key": "ItemAlteration",
+				"mode": "override",
+				"predicate": [
+					"item:slug:ghoul-swift-leap"
+				],
+				"property": "name",
+				"value": "Swift Leap"
+			},
+			{
+				"itemType": "action",
+				"key": "ItemAlteration",
+				"mode": "override",
+				"predicate": [
+					"item:slug:ghoul-consume-flesh"
+				],
+				"property": "name",
+				"value": "Consume Flesh"
+			},
+			{
+				"itemType": "action",
+				"key": "ItemAlteration",
+				"mode": "override",
+				"predicate": [
+					"item:slug:ghoul-grave-knowledge"
+				],
+				"property": "name",
+				"value": "Grave Knowledge"
 			}
 		],
 		"slug": "template-ghoul",
@@ -182,7 +231,7 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771282962753,
-		"modifiedTime": 1771283067664,
+		"modifiedTime": 1771307658252,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_id": "XqdCziedcXNc8ld5",

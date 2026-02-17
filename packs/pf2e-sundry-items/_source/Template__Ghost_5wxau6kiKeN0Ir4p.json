@@ -24,22 +24,12 @@
 		},
 		"rules": [
 			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "ghost"
-			},
-			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "spirit"
-			},
-			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "undead"
+				"key": "ActorTraits",
+				"add": [
+					"ghost",
+					"spirit",
+					"undead"
+				]
 			},
 			{
 				"key": "ActiveEffectLike",
@@ -181,7 +171,7 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771280951325,
-		"modifiedTime": 1771283490678,
+		"modifiedTime": 1771307308697,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_id": "5wxau6kiKeN0Ir4p",

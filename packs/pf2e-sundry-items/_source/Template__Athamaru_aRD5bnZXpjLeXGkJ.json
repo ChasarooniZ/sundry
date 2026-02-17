@@ -24,22 +24,14 @@
 		},
 		"rules": [
 			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "catfolk"
-			},
-			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "amphibious"
-			},
-			{
-				"key": "ActiveEffectLike",
-				"mode": "remove",
-				"path": "system.traits.value",
-				"value": "human"
+				"key": "ActorTraits",
+				"add": [
+					"athamaru",
+					"amphibious"
+				],
+				"remove": [
+					"human"
+				]
 			},
 			{
 				"key": "ActiveEffectLike",
@@ -86,7 +78,7 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771262072845,
-		"modifiedTime": 1771262072845,
+		"modifiedTime": 1771306716780,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_id": "aRD5bnZXpjLeXGkJ",

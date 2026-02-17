@@ -13,7 +13,7 @@
 			}
 		},
 		"description": {
-			"value": "<p>This creature is a minion and has the following adjsutments.</p><p><strong>Hit Points</strong> ([[ ceil(@actor.level / 4)]]) Actor level / 4 rounded up</p>",
+			"value": "<p>This creature is a minion (Intended to back up a boss) and has the following adjustments.</p><p><strong>Hit Points</strong> ([[ ceil(@actor.level / 4)]]) Actor level / 4 rounded up</p>",
 			"gm": ""
 		},
 		"publication": {
@@ -45,7 +45,7 @@
 		"deathNote": false
 	},
 	"_id": "pTKDQZYip5bfGHkA",
-	"img": "systems/pf2e/icons/default-icons/action.svg",
+	"img": "icons/sundries/gaming/chess-pawn-white-glass.webp",
 	"sort": 0,
 	"ownership": {
 		"default": 0,
@@ -60,7 +60,7 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771262072845,
-		"modifiedTime": 1771262072845,
+		"modifiedTime": 1771307970074,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_key": "!items!pTKDQZYip5bfGHkA"

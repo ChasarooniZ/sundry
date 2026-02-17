@@ -24,16 +24,13 @@
 		},
 		"rules": [
 			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "elf"
-			},
-			{
-				"key": "ActiveEffectLike",
-				"mode": "remove",
-				"path": "system.traits.value",
-				"value": "human"
+				"key": "ActorTraits",
+				"remove": [
+					"human"
+				],
+				"add": [
+					"elf"
+				]
 			},
 			{
 				"key": "ActiveEffectLike",
@@ -99,7 +96,7 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771262072845,
-		"modifiedTime": 1771262072845,
+		"modifiedTime": 1771306701057,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_id": "A4NQIBkyBNOwnXGr",

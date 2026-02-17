@@ -1,6 +1,6 @@
 {
 	"folder": "P80OGINhj6xM6f4M",
-	"name": "Template: Tengu (Missing Strikes)",
+	"name": "Template: Tengu (Missing Strike)",
 	"type": "action",
 	"effects": [],
 	"system": {
@@ -24,16 +24,13 @@
 		},
 		"rules": [
 			{
-				"key": "ActiveEffectLike",
-				"mode": "add",
-				"path": "system.traits.value",
-				"value": "tengu"
-			},
-			{
-				"key": "ActiveEffectLike",
-				"mode": "remove",
-				"path": "system.traits.value",
-				"value": "human"
+				"key": "ActorTraits",
+				"remove": [
+					"human"
+				],
+				"add": [
+					"tengu"
+				]
 			},
 			{
 				"key": "ActiveEffectLike",
@@ -75,7 +72,7 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771262072845,
-		"modifiedTime": 1771262072845,
+		"modifiedTime": 1771307265654,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_id": "Pu9FzRMn8bBSw2PE",
