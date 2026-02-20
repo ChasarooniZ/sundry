@@ -62,7 +62,7 @@
 		"category": "defensive",
 		"deathNote": false
 	},
-	"img": "systems/pf2e/icons/default-icons/action.svg",
+	"img": "icons/skills/social/diplomacy-unity-alliance.webp",
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
@@ -76,7 +76,7 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771310481964,
-		"modifiedTime": 1771313312026,
+		"modifiedTime": 1771356274574,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_id": "RwfAM0U2u3F9fXov",

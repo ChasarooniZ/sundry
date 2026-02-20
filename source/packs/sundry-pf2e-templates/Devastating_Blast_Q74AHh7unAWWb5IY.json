@@ -1,0 +1,58 @@
+{
+	"folder": "UnFDXm81p6tXZpYd",
+	"img": "systems/pf2e/icons/actions/TwoActions.webp",
+	"name": "Devastating Blast",
+	"system": {
+		"actionType": {
+			"value": "action"
+		},
+		"actions": {
+			"value": 2
+		},
+		"category": "offensive",
+		"description": {
+			"value": "<p>The graveknight unleashes a @Template[cone|distance:30] of energy. Creatures in the area take @Damage[((match(when(lte(@actor.level, 3), 1),when(btwn(@actor.level, 4, 11), 2),when(btwn(@actor.level, 12, 18), 3),when(gte(@actor.level, 19), 4)))d(match(when(lte(@actor.level, 0), 6),when(eq(@actor.level, 1), 8),when(btwn(@actor.level, 5, 6), 12),when(eq(@actor.level, 7), 10),when(gte(@actor.level, 8), 12))) + (match(when(eq(@actor.level, -1), 1),when(eq(@actor.level, 0), 3),when(btwn(@actor.level, 1, 2), 4),when(eq(@actor.level, 3), 8),when(btwn(@actor.level, 4, 5), 7),when(eq(@actor.level, 6), 10),when(eq(@actor.level, 7), 12),when(eq(@actor.level, 8), 15),when(eq(@actor.level, 9), 17),when(eq(@actor.level, 10), 20),when(eq(@actor.level, 11), 22),when(eq(@actor.level, 12), 19),when(eq(@actor.level, 13), 21),when(eq(@actor.level, 14), 24),when(eq(@actor.level, 15), 26),when(eq(@actor.level, 16), 29),when(eq(@actor.level, 17), 31),when(eq(@actor.level, 18), 34),when(eq(@actor.level, 19), 29),when(eq(@actor.level, 20), 32),when(eq(@actor.level, 21), 34),when(eq(@actor.level, 22), 37),when(eq(@actor.level, 23), 39),when(eq(@actor.level, 24), 42))))[@actor.flags.pf2e.ruinousWeaponType]] for a creature of the graveknight's level with a @Check[reflex|dc:resolve(@actor.attributes.classDC.value + 2)|basic|options:area-effect] based on a high DC of the graveknight's level.</p><p>The graveknight can use this ability once every [[/gmr 1d4 #Recharge Devastating Blast]] rounds.</p><p>This energy damage is of the same type as that of their ruinous weapons, and Devastating Blast gains the associated trait.</p>",
+			"gm": ""
+		},
+		"publication": {
+			"license": "ORC",
+			"remaster": true,
+			"title": "Pathfinder Monster Core",
+			"authors": ""
+		},
+		"rules": [],
+		"traits": {
+			"value": [
+				"arcane"
+			],
+			"otherTags": []
+		},
+		"slug": "graveknight-devastating-blast",
+		"_migration": {
+			"version": 0.955,
+			"previous": null
+		},
+		"deathNote": false
+	},
+	"type": "action",
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.10.1",
+		"createdTime": 1771359361095,
+		"modifiedTime": 1771573292324,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"effects": [],
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"flags": {},
+	"_id": "Q74AHh7unAWWb5IY",
+	"sort": 0,
+	"_key": "!items!Q74AHh7unAWWb5IY"
+}

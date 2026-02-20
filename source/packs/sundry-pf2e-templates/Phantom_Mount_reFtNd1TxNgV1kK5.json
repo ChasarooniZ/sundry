@@ -1,0 +1,59 @@
+{
+	"folder": "UnFDXm81p6tXZpYd",
+	"img": "systems/pf2e/icons/actions/ThreeActions.webp",
+	"name": "Phantom Mount",
+	"system": {
+		"actionType": {
+			"value": "action"
+		},
+		"actions": {
+			"value": 3
+		},
+		"category": "offensive",
+		"description": {
+			"value": "<p>HP [[floor(@actor.system.attributes.hp.value/3)]]; AC [[@actor.system.attributes.ac.value -4]], Fort +[[@actor.system.saves.fortitude.value -4]], Ref +[[@actor.system.saves.reflex.value -4]], Will +[[@actor.system.saves.will.value -4]]</p><hr /><p>The graveknight summons a supernatural mount, as @UUID[Compendium.pf2e.spells-srd.Item.WPKJOhEihhcIm2uQ]{Marvelous Mount} heightened to a rank equal to half the graveknight's level. Unlike <em>marvelous mount</em>, the steed's AC and saving throw bonuses are all 4 lower than the graveknight's, and the steed has one-third the graveknight's Hit Points (rounded down).</p><p>If the steed is destroyed, the graveknight must wait 1 hour before using this ability again.</p>",
+			"gm": ""
+		},
+		"publication": {
+			"license": "ORC",
+			"remaster": true,
+			"title": "Pathfinder Monster Core",
+			"authors": ""
+		},
+		"rules": [],
+		"traits": {
+			"value": [
+				"arcane",
+				"summon"
+			],
+			"otherTags": []
+		},
+		"slug": "graveknight-phantom-mount",
+		"_migration": {
+			"version": 0.955,
+			"previous": null
+		},
+		"deathNote": false
+	},
+	"type": "action",
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.10.1",
+		"createdTime": 1771359414512,
+		"modifiedTime": 1771359622043,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"effects": [],
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"flags": {},
+	"_id": "reFtNd1TxNgV1kK5",
+	"sort": 0,
+	"_key": "!items!reFtNd1TxNgV1kK5"
+}

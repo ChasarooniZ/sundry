@@ -1,0 +1,173 @@
+{
+	"folder": "13UAzWrxkUuZ9jwZ",
+	"name": "Template: Graveknight",
+	"type": "action",
+	"effects": [],
+	"system": {
+		"_migration": {
+			"version": 0.955,
+			"previous": {
+				"schema": 0.954,
+				"foundry": "13.351",
+				"system": "7.10.0"
+			}
+		},
+		"description": {
+			"value": "<p>A creature should be at least level 5 before being converted to a graveknight.</p><ul><li>Increase the creature's level by 1.</li><li>Increase its attack rolls, AC, saving throws, Perception, and skills by 1, its HP by 5, and its Strike damage by 1.</li><li>A graveknight gains the graveknight, undead, and unholy traits. They lose any abilities that come from being a living creature and any traits that represent their life, such as human and humanoid.</li><li>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.qCCLZhnp2HhP3Ex6]{Darkvision}</li><li>@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x]{Void Healing}</li><li>@UUID[Compendium.pf2e.bestiary-family-ability-glossary.ZIFaA4jDQjM0vq8q]{ Rejuvenation}</li><li><strong>Immunities</strong> bleed, death effects, disease, paralyzed, poison, unconscious, plus one energy type (same type as ruinous weapons).</li><li>@UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.bTJnxBQjr7G8yr30]{Sacriligeous Aura}</li><li>@UUID[Compendium.sundry.sundry-pf2e-templates.Item.Q74AHh7unAWWb5IY]</li><li>@UUID[Compendium.sundry.sundry-pf2e-templates.Item.reFtNd1TxNgV1kK5]</li><li>@UUID[Compendium.sundry.sundry-pf2e-templates.Item.Dz5ZdD9JGMwduczE]</li><li>@UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.6isn9nqnvfRrC1wW]{Weapon Master}</li></ul>",
+			"gm": ""
+		},
+		"publication": {
+			"title": "Book of the Dead",
+			"authors": "",
+			"license": "OGL",
+			"remaster": false
+		},
+		"rules": [
+			{
+				"key": "ActiveEffectLike",
+				"mode": "add",
+				"path": "system.details.level.value",
+				"phase": "afterDerived",
+				"value": 1,
+				"priority": 105
+			},
+			{
+				"key": "FlatModifier",
+				"value": 1,
+				"selector": [
+					"all",
+					"strike-damage"
+				]
+			},
+			{
+				"key": "FlatModifier",
+				"value": 5,
+				"selector": [
+					"hp"
+				]
+			},
+			{
+				"key": "ActorTraits",
+				"add": [
+					"undead",
+					"graveknight",
+					"unholy"
+				],
+				"remove": [
+					"human",
+					"humanoid",
+					"tengu",
+					"grippli",
+					"orc",
+					"ratfolk",
+					"leshy",
+					"merfolk",
+					"kobold",
+					"halfling",
+					"goblin",
+					"gnome",
+					"elf",
+					"dwarf",
+					"catfolk",
+					"athamaru"
+				]
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.qCCLZhnp2HhP3Ex6"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-family-ability-glossary.Item.ZIFaA4jDQjM0vq8q"
+			},
+			{
+				"key": "Immunity",
+				"type": "bleed"
+			},
+			{
+				"key": "Immunity",
+				"type": "death-effects"
+			},
+			{
+				"key": "Immunity",
+				"type": "disease"
+			},
+			{
+				"key": "Immunity",
+				"type": "paralyzed"
+			},
+			{
+				"key": "Immunity",
+				"type": "poison"
+			},
+			{
+				"key": "Immunity",
+				"type": "unconscious"
+			},
+			{
+				"key": "Immunity",
+				"type": [
+					"{actor|flags.pf2e.ruinousWeaponType}"
+				],
+				"priority": 120
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-family-ability-glossary.Item.bTJnxBQjr7G8yr30"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.sundry.sundry-pf2e-templates.Item.Q74AHh7unAWWb5IY"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.sundry.sundry-pf2e-templates.Item.reFtNd1TxNgV1kK5"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.sundry.sundry-pf2e-templates.Item.Dz5ZdD9JGMwduczE"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.pf2e.bestiary-family-ability-glossary.Item.6isn9nqnvfRrC1wW"
+			}
+		],
+		"slug": "template-graveknight",
+		"traits": {
+			"otherTags": [],
+			"value": []
+		},
+		"actionType": {
+			"value": "passive"
+		},
+		"actions": {
+			"value": null
+		},
+		"category": "defensive",
+		"deathNote": false
+	},
+	"img": "icons/equipment/head/helm-barbute-thin-steel.webp",
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"flags": {},
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.10.1",
+		"createdTime": 1771356481296,
+		"modifiedTime": 1771573958710,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"_id": "XXxdx6yTL6adpX64",
+	"sort": 0,
+	"_key": "!items!XXxdx6yTL6adpX64"
+}
