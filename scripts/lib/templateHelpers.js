@@ -1,5 +1,6 @@
 export function setupTemplateHooks() {
   Hooks.on("createItem", (item) => {
+   if (!item.name.startsWith('Template')) return;
     if (
       item.rules.some(
         (rule) =>
