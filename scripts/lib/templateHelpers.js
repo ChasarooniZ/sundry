@@ -1,7 +1,7 @@
 export function setupTemplateHooks() {
   Hooks.on("createItem", (item) => {
     if (
-      isSundryTemplate &&
+      isSundryTemplate(item) &&
       item.rules.some(
         (rule) =>
           rule?.key === "FlatModifier" &&

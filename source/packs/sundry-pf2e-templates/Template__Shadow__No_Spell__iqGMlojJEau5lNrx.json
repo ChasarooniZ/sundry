@@ -1,6 +1,6 @@
 {
 	"folder": "13UAzWrxkUuZ9jwZ",
-	"name": "Template: Shadow (No Skill Change, No Spell)",
+	"name": "Template: Shadow (No Spell)",
 	"type": "action",
 	"effects": [],
 	"system": {
@@ -139,6 +139,26 @@
 				"mode": "override",
 				"path": "flags.sundry.preSpeed",
 				"value": "@actor.system.attributes.speed.total"
+			},
+			{
+				"key": "AdjustModifier",
+				"selector": "stealth",
+				"slug": "base",
+				"suppress": true
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "override",
+				"path": "system.skills.stealth.visible",
+				"value": true,
+				"phase": "afterDerived"
+			},
+			{
+				"key": "FlatModifier",
+				"value": "max(@actor.skills.acrobatics.mod,@actor.skills.arcana.mod,@actor.skills.athletics.mod,@actor.skills.crafting.mod,@actor.skills.deception.mod,@actor.skills.diplomacy.mod,@actor.skills.intimidation.mod,@actor.skills.medicine.mod,@actor.skills.nature.mod,@actor.skills.occultism.mod,@actor.skills.performance.mod,@actor.skills.religion.mod,@actor.skills.society.mod,@actor.skills.stealth.mod,@actor.skills.survival.mod,@actor.skills.thievery.mod)",
+				"selector": [
+					"stealth"
+				]
 			}
 		],
 		"slug": "template-shadow",
@@ -169,7 +189,7 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771283535535,
-		"modifiedTime": 1771307900113,
+		"modifiedTime": 1771817974155,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_id": "iqGMlojJEau5lNrx",
