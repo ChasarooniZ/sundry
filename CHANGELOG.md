@@ -5,14 +5,31 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
-## 0.14.3
+## 0.14.6
+
 - **New**
   - `Templates`
     - `Amphibious`
     - `Graveknight`
+    - `Miniature`
+    - `Winged`
 - **Updated**
   - `Templates`
-    - 
+    - ~~Solidarity~~ -> `Union Organizer`
+    -
+    - Updated helper to more intelligently decide what to reset the health on
+
+## 0.14.5
+
+- Fixed major bug causing health to reset on tokens when items whose rule elements modified health were added
+
+## 0.14.4
+
+- Fix issues where gitignore is hiding compendiums
+
+## 0.14.3
+
+- Fixed missing DB
 
 ## 0.14.2
 
