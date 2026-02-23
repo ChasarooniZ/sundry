@@ -1,6 +1,6 @@
 {
 	"folder": "u9fTxOOGenFA3wTz",
-	"name": "Template: Solidarity (No Lore)",
+	"name": "Template: Union Organizer (No Lore)",
 	"type": "action",
 	"effects": [],
 	"system": {
@@ -48,7 +48,7 @@
 				"phase": "afterDerived"
 			}
 		],
-		"slug": "template-corrupt",
+		"slug": "template-union-organizer",
 		"traits": {
 			"otherTags": [],
 			"value": []
@@ -76,7 +76,7 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771310481964,
-		"modifiedTime": 1771356274574,
+		"modifiedTime": 1771615849972,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_id": "RwfAM0U2u3F9fXov",

@@ -1,0 +1,213 @@
+{
+	"folder": "Aj1redFnynC3NP3H",
+	"name": "Template: Miniature",
+	"type": "action",
+	"effects": [],
+	"system": {
+		"_migration": {
+			"version": 0.955,
+			"previous": null
+		},
+		"description": {
+			"value": "<p>A miniature creature is much smaller than others of its kind, often small enough to fit in the palm of a hand or keep in a small terrarium instead of large habitat.</p><ul><li>Reduce the creature's size to Tiny.</li><li>Reduce the reach of the creature's lowest-reach melee Strikes to 0 feet. If it has melee Strikes with notable reach (often a tail, tentacle, or similar long appendage), reduce the reach of these Strikes to 5 feet.</li><li>Add Stealth with a modifier equal to its highest skill modifier.</li><li><p>Add the following abilities:</p></li><li><p>@UUID[Compendium.sundry.sundry-pf2e-templates.Item.HdE4dg8MRY8Dkj3J]</p></li></ul>",
+			"gm": ""
+		},
+		"publication": {
+			"title": "",
+			"authors": "",
+			"license": "OGL",
+			"remaster": false
+		},
+		"rules": [
+			{
+				"key": "CreatureSize",
+				"value": "tiny"
+			},
+			{
+				"key": "GrantItem",
+				"uuid": "Compendium.sundry.sundry-pf2e-templates.Item.HdE4dg8MRY8Dkj3J"
+			},
+			{
+				"definition": [
+					{
+						"not": "item:trait:reach"
+					}
+				],
+				"key": "AdjustStrike",
+				"mode": "add",
+				"property": "weapon-traits",
+				"value": "reach-0"
+			},
+			{
+				"definition": [
+					"item:trait:reach"
+				],
+				"key": "AdjustStrike",
+				"mode": "remove",
+				"property": "weapon-traits",
+				"value": "reach"
+			},
+			{
+				"definition": [
+					"item:trait:reach-10"
+				],
+				"key": "AdjustStrike",
+				"mode": "remove",
+				"property": "weapon-traits",
+				"value": "reach-10"
+			},
+			{
+				"definition": [
+					"item:trait:reach-100"
+				],
+				"key": "AdjustStrike",
+				"mode": "remove",
+				"property": "weapon-traits",
+				"value": "reach-100"
+			},
+			{
+				"definition": [
+					"item:trait:reach-1000"
+				],
+				"key": "AdjustStrike",
+				"mode": "remove",
+				"property": "weapon-traits",
+				"value": "reach-1000"
+			},
+			{
+				"definition": [
+					"item:trait:reach-120"
+				],
+				"key": "AdjustStrike",
+				"mode": "remove",
+				"property": "weapon-traits",
+				"value": "reach-120"
+			},
+			{
+				"definition": [
+					"item:trait:reach-15"
+				],
+				"key": "AdjustStrike",
+				"mode": "remove",
+				"property": "weapon-traits",
+				"value": "reach-15"
+			},
+			{
+				"definition": [
+					"item:trait:reach-20"
+				],
+				"key": "AdjustStrike",
+				"mode": "remove",
+				"property": "weapon-traits",
+				"value": "reach-20"
+			},
+			{
+				"definition": [
+					"item:trait:reach-200"
+				],
+				"key": "AdjustStrike",
+				"mode": "remove",
+				"property": "weapon-traits",
+				"value": "reach-200"
+			},
+			{
+				"definition": [
+					"item:trait:reach-25"
+				],
+				"key": "AdjustStrike",
+				"mode": "remove",
+				"property": "weapon-traits",
+				"value": "reach-25"
+			},
+			{
+				"definition": [
+					"item:trait:reach-30"
+				],
+				"key": "AdjustStrike",
+				"mode": "remove",
+				"property": "weapon-traits",
+				"value": "reach-30"
+			},
+			{
+				"definition": [
+					"item:trait:reach-40"
+				],
+				"key": "AdjustStrike",
+				"mode": "remove",
+				"property": "weapon-traits",
+				"value": "reach-40"
+			},
+			{
+				"definition": [
+					"item:trait:reach-50"
+				],
+				"key": "AdjustStrike",
+				"mode": "remove",
+				"property": "weapon-traits",
+				"value": "reach-50"
+			},
+			{
+				"definition": [
+					"item:trait:reach-60"
+				],
+				"key": "AdjustStrike",
+				"mode": "remove",
+				"property": "weapon-traits",
+				"value": "reach-60"
+			},
+			{
+				"key": "FlatModifier",
+				"value": "max(@actor.skills.acrobatics.mod,@actor.skills.arcana.mod,@actor.skills.athletics.mod,@actor.skills.crafting.mod,@actor.skills.deception.mod,@actor.skills.diplomacy.mod,@actor.skills.intimidation.mod,@actor.skills.medicine.mod,@actor.skills.nature.mod,@actor.skills.occultism.mod,@actor.skills.performance.mod,@actor.skills.religion.mod,@actor.skills.society.mod,@actor.skills.stealth.mod,@actor.skills.survival.mod,@actor.skills.thievery.mod)",
+				"selector": [
+					"stealth"
+				]
+			},
+			{
+				"key": "AdjustModifier",
+				"selector": "stealth",
+				"slug": "base",
+				"suppress": true
+			},
+			{
+				"key": "ActiveEffectLike",
+				"mode": "override",
+				"path": "system.skills.stealth.visible",
+				"value": true,
+				"phase": "afterDerived"
+			}
+		],
+		"slug": "template-miniature",
+		"traits": {
+			"otherTags": [],
+			"value": []
+		},
+		"actionType": {
+			"value": "passive"
+		},
+		"actions": {
+			"value": null
+		},
+		"category": "interaction",
+		"deathNote": false
+	},
+	"_id": "RFxqvLVVwoAE3TQk",
+	"img": "icons/magic/control/silhouette-grow-shrink-blue.webp",
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"flags": {},
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.10.1",
+		"createdTime": 1771612139261,
+		"modifiedTime": 1771613618118,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"_key": "!items!RFxqvLVVwoAE3TQk"
+}

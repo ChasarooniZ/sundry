@@ -1,0 +1,74 @@
+{
+	"folder": "UnFDXm81p6tXZpYd",
+	"name": "Dropping Dodge",
+	"type": "action",
+	"effects": [],
+	"system": {
+		"_migration": {
+			"version": 0.955,
+			"previous": null
+		},
+		"description": {
+			"value": "<p><strong>Requirements</strong> the winged creature is flying</p><p><strong>Trigger</strong> An enemy targets the winged creature with a Strike</p><hr /><p><strong>Effect</strong> The winged creature folds its wings and drops to avoid the hit at the last second. The winged creature gains a +2 circumstance bonus to AC against the Strike. After the Strike resolves, the winged creature drops 15 feet. Even if it is stopped by the ground, it doesn't take falling damage.</p>",
+			"gm": ""
+		},
+		"publication": {
+			"title": "",
+			"authors": "",
+			"license": "OGL",
+			"remaster": false
+		},
+		"rules": [
+			{
+				"domain": "ac",
+				"key": "RollOption",
+				"option": "dropping-dodge",
+				"toggleable": true
+			},
+			{
+				"key": "FlatModifier",
+				"selector": [
+					"ac"
+				],
+				"value": 2,
+				"predicate": [
+					"dropping-dodge"
+				],
+				"type": "circumstance"
+			}
+		],
+		"slug": null,
+		"traits": {
+			"otherTags": [],
+			"value": []
+		},
+		"actionType": {
+			"value": "reaction"
+		},
+		"actions": {
+			"value": null
+		},
+		"category": "interaction",
+		"deathNote": false
+	},
+	"_id": "WAPWun53nCIN9eY2",
+	"img": "systems/pf2e/icons/default-icons/action.svg",
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"flags": {},
+	"_stats": {
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null,
+		"coreVersion": "13.351",
+		"systemId": "pf2e",
+		"systemVersion": "7.10.1",
+		"createdTime": 1771616096424,
+		"modifiedTime": 1771616153310,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+	},
+	"_key": "!items!WAPWun53nCIN9eY2"
+}

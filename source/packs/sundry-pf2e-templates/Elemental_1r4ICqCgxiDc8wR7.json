@@ -2,7 +2,7 @@
 	"type": "Item",
 	"folder": "WtpUUakpGE7vOSJM",
 	"name": "Elemental",
-	"color": "#388485",
+	"color": "#9b2c2c",
 	"sorting": "a",
 	"_id": "1r4ICqCgxiDc8wR7",
 	"description": "",
@@ -16,7 +16,7 @@
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771262072796,
-		"modifiedTime": 1771262072796,
+		"modifiedTime": 1771612109177,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_key": "!folders!1r4ICqCgxiDc8wR7"
