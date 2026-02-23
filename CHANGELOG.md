@@ -5,6 +5,15 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
+## 0.14.3
+- **New**
+  - `Templates`
+    - `Amphibious`
+    - `Graveknight`
+- **Updated**
+  - `Templates`
+    - 
+
 ## 0.14.2
 
 - **New**
