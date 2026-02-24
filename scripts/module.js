@@ -19,7 +19,10 @@ import { setupReactionTracker } from "./lib/reactionTracker.js";
 import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
 import { setupDisplayWeaponDamage } from "./lib/showBaseDamage.js";
 import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
-import { setupPauseReplacement } from "./lib/replacePauseInfo.js";
+import {
+  isPauseReplacementActive,
+  setupPauseReplacement,
+} from "./lib/replacePauseInfo.js";
 import { setupStartOfSession } from "./lib/startOfSession.js";
 import { setuplanguageHandling } from "./lib/languageHandling.js";
 import { setupTemplateHooks } from "./lib/templateHelpers.js";
@@ -73,7 +76,9 @@ Hooks.once("ready", async function () {
   setupStartOfSession(getSetting("notify.start-session.journal"));
 
   // Replace
-  setupPauseReplacement();
+  if (isPauseReplacementActive()) {
+    setupPauseReplacement();
+  }
 
   //Track
   setupReactionTracker(getSetting("track.reaction-usage"));

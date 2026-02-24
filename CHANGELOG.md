@@ -5,6 +5,11 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
+## 0.14.7
+
+- **Updated**
+  - Handles updating the pause icon and text when loading the game paused
+
 ## 0.14.6
 
 - **New**

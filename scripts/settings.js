@@ -12,6 +12,10 @@ import {
 } from "./lib/pf2eToolbelt.js";
 import { setupReactionTracker } from "./lib/reactionTracker.js";
 import {
+  isPauseReplacementActive,
+  setupPauseReplacement,
+} from "./lib/replacePauseInfo.js";
+import {
   hideDefaultCraftChecks,
   hideSellAllTreasure,
 } from "./lib/sheetTweaks.js";
@@ -241,6 +245,9 @@ export function setupSettings() {
     config: true,
     default: "",
     type: String,
+    onChange: () => {
+      setupPauseReplacement(isPauseReplacementActive());
+    },
   });
 
   game.settings.register(MODULE_ID, "replace.pause-img", {
@@ -251,6 +258,9 @@ export function setupSettings() {
     default: "ui/pause.svg",
     filePicker: "imagevideo",
     type: String,
+    onChange: () => {
+      setupPauseReplacement(isPauseReplacementActive());
+    },
   });
 
   game.settings.register(MODULE_ID, "replace.pause-img-class", {
@@ -260,6 +270,9 @@ export function setupSettings() {
     config: true,
     default: "fa-spin",
     type: String,
+    onChange: () => {
+      setupPauseReplacement(isPauseReplacementActive());
+    },
   });
 
   // game.settings.register(MODULE_ID, "replace.pause-size", {

@@ -1,7 +1,8 @@
 import { getSetting } from "./helpers.js";
 
-export function setupPauseReplacement() {
-  Hooks.on("renderGamePause", pauseReplacement);
+export function setupPauseReplacement(active = true) {
+  Hooks[active ? "on" : "off"]("renderGamePause", pauseReplacement);
+  Hooks[active ? "on" : "off"]("ready", pauseReplacement(null, document));
 }
 
 const pauseSplitRegex = /\||;/;
@@ -52,4 +53,12 @@ function isVideo(filepath) {
 async function getRollTableElements(uuid) {
   const table = await fromUuid(uuid);
   return table?.results?.contents?.map((result) => result?.name) ?? [];
+}
+
+export function isPauseReplacementActive() {
+  return (
+    getSetting("replace.pause-text") ||
+    getSetting("replace.pause-img") ||
+    getSetting("replace.pause-img-class") !== "fa-spin"
+  );
 }
