@@ -5,6 +5,11 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
+## 0.14.8
+
+- **Updated**
+  - Handles misc error caused by template checks failing
+
 ## 0.14.7
 
 - **Updated**

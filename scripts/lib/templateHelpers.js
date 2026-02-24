@@ -27,12 +27,12 @@ export function setupTemplateHooks() {
 
 function isSundryTemplate(item) {
   return (
-    item.name.startsWith("Template") ||
-    item.slug.startsWith("template") ||
-    item.sourceId.startsWith("Compendium.sundry.sundry-pf2e-templates") ||
-    item.grantedBy?.name?.startsWith("Template") ||
-    item.grantedBy?.slug?.startsWith("template") ||
-    item.grantedBy?.sourceId?.startsWith(
+    item?.name?.startsWith("Template") ||
+    item?.slug?.startsWith("template") ||
+    item?.sourceId?.startsWith("Compendium.sundry.sundry-pf2e-templates") ||
+    item?.grantedBy?.name?.startsWith("Template") ||
+    item?.grantedBy?.slug?.startsWith("template") ||
+    item?.grantedBy?.sourceId?.startsWith(
       "Compendium.sundry.sundry-pf2e-templates",
     )
   );
