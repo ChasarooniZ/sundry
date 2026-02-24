@@ -5,6 +5,13 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
+## 0.14.9
+
+- **Updated**
+  - `Hide`
+    - `Header Controls`
+      - Added tooltips to the header controls
+
 ## 0.14.8
 
 - **Updated**
