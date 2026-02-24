@@ -23,7 +23,7 @@ export function setupHideHeaderButtonText(active) {
 async function hideHeaderButtons(_sheet, html) {
   html?.[0]?.classList?.add("sundry-hide-button-text");
   const controls = [
-    ...html?.[0]?.document.querySelectorAll("a.header-button.control"),
+    ...html?.[0]?.querySelectorAll("a.header-button.control"),
   ];
   controls.forEach((c) => (c.dataset.tooltip = c.innerText));
 }
