@@ -52,7 +52,7 @@ You can access the changelog [here](/CHANGELOG.md).
 - **Hide**
   - `Default Craft Checks` (for Heroic Crafting)
   - `Hide Header Button Text`
-    - Hides the text (not the icons) for sheet Header Buttons
+    - Hides the text (not the icons) for sheet Header Buttons (and then puts the text as a tooltip on the button)
 
   <img width="669" height="213" alt="image" src="https://github.com/user-attachments/assets/a5881f19-e376-4a37-aa4a-f44e68527053" />
   - `Sell All Treasure`
