@@ -1,4 +1,5 @@
 import { TEMPLATES } from "./lib/const.js";
+import { setupFlourishTracker } from "./lib/flourishTracker.js";
 import { isF2eSystem } from "./lib/helpers.js";
 import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
@@ -235,6 +236,18 @@ export function setupSettings() {
       all: `${MODULE_ID}.module-settings.track.reaction-usage.choices.all`,
       "reaction-only": `${MODULE_ID}.module-settings.track.reaction-usage.choices.reaction-only`,
       off: `${MODULE_ID}.module-settings.track.reaction-usage.choices.off`,
+    },
+  });
+
+  game.settings.register(MODULE_ID, "track.flourish-usage", {
+    name: `${MODULE_ID}.module-settings.track.flourish-usage.name`,
+    hint: `${MODULE_ID}.module-settings.track.flourish-usage.hint`,
+    scope: "world",
+    config: isF2eSystem(),
+    default: false,
+    type: Boolean,
+    onChange: (value) => {
+      setupFlourishTracker(value);
     },
   });
 
