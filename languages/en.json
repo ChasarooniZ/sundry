@@ -95,6 +95,10 @@
         }
       },
       "track": {
+        "flourish-usage": {
+          "name": "[Track] Flourish Usage",
+          "hint": "This feature creates an effect on a token when it uses a flourish action, and then warns the owner when they use another while the flourish tracker is on them."
+        },
         "reaction-usage": {
           "name": "[Track] Reaction Usage",
           "hint": "This feature creates (and increments) an effect on a token that counts if a token has used a reaction. To note it also applies this effect to every token as combat starts if you have all enabled",
@@ -138,6 +142,7 @@
       "session-start": {
         "active": "[Session Start] Enough players have joined the lobby to show you the session start checklist!"
       },
+      "flourish-used": "You've already used a Flourish action this turn",
       "spellstrike": {
         "recharged": "Spellstrike Recharged",
         "conflux": "You just cast a conflux spell which allows you to recharge your spellstrike.",

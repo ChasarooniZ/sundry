@@ -26,6 +26,7 @@ import {
 import { setupStartOfSession } from "./lib/startOfSession.js";
 import { setuplanguageHandling } from "./lib/languageHandling.js";
 import { setupTemplateHooks } from "./lib/templateHelpers.js";
+import { setupFlourishTracker } from "./lib/flourishTracker.js";
 
 export const MODULE_ID = "sundry";
 
@@ -82,4 +83,6 @@ Hooks.once("ready", async function () {
 
   //Track
   setupReactionTracker(getSetting("track.reaction-usage"));
+
+  setupFlourishTracker(getSetting("track.flourish-usage"));
 });

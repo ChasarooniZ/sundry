@@ -5,6 +5,12 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
+## 0.15.0
+
+- **New**
+  - `Flourish Tracker`
+    - This feature creates an effect on a token when it uses a flourish action, and then warns the owner when they use another while the flourish tracker is on them. (💡 @Friz)
+
 ## 0.14.9
 
 - **Updated**
