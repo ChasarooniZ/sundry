@@ -1,4 +1,4 @@
-import { MODULE_ID } from "../module.ks";
+import { MODULE_ID } from "../module.js";
 
 export function setupFlourishTracker(active = true) {
   Hooks[active ? "on" : "off"]("createChatMessage", usedFlourish);
@@ -39,13 +39,14 @@ async function removeEncounterFlourish(encounter) {
 
 async function flourishUsed(actors) {
   if (actors.length === 0) return;
+  const item = FLOURISH_USED_EFFECT();
 
   for (const actor of actors) {
     const existing = actor.itemTypes.effect.find(
       (e) => e.slug === "effect-flourish-used",
     );
     if (!existing) {
-      const tempItem = foundry.utils.deepClone(FLOURISH_USED_EFFECT);
+      const tempItem = foundry.utils.deepClone(item);
       tempItem.system = {
         ...item.system,
         context: {
@@ -60,7 +61,7 @@ async function flourishUsed(actors) {
   }
 }
 
-const FLOURISH_USED_EFFECT = {
+const FLOURISH_USED_EFFECT = () => ({
   name: game.i18n.has("sundry.items.effects.flourish-used.name")
     ? game.i18n.localize("sundry.items.effects.flourish-used.name")
     : "Effect: Flourish Used",
@@ -78,4 +79,4 @@ const FLOURISH_USED_EFFECT = {
     },
     slug: "effect-flourish-used",
   },
-};
+});
