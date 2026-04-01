@@ -10,8 +10,8 @@ export function setupFlourishTracker(active = true) {
 async function usedFlourish(message) {
   if (game.user.id !== message.user.id && !game.user.isGM) return;
   if (message?.item?.system?.traits?.value?.includes("flourish")) {
-    const existing = actor.itemTypes.effect.find(
-      (e) => e.slug === "effect-flourish-used",
+    const existing = message?.actor?.itemTypes?.effect?.find(
+      (e) => e?.slug === "effect-flourish-used",
     );
     if (existing) {
       if (game.user.id !== message.user.id) return;
