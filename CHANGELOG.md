@@ -4,6 +4,11 @@
 - **Updated**
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
+ 
+## 0.15.1
+
+- **Updated**
+  - Updated Polish translation (🌐 @Lioheart)
 
 ## 0.15.0
 
@@ -39,7 +44,6 @@
 - **Updated**
   - `Templates`
     - ~~Solidarity~~ -> `Union Organizer`
-    -
     - Updated helper to more intelligently decide what to reset the health on
 
 ## 0.14.5
