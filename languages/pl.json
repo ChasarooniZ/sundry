@@ -95,6 +95,10 @@
         }
       },
       "track": {
+        "flourish-usage": {
+          "name": "[Śledzenie] Wykorzystanie Rozmachu",
+          "hint": "Ta funkcja wywołuje efekt na tokenie, gdy wykona on akcję rozmachu, a następnie ostrzega właściciela, gdy ten wykona kolejną akcję, podczas gdy wskaźnik rozmachu jest na nim."
+        },
         "reaction-usage": {
           "name": "[Śledzenie] Wykorzystanie reakcji",
           "hint": "Ta funkcja tworzy (i zwiększa) efekt na tokenie, który liczy, czy token użył reakcji. Należy zauważyć, że efekt ten stosuje się również do każdego tokenu na początku walki, jeśli wszystkie są włączone",
@@ -138,6 +142,7 @@
       "session-start": {
         "active": "[Rozpoczęcie sesji] Do lobby dołączyła wystarczająca liczba graczy, aby wyświetlić listę kontrolną rozpoczęcia sesji!"
       },
+      "flourish-used": "W tej turze skorzystałeś już z akcji Rozmachu",
       "spellstrike": {
         "recharged": "Cios Zaklęciem naładowany",
         "conflux": "Właśnie rzuciłeś zaklęcie konfluencji, które pozwala ci naładować Cios Zaklęciem.",
