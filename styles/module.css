@@ -254,3 +254,43 @@ figure.paused figcaption {
     }
   }
 }
+
+@keyframes artRise {
+  from {
+    transform: translateY(20%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#sundry-skyrim-loading-tip {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #000;
+  overflow: hidden;
+  pointer-events: none;
+}
+#sundry-skyrim-loading-tip #ov-text {
+  position: absolute;
+  right: 3%;
+  top: 85%;
+  width: 45%;
+  text-align: right;
+  z-index: 4;
+  font-family: "Modesto Condensed";
+  font-size: 35px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 1);
+  animation: textFadeIn 0.5s;
+}

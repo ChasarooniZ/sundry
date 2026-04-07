@@ -4,6 +4,9 @@
 - **Updated**
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
+- **New**
+  - `Skyrim Loading Screens`
+  - 
 
 ## 0.15.0
 

@@ -22,6 +22,7 @@ import {
 } from "./lib/sheetTweaks.js";
 import { setupDisplayWeaponDamage } from "./lib/showBaseDamage.js";
 import { minifySimpleRequests } from "./lib/simpleRequests.js";
+import { setupSkyrimLoadingTips } from "./lib/skyrimLoading.js";
 import { setupStartOfSession } from "./lib/startOfSession.js";
 import { toggleDispositionStates } from "./lib/toggleDisposition.js";
 import { MODULE_ID } from "./module.js";
@@ -122,6 +123,27 @@ export function setupSettings() {
     onChange: (value) => {
       setuplanguageHandling(value);
     },
+  });
+
+  game.settings.register(MODULE_ID, "highlight.loading-tips.items", {
+    name: `${MODULE_ID}.module-settings.highlight.loading-tips.items.name`,
+    hint: `${MODULE_ID}.module-settings.highlight.loading-tips.items.hint`,
+    scope: "world",
+    config: true,
+    default: "",
+    type: String,
+    onChange: (value) => {
+      setupSkyrimLoadingTips(!!value);
+    },
+  });
+
+  game.settings.register(MODULE_ID, "highlight.loading-tips.duration", {
+    name: `${MODULE_ID}.module-settings.highlight.loading-tips.duration.name`,
+    hint: `${MODULE_ID}.module-settings.highlight.loading-tips.duration.hint`,
+    scope: "world",
+    config: true,
+    default: 5,
+    type: Number,
   });
 
   game.settings.register(

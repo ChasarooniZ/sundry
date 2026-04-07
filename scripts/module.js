@@ -27,6 +27,8 @@ import { setupStartOfSession } from "./lib/startOfSession.js";
 import { setuplanguageHandling } from "./lib/languageHandling.js";
 import { setupTemplateHooks } from "./lib/templateHelpers.js";
 import { setupFlourishTracker } from "./lib/flourishTracker.js";
+import { setupAPI } from "./api.js";
+import { setupSkyrimLoadingTips } from "./lib/skyrimLoading.js";
 
 export const MODULE_ID = "sundry";
 
@@ -34,6 +36,7 @@ Hooks.once("init", async function () {
   setupSettings();
   registerKeybindings();
   loadAllTemplates();
+  setupAPI();
   versionMigration();
 });
 
@@ -54,6 +57,10 @@ Hooks.once("ready", async function () {
   //Highlighting
   setupHighlightToolbeltRollSaves(
     getSetting("highlight.pf2e-toolbelt.target-helper.roll"),
+  );
+
+  setupSkyrimLoadingTips(
+    !!game.settings.get(MODULE_ID, "highlight.loading-tips.items"),
   );
 
   setuplanguageHandling(getSetting("highlight.languages-known"));
