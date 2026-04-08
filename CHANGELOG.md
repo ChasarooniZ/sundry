@@ -5,6 +5,15 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
+## 0.16.3
+
+-**Updated**
+
+- `Loading Screens`
+  - Updated logic for `Loading Screens` randomization to make it randomize which is shown a bit better
+  - Added a bit more space to fit one more line of text on `1080p` monitors for `Loading Screens`
+  - Fixed a few elements of the timing window and added optional chaining to reduce errors
+
 ## 0.16.2
 
 - Fix the issue with the previous change (💡 @Hackor)

@@ -8,8 +8,34 @@ export async function setupSkyrimLoadingTips(active = true) {
       game.settings.get(MODULE_ID, "highlight.loading-tips.items"),
     );
     const pages = journal.pages.contents;
-    // Grabs the random page of the current Minute
-    const page = pages[Math.floor(new Date() / MINUTE) % pages.length];
+
+    const storedGlobalNumber = game.settings.get(
+      MODULE_ID,
+      "highlight.loading-tips.global-last",
+    );
+    const storedLocalNumber = game.settings.get(
+      MODULE_ID,
+      "highlight.loading-tips.local-last",
+    );
+    let number = Math.floor(Math.random() * pages.length);
+    if (storedGlobalNumber !== -1 && storedLocalNumber !== storedGlobalNumber) {
+      //We haven't use the number yet
+      game.settings.set(
+        MODULE_ID,
+        "highlight.loading-tips.local-last",
+        storedGlobalNumber,
+      );
+      number = storedGlobalNumber;
+    } else {
+      // we HAVE used the number
+      game.settings.set(
+        MODULE_ID,
+        "highlight.loading-tips.global-last",
+        number,
+      );
+      game.settings.set(MODULE_ID, "highlight.loading-tips.local-last", number);
+    }
+    const page = pages[number];
     showLoadingOverlay({
       art: page.src,
       text: page.image.caption || page.name,
@@ -75,11 +101,13 @@ function closeOutOverlay({
   fast = false,
 }) {
   const time = fast ? 0.2 : 0.8;
-  overlay.style.transition = `opacity ${time}s`;
-  overlay.style.opacity = "0";
+  if (overlay?.style) {
+    overlay.style.transition = `opacity ${time}s`;
+    overlay.style.opacity = "0";
+  }
   setTimeout(() => {
-    overlay.remove();
-    style.remove();
+    overlay?.remove();
+    style?.remove();
   }, time * 1000);
 }
 

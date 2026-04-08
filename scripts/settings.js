@@ -151,6 +151,24 @@ export function setupSettings() {
     type: Number,
   });
 
+  game.settings.register(MODULE_ID, "highlight.loading-tips.global-last", {
+    name: `${MODULE_ID}.module-settings.highlight.loading-tips.global-last.name`,
+    hint: `${MODULE_ID}.module-settings.highlight.loading-tips.global-last.hint`,
+    scope: "world",
+    config: false,
+    default: -1,
+    type: Number,
+  });
+
+    game.settings.register(MODULE_ID, "highlight.loading-tips.local-last", {
+    name: `${MODULE_ID}.module-settings.highlight.loading-tips.local-last.name`,
+    hint: `${MODULE_ID}.module-settings.highlight.loading-tips.local-last.hint`,
+    scope: "user",
+    config: false,
+    default: -1,
+    type: Number,
+  });
+
   game.settings.register(
     MODULE_ID,
     "highlight.pf2e-toolbelt.target-helper.roll",
