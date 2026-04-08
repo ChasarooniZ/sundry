@@ -38,6 +38,9 @@ Hooks.once("init", async function () {
   loadAllTemplates();
   setupAPI();
   versionMigration();
+  setupSkyrimLoadingTips(
+    !!game.settings.get(MODULE_ID, "highlight.loading-tips.items"),
+  );
 });
 
 Hooks.once("ready", async function () {
@@ -57,10 +60,6 @@ Hooks.once("ready", async function () {
   //Highlighting
   setupHighlightToolbeltRollSaves(
     getSetting("highlight.pf2e-toolbelt.target-helper.roll"),
-  );
-
-  setupSkyrimLoadingTips(
-    !!game.settings.get(MODULE_ID, "highlight.loading-tips.items"),
   );
 
   setuplanguageHandling(getSetting("highlight.languages-known"));

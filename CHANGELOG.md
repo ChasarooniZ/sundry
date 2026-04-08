@@ -4,9 +4,15 @@
 - **Updated**
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
+
+## 0.16.0
+
 - **New**
   - `Skyrim Loading Screens`
-  - 
+    - This new feature adds "Skyrim Esque" loading screens which you can configure by linking a journal UUID of a journal filled with images and captions in the module settings
+    - **Notes**
+      - The current loading image changes based on the current minute (in a very optimistic attempt to make the players loading similar)
+      - This feature may at some point get transitioned out to a separate more "animation focused" module, but since it just uses CSS i figured it could fit here for now (and it allows it to be system agnostic)
 
 ## 0.15.0
 

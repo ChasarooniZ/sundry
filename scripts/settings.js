@@ -143,6 +143,11 @@ export function setupSettings() {
     scope: "world",
     config: true,
     default: 5,
+    range: {
+      min: 0,
+      step: 0.5,
+      max: 30,
+    },
     type: Number,
   });
 

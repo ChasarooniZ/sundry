@@ -1,16 +1,20 @@
 import { MODULE_ID } from "../module.js";
 
+const MINUTE = 60 * 1000;
+
 export async function setupSkyrimLoadingTips(active = true) {
   Hooks[active ? "on" : "off"]("canvasInit", async () => {
     const journal = await fromUuid(
       game.settings.get(MODULE_ID, "highlight.loading-tips.items"),
     );
     const pages = journal.pages.contents;
-    const page = pages[new Date() % pages.length];
+    // Grabs the random page of the current Minute
+    const page = pages[Math.floor(new Date() / MINUTE) % pages.length];
     showLoadingOverlay({
       art: page.src,
       text: page.image.caption || page.name,
-      duration: game.settings.get(MODULE_ID, "highlight.loading-tips.duration") * 1000,
+      duration:
+        game.settings.get(MODULE_ID, "highlight.loading-tips.duration") * 1000,
     });
   });
 }
@@ -38,7 +42,7 @@ function showLoadingOverlay({ art, text, duration = 5000 }) {
   const overlay = document.createElement("div");
   overlay.id = "sundry-skyrim-loading-tip";
   overlay.innerHTML = `
-    <div class="fogwrapper">
+    <!--<div class="fogwrapper">
       <div id="foglayer_01" class="fog">
         <div class="image01"></div>
         <div class="image02"></div>
@@ -51,7 +55,7 @@ function showLoadingOverlay({ art, text, duration = 5000 }) {
         <div class="image01"></div>
         <div class="image02"></div>
       </div>
-    </div>
+    </div> -->
     <img id="ov-art" src="${art}" />
     <div id="ov-text">${text}</div>
   `;

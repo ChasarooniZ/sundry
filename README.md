@@ -65,6 +65,12 @@ You can access the changelog [here](/CHANGELOG.md).
 
   <img width="280" height="171" alt="image" src="https://github.com/user-attachments/assets/0bf22994-8524-47f1-9e16-ce9104f5534e" />
 
+  - `Skyrim Loading Screens`
+    - This new feature adds "Skyrim Esque" loading screens which you can configure by linking a journal UUID of a journal filled with images and captions in the module settings
+    - **Notes**
+      - The current loading image changes based on the current minute (in a very optimistic attempt to make the players loading similar)
+      - This feature may at some point get transitioned out to a separate more "animation focused" module, but since it just uses CSS i figured it could fit here for now (and it allows it to be system agnostic)
+
 - **Hotkey**
   - `Character Campaign Notes` - Adds a new hotkey (Default `N`) to open an editable dialog of their assigned character's `Campaign Notes` field on their character sheet for quick access
   - `Disposition Toggling` - Using a new hotkey (I) allow you to easily toggle the disposition of the hovered token
