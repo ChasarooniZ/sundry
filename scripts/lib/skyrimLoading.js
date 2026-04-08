@@ -61,7 +61,9 @@ function showLoadingOverlay({ art, text, duration = 5000 }) {
     <div id="ov-text">${text}</div>
   `;
   document.body.appendChild(overlay);
-  document.addEventListener("click", clickToSkip);
+  setTimeout(() => {
+    document.addEventListener("click", clickToSkip);
+  }, 200);
   setTimeout(() => {
     closeOutOverlay({ overlay, style, fast: false });
   }, duration);
