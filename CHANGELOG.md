@@ -5,11 +5,6 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
  
-## 0.15.1
-
-- **Updated**
-  - Updated Polish translation (🌐 @Lioheart)
-
 ## 0.16.0
 
 - **New**
@@ -19,7 +14,12 @@
       - The current loading image changes based on the current minute (in a very optimistic attempt to make the players loading similar)
       - This feature may at some point get transitioned out to a separate more "animation focused" module, but since it just uses CSS i figured it could fit here for now (and it allows it to be system agnostic)
   - `Macros`
-    - Added a new macros compendium including one to increase the reaction counter of all selected tokens
+    - Added a new macros compendium including one to increase the reaction counter of all selected tokens (💡 @juan-r-apolinario)
+ 
+## 0.15.1
+
+- **Updated**
+  - Updated Polish translation (🌐 @Lioheart)
 
 ## 0.15.0
 
