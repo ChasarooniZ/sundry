@@ -26,13 +26,13 @@ async function startOfCombatReactions(encounter) {
   const frontID = encounter?.combatants?.contents?.find(
     (c) =>
       c.initiative ===
-      Math.max(...encounter?.combatants?.contents?.map((c) => c.initiative))
+      Math.max(...encounter?.combatants?.contents?.map((c) => c.initiative)),
   )?.id;
   reactionUsed(
     encounter?.combatants?.contents
       ?.filter((combatant) => combatant.id !== frontID)
       ?.map((combatant) => combatant.actor),
-    true
+    true,
   );
 }
 
@@ -51,17 +51,17 @@ async function usedReaction(message) {
 
 async function removeEncounterReactions(encounter) {
   const actors = encounter?.combatants?.contents?.map(
-    (combatant) => combatant.actor
+    (combatant) => combatant.actor,
   );
   for (const actor of actors) {
     const existing = actor.itemTypes.effect.find(
-      (e) => e.slug === "effect-reaction-used"
+      (e) => e.slug === "effect-reaction-used",
     );
     if (existing) existing.delete();
   }
 }
 
-async function reactionUsed(actors, combatStart) {
+export async function reactionUsed(actors, combatStart) {
   if (actors.length === 0) return;
 
   const item = REACTION_USED_EFFECT(combatStart);
@@ -69,7 +69,7 @@ async function reactionUsed(actors, combatStart) {
   const actorsToCheck = actors.filter((actor) => {
     if (combatStart) {
       return !ROLL_OPTIONS_WITH_REACTIONS_AT_START_OF_COMBAT.some(
-        (rollOption) => actor?.rollOptions?.all?.[rollOption]
+        (rollOption) => actor?.rollOptions?.all?.[rollOption],
       );
     } else {
       return true;
@@ -78,7 +78,7 @@ async function reactionUsed(actors, combatStart) {
 
   for (const actor of actorsToCheck) {
     const existing = actor.itemTypes.effect.find(
-      (e) => e.slug === "effect-reaction-used"
+      (e) => e.slug === "effect-reaction-used",
     );
     if (existing) {
       actor.updateEmbeddedDocuments("Item", [

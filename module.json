@@ -21,7 +21,7 @@
   },
   "esmodules": ["scripts/module.js"],
   "scripts": ["scripts/lib/lib.js"],
-  "styles": ["styles/module.css"],
+  "styles": ["styles/module.css", "styles/fog.css"],
   "languages": [
     {
       "lang": "en",
@@ -60,6 +60,16 @@
         "ASSISTANT": "OWNER"
       },
       "system": "pf2e"
+    },
+    {
+      "name": "sundry-macros",
+      "label": "[Sundry] Macros",
+      "path": "packs/sundry-macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "media": [

@@ -1,0 +1,32 @@
+{
+  "name": "Tokens Used Reactions",
+  "type": "script",
+  "flags": {
+    "advanced-macros": {
+      "runForSpecificUser": ""
+    }
+  },
+  "command": "const actors = canvas.tokens.controlled.map(tok => tok.actor);\nwindow.sundry.api.reactionUsed(actors);",
+  "img": "systems/pf2e/icons/actions/Reaction.webp",
+  "author": "vj8VUT8j7Wtzy3Y2",
+  "scope": "global",
+  "folder": null,
+  "ownership": {
+    "default": 0,
+    "vj8VUT8j7Wtzy3Y2": 3
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.351",
+    "systemId": "pf2e",
+    "systemVersion": "7.12.2",
+    "createdTime": 1775633890356,
+    "modifiedTime": 1775633890356,
+    "lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
+  },
+  "_id": "tBMlIJqj8mFc6DIa",
+  "sort": 0,
+  "_key": "!macros!tBMlIJqj8mFc6DIa"
+}

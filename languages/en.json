@@ -58,6 +58,16 @@
         "languages-known": {
           "name": "[Highlight] Which party Members know Creature Languages",
           "hint": "Highlights which languages (on NPC stat block pages) are known by the current active party as well as adds a tooltip to make sure its clear"
+        },
+        "loading-tips": {
+          "items": {
+            "name": "[Highlight] Loading Tips - Journal UUID",
+            "hint": "Highlight Loading tips will show 'Skyrim Style' loading tips every time a new scene is loaded. If you put in a journal UUID here this will enable this feature ,and will reference the journal's 'Image' pages for the Art, and its Caption for the text to display."
+          },
+          "duration": {
+            "name": "[Highlight] Loading Tips - Duration",
+            "hint": "How long should the loading tips animation be in seconds"
+          }
         }
       },
       "message": {
