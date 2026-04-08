@@ -24,6 +24,7 @@ function showLoadingOverlay({ art, text, duration = 5000 }) {
   if (existing) existing.remove();
 
   const style = document.createElement("style");
+  style.id = "sundry-skyrim-loading-tip-style";
   style.textContent = `
     #sundry-skyrim-loading-tip #ov-art {
       position:absolute;
@@ -60,13 +61,27 @@ function showLoadingOverlay({ art, text, duration = 5000 }) {
     <div id="ov-text">${text}</div>
   `;
   document.body.appendChild(overlay);
-
+  document.addEventListener("click", clickToSkip);
   setTimeout(() => {
-    overlay.style.transition = "opacity 0.8s";
-    overlay.style.opacity = "0";
-    setTimeout(() => {
-      overlay.remove();
-      style.remove();
-    }, 800);
+    closeOutOverlay({ overlay, style, fast: false });
   }, duration);
+}
+
+function closeOutOverlay({
+  overlay = document.getElementById("sundry-skyrim-loading-tip"),
+  style = document.getElementById("sundry-skyrim-loading-tip-style"),
+  fast = false,
+}) {
+  const time = fast ? 0.2 : 0.8;
+  overlay.style.transition = `opacity ${time}s`;
+  overlay.style.opacity = "0";
+  setTimeout(() => {
+    overlay.remove();
+    style.remove();
+  }, time * 1000);
+}
+
+function clickToSkip() {
+  closeOutOverlay({ fast: true });
+  document.removeEventListener("click", clickToSkip);
 }

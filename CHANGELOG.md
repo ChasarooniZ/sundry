@@ -4,7 +4,13 @@
 - **Updated**
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
- 
+
+## 0.16.1
+
+- **Updated**
+  - `Skyrim Loading Screens`
+    - Added an option to click to skip the loading screen (💡 @Hackor)
+
 ## 0.16.0
 
 - **New**
@@ -15,7 +21,7 @@
       - This feature may at some point get transitioned out to a separate more "animation focused" module, but since it just uses CSS i figured it could fit here for now (and it allows it to be system agnostic)
   - `Macros`
     - Added a new macros compendium including one to increase the reaction counter of all selected tokens (💡 @juan-r-apolinario)
- 
+
 ## 0.15.1
 
 - **Updated**
