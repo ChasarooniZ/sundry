@@ -60,6 +60,16 @@
         "ASSISTANT": "OWNER"
       },
       "system": "pf2e"
+    },
+    {
+      "name": "sundry-macros",
+      "label": "[Sundry] Macros",
+      "path": "packs/sundry-macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "media": [
