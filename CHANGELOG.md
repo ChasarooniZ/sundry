@@ -5,6 +5,10 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
+## 1.0.0
+
+- Updated to support FoundryVTT `14`
+
 ## 0.16.3
 
 -**Updated**
