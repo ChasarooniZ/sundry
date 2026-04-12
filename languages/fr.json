@@ -33,7 +33,7 @@
       "hide": {
         "default-craft-checks": {
           "name": "[Cacher] Boutons de tests d'artisanat par défaut",
-          "hint": "Pour empêcher les joueurs d'utiliser l'artisanat par défaut plutôt que les boutons « Artisanat héroïque » en cas d'utilisation de cet ajout"
+          "hint": "Pour empêcher les joueurs d'utiliser l'artisanat par défaut plutôt que les boutons « Artisanat héroïque » en cas d'utilisation de cette option"
         },
         "header": {
           "button-text": {
@@ -50,7 +50,7 @@
         "pf2e-toolbelt": {
           "target-helper": {
             "roll": {
-              "name": "[Surligner] PF2e toolbelt - jet non lancé d'aide au ciblage",
+              "name": "[Surligner] PF2e toolbelt - Aide au ciblage de la cible non lancé",
               "hint": "Surligner les jets non effectués en les faisant briller dans la fonction 'Aide au ciblage' de 'PF2e Toolbelt' pour qu'il soit plus évident de les utiliser"
             }
           }
@@ -58,6 +58,16 @@
         "languages-known": {
           "name": "[Surligner] Les membres du groupes connaissant les langues de la créature",
           "hint": "Indique, dans les blocs de statistiques des PNJ, les langues connues par le groupe actif et ajoute une infobulle pour plus de clarté."
+        },
+        "loading-tips": {
+          "items": {
+            "name": "[Surligner] Infobulle lors du chargement - UUID du journal",
+            "hint": "L'option Surligner les infobulles de chargement affichera des infobulles de chargement dans le style 'Skyrim' lors du chargement d'une nouvelle scène. Si vous saisissez un UUID de journal ici, cette fonctionnalité sera activée et les pages « Image » du journal seront utilisées pour les illustrations ainsi que leurs légendes pour le texte qui sera affiché."
+          },
+          "duration": {
+            "name": "[Surligner] Infobulle de chargement - Durée",
+            "hint": "Durée de l'infobulle de chargement en secondes"
+          }
         }
       },
       "message": {
@@ -95,6 +105,10 @@
         }
       },
       "track": {
+        "flourish-usage": {
+          "name": "[Comptabiliser] Usage de sophistication",
+          "hint": "Cette fonctionnalité crée un effet sur un jeton lorsqu'il utilise une action de sophistication et avertit son propriétaire lorsqu'il en utilise une autre."
+        },
         "reaction-usage": {
           "name": "[Comptabiliser] Utilisation de la réaction",
           "hint": "Cette fonctionnalité crée (et incrémente) un effet sur un jeton qui compte si ce dernier a utilisé une réaction. À noter : cet effet s'applique également à chaque jeton au début du combat, si vous avez tous activé cette fonctionnalité.",
@@ -138,6 +152,7 @@
       "session-start": {
         "active": "[Début de session] Assez de joueurs ont rejoint l'accueil pour vous montrer la liste de début de session !"
       },
+      "flourish-used": "Vous avez déjà utilisé une action de sophistication durant ce tour",
       "spellstrike": {
         "recharged": "Frappe de sort rechargée",
         "conflux": "Vous venez de lancer un sort de confluence qui vous permet de recharger votre frappe magique.",
