@@ -9,7 +9,7 @@
 
 - **New**
   - `Hide Player List`
-    - Hides the player list and adds a button to toggle its visibility, the setting sets what state the player list is in by default
+    - Hides the player list and adds a button to toggle its visibility, the setting sets what state the player list is in by default (💡 @weeping_minotaur )
 - **Updated**
   - Updated French translation (🌐 @rectulo)
   - Updated Chinese translation (🌐 @AlphaStarguide)
