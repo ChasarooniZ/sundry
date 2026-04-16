@@ -294,3 +294,39 @@ figure.paused figcaption {
   color: rgba(255, 255, 255, 1);
   animation: textFadeIn 0.5s;
 }
+
+#player-list-toggle-button {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  z-index: 9999;
+  width: 18px;
+  height: 18px;
+  background: rgba(30, 30, 30, 0.75);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0 6px 0 0;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: rgba(60, 60, 60, 0.9);
+  }
+}
+
+.sundry-player-list-hide {
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  #players-inactive {
+    visibility: hidden;
+  }
+}
+
+.sundry-player-list-show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}

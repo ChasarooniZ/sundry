@@ -56,6 +56,8 @@ You can access the changelog [here](/CHANGELOG.md).
 
   <img width="669" height="213" alt="image" src="https://github.com/user-attachments/assets/a5881f19-e376-4a37-aa4a-f44e68527053" />
   - `Sell All Treasure`
+  - `Hide Player List`
+    - Hides the player list and adds a button to toggle its visibility, the setting sets what state the player list is in by default +
 
 - **Highlight**
   - `Pf2e Toolbelt`'s `Target Helper` unrolled rolls and make them glow
@@ -64,7 +66,6 @@ You can access the changelog [here](/CHANGELOG.md).
   - `Known Languages on Creatures` Highlights which languages (on NPC stat block pages) are known by the current active party as well as adds a tooltip to make sure its clear
 
   <img width="280" height="171" alt="image" src="https://github.com/user-attachments/assets/0bf22994-8524-47f1-9e16-ce9104f5534e" />
-
   - `Skyrim Loading Screens`
     - This new feature adds "Skyrim Esque" loading screens which you can configure by linking a journal UUID of a journal filled with images and captions in the module settings
     - **Notes**

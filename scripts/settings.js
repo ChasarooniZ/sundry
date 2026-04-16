@@ -2,6 +2,7 @@ import { TEMPLATES } from "./lib/const.js";
 import { setupFlourishTracker } from "./lib/flourishTracker.js";
 import { isF2eSystem } from "./lib/helpers.js";
 import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
+import { setupPlayerListToggleButton } from "./lib/hidePlayerList.js";
 import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
 import { setuplanguageHandling } from "./lib/languageHandling.js";
 import { setupNotifySpellstrikeRecharge } from "./lib/notify.js";
@@ -113,6 +114,24 @@ export function setupSettings() {
     },
   });
 
+  game.settings.register(MODULE_ID, "hide.hud.player-list", {
+    name: `${MODULE_ID}.module-settings.hide.hud.player-list.name`,
+    hint: `${MODULE_ID}.module-settings.hide.hud.player-list.hint`,
+    scope: "world",
+    config: true,
+    default: "off",
+    type: String,
+
+    choices: {
+      off: `${MODULE_ID}.module-settings.hide.hud.player-list.choices.off`,
+      hidden: `${MODULE_ID}.module-settings.hide.hud.player-list.choices.hidden`,
+      visible: `${MODULE_ID}.module-settings.hide.hud.player-list.choices.visible`,
+    },
+    onChange: (value) => {
+      setupPlayerListToggleButton(value);
+    },
+  });
+
   game.settings.register(MODULE_ID, "highlight.languages-known", {
     name: `${MODULE_ID}.module-settings.highlight.languages-known.name`,
     hint: `${MODULE_ID}.module-settings.highlight.languages-known.hint`,
@@ -160,7 +179,7 @@ export function setupSettings() {
     type: Number,
   });
 
-    game.settings.register(MODULE_ID, "highlight.loading-tips.local-last", {
+  game.settings.register(MODULE_ID, "highlight.loading-tips.local-last", {
     name: `${MODULE_ID}.module-settings.highlight.loading-tips.local-last.name`,
     hint: `${MODULE_ID}.module-settings.highlight.loading-tips.local-last.hint`,
     scope: "user",

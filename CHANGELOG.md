@@ -5,6 +5,21 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
+## 1.1.0
+
+- **New**
+  - `Hide Player List`
+    - Hides the player list and adds a button to toggle its visibility, the setting sets what state the player list is in by default +
+
+-
+
+## 1.0.1
+
+- **Updated**
+  - Updated French translation (🌐 @rectulo)
+  - Updated Chinese translation (🌐 @AlphaStarguide)
+  - Updated Polish translation (🌐 @Lioheart)
+
 ## 1.0.0
 
 - Updated to support FoundryVTT `14`
@@ -62,7 +77,10 @@
 - **Updated**
   - Handles misc error caused by template checks failing
 
-## 0.14.7
+##+
+++
+
+++++++ 0.14.7
 
 - **Updated**
   - Handles updating the pause icon and text when loading the game paused
