@@ -44,7 +44,12 @@
         "hud": {
           "player-list": {
             "name": "[Hide] Player List",
-            "hint": "Hides the player list and adds a button to toggle its visibility, the setting sets what state the player list is in by default"
+            "hint": "Hides the player list and adds a button to toggle its visibility, the setting sets what state the player list is in by default",
+            "choices": {
+              "off": "-",
+              "hidden": "Hidden by Default",
+              "visible": "Visible by Default"
+            }
           }
         },
         "sell-all-treasure": {

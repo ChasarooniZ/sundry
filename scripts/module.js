@@ -74,7 +74,7 @@ Hooks.once("ready", async function () {
 
   if (getSetting("hide.default-craft-checks")) hideDefaultCraftChecks();
 
-  setupPlayerListToggleButton("hidden");
+  setupPlayerListToggleButton(getSetting("hide.hud.player-list"));
 
   // if (getSetting('message.user-color'))
   //     setupMessageUserColor();
