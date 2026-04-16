@@ -21,7 +21,13 @@
   },
   "esmodules": ["scripts/module.js"],
   "scripts": ["scripts/lib/lib.js"],
-  "styles": ["styles/module.css", "styles/fog.css"],
+  "styles": [
+    "styles/module.css",
+    {
+      "src": "styles/applications.css",
+      "layer": "applications"
+    }
+  ],
   "languages": [
     {
       "lang": "en",
@@ -34,14 +40,14 @@
       "path": "languages/fr.json"
     },
     {
-        "lang": "pl",
-        "name": "Polish",
-        "path": "languages/pl.json"
+      "lang": "pl",
+      "name": "Polish",
+      "path": "languages/pl.json"
     },
     {
-        "lang": "cn",
-        "name": "简体中文",
-        "path": "languages/cn.json"
+      "lang": "cn",
+      "name": "简体中文",
+      "path": "languages/cn.json"
     }
   ],
   "url": "#{URL}#",
