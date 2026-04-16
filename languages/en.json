@@ -41,6 +41,12 @@
             "hint": "Hides the header buttons' text, but keeps their icons in tact for this with a lot of modules"
           }
         },
+        "hud": {
+          "player-list": {
+            "name": "[Hide] Player List",
+            "hint": "Hides the player list and adds a button to toggle its visibility, the setting sets what state the player list is in by default"
+          }
+        },
         "sell-all-treasure": {
           "name": "[Hide] Sell All Treasure",
           "hint": "Hides the 'Sell All Treasure' button to prevent accidentally selling key items"
@@ -168,6 +174,14 @@
       },
       "team-members": "members",
       "property-runes": "Property Runes"
+    },
+    "tooltip": {
+      "hud": {
+        "player-list": {
+          "show": "Show Player List",
+          "hide": "Hide Player List"
+        }
+      }
     },
     "items": {
       "effects": {

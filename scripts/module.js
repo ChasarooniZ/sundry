@@ -29,6 +29,8 @@ import { setupTemplateHooks } from "./lib/templateHelpers.js";
 import { setupFlourishTracker } from "./lib/flourishTracker.js";
 import { setupAPI } from "./api.js";
 import { setupSkyrimLoadingTips } from "./lib/skyrimLoading.js";
+import { setupMessageUserColor } from "./lib/messageUserColor.js";
+import { setupPlayerListToggleButton } from "./lib/hidePlayerList.js";
 
 export const MODULE_ID = "sundry";
 
@@ -51,6 +53,7 @@ Hooks.once("ready", async function () {
     getSetting("colorize.pf2e-toolbelt.target-helper.roll"),
   );
   setupColorizePersistentPF2eHUD(getSetting("colorize.pf2e-hud.persistent"));
+  setupMessageUserColor();
 
   // Display
   setupDisplayItemPropertyRunes(getSetting("display.item-property-runes"));
@@ -70,6 +73,8 @@ Hooks.once("ready", async function () {
   setupHideHeaderButtonText(getSetting("hide.header.button-text"));
 
   if (getSetting("hide.default-craft-checks")) hideDefaultCraftChecks();
+
+  setupPlayerListToggleButton("hidden");
 
   // if (getSetting('message.user-color'))
   //     setupMessageUserColor();
