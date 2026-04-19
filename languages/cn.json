@@ -43,6 +43,17 @@
                 "sell-all-treasure": {
                     "name": "[隐藏] 变卖所有宝物",
                     "hint": "隐藏“变卖所有宝物”按钮，以防止不小心出售重要物品"
+                },
+                "hud": {
+                    "player-list": {
+                        "choices": {
+                            "off": "禁用",
+                            "hidden": "默认隐藏",
+                            "visible": "默认可见"
+                        },
+                        "name": "[隐藏] 玩家列表",
+                        "hint": "隐藏玩家列表，并添加一个按钮切换其可见性，该设置决定玩家列表的默认状态"
+                    }
                 }
             },
             "highlight": {
@@ -172,6 +183,14 @@
             "effects": {
                 "reaction-used": {
                     "name": "效果：反应已使用"
+                }
+            }
+        },
+        "tooltip": {
+            "hud": {
+                "player-list": {
+                    "show": "显示玩家列表",
+                    "hide": "隐藏玩家列表"
                 }
             }
         }
