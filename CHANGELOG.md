@@ -5,6 +5,9 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
+## 1.1.1
+- Updated Chinese translation (🌐 @AlphaStarguide)
+
 ## 1.1.0
 
 - **New**
