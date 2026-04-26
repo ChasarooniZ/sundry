@@ -53,7 +53,7 @@ Hooks.once("ready", async function () {
     getSetting("colorize.pf2e-toolbelt.target-helper.roll"),
   );
   setupColorizePersistentPF2eHUD(getSetting("colorize.pf2e-hud.persistent"));
-  setupMessageUserColor();
+  //setupMessageUserColor();
 
   // Display
   setupDisplayItemPropertyRunes(getSetting("display.item-property-runes"));
