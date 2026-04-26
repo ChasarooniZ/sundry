@@ -41,6 +41,17 @@
             "hint": "Ukrywa tekst przycisków nagłówka, ale zachowuje ich ikony w nienaruszonym stanie dla wielu modułów"
           }
         },
+        "hud": {
+          "player-list": {
+            "name": "[Ukrycie] Lista graczy",
+            "hint": "Ukrywa listę graczy i dodaje przycisk służący do przełączania jej widoczności; to ustawienie określa, w jakim stanie lista graczy znajduje się domyślnie",
+            "choices": {
+              "off": "-",
+              "hidden": "Domyślnie ukryte",
+              "visible": "Domyślnie widoczne"
+            }
+          }
+        },
         "sell-all-treasure": {
           "name": "[Ukrycie] Sprzedaj wszystkie skarby",
           "hint": "Ukrywa przycisk 'Sprzedaj wszystkie skarby', aby zapobiec przypadkowej sprzedaży kluczowych przedmiotów"
@@ -168,6 +179,14 @@
       },
       "team-members": "członkowie",
       "property-runes": "Runy Właściwości\n"
+    },
+    "tooltip": {
+      "hud": {
+        "player-list": {
+          "show": "Pokaż listę graczy",
+          "hide": "Ukryj listę graczy"
+        }
+      }
     },
     "items": {
       "effects": {
