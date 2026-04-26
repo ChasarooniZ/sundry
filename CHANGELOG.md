@@ -4,8 +4,14 @@
 - **Updated**
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
+ 
+## 1.1.2
+
+  - Fixed bug causing the module to fail to load
+  - Updated Polish translation (🌐 @Lioheart)
 
 ## 1.1.1
+
 - Updated Chinese translation (🌐 @AlphaStarguide)
 
 ## 1.1.0
