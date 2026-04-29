@@ -41,6 +41,17 @@
             "hint": "Cache le texte des boutons d'en-tête mais garde les icônes de nombreux modules"
           }
         },
+        "hud": {
+          "player-list": {
+            "name": "[Masquer] Liste des joueurs",
+            "hint": "Masque la liste des joueurs et ajoute un bouton pour l'afficher ou la masquer. Ce paramètre définit l'état par défaut de la liste des joueurs.",
+            "choices": {
+              "off": "-",
+              "hidden": "Masqué par défaut",
+              "visible": "Visible par défaut"
+            }
+          }
+        },
         "sell-all-treasure": {
           "name": "[Cacher] Vendre tous les trésors",
           "hint": "Cache le bouton 'Vendre tous les trésors' pour prévenir la vente accidentelle d'objets clés"
@@ -78,8 +89,8 @@
       },
       "minify": {
         "simple-requests": {
-          "name": "[Minifier] Simple Requests",
-          "hint": "Rend le HUD du module 'Simple Requests' un peu plus petit pour qu'il soit moins encombrant"
+          "name": "[Minifier] Simples Sollicitations",
+          "hint": "Rend le HUD du module 'Simples Sollicitations' un peu plus petit pour qu'il soit moins encombrant"
         }
       },
       "notify": {
@@ -168,6 +179,14 @@
       },
       "team-members": "membres",
       "property-runes": "Runes de propriété"
+    },
+    "tooltip": {
+      "hud": {
+        "player-list": {
+          "show": "Afficher la liste des joueurs",
+          "hide": "Masquer la liste des joueurs"
+        }
+      }
     },
     "items": {
       "effects": {
