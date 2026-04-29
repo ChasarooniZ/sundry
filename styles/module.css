@@ -418,7 +418,7 @@ figure.paused figcaption {
 }
 
 .chat-message {
-  &.sundry-message-user-color-gradient-20 {
+  &.sundry-message-user-color-gradient-twenty {
     background:
       linear-gradient(
         to bottom,

@@ -4,6 +4,7 @@ import { isF2eSystem } from "./lib/helpers.js";
 import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
 import { setuplanguageHandling } from "./lib/languageHandling.js";
+import { setupMessageUserColor } from "./lib/messageUserColor.js";
 import { setupNotifySpellstrikeRecharge } from "./lib/notify.js";
 import { openPlayerNotes } from "./lib/openNotes.js";
 import { setupPanToCombatant } from "./lib/panToCurrentCombatant.js";

@@ -5,7 +5,7 @@ export async function setupMessageUserColor(version = "off") {
   let fun = () => {};
   let mode = "on";
   switch (version) {
-    case "20-%":
+    case "20-percent":
       fun = addGradient20Percent;
       break;
     case "set-length":
@@ -52,7 +52,7 @@ function calcHeaderTextColor(headerColor) {
 }
 
 function addGradient20Percent(message, html, _data) {
-  addGradientHelper(message, html, STYLE_MODES["20-%"]);
+  addGradientHelper(message, html, STYLE_MODES["20-percent"]);
 }
 
 function addGradientSetAmt(message, html, _data) {
