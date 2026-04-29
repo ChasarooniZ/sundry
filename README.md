@@ -32,9 +32,14 @@ You can access the changelog [here](/CHANGELOG.md).
 
   ![](https://github.com/user-attachments/assets/250de37f-511a-439a-b07d-3e02abe3346a)
   ![](https://github.com/user-attachments/assets/9ea66861-1094-4a5d-bcfb-f2f701bfdb28)
+  
   - `PF2e Toolbelt`'s `Target Helper`
 
   ![](https://github.com/user-attachments/assets/eb7b0c58-ac2b-4e85-8c0f-86f534cf8829)
+
+  - `Message Headers` - Adds some styling options to use the user color in the message headers
+  <img width="308" height="270" alt="image" src="https://github.com/user-attachments/assets/ace891b1-86b0-46e1-8815-3401f997395d" />
+
 
 - **Data**
   - Added [Templates](https://2e.aonprd.com/MonsterTemplates.aspx) implementation
@@ -66,6 +71,9 @@ You can access the changelog [here](/CHANGELOG.md).
   - `Known Languages on Creatures` Highlights which languages (on NPC stat block pages) are known by the current active party as well as adds a tooltip to make sure its clear
 
   <img width="280" height="171" alt="image" src="https://github.com/user-attachments/assets/0bf22994-8524-47f1-9e16-ce9104f5534e" />
+
+  - `Pan To Current Combatant` - When enabled while in combat it will pan the view to include their token as well as the active combatant (for players only by default)
+
   - `Skyrim Loading Screens`
     - This new feature adds "Skyrim Esque" loading screens which you can configure by linking a journal UUID of a journal filled with images and captions in the module settings
     - **Notes**
