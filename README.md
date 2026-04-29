@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Foundry-v12-orange) ![](https://img.shields.io/badge/Foundry-v13-informational)
+![](https://img.shields.io/badge/Foundry-v13-orange) ![](https://img.shields.io/badge/Foundry-v14-informational)
 ![All Downloads](https://img.shields.io/github/downloads/ChasarooniZ/sundry/total?color=5e0000&label=All%20Downloads)
 ![Latest Release Download Count](https://img.shields.io/github/downloads/ChasarooniZ/sundry/latest/module.zip)
 ![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Fsundry&colorB=4aa94a)
@@ -14,7 +14,7 @@
 > This module is intended to be a grab bag of useful features which are all intended to be **toggleable** and off by default. IE you can choose which ones you like to turn on! Maybe one day i'll add a sort of gui setup process or something but that's a later me problem :)
 
 > [!WARNING]  
-> While v12 is technically supported, support for some features may fail as this module is developed primarily for FVTT v13
+> While v13 is technically supported, support for some features may fail as this module is developed primarily for FVTT v14
 
 ## Table of Contents
 
@@ -56,6 +56,8 @@ You can access the changelog [here](/CHANGELOG.md).
 
   <img width="669" height="213" alt="image" src="https://github.com/user-attachments/assets/a5881f19-e376-4a37-aa4a-f44e68527053" />
   - `Sell All Treasure`
+  - `Hide Player List`
+    - Hides the player list and adds a button to toggle its visibility, the setting sets what state the player list is in by default +
 
 - **Highlight**
   - `Pf2e Toolbelt`'s `Target Helper` unrolled rolls and make them glow
@@ -64,7 +66,6 @@ You can access the changelog [here](/CHANGELOG.md).
   - `Known Languages on Creatures` Highlights which languages (on NPC stat block pages) are known by the current active party as well as adds a tooltip to make sure its clear
 
   <img width="280" height="171" alt="image" src="https://github.com/user-attachments/assets/0bf22994-8524-47f1-9e16-ce9104f5534e" />
-
   - `Skyrim Loading Screens`
     - This new feature adds "Skyrim Esque" loading screens which you can configure by linking a journal UUID of a journal filled with images and captions in the module settings
     - **Notes**

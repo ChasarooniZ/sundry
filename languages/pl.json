@@ -41,6 +41,17 @@
             "hint": "Ukrywa tekst przycisków nagłówka, ale zachowuje ich ikony w nienaruszonym stanie dla wielu modułów"
           }
         },
+        "hud": {
+          "player-list": {
+            "name": "[Ukrycie] Lista graczy",
+            "hint": "Ukrywa listę graczy i dodaje przycisk służący do przełączania jej widoczności; to ustawienie określa, w jakim stanie lista graczy znajduje się domyślnie",
+            "choices": {
+              "off": "-",
+              "hidden": "Domyślnie ukryte",
+              "visible": "Domyślnie widoczne"
+            }
+          }
+        },
         "sell-all-treasure": {
           "name": "[Ukrycie] Sprzedaj wszystkie skarby",
           "hint": "Ukrywa przycisk 'Sprzedaj wszystkie skarby', aby zapobiec przypadkowej sprzedaży kluczowych przedmiotów"
@@ -50,7 +61,7 @@
         "pf2e-toolbelt": {
           "target-helper": {
             "roll": {
-              "name": "[Podświetlenie] PF2e Toolbelt – Pomocnik celowania rozwinięty przycisk rzutu",
+              "name": "[Wyróżnienie] PF2e Toolbelt – Pomocnik celowania rozwinięty przycisk rzutu",
               "hint": "Podświetl niezrobione rzuty, sprawiając, że będą świecić w funkcji 'Pomocnik celowania' w 'PF2e Toolbelt', aby było bardziej oczywiste, że należy je wykonać"
             }
           }
@@ -58,6 +69,16 @@
         "languages-known": {
           "name": "[Wyróżnienie] Znajomość języków stworzeń przez drużynę",
           "hint": "Wyróżnia języki (na stronach statystyk BN), które zna aktualnie aktywna drużyna, a także dodaje podpowiedź, aby zapewnić jasność."
+        },
+        "loading-tips": {
+          "items": {
+            "name": "[Wyróżnione] Wskazówki podczas ładowania – identyfikator UUID dziennika",
+            "hint": "Opcja „Podświetlaj wskazówki podczas ładowania” spowoduje wyświetlanie wskazówek w stylu „Skyrim” za każdym razem, gdy zostanie załadowana nowa scena. Jeśli wpiszesz tutaj identyfikator UUID dziennika, funkcja ta zostanie włączona, a grafika będzie pobierana ze stron „Obraz” dziennika, a tekst z podpisu."
+          },
+          "duration": {
+            "name": "[Wyróżnione] Wskazówki podczas ładowania – czas trwania",
+            "hint": "Jak długo powinna trwać animacja wskazówek podczas ładowania (w sekundach)?"
+          }
         }
       },
       "message": {
@@ -158,6 +179,14 @@
       },
       "team-members": "członkowie",
       "property-runes": "Runy Właściwości\n"
+    },
+    "tooltip": {
+      "hud": {
+        "player-list": {
+          "show": "Pokaż listę graczy",
+          "hide": "Ukryj listę graczy"
+        }
+      }
     },
     "items": {
       "effects": {

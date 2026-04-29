@@ -31,6 +31,7 @@ import { setupAPI } from "./api.js";
 import { setupSkyrimLoadingTips } from "./lib/skyrimLoading.js";
 import { setupMessageUserColor } from "./lib/messageUserColor.js";
 import { setupPanToCombatant } from "./lib/panToCurrentCombatant.js";
+import { setupPlayerListToggleButton } from "./lib/hidePlayerList.js";
 
 export const MODULE_ID = "sundry";
 
@@ -76,8 +77,7 @@ Hooks.once("ready", async function () {
 
   if (getSetting("hide.default-craft-checks")) hideDefaultCraftChecks();
 
-  // if (getSetting('message.user-color'))
-  //     setupMessageUserColor();
+  setupPlayerListToggleButton(getSetting("hide.hud.player-list"));
 
   //Minify
   if (getSetting("minify.simple-requests")) minifySimpleRequests();

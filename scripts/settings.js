@@ -2,6 +2,7 @@ import { TEMPLATES } from "./lib/const.js";
 import { setupFlourishTracker } from "./lib/flourishTracker.js";
 import { isF2eSystem } from "./lib/helpers.js";
 import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
+import { setupPlayerListToggleButton } from "./lib/hidePlayerList.js";
 import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
 import { setuplanguageHandling } from "./lib/languageHandling.js";
 import { setupMessageUserColor } from "./lib/messageUserColor.js";
@@ -130,6 +131,24 @@ export function setupSettings() {
     type: Boolean,
     onChange: (value) => {
       hideSellAllTreasure(value);
+    },
+  });
+
+  game.settings.register(MODULE_ID, "hide.hud.player-list", {
+    name: `${MODULE_ID}.module-settings.hide.hud.player-list.name`,
+    hint: `${MODULE_ID}.module-settings.hide.hud.player-list.hint`,
+    scope: "world",
+    config: true,
+    default: "off",
+    type: String,
+
+    choices: {
+      off: `${MODULE_ID}.module-settings.hide.hud.player-list.choices.off`,
+      hidden: `${MODULE_ID}.module-settings.hide.hud.player-list.choices.hidden`,
+      visible: `${MODULE_ID}.module-settings.hide.hud.player-list.choices.visible`,
+    },
+    onChange: (value) => {
+      setupPlayerListToggleButton(value);
     },
   });
 
