@@ -3,11 +3,22 @@
 - **Updated**
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
- 
+
+## 1.2.0
+
+- **New**
+  - `Highlight`
+    - `Pan To Current Combatant` - When enabled while in combat it will pan the view to include their token as well as the active combatant (for players only by default)
+  - `Colorize`
+    - `Message Headers` - Adds some styling options to use the user color in the message headers
+- **Updated**
+  - `Colorize PF2e HUD` - Added more colorization for more items
+  - Fixed bug causing `Flourish Tracker` to fail (migrated user checks)
+
 ## 1.1.2
 
-  - Fixed bug causing the module to fail to load
-  - Updated Polish translation (🌐 @Lioheart)
+- Fixed bug causing the module to fail to load
+- Updated Polish translation (🌐 @Lioheart)
 
 ## 1.1.1
 
@@ -22,17 +33,6 @@
   - Updated French translation (🌐 @rectulo)
   - Updated Chinese translation (🌐 @AlphaStarguide)
   - Updated Polish translation (🌐 @Lioheart)
-
-## 1.1.0
-
-- **New**
-  - `Highlight`
-    - `Pan To Current Combatant` - When enabled while in combat it will pan the view to include their token as well as the active combatant (for players only by default)
-  - `Colorize`
-    - `Message Headers` - Adds some styling options to use the user color in the message headers
-- **Updated**
-  - `Colorize PF2e HUD` - Added more colorization for more items
-  - Fixed bug causing `Flourish Tracker` to fail (migrated user checks)
 
 ## 1.0.0
 

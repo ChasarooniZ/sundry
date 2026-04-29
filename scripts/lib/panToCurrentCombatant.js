@@ -6,7 +6,7 @@ export function setupPanToCombatant(active = false) {
 
 const MAX_ZOOM = 2.5;
 
-async function panToCombatant(_encounter, newTurn) {
+async function panToCombatant(_encounter, oldTurn, newTurn) {
   if (
     game.user.isGM &&
     !getSetting("highlight.pan-current-combatant.enabled-gm")
