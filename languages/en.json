@@ -3,6 +3,15 @@
   "sundry": {
     "module-settings": {
       "colorize": {
+        "message": {
+          "name": "[Colorize] Message Header to User Color",
+          "hint": "Colorizes the message header to the user's color (see the options to pick what style is for you)",
+          "choices": {
+            "off": "Off",
+            "20-percent": "20 %",
+            "set-length": "Set Amt"
+          }
+        },
         "pf2e-hud": {
           "persistent": {
             "name": "[Colorize] PF2e HUD - Persistent HUD",
@@ -67,6 +76,16 @@
           "duration": {
             "name": "[Highlight] Loading Tips - Duration",
             "hint": "How long should the loading tips animation be in seconds"
+          }
+        },
+        "pan-current-combatant": {
+          "enabled": {
+            "name": "[Highlight] Pan to See Current Combatant",
+            "hint": "When enabled will pan the camera for the players to include their token as well as the opponent"
+          },
+          "enabled-gm": {
+            "name": "[Highlight] Pan to See Current Combatant - GM",
+            "hint": "This enables the feature for the GM"
           }
         }
       },

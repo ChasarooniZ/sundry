@@ -2,6 +2,8 @@
   --sundry-hp: #1fb222;
   --sundry-temp-hp: #45b6fe;
 
+  --sundry-ac: #aab0b3;
+
   --sundry-reflex: #f5a623;
   --sundry-will: #5c6bc0;
   --sundry-fortitude: #43a047;
@@ -14,6 +16,35 @@
   --sundry-shield-raise: #dba143;
 
   --sundry-hero-points: #e4be37;
+
+  --sundry-wounded: #ff595e;
+  --sundry-dying: #b01717;
+
+  --sundry-actions: #53c341;
+  --sundry-items: #b87c3d;
+  --sundry-spells: #921df2;
+  --sundry-skills: #47a8a9;
+  --sundry-effects: #ff5b00;
+
+  --sundry-speed-land: #288f47;
+  --sundry-speed-fly: #a3f1ff;
+  --sundry-speed-swim: #1d9fdb;
+  --sundry-speed-climb: #a07fc7;
+  --sundry-speed-burrow: #ba6d2b;
+
+  --sundry-gm-menu-party-sheet: #41bf62;
+  --sundry-gm-menu-check-prompt: #fd782f;
+  --sundry-gm-menu-random-pick: #ff5252;
+  --sundry-gm-menu-gm-screen: #ebe194;
+  --sundry-gm-menu-journal-sheet: #53dbdb;
+  --sundry-gm-menu-identify-menu: #b776b8;
+  --sundry-gm-menu-select-all: #5cbd76;
+
+  --sundry-glow: #fd782f;
+
+  --sundry-disposition-opposition: #e72124;
+  --sundry-disposition-neutral: #f1d836;
+  --sundry-disposition-party: #43dfdf;
 }
 
 .sundry-pf2e-hud-persistent-colorized {
@@ -50,11 +81,11 @@
   }
 
   [data-section="dying"] i:not(.carret) {
-    --icon-color: #b01717;
+    --icon-color: var(--sundry-dying);
   }
 
   [data-section="wounded"] i:not(.carret) {
-    --icon-color: #ff595e;
+    --icon-color: var(--sundry-dying);
   }
 
   [data-section="hp"] {
@@ -69,28 +100,32 @@
     --icon-color: var(--sundry-temp-hp);
   }
 
-  [data-section="ac"] {
-    --icon-color: #aab0b3;
+  [data-section="ac"] i.fa-regular {
+    --icon-color: var(--sundry-ac);
+  }
+
+  [data-section="ac"] i.fa-solid {
+    --icon-color: var(--sundry-glow);
   }
 
   [data-panel="owned-actors"] .owned-actor .ac i {
-    color: #aab0b3;
+    color: var(--sundry-ac);
   }
 
   [data-sidebar="actions"] i {
-    --icon-color: #53c341;
+    --icon-color: var(--sundry-actions);
   }
 
   [data-sidebar="items"] i {
-    --icon-color: #b87c3d;
+    --icon-color: var(--sundry-items);
   }
 
   [data-sidebar="spells"] i {
-    --icon-color: #921df2;
+    --icon-color: var(--sundry-spells);
   }
 
   [data-sidebar="skills"] i {
-    --icon-color: #47a8a9;
+    --icon-color: var(--sundry-skills);
   }
 
   /*
@@ -100,7 +135,7 @@
     */
 
   [data-section="effects"] i {
-    --icon-color: #ff5b00;
+    --icon-color: var(--sundry-effects);
   }
 
   [data-section="perception"] {
@@ -127,6 +162,10 @@
     --icon-color: var(--sundry-athletics);
   }
 
+  [data-panel="owned-actors"] [data-action="unpin-owned-actor"] i {
+    color: var(--sundry-gm-menu-random-pick);
+  }
+
   /**[data-section="ac"] i {
         --icon-color: #FFFFFF;
     }*/
@@ -137,6 +176,89 @@
     }
     i.fa-shield.fa-solid {
       --icon-color: var(--sundry-shield-raise);
+    }
+  }
+  [data-panel="menu"] {
+    [data-action="pin-token"] i {
+      color: var(--sundry-gm-menu-random-pick);
+    }
+  }
+
+  [data-panel="patch"] {
+    [data-action="party-sheet"] i {
+      color: var(--sundry-gm-menu-party-sheet);
+    }
+    [data-action="check-prompt"] i {
+      color: var(--sundry-gm-menu-check-prompt);
+    }
+    [data-action="travel-sheet"] i {
+      color: var(--sundry-speed-fly);
+    }
+    [data-action="gm-screen"] i {
+      color: var(--sundry-gm-menu-gm-screen);
+    }
+    [data-action="journal-sheet"] i.fa-book-open {
+      color: var(--sundry-gm-menu-journal-sheet);
+    }
+    [data-action="group-perception"] i {
+      color: var(--sundry-perception);
+    }
+    [data-action="identify-menu"] i {
+      color: var(--sundry-gm-menu-identify-menu);
+    }
+    [data-action="random-pick"] i {
+      color: var(--sundry-gm-menu-random-pick);
+    }
+    [data-action="select-all"] i {
+      color: var(--sundry-gm-menu-select-all);
+    }
+  }
+
+  .statistic.speed {
+    i.fa-shoe-prints {
+      color: var(--sundry-speed-land);
+    }
+    i.fa-feather {
+      color: var(--sundry-speed-fly);
+    }
+    i.fa-person-swimming {
+      color: var(--sundry-speed-swim);
+    }
+    i.fa-spider {
+      color: var(--sundry-speed-climb);
+    }
+    i.fa-chevrons-down {
+      color: var(--sundry-speed-burrow);
+    }
+  }
+
+  [data-section="speeds"] {
+    &[data-speed="land"] i {
+      color: var(--sundry-speed-land);
+    }
+    &[data-speed="fly"] i {
+      color: var(--sundry-speed-fly);
+    }
+    &[data-speed="swim"] i {
+      color: var(--sundry-speed-swim);
+    }
+    &[data-speed="climb"] i {
+      color: var(--sundry-speed-climb);
+    }
+    &[data-speed="burrow"] i {
+      color: var(--sundry-speed-burrow);
+    }
+  }
+
+  [data-panel="alliance"] {
+    [data-value="3"] > i {
+      color: var(--sundry-disposition-opposition);
+    }
+    [data-value="2"] > i {
+      color: var(--sundry-disposition-neutral);
+    }
+    [data-value="1"] > i {
+      color: var(--sundry-disposition-party);
     }
   }
 }
@@ -176,7 +298,7 @@
     color: #fff;
   }
   50% {
-    color: #fd782f;
+    color: var(--sundry-glow);
   }
   100% {
     color: #fff;
@@ -293,4 +415,26 @@ figure.paused figcaption {
   letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 1);
   animation: textFadeIn 0.5s;
+}
+
+.chat-message {
+  &.sundry-message-user-color-gradient-20 {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(var(--player-color), 0.5),
+        transparent 20%
+      ),
+      url(/ui/parchment.jpg) repeat;
+  }
+
+  &.sundry-message-user-color-header-set-amt {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(var(--player-color), 0.5),
+        transparent 3.2rem
+      ),
+      url(/ui/parchment.jpg) repeat;
+  }
 }

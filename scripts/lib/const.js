@@ -39,3 +39,8 @@ export const DISPOSITION_STATES = [
   "friendly",
   "helpful",
 ];
+export const STYLE_MODES = {
+  "20-%": "sundry-message-user-color-gradient-20",
+  "set-length": "sundry-message-user-color-header-set-amt",
+};
+export const STYLE_LIST = Object.values(STYLE_MODES);
