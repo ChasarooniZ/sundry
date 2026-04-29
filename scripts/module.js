@@ -30,6 +30,7 @@ import { setupFlourishTracker } from "./lib/flourishTracker.js";
 import { setupAPI } from "./api.js";
 import { setupSkyrimLoadingTips } from "./lib/skyrimLoading.js";
 import { setupMessageUserColor } from "./lib/messageUserColor.js";
+import { setupPanToCombatant } from "./lib/panToCurrentCombatant.js";
 import { setupPlayerListToggleButton } from "./lib/hidePlayerList.js";
 
 export const MODULE_ID = "sundry";
@@ -53,7 +54,7 @@ Hooks.once("ready", async function () {
     getSetting("colorize.pf2e-toolbelt.target-helper.roll"),
   );
   setupColorizePersistentPF2eHUD(getSetting("colorize.pf2e-hud.persistent"));
-  //setupMessageUserColor();
+  setupMessageUserColor(getSetting("colorize.message"));
 
   // Display
   setupDisplayItemPropertyRunes(getSetting("display.item-property-runes"));
@@ -67,6 +68,8 @@ Hooks.once("ready", async function () {
 
   setuplanguageHandling(getSetting("highlight.languages-known"));
 
+  setupPanToCombatant(getSetting("highlight.pan-current-combatant.enabled"));
+
   //Hide
   if (getSetting("hide.sell-all-treasure")) hideSellAllTreasure();
 
@@ -75,9 +78,6 @@ Hooks.once("ready", async function () {
   if (getSetting("hide.default-craft-checks")) hideDefaultCraftChecks();
 
   setupPlayerListToggleButton(getSetting("hide.hud.player-list"));
-
-  // if (getSetting('message.user-color'))
-  //     setupMessageUserColor();
 
   //Minify
   if (getSetting("minify.simple-requests")) minifySimpleRequests();

@@ -5,8 +5,10 @@ import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 import { setupPlayerListToggleButton } from "./lib/hidePlayerList.js";
 import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
 import { setuplanguageHandling } from "./lib/languageHandling.js";
+import { setupMessageUserColor } from "./lib/messageUserColor.js";
 import { setupNotifySpellstrikeRecharge } from "./lib/notify.js";
 import { openPlayerNotes } from "./lib/openNotes.js";
+import { setupPanToCombatant } from "./lib/panToCurrentCombatant.js";
 import { setupColorizePersistentPF2eHUD } from "./lib/pf2eHUD.js";
 import {
   setupColorizeToolbeltMessageSaves,
@@ -56,6 +58,24 @@ export function setupSettings() {
       },
     },
   );
+
+  
+  game.settings.register(MODULE_ID, "colorize.message", {
+    name: `${MODULE_ID}.module-settings.colorize.message.name`,
+    hint: `${MODULE_ID}.module-settings.colorize.message.hint`,
+    scope: "world",
+    config: true,
+    default: "off",
+    type: String,
+    onChange: (value) => {
+      setupMessageUserColor(value);
+    },
+    choices: {
+      off: `${MODULE_ID}.module-settings.colorize.message.choices.off`,
+      "20-percent": `${MODULE_ID}.module-settings.colorize.message.choices.20-percent`,
+      "set-length": `${MODULE_ID}.module-settings.colorize.message.choices.set-length`,
+    },
+  });
 
   game.settings.register(MODULE_ID, "display.item-property-runes", {
     name: `${MODULE_ID}.module-settings.display.item-property-runes.name`,
@@ -142,6 +162,27 @@ export function setupSettings() {
     onChange: (value) => {
       setuplanguageHandling(value);
     },
+  });
+
+  game.settings.register(MODULE_ID, "highlight.pan-current-combatant.enabled", {
+    name: `${MODULE_ID}.module-settings.highlight.pan-current-combatant.enabled.name`,
+    hint: `${MODULE_ID}.module-settings.highlight.pan-current-combatant.enabled.hint`,
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean,
+    onChange: (value) => {
+      setupPanToCombatant(value);
+    },
+  });
+
+  game.settings.register(MODULE_ID, "highlight.pan-current-combatant.enabled-gm", {
+    name: `${MODULE_ID}.module-settings.highlight.pan-current-combatant.enabled-gm.name`,
+    hint: `${MODULE_ID}.module-settings.highlight.pan-current-combatant.enabled-gm.hint`,
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean
   });
 
   game.settings.register(MODULE_ID, "highlight.loading-tips.items", {
