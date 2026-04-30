@@ -22,11 +22,7 @@
   "esmodules": ["scripts/module.js"],
   "scripts": ["scripts/lib/lib.js"],
   "styles": [
-    "styles/module.css",
-    {
-      "src": "styles/applications.css",
-      "layer": "applications"
-    }
+    "styles/module.css"
   ],
   "languages": [
     {
