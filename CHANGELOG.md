@@ -4,14 +4,18 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
+## 1.2.3
+
+- Fixed issue causing error spamming again (🐛 @Metroxide)
+
 ## 1.2.2
 
- - Fixed issue breaking isntallation caused by a missing CSS File (🐛 @YoSoy-Ed, @weepingminotaur, @Dynalt)
- 
+- Fixed issue breaking installation caused by a missing CSS File (🐛 @YoSoy-Ed, @weepingminotaur, @Dynalt)
+
 ## 1.2.1
 
-  - Bump to fix forge issues
-  - Updated French translation (🌐 @rectulo)
+- Bump to fix forge issues
+- Updated French translation (🌐 @rectulo)
 
 ## 1.2.0
 
