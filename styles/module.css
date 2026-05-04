@@ -455,22 +455,44 @@ figure.paused figcaption {
 
 .chat-message {
   &.sundry-message-user-color-gradient-twenty {
-    background:
-      linear-gradient(
-        to bottom,
-        rgba(var(--player-color), 0.5),
-        transparent 20%
-      ),
-      url(/ui/parchment.jpg) repeat;
+    &:not(.whisper) {
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(var(--player-color), 0.5),
+          transparent 20%
+        ),
+        url(/ui/parchment.jpg) repeat;
+    }
+    &.whisper {
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(var(--player-color), 0.5),
+          var(--color-whisper-background) 20%
+        ),
+        url(/ui/parchment.jpg) repeat;
+    }
   }
 
   &.sundry-message-user-color-header-set-amt {
-    background:
-      linear-gradient(
-        to bottom,
-        rgba(var(--player-color), 0.5),
-        transparent 3.2rem
-      ),
-      url(/ui/parchment.jpg) repeat;
+    &:not(.whisper) {
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(var(--player-color), 0.5),
+          transparent 3.2rem
+        ),
+        url(/ui/parchment.jpg) repeat;
+    }
+    &.whisper {
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(var(--player-color), 0.5),
+          var(--color-whisper-background) 3.2rem
+        ),
+        url(/ui/parchment.jpg) repeat;
+    }
   }
 }
