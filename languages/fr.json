@@ -3,6 +3,15 @@
   "sundry": {
     "module-settings": {
       "colorize": {
+        "message": {
+          "name": "[Coloriser] En-tête du message à la couleur de l'utilisateur",
+          "hint": "Applique à l'en-tête du message la couleur de l'utilisateur (voir les options pour choisir le style qui vous convient).",
+          "choices": {
+            "off": "Désactivé",
+            "20-percent": "20 %",
+            "set-length": "Fixer le montant"
+          }
+        },
         "pf2e-hud": {
           "persistent": {
             "name": "[Colorier] PF2e HUD - HUD persistant",
@@ -78,6 +87,16 @@
           "duration": {
             "name": "[Surligner] Infobulle de chargement - Durée",
             "hint": "Durée de l'infobulle de chargement en secondes"
+          }
+        },
+        "pan-current-combatant": {
+          "enabled": {
+            "name": "[Surligner] Zoomer pour voir le combattant actuel",
+            "hint": "Lorsqu'elle est activée, cette fonction permet de zoomer pour inclure son jeton ainsi que celui de l'adversaire."
+          },
+          "enabled-gm": {
+            "name": "[Surligner] Zoomer pour voir le combattant actuel - MJ",
+            "hint": "Cela active la fonctionnalité pour le MJ"
           }
         }
       },
