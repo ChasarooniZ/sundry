@@ -63,7 +63,7 @@ function addGradientHelper(message, html, cssClass) {
   const colorBannerHeader = message.author.color.rgb
     .map((val) => val * 255)
     .join(", ");
-  html.style.setProperty("--player-color", colorBannerHeader);
+  html?.style?.setProperty("--player-color", colorBannerHeader);
   html?.classList?.remove(STYLE_LIST.filter((st) => st !== cssClass));
   html?.classList?.add(cssClass);
 }
