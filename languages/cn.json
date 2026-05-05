@@ -15,6 +15,15 @@
                             "hint": "为PF2e Toolbelt中目标助手的掷骰选项上色，以使每种掷骰类型呈现不同的鲜明颜色"
                         }
                     }
+                },
+                "message": {
+                    "choices": {
+                        "off": "关闭",
+                        "20-percent": "标题栏20%",
+                        "set-length": "设置总额"
+                    },
+                    "name": "[上色] 聊天消息标题栏设为用户颜色",
+                    "hint": "将聊天消息标题栏着色为用户颜色（查看选项以选择适合你的样式）"
                 }
             },
             "display": {
@@ -78,6 +87,16 @@
                         "name": "[高亮] 加载提示 - 持续时长",
                         "hint": "加载提示动画会显示多长时间（以秒为单位）"
                     }
+                },
+                "pan-current-combatant": {
+                    "enabled": {
+                        "hint": "启用时，相机将平移视角，以便在画面上显示玩家及其对手的指示物",
+                        "name": "[高亮] 平移视角以显示当前回合参战者"
+                    },
+                    "enabled-gm": {
+                        "name": "[高亮] 平移视角以显示当前回合参战者 - GM",
+                        "hint": "该设置为GM启用上述特性"
+                    }
                 }
             },
             "message": {
@@ -135,8 +154,8 @@
                     "hint": "允许你替换默认的暂停图像。"
                 },
                 "pause-img-class": {
-                    "name": "[更换] 暂停图像类别",
-                    "hint": "允许你更换暂停图像（动画）的种类，详情见此网址（https://docs.fontawesome.com/web/style/animate）的Font Awesome文档（默认值为“fa-spin”）"
+                    "name": "[更换] 暂停图像类型",
+                    "hint": "允许你更换暂停图像（动画）的类型，详情见此网址（https://docs.fontawesome.com/web/style/animate）的Font Awesome文档（默认值为“fa-spin”）"
                 },
                 "pause-text": {
                     "name": "[更换] 暂停文本",
