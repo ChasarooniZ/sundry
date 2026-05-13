@@ -3,6 +3,15 @@
   "sundry": {
     "module-settings": {
       "colorize": {
+        "message": {
+          "name": "[Koloryzacja] Nagłówek wiadomości dostosowany do koloru użytkownika",
+          "hint": "Zmienia kolor nagłówka wiadomości na wybrany przez użytkownika (zobacz opcje, aby wybrać styl, który Ci odpowiada)",
+          "choices": {
+            "off": "Wyłącz",
+            "20-percent": "20 %",
+            "set-length": "Ustaw wartość"
+          }
+        },
         "pf2e-hud": {
           "persistent": {
             "name": "[Koloryzacja] PF2e HUD — trwały HUD",
@@ -78,6 +87,16 @@
           "duration": {
             "name": "[Wyróżnione] Wskazówki podczas ładowania – czas trwania",
             "hint": "Jak długo powinna trwać animacja wskazówek podczas ładowania (w sekundach)?"
+          }
+        },
+        "pan-current-combatant": {
+          "enabled": {
+            "name": "[Wyróżnienie] Przesuń, aby zobaczyć aktualnego uczestnika walki",
+            "hint": "Po włączeniu tej opcji kamera będzie przesuwać się tak, aby gracze widzieli zarówno swój token, jak i token przeciwnika"
+          },
+          "enabled-gm": {
+            "name": "[Wyróżnienie] Przesuń widok na aktualnego uczestnika walki – MG",
+            "hint": "W ten sposób włącza się tę funkcję dla MG"
           }
         }
       },
