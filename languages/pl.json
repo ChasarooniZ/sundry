@@ -81,11 +81,11 @@
         },
         "loading-tips": {
           "items": {
-            "name": "[Wyróżnione] Wskazówki podczas ładowania – identyfikator UUID dziennika",
+            "name": "[Wyróżnienie] Wskazówki podczas ładowania – identyfikator UUID dziennika",
             "hint": "Opcja „Podświetlaj wskazówki podczas ładowania” spowoduje wyświetlanie wskazówek w stylu „Skyrim” za każdym razem, gdy zostanie załadowana nowa scena. Jeśli wpiszesz tutaj identyfikator UUID dziennika, funkcja ta zostanie włączona, a grafika będzie pobierana ze stron „Obraz” dziennika, a tekst z podpisu."
           },
           "duration": {
-            "name": "[Wyróżnione] Wskazówki podczas ładowania – czas trwania",
+            "name": "[Wyróżnienie] Wskazówki podczas ładowania – czas trwania",
             "hint": "Jak długo powinna trwać animacja wskazówek podczas ładowania (w sekundach)?"
           }
         },
