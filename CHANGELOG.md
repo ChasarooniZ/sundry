@@ -4,6 +4,11 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
+## 1.4.1
+
+- **Updated**
+  - `Highlight Random Location` - Added a border as well as made the points render through walls and above the interface level
+
 ## 1.4.0
 
 - **New**

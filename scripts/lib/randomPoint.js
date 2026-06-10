@@ -23,6 +23,9 @@ export async function getRandomPoint() {
         .persist()
         .name("randomPoints")
         .size(1, { gridUnits: true })
+        .aboveInterface()
+        .xray()
+        .filter("Glow", { distance: 5, color: 0x0, quality: 0.1 })
         .play();
     } else {
       loop = false;
