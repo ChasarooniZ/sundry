@@ -4,6 +4,11 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
+## 1.4.0
+
+- **New**
+  - `Highlight Random Location` - Use this new hotkey feature to select a number of locations on the map to target, then right click to have it randomly select a point (requires `Sequencer`)
+
 ## 1.3.0
 
 - **New**

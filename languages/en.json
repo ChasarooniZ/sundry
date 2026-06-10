@@ -40,7 +40,11 @@
         },
         "action-comparison": {
           "name": "[Display] Action Comparison",
-          "hint": "Adds a little tooltip on all action glyphs in chat messages from enemies, to show their relative PC action comparison based on a combination of both what pertcentage of the combat's XP they take up, as well as how many PCs are in the combat"
+          "hint": "Adds a little tooltip on all action glyphs in chat messages from enemies, to show their relative PC action comparison based on a combination of both what pertcentage of the combat's XP they take up, as well as how many PCs are in the combat. (Choices allow you to scale the action count based on the actor's XP vs the total encounter XP)",
+          "choices": {
+            "xp": "Factor in XP %",
+            "no-xp": "Do NOT factor in XP %"
+          }
         }
       },
       "hide": {
@@ -176,6 +180,10 @@
       "toggle-disposition": {
         "name": "Toggle Disposition",
         "hint": "Toggles the disposition of the hovered token (starting with indifferent), Use Shift + button to decrease disposition, and the default to increase it"
+      },
+      "random-location": {
+        "name": "[Highlight] Random Location Picker",
+        "hint": "When activated click a number of locations on the map to target, them right click to have it randomly select a point (requires `Sequencer`)"
       }
     },
     "notification": {
@@ -193,6 +201,9 @@
         "feature": "You used a feature that recharges your spellstrike",
         "on-success": "You used a feature that recharges your spellstrike if you succeeded on a roll",
         "other-option": "Alternatively you can always spend 1 action to recharge, this action has the <b>concentrate</b> trait"
+      },
+      "random-location": {
+        "finished": "Random Location Selected!"
       }
     },
     "display": {

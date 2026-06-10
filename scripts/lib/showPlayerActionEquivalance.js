@@ -1,59 +1,88 @@
-export function setupDisplayActionComparison(active = true) {
-  Hooks[active ? "on" : "off"](
-    "renderChatMessageHTML",
-    (message, html, _data) => {
-      if (!game.combat || message?.token?.disposition === 1) {
-        return;
-      }
-      const party = game.combat.combatants.contents.filter(
-        (c) => c.token.disposition === 1,
-      );
-      const playerCount = party.length;
-      const partyLevel =
-        Math.sumPrecise(party.map((c) => c.actor.level)) / playerCount;
-      const enemies = game.combat.combatants.contents.filter(
-        (c) => c.token.disposition !== 1,
-      );
-      const enemiesLevels = enemies.map((t) => t.actor.level);
-      const combatantCount = enemies.length;
+export function setupDisplayActionComparison(type) {
+  let fun = () => {};
+  let mode = "on";
+  switch (type) {
+    case "xp":
+      fun = actionDisplayXP;
+      break;
+    case "no-xp":
+      fun = actionDisplayNoXP;
+      break;
+    case "off":
+    default:
+      mode = "off";
+      break;
+  }
 
-      const actionRatio = Math.round((playerCount / combatantCount) * 10) / 10;
+  Hooks[mode]("renderChatMessageHTML", fun);
+}
 
-      const totalXP = game.pf2e.gm.calculateXP(
-        partyLevel,
-        playerCount,
-        enemiesLevels,
-        [],
-        {},
-      ).totalXP;
-      const personalXP = game.pf2e.gm.calculateXP(
-        partyLevel,
-        playerCount,
-        [message.actor.level],
-        [],
-        {},
-      ).totalXP;
+function actionDisplayXP(message, html, _data) {
+  actionDisplayBase(true, message, html);
+}
 
-      const percentOfForce = personalXP / totalXP;
+function actionDisplayNoXP(message, html, _data) {
+  actionDisplayBase(false, message, html);
+}
 
-      const actionGlyphs = html.querySelectorAll("span.action-glyph");
-
-      for (const action of actionGlyphs) {
-        const val = action.innerText;
-        const actionInfo = getActionInfo(val);
-        console.log({ actionInfo, actionRatio });
-        action.dataset.tooltip = game.i18n.format(
-          "sundry.tooltip.action-comparison.main",
-          {
-            actionCount: actionRatio * percentOfForce * actionInfo.cnt,
-            actionType: game.i18n.localize(
-              `sundry.tooltip.action-comparison.${actionInfo.type}`,
-            ),
-          },
-        );
-      }
-    },
+function actionDisplayBase(useXP, message, html) {
+  if (!game.combat || message?.token?.disposition === 1) {
+    return;
+  }
+  const party = game.combat.combatants.contents.filter(
+    (c) => c.token.disposition === 1,
   );
+  const playerCount = party.length;
+  const partyLevel =
+    Math.sumPrecise(party.map((c) => c.actor.level)) / playerCount;
+  const enemies = game.combat.combatants.contents.filter(
+    (c) => c.token.disposition !== 1,
+  );
+  const enemiesLevels = enemies.map((t) => t.actor.level);
+  const combatantCount = enemies.length;
+
+  const actionRatio = Math.round((playerCount / combatantCount) * 10) / 10;
+
+  const percentOfForce = useXP
+    ? getPercentXP(partyLevel, playerCount, enemiesLevels, message)
+    : 1;
+
+  const actionGlyphs = html.querySelectorAll("span.action-glyph");
+
+  for (const action of actionGlyphs) {
+    const val = action.innerText;
+    const actionInfo = getActionInfo(val);
+    console.log({ actionInfo, actionRatio });
+    action.dataset.tooltip = game.i18n.format(
+      "sundry.tooltip.action-comparison.main",
+      {
+        actionCount: actionRatio * percentOfForce * actionInfo.cnt,
+        actionType: game.i18n.localize(
+          `sundry.tooltip.action-comparison.${actionInfo.type}`,
+        ),
+      },
+    );
+  }
+}
+
+function getPercentXP(partyLevel, playerCount, enemiesLevels, message) {
+  const totalXP = game.pf2e.gm.calculateXP(
+    partyLevel,
+    playerCount,
+    enemiesLevels,
+    [],
+    {},
+  ).totalXP;
+  const personalXP = game.pf2e.gm.calculateXP(
+    partyLevel,
+    playerCount,
+    [message.actor.level],
+    [],
+    {},
+  ).totalXP;
+
+  const percentOfForce = personalXP / totalXP;
+  return percentOfForce;
 }
 
 function getActionInfo(type) {

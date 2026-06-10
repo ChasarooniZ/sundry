@@ -60,7 +60,6 @@ export function setupSettings() {
     },
   );
 
-  
   game.settings.register(MODULE_ID, "colorize.message", {
     name: `${MODULE_ID}.module-settings.colorize.message.name`,
     hint: `${MODULE_ID}.module-settings.colorize.message.hint`,
@@ -102,15 +101,20 @@ export function setupSettings() {
     },
   });
 
-    game.settings.register(MODULE_ID, "display.action-comparison", {
+  game.settings.register(MODULE_ID, "display.action-comparison", {
     name: `${MODULE_ID}.module-settings.display.action-comparison.name`,
     hint: `${MODULE_ID}.module-settings.display.action-comparison.hint`,
     scope: "world",
     config: true,
-    default: false,
-    type: Boolean,
+    default: "off",
+    type: String,
     onChange: (value) => {
       setupDisplayActionComparison(value);
+    },
+    choices: {
+      off: `${MODULE_ID}.module-settings.colorize.message.choices.off`,
+      xp: `${MODULE_ID}.module-settings.display.action-comparison.choices.20-percent`,
+      "no-xp": `${MODULE_ID}.module-settings.display.action-comparison.choices.set-length`,
     },
   });
 
@@ -189,14 +193,18 @@ export function setupSettings() {
     },
   });
 
-  game.settings.register(MODULE_ID, "highlight.pan-current-combatant.enabled-gm", {
-    name: `${MODULE_ID}.module-settings.highlight.pan-current-combatant.enabled-gm.name`,
-    hint: `${MODULE_ID}.module-settings.highlight.pan-current-combatant.enabled-gm.hint`,
-    scope: "world",
-    config: true,
-    default: false,
-    type: Boolean
-  });
+  game.settings.register(
+    MODULE_ID,
+    "highlight.pan-current-combatant.enabled-gm",
+    {
+      name: `${MODULE_ID}.module-settings.highlight.pan-current-combatant.enabled-gm.name`,
+      hint: `${MODULE_ID}.module-settings.highlight.pan-current-combatant.enabled-gm.hint`,
+      scope: "world",
+      config: true,
+      default: false,
+      type: Boolean,
+    },
+  );
 
   game.settings.register(MODULE_ID, "highlight.loading-tips.items", {
     name: `${MODULE_ID}.module-settings.highlight.loading-tips.items.name`,
@@ -442,6 +450,22 @@ export function registerKeybindings() {
     onUp: () => {},
     restricted: false, // Restrict this Keybinding to gamemaster only?
     //   reservedModifiers: ["Shift"], // On ALT, the notification is permanent instead of temporary
+    precedence: CONST.KEYBINDING_PRECEDENCE.NORMAL,
+  });
+
+  game.keybindings.register(MODULE_ID, "random-location", {
+    name: game.i18n.localize(`${MODULE_ID}.controls.random-location.name`),
+    hint: game.i18n.localize(`${MODULE_ID}.controls.random-location.hint`),
+    editable: [
+      {
+        key: "KeyR",
+      },
+    ],
+    onDown: (context) => {
+      getRandomPoint();
+    },
+    onUp: () => {},
+    restricted: false, // Restrict this Keybinding to gamemaster only?
     precedence: CONST.KEYBINDING_PRECEDENCE.NORMAL,
   });
 

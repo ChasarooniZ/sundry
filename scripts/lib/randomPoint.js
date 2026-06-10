@@ -1,0 +1,39 @@
+async function getRandomPoint() {
+  if (!game.modules.get("sequencer")?.active) {
+    ui.notifications.error(
+      "[Error] This requires the 'Sequencer' module to use, please install it",
+    );
+  }
+  let loop = true;
+  const points = [];
+  let cnt = 0;
+  while (loop) {
+    const location = await Sequencer.Crosshair.show({
+      label: {
+        text: `${cnt}`,
+      },
+    });
+    if (location) {
+      points.push(location);
+      await new Sequence()
+        .effect()
+        .atLocation(location)
+        .file("icons/svg/cancel.svg")
+        .tint("#ff0000")
+        .persist()
+        .name("randomPoints")
+        .size(1, { gridUnits: true })
+        .play();
+    } else {
+      loop = false;
+    }
+
+    cnt++;
+  }
+  Sequencer.EffectManager.endEffects({ name: "randomPoints" });
+  const pt = Sequencer.Helpers.random_array_element(points);
+  canvas.ping(pt, { duration: 5000 });
+  ui.notifications.info(
+    game.i18n.localize("sundry.notification.random-location.finished"),
+  );
+}
