@@ -8,6 +8,8 @@
 
 - **New**
   - `Highlight Random Location` - Use this new hotkey feature to select a number of locations on the map to target, then right click to have it randomly select a point (requires `Sequencer`)
+- **Updated**
+ - Split out `Display Action Ratio` to allow you to use `% of XP` or just use `% of Enemies`
 
 ## 1.3.0
 
