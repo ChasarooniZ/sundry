@@ -4,9 +4,19 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
+<<<<<<< HEAD
 ## 1.2.5
 
 - Don't Show Loading Screen Tips when switching scene levels (@Hackor)
+=======
+## 1.2.7
+
+- Updated Polish translation (🌐 @Lioheart)
+
+## 1.2.5
+
+- Updated Chinese translation (🌐 @AlphaStarguide)
+>>>>>>> 51c720a964522b8fd1752ceb38b21fb52e9ed1a7
 
 ## 1.2.4
 
