@@ -37,6 +37,10 @@
             "name": "[Display] Weapon Base Damage",
             "hint": "Adds a little display below the price on weapon sheets that displays their base damage (Note: This includes any Striking runes the weapon has)"
           }
+        },
+        "action-comparison": {
+          "name": "[Display] Action Comparison",
+          "hint": "Adds a little tooltip on all action glyphs in chat messages from enemies, to show their relative PC action comparison based on a combination of both what pertcentage of the combat's XP they take up, as well as how many PCs are in the combat"
         }
       },
       "hide": {
@@ -205,6 +209,12 @@
           "show": "Show Player List",
           "hide": "Hide Player List"
         }
+      },
+      "action-comparison": {
+        "main": "≈{actionCount} Player {actionType}",
+        "action": "Actions",
+        "free": "Free Actions",
+        "reaction": "Reactions"
       }
     },
     "items": {

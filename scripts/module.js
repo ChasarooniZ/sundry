@@ -32,6 +32,7 @@ import { setupSkyrimLoadingTips } from "./lib/skyrimLoading.js";
 import { setupMessageUserColor } from "./lib/messageUserColor.js";
 import { setupPanToCombatant } from "./lib/panToCurrentCombatant.js";
 import { setupPlayerListToggleButton } from "./lib/hidePlayerList.js";
+import { setupDisplayActionComparison } from "./lib/showPlayerActionEquivalance.js";
 
 export const MODULE_ID = "sundry";
 
@@ -60,6 +61,8 @@ Hooks.once("ready", async function () {
   setupDisplayItemPropertyRunes(getSetting("display.item-property-runes"));
 
   setupDisplayWeaponDamage(getSetting("display.weapon.base-damage"));
+
+  setupDisplayActionComparison(getSetting("display.action-comparison"));
 
   //Highlighting
   setupHighlightToolbeltRollSaves(

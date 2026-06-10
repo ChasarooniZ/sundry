@@ -24,6 +24,7 @@ import {
   hideSellAllTreasure,
 } from "./lib/sheetTweaks.js";
 import { setupDisplayWeaponDamage } from "./lib/showBaseDamage.js";
+import { setupDisplayActionComparison } from "./lib/showPlayerActionEquivalance.js";
 import { minifySimpleRequests } from "./lib/simpleRequests.js";
 import { setupSkyrimLoadingTips } from "./lib/skyrimLoading.js";
 import { setupStartOfSession } from "./lib/startOfSession.js";
@@ -98,6 +99,18 @@ export function setupSettings() {
     type: Boolean,
     onChange: (value) => {
       setupDisplayWeaponDamage(value);
+    },
+  });
+
+    game.settings.register(MODULE_ID, "display.action-comparison", {
+    name: `${MODULE_ID}.module-settings.display.action-comparison.name`,
+    hint: `${MODULE_ID}.module-settings.display.action-comparison.hint`,
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean,
+    onChange: (value) => {
+      setupDisplayActionComparison(value);
     },
   });
 

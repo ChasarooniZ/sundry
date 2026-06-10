@@ -4,9 +4,12 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
-## 1.2.8
+## 1.3.0
 
-- Don't Show Loading Screen Tips when switching scene levels (@Hackor)
+- **New**
+  - `Display Action Ratio` - Adds a little tooltip on all action glyphs in chat messages from enemies, to show their relative PC action comparison based on a combination of both what pertcentage of the combat's XP they take up, as well as how many PCs are in the combat
+- **Updated**
+  - Don't Show Loading Screen Tips when switching scene levels (@Hackor)
 
 ## 1.2.7
 
