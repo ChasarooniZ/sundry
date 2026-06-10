@@ -3,7 +3,16 @@ import { MODULE_ID } from "../module.js";
 const MINUTE = 60 * 1000;
 
 export async function setupSkyrimLoadingTips(active = true) {
+  Hooks[active ? "on" : "off"]("canvasTearDown", async (c, { nextScene }) => {
+    window.sundryShowSkyirmLoadingTip = c?.scene?.id !== nextScene?.id;
+  });
   Hooks[active ? "on" : "off"]("canvasInit", async () => {
+    // Do not show loading tips for changing levels
+    if (!window.sundryShowSkyirmLoadingTip) {
+      window.sundryShowSkyirmLoadingTip = true;
+      return;
+    }
+
     const journal = await fromUuid(
       game.settings.get(MODULE_ID, "highlight.loading-tips.items"),
     );
