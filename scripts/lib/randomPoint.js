@@ -1,4 +1,4 @@
-async function getRandomPoint() {
+export async function getRandomPoint() {
   if (!game.modules.get("sequencer")?.active) {
     ui.notifications.error(
       "[Error] This requires the 'Sequencer' module to use, please install it",

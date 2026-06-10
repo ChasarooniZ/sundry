@@ -14,6 +14,7 @@ import {
   setupColorizeToolbeltMessageSaves,
   setupHighlightToolbeltRollSaves,
 } from "./lib/pf2eToolbelt.js";
+import { getRandomPoint } from "./lib/randomPoint.js";
 import { setupReactionTracker } from "./lib/reactionTracker.js";
 import {
   isPauseReplacementActive,
