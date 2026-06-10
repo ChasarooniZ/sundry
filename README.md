@@ -51,6 +51,10 @@ You can access the changelog [here](/CHANGELOG.md).
 
     <img width="280" height="236" alt="image" src="https://github.com/user-attachments/assets/0c3083f5-710d-43f9-b906-b87924ace4a4" />
 
+  - `Action Ratio` - Adds a little tooltip on all action glyphs in chat messages from enemies, to show their relative PC action comparison based on a combination of both what percentage of the combat's XP they take up, as well as how many PCs are in the combat
+
+    <img width="303" height="192" alt="image" src="https://github.com/user-attachments/assets/ed336420-0ac6-489a-b50f-de5a2161e1f9" />
+
 - **Hide**
   - `Default Craft Checks` (for Heroic Crafting)
   - `Hide Header Button Text`

@@ -12,7 +12,7 @@
 ## 1.3.0
 
 - **New**
-  - `Display Action Ratio` - Adds a little tooltip on all action glyphs in chat messages from enemies, to show their relative PC action comparison based on a combination of both what pertcentage of the combat's XP they take up, as well as how many PCs are in the combat
+  - `Display Action Ratio` - Adds a little tooltip on all action glyphs in chat messages from enemies, to show their relative PC action comparison based on a combination of both what percentage of the combat's XP they take up, as well as how many PCs are in the combat
 - **Updated**
   - Don't Show Loading Screen Tips when switching scene levels (@Hackor)
 
