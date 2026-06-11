@@ -12,6 +12,8 @@ export async function getRandomPoint() {
       label: {
         text: `${cnt}`,
       },
+      texture: "icons/svg/cancel.svg",
+      fillAlpha: 0,
     });
     if (location) {
       points.push(location);

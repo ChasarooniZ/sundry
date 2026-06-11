@@ -52,6 +52,12 @@
           "name": "[Hide] Default Craft Checks Buttons",
           "hint": "To Prevent players from using default crafting as opposed to the 'Heroic Crafting' Buttons if using that addon"
         },
+        "token": {
+          "enabled": {
+            "name": "[Hide] Token Effects",
+            "hint": "Hides Token Effects only surfacing relevant ones by default, and showing all on hover"
+          }
+        },
         "header": {
           "button-text": {
             "name": "[Hide] Header Button Text",

@@ -44,3 +44,67 @@ export const STYLE_MODES = {
   "set-length": "sundry-message-user-color-header-set-amt",
 };
 export const STYLE_LIST = Object.values(STYLE_MODES);
+
+export const BG_FRAME_SKIP_MODULES = [
+  "pf2e-dorako-ux",
+  "pathfinder-ui",
+  "pf2e-effects-halo",
+];
+
+export const RELEVANT_EFFECTS = {
+  SLUGS: new Set([
+    // Conditions
+    "blinded",
+    "broken",
+    "clumsy",
+    "concealed",
+    "confused",
+    "controlled",
+    "dazzled",
+    "deafened",
+    "doomed",
+    "drained",
+    "dying",
+    "encumbered",
+    "enfeebled",
+    "fascinated",
+    "fatigued",
+    "frightened",
+    "grabbed",
+    "hidden",
+    "immobilized",
+    "invisible",
+    "off-guard",
+    "paralyzed",
+    "persistent-damage",
+    "petrified",
+    "prone",
+    "quickened",
+    "restrained",
+    "sickened",
+    "slowed",
+    "stunned",
+    "stupefied",
+    "unconscious",
+    "undetected",
+    "wounded",
+    "cursebound",
+    "friendly",
+    "helpful",
+    "hostile",
+    "indifferent",
+    "malevolence",
+    "observed",
+    "unfriendly",
+    "unnoticed",
+    //Custom
+    "effect-crowd-boost-1",
+    "effect-crowd-boost-2",
+  ]),
+};
+
+export const DURATION = {
+  SECOND: 1,
+  MINUTE: 60,
+  HOUR: 3600,
+};

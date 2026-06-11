@@ -106,7 +106,7 @@ export function setupSettings() {
     name: `${MODULE_ID}.module-settings.display.action-comparison.name`,
     hint: `${MODULE_ID}.module-settings.display.action-comparison.hint`,
     scope: "world",
-    config: true,
+    config: isF2eSystem(),
     default: "off",
     type: String,
     onChange: (value) => {
@@ -122,6 +122,15 @@ export function setupSettings() {
   game.settings.register(MODULE_ID, "hide.default-craft-checks", {
     name: `${MODULE_ID}.module-settings.hide.default-craft-checks.name`,
     hint: `${MODULE_ID}.module-settings.hide.default-craft-checks.hint`,
+    scope: "world",
+    config: isF2eSystem(),
+    default: false,
+    type: Boolean,
+  });
+
+  game.settings.register(MODULE_ID, "hide.effects.token.enabled", {
+    name: `${MODULE_ID}.module-settings.hide.effects.token.enabled.name`,
+    hint: `${MODULE_ID}.module-settings.hide.effects.token.enabled.hint`,
     scope: "world",
     config: isF2eSystem(),
     default: false,

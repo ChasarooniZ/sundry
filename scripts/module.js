@@ -33,6 +33,7 @@ import { setupMessageUserColor } from "./lib/messageUserColor.js";
 import { setupPanToCombatant } from "./lib/panToCurrentCombatant.js";
 import { setupPlayerListToggleButton } from "./lib/hidePlayerList.js";
 import { setupDisplayActionComparison } from "./lib/showPlayerActionEquivalance.js";
+import { setupHideTokenEffects } from "./lib/tokenEffectHider.js";
 
 export const MODULE_ID = "sundry";
 
@@ -75,6 +76,8 @@ Hooks.once("ready", async function () {
 
   //Hide
   if (getSetting("hide.sell-all-treasure")) hideSellAllTreasure();
+
+  setupHideTokenEffects(getSetting("hide.effects.token.enabled"));
 
   setupHideHeaderButtonText(getSetting("hide.header.button-text"));
 
