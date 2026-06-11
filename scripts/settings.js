@@ -30,6 +30,7 @@ import { minifySimpleRequests } from "./lib/simpleRequests.js";
 import { setupSkyrimLoadingTips } from "./lib/skyrimLoading.js";
 import { setupStartOfSession } from "./lib/startOfSession.js";
 import { toggleDispositionStates } from "./lib/toggleDisposition.js";
+import { setupHideTokenEffects } from "./lib/tokenEffectHider.js";
 import { MODULE_ID } from "./module.js";
 
 export function setupSettings() {
@@ -135,6 +136,9 @@ export function setupSettings() {
     config: isF2eSystem(),
     default: false,
     type: Boolean,
+    onChange: (value) => {
+      setupHideTokenEffects(value);
+    },
   });
 
   game.settings.register(MODULE_ID, "hide.header.button-text", {
