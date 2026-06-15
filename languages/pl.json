@@ -37,12 +37,48 @@
             "name": "[Wyświetlanie] Podstawowe obrażenia broni",
             "hint": "Dodaje niewielki wyświetlacz poniżej ceny na kartach broni, który pokazuje ich podstawowe obrażenia (uwaga: obejmuje to wszystkie runy uderzeń, które posiada broń)"
           }
+        },
+        "action-comparison": {
+          "name": "[Wyświetlanie] Porównanie akcji",
+          "hint": "Dodaje niewielką podpowiedź do wszystkich ikonek akcji w wiadomościach czatu od przeciwników, aby pokazać ich względne znaczenie w stosunku do akcji bohaterów na podstawie połączenia dwóch czynników: procentowego udziału w PD danej potyczki oraz liczby bohaterów biorących w niej udział. (Opcje pozwalają skalować liczbę akcji w oparciu o stosunek PD danego przeciwnika do całkowitej liczby PD w potyczce)",
+          "choices": {
+            "xp": "Współczynnik PD (%)",
+            "no-xp": "NIE uwzględniaj wartości % PD"
+          }
         }
       },
       "hide": {
         "default-craft-checks": {
           "name": "[Ukrycie] Domyślne przyciski testów Rzemiosła",
           "hint": "Aby uniemożliwić graczom korzystanie z domyślnego Rzemiosła zamiast przycisków 'Heroiczne Rzemiosło' w przypadku korzystania z tego dodatku"
+        },
+        "effects": {
+          "token": {
+            "enabled-for": {
+              "name": "[Ukrycie] Efekty tokenów dla...",
+              "hint": "Ukrywa efekty tokenów, domyślnie wyświetlając tylko te istotne, a po najechaniu kursorem na konkretny typ obiektu pokazuje wszystkie",
+              "choices": {
+                "none": "Brak",
+                "all": "Wszyscy",
+                "pcs": "Gracze",
+                "npcs": "Bohaterowie Niezależni"
+              }
+            },
+            "surface": {
+              "name": "[Ukrycie] Efekty tokenów, z wyjątkiem tych...",
+              "hint": "Ukrywa efekty tokenów, wyświetlając jedynie te istotne (Istotne – efekty stanów i wyboru wyświetlane na podstawie ich skrótów; Czas trwania – oparte na czasie pozostałym dla danego efektu)",
+              "choices": {
+                "nothing": "nic",
+                "relevant-under-1-hour": "Istotne + Czas trwania ≤ 1 godz.",
+                "relevant": "Istotne",
+                "under-1-hour": "Czas trwania ≤ 1 godz.",
+                "under-10-min": "≤10min",
+                "under-1-min": "≤1min",
+                "relevant-under-10-min": "Istotne + ≤10 min",
+                "relevant-under-1-min": "Istotne + ≤1 min"
+              }
+            }
+          }
         },
         "header": {
           "button-text": {
@@ -97,6 +133,12 @@
           "enabled-gm": {
             "name": "[Wyróżnienie] Przesuń widok na aktualnego uczestnika walki – MG",
             "hint": "W ten sposób włącza się tę funkcję dla MG"
+          }
+        },
+        "prone-tokens": {
+          "rotate": {
+            "name": "[Wyróżnienie] Tokeny przewrócone – Obrót",
+            "hint": "Odwraca leżące tokeny na plecy, a gdy przestaną leżeć, ponownie ustawia je w pozycji stojącej"
           }
         }
       },
@@ -172,6 +214,10 @@
       "toggle-disposition": {
         "name": "Przełącznik nastawienia",
         "hint": "Przełącza nastawienie tokenu, nad którym znajduje się kursor (zaczynając od obojętnego). Użyj Shift + przycisk, aby zmniejszyć nastawienie, a domyślnie, aby je zwiększyć."
+      },
+      "random-location": {
+        "name": "[Wyróżnienie] Wybór losowej lokalizacji",
+        "hint": "Po włączeniu funkcji kliknij kilka miejsc na mapie, które chcesz wybrać jako cele, a następnie kliknij prawym przyciskiem myszy, aby losowo wybrać punkt (wymagany jest moduł `Sequencer`)"
       }
     },
     "notification": {
@@ -189,6 +235,9 @@
         "feature": "Użyłeś zdolności, która ładuje twój Cios Zaklęciem",
         "on-success": "Użyłeś zdolności, która ładuje twój Cios Zaklęciem, jeśli rzut się powiódł",
         "other-option": "Alternatywnie zawsze możesz wydać 1 akcję, aby się naładować. Ta akcja ma cechę <b>koncentracji</b>"
+      },
+      "random-location": {
+        "finished": "Wybrano losową lokalizację!"
       }
     },
     "display": {
@@ -205,6 +254,12 @@
           "show": "Pokaż listę graczy",
           "hide": "Ukryj listę graczy"
         }
+      },
+      "action-comparison": {
+        "main": "≈{actionCount} graczy {actionType}",
+        "action": "Akcje",
+        "free": "Darmowe akcje",
+        "reaction": "Reakcje"
       }
     },
     "items": {
