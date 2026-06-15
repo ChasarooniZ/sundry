@@ -58,6 +58,9 @@ You can access the changelog [here](/CHANGELOG.md).
 - **Hide**
   - `Default Craft Checks` (for Heroic Crafting)
   - `Token Effects` - Hides Token Effects only surfacing relevant ones
+
+https://github.com/user-attachments/assets/5a8ac4dd-861e-4751-93ce-de5ca0cb18ab
+
   - `Hide Header Button Text`
     - Hides the text (not the icons) for sheet Header Buttons (and then puts the text as a tooltip on the button)
 
