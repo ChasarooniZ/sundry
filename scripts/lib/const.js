@@ -108,3 +108,10 @@ export const DURATION = {
   MINUTE: 60,
   HOUR: 3600,
 };
+
+export const RELEVANT_MODES = new Set([
+  "relevant",
+  "relevant-under-1-hour",
+  "relevant-under-10-min",
+  "relevant-under-1-min",
+]);

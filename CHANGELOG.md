@@ -4,6 +4,11 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
+## 1.5.0
+
+- **New**
+  - `Hide Token Effects` - Hides Token Effects only surfacing relevant ones (💡 @weepingminotaur for showing me Effect Hider, and 💻 @FurySpark for the original `Foundryvtt Effect Hider` module as inspiration)
+
 ## 1.4.2
 
 - **Updated**

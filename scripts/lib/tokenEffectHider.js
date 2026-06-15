@@ -1,27 +1,41 @@
-import { BG_FRAME_SKIP_MODULES, DURATION } from "./const.js";
+import {
+  BG_FRAME_SKIP_MODULES,
+  DURATION,
+  RELEVANT_EFFECTS,
+  RELEVANT_MODES,
+} from "./const.js";
+import { getSetting } from "./helpers.js";
 
 // This code was lovingly referenced under the MIT license from foundryvtt_effect-hider
 export async function setupHideTokenEffects(active = true) {
   Hooks[active ? "on" : "off"]("refreshToken", (token) => {
-    refreshEffectVisibility(token);
+    const surfaceMode = getSetting("hide.effects.token.surface");
+    const characterTypes = getSetting("hide.effects.token.surface");
+    if (isValidCharacter(characterTypes)) {
+      refreshEffectVisibility(token, { surfaceMode });
+    }
   });
 
   Hooks[active ? "on" : "off"]("highlightObjects", (state) => {
+    const surfaceMode = getSetting("hide.effects.token.surface");
     for (const token of canvas.tokens.placeables) {
-      refreshEffectVisibility(token);
+      const characterTypes = getSetting("hide.effects.token.surface");
+      if (isValidCharacter(characterTypes)) {
+        refreshEffectVisibility(token, { surfaceMode });
+      }
     }
   });
 }
 
-function refreshEffectVisibility(token) {
+function refreshEffectVisibility(token, { surfaceMode }) {
   if (shouldShowEffects(token)) {
-    setEffectVisibility(token, true);
+    setEffectVisibility(token, true, { surfaceMode });
   } else {
-    setEffectVisibility(token, false);
+    setEffectVisibility(token, false, { surfaceMode });
   }
 }
 
-function shouldShowEffects(token) {
+function shouldShowEffects(token, { surfaceMode }) {
   if (token.hover) return true;
 
   if (canvas.tokens.highlightObjects) return true;
@@ -33,15 +47,23 @@ function shouldShowEffects(token) {
   //   return game.settings.get(MODULE_ID, "hideEffects") === "never";
 }
 
-function setEffectVisibility(token, value) {
+function setEffectVisibility(token, value, { surfaceMode }) {
   const fxInfoList = token.actor.appliedEffects;
-  let cnt = 0;
-  for (const fx of token.effects.children) {
-    if (fx === token.effects.overlay) continue; // Skip base overlay
-    if (fx === token.effects.bg && shouldSkipEffectBackground()) continue; // Skip background frames, for Dorako UI (and possibly other module conflicts)
-    if (shouldAlwaysShowEffect(fxInfoList[cnt])) continue; // Skip effects that should always be shown
-    fx.visible = value;
+  if (!shouldSkipEffectBackground()) {
+    token.effects.bg.visible = value;
+  }
+
+  // Skip base overlay
+  // Skip background frames
+  const fxs = token.effects.children.filter(
+    (fx) => fx !== token.effects.overlay && fx !== token.effects.bg,
+  );
+
+  let cnt = -1;
+  for (const fx of fxs) {
     cnt++;
+    if (shouldAlwaysShowEffect(fxInfoList[cnt], { surfaceMode })) continue; // Skip effects that should always be shown
+    fx.visible = value;
   }
 }
 
@@ -49,14 +71,45 @@ function shouldSkipEffectBackground() {
   return BG_FRAME_SKIP_MODULES.some((id) => game.modules.get(id)?.active);
 }
 
-export function shouldAlwaysShowEffect(effect) {
-  return relevantSlug(effect) || relevantDuration(effect);
+export function shouldAlwaysShowEffect(effect, { surfaceMode }) {
+  return (
+    relevantSlug(effect, surfaceMode) || relevantDuration(effect, surfaceMode)
+  );
 }
 
-function relevantDuration(effect) {
-  return effect.secondsRemaining <= DURATION.MINUTE * 10;
+function relevantDuration(effect, mode) {
+  switch (mode) {
+    case "relevant-under-1-hour":
+    case "under-1-hour":
+      return effect.secondsRemaining <= DURATION.HOUR;
+    case "relevant-under-10-min":
+    case "under-10-min":
+      return effect.secondsRemaining <= DURATION.MINUTE * 10;
+    case "relevant-under-1-min":
+    case "under-1-min":
+      return effect.secondsRemaining <= DURATION.MINUTE * 10;
+    default:
+      return false;
+  }
 }
 
-function relevantSlug(effect) {
-  return !!RELEVANT_EFFECTS.intersection(effect?.statuses)?.size;
+function relevantSlug(effect, mode) {
+  return (
+    RELEVANT_MODES.includes(mode) &&
+    !!RELEVANT_EFFECTS.SLUGS.intersection(effect?.statuses)?.size
+  );
+}
+
+function isValidCharacter(actorType, setting) {
+  switch (setting) {
+    case "all":
+      return true;
+    case "pc":
+      return actorType === "character";
+    case "npc":
+      return actorType === "npc";
+      return false;
+    case "none":
+      return false;
+  }
 }

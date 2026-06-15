@@ -129,29 +129,56 @@ export function setupSettings() {
     type: Boolean,
   });
 
-  game.settings.register(MODULE_ID, "hide.effects.token.enabled", {
-    name: `${MODULE_ID}.module-settings.hide.effects.token.enabled.name`,
-    hint: `${MODULE_ID}.module-settings.hide.effects.token.enabled.hint`,
+  game.settings.register(MODULE_ID, "hide.effects.token.enabled-for", {
+    name: `${MODULE_ID}.module-settings.hide.effects.token.enabled-for.name`,
+    hint: `${MODULE_ID}.module-settings.hide.effects.token.enabled-for.hint`,
     scope: "world",
     config: isF2eSystem(),
-    default: false,
-    type: Boolean,
+    default: none,
+    type: String,
+    choices: {
+      none: `${MODULE_ID}.module-settings.hide.effects.token.enabled-for.choices.none`,
+      all: `${MODULE_ID}.module-settings.hide.effects.token.enabled-for.choices.all`,
+      pcs: `${MODULE_ID}.module-settings.hide.effects.token.enabled-for.choices.pcs`,
+      npcs: `${MODULE_ID}.module-settings.hide.effects.token.enabled-for.choices.npcs`,
+    },
     onChange: (value) => {
-      setupHideTokenEffects(value);
+      setupHideTokenEffects(value !== "none");
     },
   });
 
-  game.settings.register(MODULE_ID, "hide.header.button-text", {
-    name: `${MODULE_ID}.module-settings.hide.header.button-text.name`,
-    hint: `${MODULE_ID}.module-settings.hide.header.button-text.hint`,
+  game.settings.register(MODULE_ID, "hide.effects.token.surface", {
+    name: `${MODULE_ID}.module-settings.hide.effects.token.surface.name`,
+    hint: `${MODULE_ID}.module-settings.hide.effects.token.surface.hint`,
     scope: "world",
     config: true,
-    default: false,
-    type: Boolean,
-    onChange: (value) => {
-      setupHideHeaderButtonText(value);
+    default: "relevant-under-1-hour",
+    type: String,
+    choices: {
+      nothing: `${MODULE_ID}.module-settings.hide.effects.token.surface.choices.nothing`,
+      "relevant-under-1-hour": `${MODULE_ID}.module-settings.hide.effects.token.surface.choices.relevant-under-1-hour`,
+      relevant: `${MODULE_ID}.module-settings.hide.effects.token.surface.choices.relevant`,
+      "under-1-hour": `${MODULE_ID}.module-settings.hide.effects.token.surface.choices.under-1-hour`,
+      "under-10-min": `${MODULE_ID}.module-settings.hide.effects.token.surface.choices.under-10-min`,
+      "under-1-min": `${MODULE_ID}.module-settings.hide.effects.token.surface.choices.under-1-min`,
+      "relevant-under-10-min": `${MODULE_ID}.module-settings.hide.effects.token.surface.choices.relevant-under-10-min`,
+      "relevant-under-1-min": `${MODULE_ID}.module-settings.hide.effects.token.surface.choices.relevant-under-1-min`,
     },
   });
+
+  // game.settings.register(MODULE_ID, "hide.effects.token.when", {
+  //   name: `${MODULE_ID}.module-settings.hide.effects.token.when.name`,
+  //   hint: `${MODULE_ID}.module-settings.hide.effects.token.when.hint`,
+  //   scope: "world",
+  //   config: true,
+  //   default: "always-hover",
+  //   type: String,
+  //   choices: {
+  //     "always-hover": `${MODULE_ID}.module-settings.hide.effects.token.when.choices.always-hover`,
+  //     "always-no-hover": `${MODULE_ID}.module-settings.hide.effects.token.when.choices.always-no-hover`,
+  //     // "non-combat-hover": `${MODULE_ID}.module-settings.hide.effects.token.when.choices.non-combat-hover`,
+  //   },
+  // });
 
   game.settings.register(MODULE_ID, "hide.sell-all-treasure", {
     name: `${MODULE_ID}.module-settings.hide.sell-all-treasure.name`,

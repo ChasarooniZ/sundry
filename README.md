@@ -57,6 +57,7 @@ You can access the changelog [here](/CHANGELOG.md).
 
 - **Hide**
   - `Default Craft Checks` (for Heroic Crafting)
+  - `Token Effects` - Hides Token Effects only surfacing relevant ones
   - `Hide Header Button Text`
     - Hides the text (not the icons) for sheet Header Buttons (and then puts the text as a tooltip on the button)
 
@@ -74,7 +75,6 @@ You can access the changelog [here](/CHANGELOG.md).
   <img width="280" height="171" alt="image" src="https://github.com/user-attachments/assets/0bf22994-8524-47f1-9e16-ce9104f5534e" />
   - `Pan To Current Combatant` - When enabled while in combat it will pan the view to include their token as well as the active combatant (for players only by default)
   - `Random Location Picker` - Use this new hotkey feature to select a number of locations on the map to target, then right click to have it randomly select a point (requires `Sequencer`)
-
   - `Skyrim Loading Screens`
     - This new feature adds "Skyrim Esque" loading screens which you can configure by linking a journal UUID of a journal filled with images and captions in the module settings
     - **Notes**
