@@ -73,21 +73,22 @@ function shouldSkipEffectBackground() {
 
 export function shouldAlwaysShowEffect(effect, { surfaceMode }) {
   return (
-    relevantSlug(effect, surfaceMode) || relevantDuration(effect, surfaceMode)
+    relevantSlug(effect, surfaceMode) ||
+    relevantDuration(effect.duration.secondsRemaining, surfaceMode)
   );
 }
 
-function relevantDuration(effect, mode) {
+function relevantDuration(secondsRemaining, mode) {
   switch (mode) {
     case "relevant-under-1-hour":
     case "under-1-hour":
-      return effect.secondsRemaining <= DURATION.HOUR;
+      return secondsRemaining <= DURATION.HOUR;
     case "relevant-under-10-min":
     case "under-10-min":
-      return effect.secondsRemaining <= DURATION.MINUTE * 10;
+      return secondsRemaining <= DURATION.MINUTE * 10;
     case "relevant-under-1-min":
     case "under-1-min":
-      return effect.secondsRemaining <= DURATION.MINUTE * 10;
+      return secondsRemaining <= DURATION.MINUTE * 10;
     default:
       return false;
   }
