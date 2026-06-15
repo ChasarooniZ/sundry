@@ -4,6 +4,12 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
+## 1.6.1
+
+- **Updated**
+  - Fixed issues with `Hide Token Effects` not working on the PC and NPC settings (🐛 @weepingminotaur)
+  - Updated Polish translation (🌐 @Lioheart)
+
 ## 1.6.0
 
 - **New**

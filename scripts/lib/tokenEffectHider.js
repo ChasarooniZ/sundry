@@ -108,9 +108,9 @@ function isValidCharacter(actorType, setting) {
   switch (setting) {
     case "all":
       return true;
-    case "pc":
+    case "pcs":
       return actorType === "character";
-    case "npc":
+    case "npcs":
       return actorType === "npc";
     case "none":
       return false;
