@@ -115,8 +115,8 @@ export function setupSettings() {
     },
     choices: {
       off: `${MODULE_ID}.module-settings.colorize.message.choices.off`,
-      xp: `${MODULE_ID}.module-settings.display.action-comparison.choices.20-percent`,
-      "no-xp": `${MODULE_ID}.module-settings.display.action-comparison.choices.set-length`,
+      xp: `${MODULE_ID}.module-settings.display.action-comparison.choices.xp`,
+      "no-xp": `${MODULE_ID}.module-settings.display.action-comparison.choices.no-xp`,
     },
   });
 
@@ -134,7 +134,7 @@ export function setupSettings() {
     hint: `${MODULE_ID}.module-settings.hide.effects.token.enabled-for.hint`,
     scope: "world",
     config: isF2eSystem(),
-    default: none,
+    default: 'none',
     type: String,
     choices: {
       none: `${MODULE_ID}.module-settings.hide.effects.token.enabled-for.choices.none`,
@@ -151,7 +151,7 @@ export function setupSettings() {
     name: `${MODULE_ID}.module-settings.hide.effects.token.surface.name`,
     hint: `${MODULE_ID}.module-settings.hide.effects.token.surface.hint`,
     scope: "world",
-    config: true,
+    config: isF2eSystem(),
     default: "relevant-under-1-hour",
     type: String,
     choices: {

@@ -8,6 +8,8 @@
 
 - **New**
   - `Hide Token Effects` - Hides Token Effects only surfacing relevant ones (💡 @weepingminotaur for showing me Effect Hider, and 💻 @FurySpark for the original `Foundryvtt Effect Hider` module as inspiration)
+- **Updated**
+  - Fixed localization with `Display Action Ratio`
 
 ## 1.4.2
 
