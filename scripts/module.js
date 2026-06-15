@@ -77,7 +77,9 @@ Hooks.once("ready", async function () {
   //Hide
   if (getSetting("hide.sell-all-treasure")) hideSellAllTreasure();
 
-  setupHideTokenEffects(getSetting("hide.effects.token.enabled"));
+  setupHideTokenEffects(
+    getSetting("hide.effects.token.enabled-for") !== "none",
+  );
 
   setupHideHeaderButtonText(getSetting("hide.header.button-text"));
 

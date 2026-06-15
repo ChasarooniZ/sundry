@@ -134,7 +134,7 @@ export function setupSettings() {
     hint: `${MODULE_ID}.module-settings.hide.effects.token.enabled-for.hint`,
     scope: "world",
     config: isF2eSystem(),
-    default: 'none',
+    default: "none",
     type: String,
     choices: {
       none: `${MODULE_ID}.module-settings.hide.effects.token.enabled-for.choices.none`,
@@ -207,6 +207,18 @@ export function setupSettings() {
     },
     onChange: (value) => {
       setupPlayerListToggleButton(value);
+    },
+  });
+
+  game.settings.register(MODULE_ID, "hide.header.button-text", {
+    name: `${MODULE_ID}.module-settings.hide.header.button-text.name`,
+    hint: `${MODULE_ID}.module-settings.hide.header.button-text.hint`,
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean,
+    onChange: (value) => {
+      setupHideHeaderButtonText(value);
     },
   });
 

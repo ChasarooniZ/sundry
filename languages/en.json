@@ -52,29 +52,31 @@
           "name": "[Hide] Default Craft Checks Buttons",
           "hint": "To Prevent players from using default crafting as opposed to the 'Heroic Crafting' Buttons if using that addon"
         },
-        "token": {
-          "enabled-for": {
-            "name": "[Hide] Token Effects For...",
-            "hint": "Hides Token Effects only surfacing relevant ones by default, and showing all on hover for the specific actor type",
-            "choices": {
-              "none": "None",
-              "all": "All",
-              "pcs": "PCs",
-              "npcs": "NPCs"
-            }
-          },
-          "surface": {
-            "name": "[Hide] Token Effects Except show these...",
-            "hint": "Hides Token Effects only surfacing relevant ones (Relevant - Conditions + Choice Effects that are surfaced based on their slugs, Duration - Base it on time left for a particular effect",
-            "choices": {
-              "nothing": "nothing",
-              "relevant-under-1-hour": "Relevant + Duration ≤1hr",
-              "relevant": "Relevant",
-              "under-1-hour": "Duration ≤1hr",
-              "under-10-min": "≤10min",
-              "under-1-min": "≤1min",
-              "relevant-under-10-min": "Relevant + ≤10min",
-              "relevant-under-1-min": "Relevant + ≤1min"
+        "effects": {
+          "token": {
+            "enabled-for": {
+              "name": "[Hide] Token Effects For...",
+              "hint": "Hides Token Effects only surfacing relevant ones by default, and showing all on hover for the specific actor type",
+              "choices": {
+                "none": "None",
+                "all": "All",
+                "pcs": "PCs",
+                "npcs": "NPCs"
+              }
+            },
+            "surface": {
+              "name": "[Hide] Token Effects Except show these...",
+              "hint": "Hides Token Effects only surfacing relevant ones (Relevant - Conditions + Choice Effects that are surfaced based on their slugs, Duration - Base it on time left for a particular effect",
+              "choices": {
+                "nothing": "nothing",
+                "relevant-under-1-hour": "Relevant + Duration ≤1hr",
+                "relevant": "Relevant",
+                "under-1-hour": "Duration ≤1hr",
+                "under-10-min": "≤10min",
+                "under-1-min": "≤1min",
+                "relevant-under-10-min": "Relevant + ≤10min",
+                "relevant-under-1-min": "Relevant + ≤1min"
+              }
             }
           }
         },
