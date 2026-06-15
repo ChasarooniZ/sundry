@@ -20,6 +20,7 @@ import {
   isPauseReplacementActive,
   setupPauseReplacement,
 } from "./lib/replacePauseInfo.js";
+import { setupRotateProneTokens } from "./lib/rotateProneTokens.js";
 import {
   hideDefaultCraftChecks,
   hideSellAllTreasure,
@@ -180,6 +181,18 @@ export function setupSettings() {
   //   },
   // });
 
+  game.settings.register(MODULE_ID, "hide.header.button-text", {
+    name: `${MODULE_ID}.module-settings.hide.header.button-text.name`,
+    hint: `${MODULE_ID}.module-settings.hide.header.button-text.hint`,
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean,
+    onChange: (value) => {
+      setupHideHeaderButtonText(value);
+    },
+  });
+
   game.settings.register(MODULE_ID, "hide.sell-all-treasure", {
     name: `${MODULE_ID}.module-settings.hide.sell-all-treasure.name`,
     hint: `${MODULE_ID}.module-settings.hide.sell-all-treasure.hint`,
@@ -210,18 +223,6 @@ export function setupSettings() {
     },
   });
 
-  game.settings.register(MODULE_ID, "hide.header.button-text", {
-    name: `${MODULE_ID}.module-settings.hide.header.button-text.name`,
-    hint: `${MODULE_ID}.module-settings.hide.header.button-text.hint`,
-    scope: "world",
-    config: true,
-    default: false,
-    type: Boolean,
-    onChange: (value) => {
-      setupHideHeaderButtonText(value);
-    },
-  });
-
   game.settings.register(MODULE_ID, "highlight.languages-known", {
     name: `${MODULE_ID}.module-settings.highlight.languages-known.name`,
     hint: `${MODULE_ID}.module-settings.highlight.languages-known.hint`,
@@ -243,6 +244,18 @@ export function setupSettings() {
     type: Boolean,
     onChange: (value) => {
       setupPanToCombatant(value);
+    },
+  });
+
+  game.settings.register(MODULE_ID, "highlight.prone-tokens.rotate", {
+    name: `${MODULE_ID}.module-settings.highlight.prone-tokens.rotate.name`,
+    hint: `${MODULE_ID}.module-settings.highlight.prone-tokens.rotate.hint`,
+    scope: "world",
+    config: isF2eSystem(),
+    default: false,
+    type: Boolean,
+    onChange: (value) => {
+      setupRotateProneTokens(value);
     },
   });
 

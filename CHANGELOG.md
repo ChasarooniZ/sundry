@@ -4,6 +4,14 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
+## 1.6.0
+
+- **New**
+  - `Highlight`
+    - `Rotate Prone Tokens` - Rotates Tokens when they are knocked prone (and unrotates when unprone) (💡 @Lukas)
+- **Updated**
+  - Fixed misc error with `Hide Token Effects`
+
 ## 1.5.0
 
 - **New**

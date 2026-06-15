@@ -34,6 +34,7 @@ import { setupPanToCombatant } from "./lib/panToCurrentCombatant.js";
 import { setupPlayerListToggleButton } from "./lib/hidePlayerList.js";
 import { setupDisplayActionComparison } from "./lib/showPlayerActionEquivalance.js";
 import { setupHideTokenEffects } from "./lib/tokenEffectHider.js";
+import { setupRotateProneTokens } from "./lib/rotateProneTokens.js";
 
 export const MODULE_ID = "sundry";
 
@@ -73,6 +74,8 @@ Hooks.once("ready", async function () {
   setuplanguageHandling(getSetting("highlight.languages-known"));
 
   setupPanToCombatant(getSetting("highlight.pan-current-combatant.enabled"));
+
+  setupRotateProneTokens(getSetting("highlight.prone-tokens.rotate"));
 
   //Hide
   if (getSetting("hide.sell-all-treasure")) hideSellAllTreasure();

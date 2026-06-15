@@ -115,3 +115,5 @@ export const RELEVANT_MODES = new Set([
   "relevant-under-10-min",
   "relevant-under-1-min",
 ]);
+
+export const EMPTY_SET = new Set([])

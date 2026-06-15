@@ -134,6 +134,12 @@
             "name": "[Highlight] Pan to See Current Combatant - GM",
             "hint": "This enables the feature for the GM"
           }
+        },
+        "prone-tokens": {
+          "rotate": {
+            "name": "[Highlight] Prone Tokens - Rotate",
+            "hint": "Rotates prone tokens on their back, and back upright when no longer prone"
+          }
         }
       },
       "message": {

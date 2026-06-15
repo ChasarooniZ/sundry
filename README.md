@@ -74,7 +74,7 @@ You can access the changelog [here](/CHANGELOG.md).
 
   <img width="280" height="171" alt="image" src="https://github.com/user-attachments/assets/0bf22994-8524-47f1-9e16-ce9104f5534e" />
   - `Pan To Current Combatant` - When enabled while in combat it will pan the view to include their token as well as the active combatant (for players only by default)
-  - `Random Location Picker` - Use this new hotkey feature to select a number of locations on the map to target, then right click to have it randomly select a point (requires `Sequencer`)
+  - `Rotate Prone Tokens` - Rotates Tokens when they are knocked prone (and unrotates when unprone)
   - `Skyrim Loading Screens`
     - This new feature adds "Skyrim Esque" loading screens which you can configure by linking a journal UUID of a journal filled with images and captions in the module settings
     - **Notes**
@@ -84,6 +84,7 @@ You can access the changelog [here](/CHANGELOG.md).
 - **Hotkey**
   - `Character Campaign Notes` - Adds a new hotkey (Default `N`) to open an editable dialog of their assigned character's `Campaign Notes` field on their character sheet for quick access
   - `Disposition Toggling` - Using a new hotkey (I) allow you to easily toggle the disposition of the hovered token
+  - `Random Location Picker` - Use this new hotkey feature to select a number of locations on the map to target, then right click to have it randomly select a point (requires `Sequencer`)
 
 - **Minify**
   - `Simple Requests` module to minify the chat area it takes up

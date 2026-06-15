@@ -1,6 +1,7 @@
 import {
   BG_FRAME_SKIP_MODULES,
   DURATION,
+  EMPTY_SET,
   RELEVANT_EFFECTS,
   RELEVANT_MODES,
 } from "./const.js";
@@ -74,7 +75,7 @@ function shouldSkipEffectBackground() {
 export function shouldAlwaysShowEffect(effect, { surfaceMode }) {
   return (
     relevantSlug(effect, surfaceMode) ||
-    relevantDuration(effect.duration.secondsRemaining, surfaceMode)
+    relevantDuration(effect?.duration?.secondsRemaining, surfaceMode)
   );
 }
 
@@ -97,7 +98,9 @@ function relevantDuration(secondsRemaining, mode) {
 function relevantSlug(effect, mode) {
   return (
     RELEVANT_MODES.has(mode) &&
-    !!RELEVANT_EFFECTS.SLUGS.intersection(effect?.statuses)?.size
+    !!RELEVANT_EFFECTS.SLUGS.intersection(
+      typeof effect?.statuses === "object" ? effect?.statuses : EMPTY_SET,
+    )?.size
   );
 }
 
