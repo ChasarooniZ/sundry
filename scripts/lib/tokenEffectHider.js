@@ -10,8 +10,8 @@ import { getSetting } from "./helpers.js";
 export async function setupHideTokenEffects(active = true) {
   Hooks[active ? "on" : "off"]("refreshToken", (token) => {
     const surfaceMode = getSetting("hide.effects.token.surface");
-    const characterTypes = getSetting("hide.effects.token.surface");
-    if (isValidCharacter(characterTypes)) {
+    const characterTypes = getSetting("hide.effects.token.enabled-for");
+    if (isValidCharacter(token?.actor?.type, characterTypes)) {
       refreshEffectVisibility(token, { surfaceMode });
     }
   });
@@ -19,8 +19,8 @@ export async function setupHideTokenEffects(active = true) {
   Hooks[active ? "on" : "off"]("highlightObjects", (state) => {
     const surfaceMode = getSetting("hide.effects.token.surface");
     for (const token of canvas.tokens.placeables) {
-      const characterTypes = getSetting("hide.effects.token.surface");
-      if (isValidCharacter(characterTypes)) {
+      const characterTypes = getSetting("hide.effects.token.enabled-for");
+      if (isValidCharacter(token?.actor?.type, characterTypes)) {
         refreshEffectVisibility(token, { surfaceMode });
       }
     }
@@ -35,7 +35,7 @@ function refreshEffectVisibility(token, { surfaceMode }) {
   }
 }
 
-function shouldShowEffects(token, { surfaceMode }) {
+function shouldShowEffects(token) {
   if (token.hover) return true;
 
   if (canvas.tokens.highlightObjects) return true;
@@ -95,7 +95,7 @@ function relevantDuration(effect, mode) {
 
 function relevantSlug(effect, mode) {
   return (
-    RELEVANT_MODES.includes(mode) &&
+    RELEVANT_MODES.has(mode) &&
     !!RELEVANT_EFFECTS.SLUGS.intersection(effect?.statuses)?.size
   );
 }
@@ -108,7 +108,6 @@ function isValidCharacter(actorType, setting) {
       return actorType === "character";
     case "npc":
       return actorType === "npc";
-      return false;
     case "none":
       return false;
   }
