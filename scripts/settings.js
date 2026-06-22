@@ -3,7 +3,10 @@ import { setupFlourishTracker } from "./lib/flourishTracker.js";
 import { isF2eSystem } from "./lib/helpers.js";
 import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 import { setupPlayerListToggleButton } from "./lib/hidePlayerList.js";
-import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
+import {
+  setupActorSheetDisplayPropertyRunes,
+  setupDisplayItemPropertyRunes,
+} from "./lib/itemPropertyRunes.js";
 import { setuplanguageHandling } from "./lib/languageHandling.js";
 import { setupMessageUserColor } from "./lib/messageUserColor.js";
 import { setupNotifySpellstrikeRecharge } from "./lib/notify.js";
@@ -89,6 +92,18 @@ export function setupSettings() {
     type: Boolean,
     onChange: (value) => {
       setupDisplayItemPropertyRunes(value);
+    },
+  });
+
+  game.settings.register(MODULE_ID, "display.item-property-runes-actor", {
+    name: `${MODULE_ID}.module-settings.display.item-property-runes-actor.name`,
+    hint: `${MODULE_ID}.module-settings.display.item-property-runes-actor.hint`,
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean,
+    onChange: (value) => {
+      setupActorSheetDisplayPropertyRunes(value);
     },
   });
 
@@ -257,6 +272,15 @@ export function setupSettings() {
     onChange: (value) => {
       setupRotateProneTokens(value);
     },
+  });
+
+  game.settings.register(MODULE_ID, "highlight.random-location.first-use", {
+    name: '',
+    hint: '',
+    scope: "user",
+    config: false,
+    default: true,
+    type: Boolean,
   });
 
   game.settings.register(

@@ -16,7 +16,10 @@ import {
 import { setupColorizePersistentPF2eHUD } from "./lib/pf2eHUD.js";
 import { setupNotifySpellstrikeRecharge } from "./lib/notify.js";
 import { setupReactionTracker } from "./lib/reactionTracker.js";
-import { setupDisplayItemPropertyRunes } from "./lib/itemPropertyRunes.js";
+import {
+  setupActorSheetDisplayPropertyRunes,
+  setupDisplayItemPropertyRunes,
+} from "./lib/itemPropertyRunes.js";
 import { setupDisplayWeaponDamage } from "./lib/showBaseDamage.js";
 import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 import {
@@ -61,6 +64,10 @@ Hooks.once("ready", async function () {
 
   // Display
   setupDisplayItemPropertyRunes(getSetting("display.item-property-runes"));
+
+  setupActorSheetDisplayPropertyRunes(
+    getSetting("display.item-property-runes-actor"),
+  );
 
   setupDisplayWeaponDamage(getSetting("display.weapon.base-damage"));
 

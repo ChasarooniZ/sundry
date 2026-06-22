@@ -1,9 +1,16 @@
 ## Unreleased
 
 - **Updated**
-  - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
- 
+
+## 1.7.0
+
+- **New**
+  - `Display Property Runes - Actor Sheet` - Now also displays on character sheet as well as the item description
+- **Updated**
+  - Locked `Highlight Random Location` from double activating
+  - Added a tooltip on first use to explain `Highlight Random Location`, where it comes from, and how to disable it
+
 ## 1.6.2
 
 - Updated Chinese translation (🌐 @AlphaStarguide)

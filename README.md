@@ -44,6 +44,7 @@ You can access the changelog [here](/CHANGELOG.md).
 
 - **Display**
   - `Property Runes` - Displays property runes on (item sheets) for items with them
+    - Also an option to display them on Actor Sheets as well!
 
     <img height="250" alt="image" src="https://github.com/user-attachments/assets/13f3e51b-2941-4a9d-82f9-811e0a605201" />
 
@@ -61,8 +62,8 @@ You can access the changelog [here](/CHANGELOG.md).
 
 https://github.com/user-attachments/assets/5a8ac4dd-861e-4751-93ce-de5ca0cb18ab
 
-  - `Hide Header Button Text`
-    - Hides the text (not the icons) for sheet Header Buttons (and then puts the text as a tooltip on the button)
+- `Hide Header Button Text`
+  - Hides the text (not the icons) for sheet Header Buttons (and then puts the text as a tooltip on the button)
 
   <img width="669" height="213" alt="image" src="https://github.com/user-attachments/assets/a5881f19-e376-4a37-aa4a-f44e68527053" />
   - `Sell All Treasure`

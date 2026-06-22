@@ -1,8 +1,17 @@
+import { MODULE_ID } from "../module.js";
+
 export async function getRandomPoint() {
   if (!game.modules.get("sequencer")?.active) {
     ui.notifications.error(
       "[Error] This requires the 'Sequencer' module to use, please install it",
     );
+  }
+  if (!game.settings.get(MODULE_ID, "highlight.random-location.first-use")) {
+    ui.notifications.info(
+      `[${game.modules.get(MODULE_ID)?.title}] ${game.i18n.localize("sundry.notification.random-location.first-use")}`,
+      { permanent: true },
+    );
+    game.settings.set(MODULE_ID, "highlight.random-location.first-use", false);
   }
   if (window?.sundryRandomModeOn) return;
   window.sundryRandomModeOn = true;

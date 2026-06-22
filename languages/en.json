@@ -32,6 +32,10 @@
           "name": "[Display] Item Property Runes",
           "hint": "When you go to look an item's sheet will add in the name and description of any Property Runes on the item"
         },
+        "item-property-runes-actor": {
+          "name": "[Display] Item Property Runes on Actor Sheet",
+          "hint": "When you go to look an actor's sheet and look at item descriptions, the name and description of any Property Runes on the item will be displayed"
+        },
         "weapon": {
           "base-damage": {
             "name": "[Display] Weapon Base Damage",
@@ -221,6 +225,7 @@
       }
     },
     "notification": {
+      "flourish-used": "You've already used a Flourish action this turn",
       "player-notes": {
         "updated": "Campaign Notes Updated!",
         "no-character": "No Notes to open as you have no assigned character nor selected character"
@@ -228,7 +233,6 @@
       "session-start": {
         "active": "[Session Start] Enough players have joined the lobby to show you the session start checklist!"
       },
-      "flourish-used": "You've already used a Flourish action this turn",
       "spellstrike": {
         "recharged": "Spellstrike Recharged",
         "conflux": "You just cast a conflux spell which allows you to recharge your spellstrike.",
@@ -237,7 +241,8 @@
         "other-option": "Alternatively you can always spend 1 action to recharge, this action has the <b>concentrate</b> trait"
       },
       "random-location": {
-        "finished": "Random Location Selected!"
+        "finished": "Random Location Selected!",
+        "first-use": "This is the Random Location feature that is activated by pressing R (configurable in controls). Left click to select points to randomize between, then right click to randomly select one!"
       }
     },
     "display": {
