@@ -4,6 +4,11 @@
   - `Display Property Runes` - Now also displays on character sheet as well as the item description
   - Added Localization where possible for some names
 
+## 1.6.2
+
+- **Updated**
+  - Fixed issue if you run random picker multiple times it breaks other workflows (🐛 @Simon Magnus)
+
 ## 1.6.1
 
 - **Updated**

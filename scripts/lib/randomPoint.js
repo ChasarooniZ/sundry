@@ -4,6 +4,8 @@ export async function getRandomPoint() {
       "[Error] This requires the 'Sequencer' module to use, please install it",
     );
   }
+  if (window?.sundryRandomModeOn) return;
+  window.sundryRandomModeOn = true;
   let loop = true;
   const points = [];
   let cnt = 0;
@@ -17,7 +19,7 @@ export async function getRandomPoint() {
     });
     if (location) {
       points.push(location);
-      await new Sequence()
+      new Sequence()
         .effect()
         .atLocation(location)
         .file("icons/svg/cancel.svg")
@@ -38,6 +40,7 @@ export async function getRandomPoint() {
   Sequencer.EffectManager.endEffects({ name: "randomPoints" });
   const pt = Sequencer.Helpers.random_array_element(points);
   canvas.ping(pt, { duration: 5000 });
+  window.sundryRandomModeOn = false;
   ui.notifications.info(
     game.i18n.localize("sundry.notification.random-location.finished"),
   );
