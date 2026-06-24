@@ -3,6 +3,10 @@
 - **Updated**
   - Added Localization where possible for some names
 
+## 1.7.1
+
+- Fixed case for `Effects Hider` where expire effects or oddly added effects would always count as relevant time wise
+
 ## 1.7.0
 
 - **New**

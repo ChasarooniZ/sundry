@@ -80,6 +80,9 @@ export function shouldAlwaysShowEffect(effect, { surfaceMode }) {
 }
 
 function relevantDuration(secondsRemaining, mode) {
+  if (secondsRemaining < 0) {
+    return false;
+  }
   switch (mode) {
     case "relevant-under-1-hour":
     case "under-1-hour":
