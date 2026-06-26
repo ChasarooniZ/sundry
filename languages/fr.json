@@ -32,10 +32,22 @@
           "name": "[Afficher] Runes de propriétés des objets",
           "hint": "Lorsque vous consultez la fiche d'un objet, le nom et la description de toutes les runes de propriété de l'objet seront ajoutés."
         },
+        "item-property-runes-actor": {
+          "name": "[Affichage] Runes de propriété d'objet sur la fiche d'acteur",
+          "hint": "Lorsque vous consultez la fiche d'un acteur et les descriptions des objets, le nom et la description des runes de propriété présentes sur l'objet sont affichées."
+        },
         "weapon": {
           "base-damage": {
             "name": "[Afficher] Dégâts de base de l'arme",
             "hint": "Ajoute un petit affichage sous le prix sur les fiches d'armes qui présente leurs dégâts de base (Note : toutes les runes de frappe sont incluses)"
+          }
+        },
+        "action-comparison": {
+          "name": "[Afficher] Comparaison des actions",
+          "hint": "Ajoute une petite infobulle sur tous les glyphes d'action dans les messages de conversation des ennemis, indiquant leur contribution relative aux actions des PJ. Cette contribution est calculée en fonction du pourcentage d'XP du combat et du nombre de PJ impliqués. (Des choix vous permettent d'ajuster le nombre d'actions en fonction de l'XP du personnage par rapport à l'XP totale de la rencontre.)",
+          "choices": {
+            "xp": "Prendre en compte en % d'XP",
+            "no-xp": "NE PAS prendre en compte en % d'XP"
           }
         }
       },
@@ -43,6 +55,34 @@
         "default-craft-checks": {
           "name": "[Cacher] Boutons de tests d'artisanat par défaut",
           "hint": "Pour empêcher les joueurs d'utiliser l'artisanat par défaut plutôt que les boutons « Artisanat héroïque » en cas d'utilisation de cette option"
+        },
+        "effects": {
+          "token": {
+            "enabled-for": {
+              "name": "[Masquer] Effets des jetons pour...",
+              "hint": "Masque les effets des jetons, ne faisant émerger que les effets pertinents par défaut et les affichant tous au survol pour le type d'acteur spécifique.",
+              "choices": {
+                "none": "Aucun",
+                "all": "Tous",
+                "pcs": "PJ",
+                "npcs": "PNJ"
+              }
+            },
+            "surface": {
+              "name": "[Masquer] Effets des jetons Sauf ceux-ci affichés...",
+              "hint": "Masque les effets de jetons en n'affichant que les plus pertinents (Pertinents : états + effets de choix affichés en fonction de leur identifiant ; Durée : basée sur le temps restant pour un effet particulier).",
+              "choices": {
+                "nothing": "rien",
+                "relevant-under-1-hour": "Pertinent + Durée ≤ 1 h",
+                "relevant": "Pertinent",
+                "under-1-hour": "Durée ≤ 1 heure",
+                "under-10-min": "≤10 min",
+                "under-1-min": "≤1 min",
+                "relevant-under-10-min": "Pertinent + ≤10 min",
+                "relevant-under-1-min": "Pertinent + ≤1 min"
+              }
+            }
+          }
         },
         "header": {
           "button-text": {
@@ -97,6 +137,12 @@
           "enabled-gm": {
             "name": "[Surligner] Zoomer pour voir le combattant actuel - MJ",
             "hint": "Cela active la fonctionnalité pour le MJ"
+          }
+        },
+        "prone-tokens": {
+          "rotate": {
+            "name": "[Surlignage] Jetons À terre - Retourné",
+            "hint": "Retourne les jetons À terre pour les mettre sur le dos  et les redresse lorsqu'ils ne le sont plus"
           }
         }
       },
@@ -172,9 +218,14 @@
       "toggle-disposition": {
         "name": "Basculer la disposition",
         "hint": "Bascule l'état du jeton survolé (débutant à indifférent). Utilisez Maj + bouton si l'état empire et la valeur par défaut pour l'améliorer."
+      },
+      "random-location": {
+        "name": "[Surligner] Sélecteur de lieu aléatoire",
+        "hint": "Après activation, cliquez sur plusieurs lieux sur la carte pour la cible, puis faites un clic droit pour lui faire choisir un point aléatoirement (nécessite `Sequencer`)."
       }
     },
     "notification": {
+      "flourish-used": "Vous avez déjà utilisé une action de sophistication durant ce tour",
       "player-notes": {
         "updated": "Notes de campagne mises à jour !",
         "no-character": "Aucune note à ouvrir car vous n'avez aucun personnage attribué ni sélectionné"
@@ -182,13 +233,16 @@
       "session-start": {
         "active": "[Début de session] Assez de joueurs ont rejoint l'accueil pour vous montrer la liste de début de session !"
       },
-      "flourish-used": "Vous avez déjà utilisé une action de sophistication durant ce tour",
       "spellstrike": {
         "recharged": "Frappe de sort rechargée",
         "conflux": "Vous venez de lancer un sort de confluence qui vous permet de recharger votre frappe magique.",
         "feature": "Vous avez utilisé une capacité qui recharge votre frappe magique",
         "on-success": "Vous avez utilisé une capacité qui recharge votre frappe magique si vous avez obtenu un succès",
         "other-option": "Alternativement, vous pouvez toujours dépenser 1 action pour recharger. Cette action possède le trait <b>concentration</b>"
+      },
+      "random-location": {
+        "finished": "Lieu aléatoire sélectionné !",
+        "first-use": "Ceci est la fonction Lieux aléatoires, activée par la touche R (paramétrable dans les commandes). Cliquez à gauche pour sélectionner les points à répartir aléatoirement, puis à droite pour en sélectionner un au hasard !"
       }
     },
     "display": {
@@ -205,6 +259,12 @@
           "show": "Afficher la liste des joueurs",
           "hide": "Masquer la liste des joueurs"
         }
+      },
+      "action-comparison": {
+        "main": "≈{actionCount} Joueur {actionType}",
+        "action": "Actions",
+        "free": "Actions gratuites",
+        "reaction": "Réactions"
       }
     },
     "items": {
