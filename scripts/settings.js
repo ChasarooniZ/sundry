@@ -275,8 +275,8 @@ export function setupSettings() {
   });
 
   game.settings.register(MODULE_ID, "highlight.random-location.first-use", {
-    name: '',
-    hint: '',
+    name: "",
+    hint: "",
     scope: "user",
     config: false,
     default: true,
@@ -356,15 +356,65 @@ export function setupSettings() {
     },
   );
 
-  // game.settings.register(MODULE_ID, "message.user-color", {
-  //     name: `${MODULE_ID}.module-settings.message.user-color.name`,
-  //     hint: `${MODULE_ID}.module-settings.message.user-color.hint`,
-  //     requiresReload: true,
-  //     scope: "world",
-  //     config: true,
-  //     default: false,
-  //     type: Boolean,
-  // });
+  game.settings.register(MODULE_ID, "hotkey.player-notes.enabled", {
+    name: game.i18n.format(`${MODULE_ID}.module-settings.hotkey.name`, {
+      name: game.i18n.localize("sundry.controls.player-notes.name"),
+    }),
+    hint: game.i18n.format(`${MODULE_ID}.module-settings.hotkey.hint`, {
+      description: game.i18n.localize(
+        "sundry.controls.player-notes.description",
+      ),
+    }),
+    scope: "world",
+    config: true,
+    default: "off",
+    type: String,
+    choices: {
+      off: "sundry.module-settings.hotkey.choices.off",
+      all: "sundry.module-settings.hotkey.choices.all",
+      gm: "sundry.module-settings.hotkey.choices.gm",
+    },
+  });
+
+  game.settings.register(MODULE_ID, "hotkey.random-location.enabled", {
+    name: game.i18n.format(`${MODULE_ID}.module-settings.hotkey.name`, {
+      name: game.i18n.localize("sundry.controls.random-location.name"),
+    }),
+    hint: game.i18n.format(`${MODULE_ID}.module-settings.hotkey.hint`, {
+      description: game.i18n.localize(
+        "sundry.controls.random-location.description",
+      ),
+    }),
+    scope: "world",
+    config: true,
+    default: "off",
+    type: String,
+    choices: {
+      off: "sundry.module-settings.hotkey.choices.off",
+      all: "sundry.module-settings.hotkey.choices.all",
+      gm: "sundry.module-settings.hotkey.choices.gm",
+    },
+  });
+
+  game.settings.register(MODULE_ID, "hotkey.toggle-disposition.enabled", {
+    name: game.i18n.format(`${MODULE_ID}.module-settings.hotkey.name`, {
+      name: game.i18n.localize("sundry.controls.toggle-disposition.name"),
+    }),
+    hint: game.i18n.format(`${MODULE_ID}.module-settings.hotkey.hint`, {
+      description: game.i18n.localize(
+        "sundry.controls.toggle-disposition.description",
+      ),
+    }),
+    scope: "world",
+    config: true,
+    default: "off",
+    type: String,
+    choices: {
+      off: "sundry.module-settings.hotkey.choices.off",
+      all: "sundry.module-settings.hotkey.choices.all",
+      gm: "sundry.module-settings.hotkey.choices.gm",
+    },
+  });
 
   game.settings.register(MODULE_ID, "minify.simple-requests", {
     name: `${MODULE_ID}.module-settings.minify.simple-requests.name`,
@@ -531,10 +581,12 @@ export function registerKeybindings() {
       },
     ],
     onDown: (context) => {
-      if (context.isShift) {
-        //   game.objection.api.objection({ type: "objection", flipped: true });
-      } else {
-        openPlayerNotes({ open: true, edit: true });
+      if (getAndHandleControlsEnabled("player-notes")) {
+        if (context.isShift) {
+          //   game.objection.api.objection({ type: "objection", flipped: true });
+        } else {
+          openPlayerNotes({ open: true, edit: true });
+        }
       }
     },
     onUp: () => {},
@@ -552,7 +604,9 @@ export function registerKeybindings() {
       },
     ],
     onDown: (context) => {
-      getRandomPoint();
+      if (getAndHandleControlsEnabled("random-location")) {
+        getRandomPoint();
+      }
     },
     onUp: () => {},
     restricted: false, // Restrict this Keybinding to gamemaster only?
@@ -568,10 +622,12 @@ export function registerKeybindings() {
       },
     ],
     onDown: (context) => {
-      if (context.isAlt) {
-        toggleDispositionStates(false);
-      } else {
-        toggleDispositionStates(true);
+      if (getAndHandleControlsEnabled("toggle-disposition")) {
+        if (context.isAlt) {
+          toggleDispositionStates(false);
+        } else {
+          toggleDispositionStates(true);
+        }
       }
     },
     onUp: () => {},
@@ -583,4 +639,29 @@ export function registerKeybindings() {
 
 export function loadAllTemplates() {
   loadTemplates([TEMPLATES.RUNES_ON_ITEM, TEMPLATES.BASE_DAMAGE]);
+}
+
+function getAndHandleControlsEnabled(controlID) {
+  const enableMode = game.settings.get(
+    MODULE_ID,
+    `hotkey.${controlID}.enabled`,
+  );
+  if (enableMode === "off") {
+    if (game.user.isGM && window?.sundry?.[controlID] !== true) {
+      if (!window?.sundry) {
+        window.sundry = {};
+      }
+      window.sundry[controlID] = true;
+
+      ui.notifications.warn(
+        game.i18n.format("sundry.notification.controls.disabled", {
+          name: `<b>${game.i18n.localize(`${MODULE_ID}.controls.${controlID}.name`)}</b>`,
+        }),
+      );
+    }
+    return false;
+  } else if (enableMode === "gm") {
+    return game.user.isGM;
+  } else if (enableMode === "all") {
+  }
 }

@@ -3,6 +3,14 @@
 - **Updated**
   - Added Localization where possible for some names
 
+## 1.7.2
+
+- **New**
+  - All controls now have an additional setting that must be toggled on to function, and will notify the GM the first time they try to use a control that is disabled
+- **Updated**
+  - Updated Chinese translation (🌐 @AlphaStarguide)
+  - Updated French translation (🌐 @rectulo)
+
 ## 1.7.1
 
 - Fixed case for `Effects Hider` where expire effects or oddly added effects would always count as relevant time wise

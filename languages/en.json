@@ -146,6 +146,15 @@
           }
         }
       },
+      "hotkey": {
+        "name": "[Hotkey] Enable {name}",
+        "hint": "Enables the following '{description}'",
+        "choices": {
+          "all": "Enabled for All",
+          "gm": "GM Only",
+          "off": "Off"
+        }
+      },
       "message": {
         "user-color": {
           "name": "User Color for Message Headers",
@@ -243,6 +252,9 @@
       "random-location": {
         "finished": "Random Location Selected!",
         "first-use": "This is the Random Location feature that is activated by pressing R (configurable in controls). Left click to select points to randomize between, then right click to randomly select one!"
+      },
+      "controls": {
+        "disabled": "[Sundry] The control {name} is currently disabled in the settings, enable it use this hotkey (this message will only show the first time the GM uses this control per session)"
       }
     },
     "display": {
