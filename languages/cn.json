@@ -1,278 +1,304 @@
 {
-    "sundry": {
-        "module-settings": {
-            "colorize": {
-                "pf2e-hud": {
-                    "persistent": {
-                        "hint": "为PF2e HUD的受控HUD元素上色",
-                        "name": "[上色] PF2e HUD - 受控HUD元素"
-                    }
-                },
-                "pf2e-toolbelt": {
-                    "target-helper": {
-                        "roll": {
-                            "name": "[上色] PF2e Toolbelt - 目标助手掷骰类型",
-                            "hint": "为PF2e Toolbelt中目标助手的掷骰选项上色，以使每种掷骰类型呈现不同的鲜明颜色"
-                        }
-                    }
-                },
-                "message": {
-                    "choices": {
-                        "off": "关闭",
-                        "20-percent": "标题栏20%",
-                        "set-length": "设置总额"
-                    },
-                    "name": "[上色] 聊天消息标题栏设为用户颜色",
-                    "hint": "将聊天消息标题栏着色为用户颜色（查看选项以选择适合你的样式）"
-                }
-            },
-            "display": {
-                "item-property-runes": {
-                    "name": "[显示] 物品性能符文",
-                    "hint": "当你查看某一物品卡时，模组会在物品描述中添加其性能符文的名称和描述"
-                },
-                "weapon": {
-                    "base-damage": {
-                        "name": "[显示] 武器基础伤害",
-                        "hint": "在武器信息的价格下方添加一个小显示框，用于显示其基础伤害骰（注意：这包含武器所具备的强击符文）"
-                    }
-                },
-                "action-comparison": {
-                    "name": "[显示] 动作比率",
-                    "choices": {
-                        "xp": "考量经验值百分比",
-                        "no-xp": "不考量经验值百分比"
-                    },
-                    "hint": "在敌人聊天消息中的所有动作图标添加悬停小提示框，显示其相对于玩家角色的动作比率。该比率基于两个要素计算：敌人在当前战斗所占经验值的百分比，以及参战的玩家角色数量。（可选择是否基于生物经验值与总遭遇经验值的比例来调整动作计数）"
-                },
-                "item-property-runes-actor": {
-                    "name": "[显示] 在物品栏概览显示物品性能符文",
-                    "hint": "当你查看角色卡并浏览其物品栏中的物品描述时，描述中会显示该物品的性能符文名称与描述"
-                }
-            },
-            "hide": {
-                "default-craft-checks": {
-                    "name": "[隐藏] 默认手艺检定按钮",
-                    "hint": "防止玩家在使用该插件时，使用默认制作而非“英雄制作”按钮"
-                },
-                "header": {
-                    "button-text": {
-                        "name": "[隐藏] 标题栏按钮文本",
-                        "hint": "隐藏标题栏按钮的文本，但保留其按钮图标。适用于开启多个标题栏功能模组的情形"
-                    }
-                },
-                "sell-all-treasure": {
-                    "name": "[隐藏] 变卖所有宝物",
-                    "hint": "隐藏“变卖所有宝物”按钮，以防止不小心出售重要物品"
-                },
-                "hud": {
-                    "player-list": {
-                        "choices": {
-                            "off": "禁用",
-                            "hidden": "默认隐藏",
-                            "visible": "默认可见"
-                        },
-                        "name": "[隐藏] 玩家列表",
-                        "hint": "隐藏玩家列表，并添加一个按钮切换其可见性，该设置决定玩家列表的默认状态"
-                    }
-                },
-                "effects": {
-                    "token": {
-                        "enabled-for": {
-                            "name": "[隐藏] 指示物效果",
-                            "choices": {
-                                "pcs": "玩家角色",
-                                "npcs": "NPC",
-                                "all": "全部",
-                                "none": "禁用"
-                            },
-                            "hint": "默认情况下仅显示相关指示物效果，且特定角色类型在悬停于指示物上时会显示全部效果"
-                        },
-                        "surface": {
-                            "choices": {
-                                "under-1-hour": "持续时间 ≤1小时",
-                                "under-10-min": "≤10分钟",
-                                "under-1-min": "≤1分钟",
-                                "relevant-under-10-min": "相关效果 + ≤10分钟",
-                                "relevant-under-1-min": "相关效果 + ≤1分钟",
-                                "relevant": "相关效果",
-                                "nothing": "禁用",
-                                "relevant-under-1-hour": "相关效果 + 持续时间 ≤1小时"
-                            },
-                            "name": "[隐藏] 仅显示以下指示物效果…",
-                            "hint": "仅显示符合相关条件的指示物效果（相关效果 - 状态+基于其标识符显示的选项效果，持续时间 - 基于其持续时间确定显示效果）"
-                        }
-                    }
-                }
-            },
-            "highlight": {
-                "pf2e-toolbelt": {
-                    "target-helper": {
-                        "roll": {
-                            "name": "[高亮] PF2e Toolbelt - 目标助手的未掷骰项目",
-                            "hint": "通过使PF2e Toolbelt的“目标助手”功能中的掷骰图标闪烁光芒，来高亮显示未掷骰项目，以更便捷明晰地进行掷骰操作"
-                        }
-                    }
-                },
-                "languages-known": {
-                    "hint": "在NPC数据块页面高亮显示当前活跃队伍所掌握的语言类型，并添加提示框确保信息清晰明了",
-                    "name": "[高亮] 哪位队伍成员掌握对应生物的语言"
-                },
-                "loading-tips": {
-                    "items": {
-                        "hint": "高亮加载提示会在每次加载新场景时显示《上古卷轴》风格的加载提示。你在此处输入日志UUID后便会启用该特性，并会参考该日志的图片页面作为艺术资源，及其文字说明作为显示文本。",
-                        "name": "[高亮] 加载提示 - 日志UUID"
-                    },
-                    "duration": {
-                        "name": "[高亮] 加载提示 - 持续时长",
-                        "hint": "加载提示动画会显示多长时间（以秒为单位）"
-                    }
-                },
-                "pan-current-combatant": {
-                    "enabled": {
-                        "hint": "启用时，相机将平移视角，以便在画面上显示玩家及其对手的指示物",
-                        "name": "[高亮] 平移视角以显示当前回合参战者"
-                    },
-                    "enabled-gm": {
-                        "name": "[高亮] 平移视角以显示当前回合参战者 - GM",
-                        "hint": "该设置为GM启用上述特性"
-                    }
-                },
-                "prone-tokens": {
-                    "rotate": {
-                        "name": "[高亮] 倒地指示物 - 旋转",
-                        "hint": "将倒地指示物朝后旋转，不再倒地时则旋转回正"
-                    }
-                }
-            },
-            "message": {
-                "user-color": {
-                    "name": "设置聊天信息标题栏为用户颜色",
-                    "hint": "根据用户颜色设置聊天信息标题栏"
-                }
-            },
-            "track": {
-                "reaction-usage": {
-                    "name": "[追踪] 反应动作使用",
-                    "hint": "该功能可以在指示物上创建（并递增）一个效果，如果指示物使用反应动作则该效果将生效。需要注意的是，若你启用全部功能，则该效果将在战斗开始时应用于所有指示物上",
-                    "choices": {
-                        "reaction-only": "仅追踪发送至聊天的反应动作",
-                        "off": "关闭",
-                        "all": "全部特性"
-                    }
-                },
-                "flourish-usage": {
-                    "name": "[追踪] 绝技动作使用",
-                    "hint": "该特性会在角色使用绝技动作时创建一个标记效果，并会在激活绝技追踪器，且带有标记效果的角色再次使用绝技动作时发出警告。"
-                }
-            },
-            "notify": {
-                "spellstrike": {
-                    "recharge": {
-                        "name": "[通知] 法术打击再充能",
-                        "hint": "当你的法术打击需要再充能时，会显示一段简短的UI通知信息"
-                    }
-                },
-                "start-session": {
-                    "journal": {
-                        "name": "[通知] 团期开始前GM检查清单（日志）",
-                        "hint": "当加入世界的玩家达到一定数量时，该功能将会为GM打开团期开始前检查清单，以确保你没有遗漏任何事项。（要启用此功能，请在该设置填入对应日志或日志页面的UUID）"
-                    },
-                    "players-needed": {
-                        "name": "[通知] 团期开始前检查清单（玩家需求）",
-                        "hint": "显示检查清单时，加入世界的非GM玩家的最低人数（默认为玩家数量-1）"
-                    },
-                    "journal-players": {
-                        "name": "[通知] 团期开始前玩家检查清单（日志）",
-                        "hint": "当加入世界的玩家达到一定数量时，该功能将会为玩家打开团期开始前检查清单，以确保玩家没有遗漏任何事项。（要启用此功能，请在该设置填入对应日志或日志页面的UUID）"
-                    }
-                }
-            },
-            "minify": {
-                "simple-requests": {
-                    "name": "[简化] 简单请求 Simple Requests",
-                    "hint": "将“Simple Requests”模组的HUD缩小点，使其占用的界面空间变小"
-                }
-            },
-            "replace": {
-                "pause-img": {
-                    "name": "[更换] 暂停图像",
-                    "hint": "允许你替换默认的暂停图像。"
-                },
-                "pause-img-class": {
-                    "name": "[更换] 暂停图像类型",
-                    "hint": "允许你更换暂停图像（动画）的类型，详情见此网址（https://docs.fontawesome.com/web/style/animate）的Font Awesome文档（默认值为“fa-spin”）"
-                },
-                "pause-text": {
-                    "name": "[更换] 暂停文本",
-                    "hint": "允许你替换默认的暂停文本。该功能支持多条暂停文本随机切换，每条文本用“|”或“;”隔开即可。（若该设置为空则为原始的暂停文本）（且该功能支持填入随机表UUID随机抽取选项）"
-                }
-            }
-        },
-        "notification": {
-            "spellstrike": {
-                "recharged": "法术打击已再充能",
-                "feature": "你使用特性再充能法术打击",
-                "conflux": "你刚刚施展了一个汇聚法术，这使你再充能了法术打击。",
-                "on-success": "你使用特性，若你掷骰成功则再充能法术打击",
-                "other-option": "或者你也可以使用1动作进行再充能，该动作具备<b>专注</b>特征"
-            },
-            "session-start": {
-                "active": "[团期开始] 已加入世界的玩家数量达到设置要求，现在向你展示团期开始的检查清单！"
-            },
-            "player-notes": {
-                "updated": "战役笔记已更新！",
-                "no-character": "由于你未被分配也未选择任何角色，所以无法打开任何笔记"
-            },
-            "flourish-used": "你在本轮中已使用过绝技动作",
-            "random-location": {
-                "finished": "随机地点已选定！",
-                "first-use": "这是按R键激活（可在操控设置中配置）的随机地点功能。左键单击选择预备随机选择的位点，然后右键单击即可随机选择其中一点！"
-            }
-        },
-        "controls": {
-            "player-notes": {
-                "name": "打开角色“战役笔记”",
-                "description": "打开玩家角色卡中“战役笔记”部分的可编辑版本"
-            },
-            "toggle-disposition": {
-                "name": "切换态度",
-                "hint": "切换悬停指示物的态度（从不关心开始），使用Alt+绑定键以使态度下降，而默认为提升态度"
-            },
-            "random-location": {
-                "name": "[高亮] 随机地点选择器",
-                "hint": "激活选择器后，点击地图上的多个位置以设定目标，然后右键单击即可随机选择其中一点（需求“Sequencer”模组）"
-            }
+  "sundry": {
+    "module-settings": {
+      "headers": {
+        "colorize": {
+          "title": "上色"
         },
         "display": {
-            "base-damage": "基础伤害骰",
-            "player-notes": {
-                "title": "战役笔记"
-            },
-            "team-members": "成员",
-            "property-runes": "性能符文"
+          "title": "显示"
         },
-        "items": {
-            "effects": {
-                "reaction-used": {
-                    "name": "效果：反应已使用"
-                }
-            }
+        "hide": {
+          "title": "隐藏"
         },
-        "tooltip": {
-            "hud": {
-                "player-list": {
-                    "show": "显示玩家列表",
-                    "hide": "隐藏玩家列表"
-                }
-            },
-            "action-comparison": {
-                "action": "动作",
-                "free": "自由动作",
-                "reaction": "反应动作",
-                "main": "≈{actionCount}个玩家{actionType}"
-            }
+        "highlight": {
+          "title": "高亮"
+        },
+        "minify": {
+          "title": "简化"
+        },
+        "notify": {
+          "title": "通知"
+        },
+        "track": {
+          "title": "追踪"
+        },
+        "replace": {
+          "title": "更换"
         }
+      },
+      "colorize": {
+        "pf2e-hud": {
+          "persistent": {
+            "hint": "为PF2e HUD的受控HUD元素上色",
+            "name": "PF2e HUD - 受控HUD元素"
+          }
+        },
+        "pf2e-toolbelt": {
+          "target-helper": {
+            "roll": {
+              "name": "PF2e Toolbelt - 目标助手掷骰类型",
+              "hint": "为PF2e Toolbelt中目标助手的掷骰选项上色，以使每种掷骰类型呈现不同的鲜明颜色"
+            }
+          }
+        },
+        "message": {
+          "choices": {
+            "off": "关闭",
+            "20-percent": "标题栏20%",
+            "set-length": "设置总额"
+          },
+          "name": "聊天消息标题栏设为用户颜色",
+          "hint": "将聊天消息标题栏着色为用户颜色（查看选项以选择适合你的样式）"
+        }
+      },
+      "display": {
+        "item-property-runes": {
+          "name": "物品性能符文",
+          "hint": "当你查看某一物品卡时，模组会在物品描述中添加其性能符文的名称和描述"
+        },
+        "weapon": {
+          "base-damage": {
+            "name": "武器基础伤害",
+            "hint": "在武器信息的价格下方添加一个小显示框，用于显示其基础伤害骰（注意：这包含武器所具备的强击符文）"
+          }
+        },
+        "action-comparison": {
+          "name": "动作比率",
+          "choices": {
+            "xp": "考量经验值百分比",
+            "no-xp": "不考量经验值百分比"
+          },
+          "hint": "在敌人聊天消息中的所有动作图标添加悬停小提示框，显示其相对于玩家角色的动作比率。该比率基于两个要素计算：敌人在当前战斗所占经验值的百分比，以及参战的玩家角色数量。（可选择是否基于生物经验值与总遭遇经验值的比例来调整动作计数）"
+        },
+        "item-property-runes-actor": {
+          "name": "在物品栏概览显示物品性能符文",
+          "hint": "当你查看角色卡并浏览其物品栏中的物品描述时，描述中会显示该物品的性能符文名称与描述"
+        }
+      },
+      "hide": {
+        "default-craft-checks": {
+          "name": "默认手艺检定按钮",
+          "hint": "防止玩家在使用该插件时，使用默认制作而非“英雄制作”按钮"
+        },
+        "header": {
+          "button-text": {
+            "name": "标题栏按钮文本",
+            "hint": "隐藏标题栏按钮的文本，但保留其按钮图标。适用于开启多个标题栏功能模组的情形"
+          }
+        },
+        "sell-all-treasure": {
+          "name": "变卖所有宝物",
+          "hint": "隐藏“变卖所有宝物”按钮，以防止不小心出售重要物品"
+        },
+        "hud": {
+          "player-list": {
+            "choices": {
+              "off": "禁用",
+              "hidden": "默认隐藏",
+              "visible": "默认可见"
+            },
+            "name": "玩家列表",
+            "hint": "隐藏玩家列表，并添加一个按钮切换其可见性，该设置决定玩家列表的默认状态"
+          }
+        },
+        "effects": {
+          "token": {
+            "enabled-for": {
+              "name": "指示物效果",
+              "choices": {
+                "pcs": "玩家角色",
+                "npcs": "NPC",
+                "all": "全部",
+                "none": "禁用"
+              },
+              "hint": "默认情况下仅显示相关指示物效果，且特定角色类型在悬停于指示物上时会显示全部效果"
+            },
+            "surface": {
+              "choices": {
+                "under-1-hour": "持续时间 ≤1小时",
+                "under-10-min": "≤10分钟",
+                "under-1-min": "≤1分钟",
+                "relevant-under-10-min": "相关效果 + ≤10分钟",
+                "relevant-under-1-min": "相关效果 + ≤1分钟",
+                "relevant": "相关效果",
+                "nothing": "禁用",
+                "relevant-under-1-hour": "相关效果 + 持续时间 ≤1小时"
+              },
+              "name": "仅显示以下指示物效果…",
+              "hint": "仅显示符合相关条件的指示物效果（相关效果 - 状态+基于其标识符显示的选项效果，持续时间 - 基于其持续时间确定显示效果）"
+            }
+          }
+        }
+      },
+      "highlight": {
+        "pf2e-toolbelt": {
+          "target-helper": {
+            "roll": {
+              "name": "PF2e Toolbelt - 目标助手的未掷骰项目",
+              "hint": "通过使PF2e Toolbelt的“目标助手”功能中的掷骰图标闪烁光芒，来高亮显示未掷骰项目，以更便捷明晰地进行掷骰操作"
+            }
+          }
+        },
+        "languages-known": {
+          "hint": "在NPC数据块页面高亮显示当前活跃队伍所掌握的语言类型，并添加提示框确保信息清晰明了",
+          "name": "哪位队伍成员掌握对应生物的语言"
+        },
+        "loading-tips": {
+          "items": {
+            "hint": "高亮加载提示会在每次加载新场景时显示《上古卷轴》风格的加载提示。你在此处输入日志UUID后便会启用该特性，并会参考该日志的图片页面作为艺术资源，及其文字说明作为显示文本。",
+            "name": "加载提示 - 日志UUID"
+          },
+          "duration": {
+            "name": "加载提示 - 持续时长",
+            "hint": "加载提示动画会显示多长时间（以秒为单位）"
+          }
+        },
+        "pan-current-combatant": {
+          "enabled": {
+            "hint": "启用时，相机将平移视角，以便在画面上显示玩家及其对手的指示物",
+            "name": "平移视角以显示当前回合参战者"
+          },
+          "enabled-gm": {
+            "name": "平移视角以显示当前回合参战者 - GM",
+            "hint": "该设置为GM启用上述特性"
+          }
+        },
+        "prone-tokens": {
+          "rotate": {
+            "name": "倒地指示物 - 旋转",
+            "hint": "将倒地指示物朝后旋转，不再倒地时则旋转回正"
+          }
+        }
+      },
+      "message": {
+        "user-color": {
+          "name": "设置聊天信息标题栏为用户颜色",
+          "hint": "根据用户颜色设置聊天信息标题栏"
+        }
+      },
+      "track": {
+        "reaction-usage": {
+          "name": "反应动作使用",
+          "hint": "该功能可以在指示物上创建（并递增）一个效果，如果指示物使用反应动作则该效果将生效。需要注意的是，若你启用全部功能，则该效果将在战斗开始时应用于所有指示物上",
+          "choices": {
+            "reaction-only": "仅追踪发送至聊天的反应动作",
+            "off": "关闭",
+            "all": "全部特性"
+          }
+        },
+        "flourish-usage": {
+          "name": "绝技动作使用",
+          "hint": "该特性会在角色使用绝技动作时创建一个标记效果，并会在激活绝技追踪器，且带有标记效果的角色再次使用绝技动作时发出警告。"
+        }
+      },
+      "notify": {
+        "spellstrike": {
+          "recharge": {
+            "name": "法术打击再充能",
+            "hint": "当你的法术打击需要再充能时，会显示一段简短的UI通知信息"
+          }
+        },
+        "start-session": {
+          "journal": {
+            "name": "团期开始前GM检查清单（日志）",
+            "hint": "当加入世界的玩家达到一定数量时，该功能将会为GM打开团期开始前检查清单，以确保你没有遗漏任何事项。（要启用此功能，请在该设置填入对应日志或日志页面的UUID）"
+          },
+          "players-needed": {
+            "name": "团期开始前检查清单（玩家需求）",
+            "hint": "显示检查清单时，加入世界的非GM玩家的最低人数（默认为玩家数量-1）"
+          },
+          "journal-players": {
+            "name": "团期开始前玩家检查清单（日志）",
+            "hint": "当加入世界的玩家达到一定数量时，该功能将会为玩家打开团期开始前检查清单，以确保玩家没有遗漏任何事项。（要启用此功能，请在该设置填入对应日志或日志页面的UUID）"
+          }
+        }
+      },
+      "minify": {
+        "simple-requests": {
+          "name": "简单请求 Simple Requests",
+          "hint": "将“Simple Requests”模组的HUD缩小点，使其占用的界面空间变小"
+        }
+      },
+      "replace": {
+        "pause-img": {
+          "name": "暂停图像",
+          "hint": "允许你替换默认的暂停图像。"
+        },
+        "pause-img-class": {
+          "name": "暂停图像类型",
+          "hint": "允许你更换暂停图像（动画）的类型，详情见此网址（https://docs.fontawesome.com/web/style/animate）的Font Awesome文档（默认值为“fa-spin”）"
+        },
+        "pause-text": {
+          "name": "暂停文本",
+          "hint": "允许你替换默认的暂停文本。该功能支持多条暂停文本随机切换，每条文本用“|”或“;”隔开即可。（若该设置为空则为原始的暂停文本）（且该功能支持填入随机表UUID随机抽取选项）"
+        }
+      }
     },
-    "I18N.LANGUAGE": "简体中文"
+    "notification": {
+      "spellstrike": {
+        "recharged": "法术打击已再充能",
+        "feature": "你使用特性再充能法术打击",
+        "conflux": "你刚刚施展了一个汇聚法术，这使你再充能了法术打击。",
+        "on-success": "你使用特性，若你掷骰成功则再充能法术打击",
+        "other-option": "或者你也可以使用1动作进行再充能，该动作具备<b>专注</b>特征"
+      },
+      "session-start": {
+        "active": "[团期开始] 已加入世界的玩家数量达到设置要求，现在向你展示团期开始的检查清单！"
+      },
+      "player-notes": {
+        "updated": "战役笔记已更新！",
+        "no-character": "由于你未被分配也未选择任何角色，所以无法打开任何笔记"
+      },
+      "flourish-used": "你在本轮中已使用过绝技动作",
+      "random-location": {
+        "finished": "随机地点已选定！",
+        "first-use": "这是按R键激活（可在操控设置中配置）的随机地点功能。左键单击选择预备随机选择的位点，然后右键单击即可随机选择其中一点！"
+      }
+    },
+    "controls": {
+      "player-notes": {
+        "name": "打开角色“战役笔记”",
+        "description": "打开玩家角色卡中“战役笔记”部分的可编辑版本"
+      },
+      "toggle-disposition": {
+        "name": "切换态度",
+        "hint": "切换悬停指示物的态度（从不关心开始），使用Alt+绑定键以使态度下降，而默认为提升态度"
+      },
+      "random-location": {
+        "name": "[高亮] 随机地点选择器",
+        "hint": "激活选择器后，点击地图上的多个位置以设定目标，然后右键单击即可随机选择其中一点（需求“Sequencer”模组）"
+      }
+    },
+    "display": {
+      "base-damage": "基础伤害骰",
+      "player-notes": {
+        "title": "战役笔记"
+      },
+      "team-members": "成员",
+      "property-runes": "性能符文"
+    },
+    "items": {
+      "effects": {
+        "reaction-used": {
+          "name": "效果：反应已使用"
+        }
+      }
+    },
+    "tooltip": {
+      "hud": {
+        "player-list": {
+          "show": "显示玩家列表",
+          "hide": "隐藏玩家列表"
+        }
+      },
+      "action-comparison": {
+        "action": "动作",
+        "free": "自由动作",
+        "reaction": "反应动作",
+        "main": "≈{actionCount}个玩家{actionType}"
+      }
+    }
+  },
+  "I18N.LANGUAGE": "简体中文"
 }

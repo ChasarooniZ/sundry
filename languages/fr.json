@@ -2,9 +2,38 @@
   "I18N.LANGUAGE": "Français",
   "sundry": {
     "module-settings": {
+      "headers": {
+        "colorize": {
+          "title": "Colorier"
+        },
+        "display": {
+          "title": "Afficher"
+        },
+        "hide": {
+          "title": "Cacher"
+        },
+        "highlight": {
+          "title": "Surligner"
+        },
+        "hotkey": {
+          "title": "Hotkey"
+        },
+        "minify": {
+          "title": "Minifier"
+        },
+        "notify": {
+          "title": "Notifier"
+        },
+        "track": {
+          "title": "Comptabiliser"
+        },
+        "replace": {
+          "title": "Remplacer"
+        }
+      },
       "colorize": {
         "message": {
-          "name": "[Coloriser] En-tête du message à la couleur de l'utilisateur",
+          "name": "En-tête du message à la couleur de l'utilisateur",
           "hint": "Applique à l'en-tête du message la couleur de l'utilisateur (voir les options pour choisir le style qui vous convient).",
           "choices": {
             "off": "Désactivé",
@@ -14,14 +43,14 @@
         },
         "pf2e-hud": {
           "persistent": {
-            "name": "[Colorier] PF2e HUD - HUD persistant",
+            "name": "PF2e HUD - HUD persistant",
             "hint": "Colorier la fonctionnalité 'HUD persistant' de 'PF2e HUD'"
           }
         },
         "pf2e-toolbelt": {
           "target-helper": {
             "roll": {
-              "name": "[Colorier] PF2e toolbelt - Types de jets d'aide au ciblage",
+              "name": "PF2e toolbelt - Types de jets d'aide au ciblage",
               "hint": "Coloriez la fonction 'Aide au ciblage' de 'PF2e Toolbelt' afin que chaque type de jet soit en couleur"
             }
           }
@@ -29,21 +58,21 @@
       },
       "display": {
         "item-property-runes": {
-          "name": "[Afficher] Runes de propriétés des objets",
+          "name": "Runes de propriétés des objets",
           "hint": "Lorsque vous consultez la fiche d'un objet, le nom et la description de toutes les runes de propriété de l'objet seront ajoutés."
         },
         "item-property-runes-actor": {
-          "name": "[Affichage] Runes de propriété d'objet sur la fiche d'acteur",
+          "name": "Runes de propriété d'objet sur la fiche d'acteur",
           "hint": "Lorsque vous consultez la fiche d'un acteur et les descriptions des objets, le nom et la description des runes de propriété présentes sur l'objet sont affichées."
         },
         "weapon": {
           "base-damage": {
-            "name": "[Afficher] Dégâts de base de l'arme",
+            "name": "Dégâts de base de l'arme",
             "hint": "Ajoute un petit affichage sous le prix sur les fiches d'armes qui présente leurs dégâts de base (Note : toutes les runes de frappe sont incluses)"
           }
         },
         "action-comparison": {
-          "name": "[Afficher] Comparaison des actions",
+          "name": "Comparaison des actions",
           "hint": "Ajoute une petite infobulle sur tous les glyphes d'action dans les messages de conversation des ennemis, indiquant leur contribution relative aux actions des PJ. Cette contribution est calculée en fonction du pourcentage d'XP du combat et du nombre de PJ impliqués. (Des choix vous permettent d'ajuster le nombre d'actions en fonction de l'XP du personnage par rapport à l'XP totale de la rencontre.)",
           "choices": {
             "xp": "Prendre en compte en % d'XP",
@@ -53,13 +82,13 @@
       },
       "hide": {
         "default-craft-checks": {
-          "name": "[Cacher] Boutons de tests d'artisanat par défaut",
+          "name": "Boutons de tests d'artisanat par défaut",
           "hint": "Pour empêcher les joueurs d'utiliser l'artisanat par défaut plutôt que les boutons « Artisanat héroïque » en cas d'utilisation de cette option"
         },
         "effects": {
           "token": {
             "enabled-for": {
-              "name": "[Masquer] Effets des jetons pour...",
+              "name": "Effets des jetons pour...",
               "hint": "Masque les effets des jetons, ne faisant émerger que les effets pertinents par défaut et les affichant tous au survol pour le type d'acteur spécifique.",
               "choices": {
                 "none": "Aucun",
@@ -69,7 +98,7 @@
               }
             },
             "surface": {
-              "name": "[Masquer] Effets des jetons Sauf ceux-ci affichés...",
+              "name": "Effets des jetons Sauf ceux-ci affichés...",
               "hint": "Masque les effets de jetons en n'affichant que les plus pertinents (Pertinents : états + effets de choix affichés en fonction de leur identifiant ; Durée : basée sur le temps restant pour un effet particulier).",
               "choices": {
                 "nothing": "rien",
@@ -86,13 +115,13 @@
         },
         "header": {
           "button-text": {
-            "name": "[Cacher] Texte du bouton d'en-tête",
+            "name": "Texte du bouton d'en-tête",
             "hint": "Cache le texte des boutons d'en-tête mais garde les icônes de nombreux modules"
           }
         },
         "hud": {
           "player-list": {
-            "name": "[Masquer] Liste des joueurs",
+            "name": "Liste des joueurs",
             "hint": "Masque la liste des joueurs et ajoute un bouton pour l'afficher ou la masquer. Ce paramètre définit l'état par défaut de la liste des joueurs.",
             "choices": {
               "off": "-",
@@ -102,7 +131,7 @@
           }
         },
         "sell-all-treasure": {
-          "name": "[Cacher] Vendre tous les trésors",
+          "name": "Vendre tous les trésors",
           "hint": "Cache le bouton 'Vendre tous les trésors' pour prévenir la vente accidentelle d'objets clés"
         }
       },
@@ -110,32 +139,32 @@
         "pf2e-toolbelt": {
           "target-helper": {
             "roll": {
-              "name": "[Surligner] PF2e toolbelt - Aide au ciblage de la cible non lancé",
+              "name": "PF2e toolbelt - Aide au ciblage de la cible non lancé",
               "hint": "Surligner les jets non effectués en les faisant briller dans la fonction 'Aide au ciblage' de 'PF2e Toolbelt' pour qu'il soit plus évident de les utiliser"
             }
           }
         },
         "languages-known": {
-          "name": "[Surligner] Les membres du groupes connaissant les langues de la créature",
+          "name": "Les membres du groupes connaissant les langues de la créature",
           "hint": "Indique, dans les blocs de statistiques des PNJ, les langues connues par le groupe actif et ajoute une infobulle pour plus de clarté."
         },
         "loading-tips": {
           "items": {
-            "name": "[Surligner] Infobulle lors du chargement - UUID du journal",
+            "name": "Infobulle lors du chargement - UUID du journal",
             "hint": "L'option Surligner les infobulles de chargement affichera des infobulles de chargement dans le style 'Skyrim' lors du chargement d'une nouvelle scène. Si vous saisissez un UUID de journal ici, cette fonctionnalité sera activée et les pages « Image » du journal seront utilisées pour les illustrations ainsi que leurs légendes pour le texte qui sera affiché."
           },
           "duration": {
-            "name": "[Surligner] Infobulle de chargement - Durée",
+            "name": "Infobulle de chargement - Durée",
             "hint": "Durée de l'infobulle de chargement en secondes"
           }
         },
         "pan-current-combatant": {
           "enabled": {
-            "name": "[Surligner] Zoomer pour voir le combattant actuel",
+            "name": "Zoomer pour voir le combattant actuel",
             "hint": "Lorsqu'elle est activée, cette fonction permet de zoomer pour inclure son jeton ainsi que celui de l'adversaire."
           },
           "enabled-gm": {
-            "name": "[Surligner] Zoomer pour voir le combattant actuel - MJ",
+            "name": "Zoomer pour voir le combattant actuel - MJ",
             "hint": "Cela active la fonctionnalité pour le MJ"
           }
         },
@@ -154,39 +183,39 @@
       },
       "minify": {
         "simple-requests": {
-          "name": "[Minifier] Simples Sollicitations",
+          "name": "Simples Sollicitations",
           "hint": "Rend le HUD du module 'Simples Sollicitations' un peu plus petit pour qu'il soit moins encombrant"
         }
       },
       "notify": {
         "spellstrike": {
           "recharge": {
-            "name": "[Notifier] Recharge de Frappe de sort",
+            "name": "Recharge de Frappe de sort",
             "hint": "Ajoute une petite notification d'IU lorsque votre frappe de sort doit être rechargée"
           }
         },
         "start-session": {
           "journal": {
-            "name": "[Notifier] Liste de vérification de début de partie pour le MJ (Journal)",
+            "name": "Liste de vérification de début de partie pour le MJ (Journal)",
             "hint": "Lorsque suffisamment de joueurs seront connectés, cette fonctionnalité affichera une liste de vérification de début de partie pour le MJ afin de s'assurer que rien n'est oublié. (Pour activer cette fonctionnalité, définissez ce paramètre sur un UUID de journal ou de page de journal.)"
           },
           "journal-players": {
-            "name": "[Notifier] Liste de vérification de début de partie pour les joueurs (Journal)",
+            "name": "Liste de vérification de début de partie pour les joueurs (Journal)",
             "hint": "Lorsque suffisamment de joueurs se sont connectés, cette fonctionnalité affichera une liste de vérification en début de partie afin de s'assurer que les joueurs n'oublient rien. (Pour activer cette fonctionnalité, définissez ce paramètre sur un UUID de journal ou de page de journal.)"
           },
           "players-needed": {
-            "name": "[Notification] Liste de début de session (Joueurs requis)",
+            "name": "Liste de début de session (Joueurs requis)",
             "hint": "C'est le nombre minimum de joueurs non-MJ requis pour que la liste s'affiche (par défaut : nombre de joueurs -1)."
           }
         }
       },
       "track": {
         "flourish-usage": {
-          "name": "[Comptabiliser] Usage de sophistication",
+          "name": "Usage de sophistication",
           "hint": "Cette fonctionnalité crée un effet sur un jeton lorsqu'il utilise une action de sophistication et avertit son propriétaire lorsqu'il en utilise une autre."
         },
         "reaction-usage": {
-          "name": "[Comptabiliser] Utilisation de la réaction",
+          "name": "Utilisation de la réaction",
           "hint": "Cette fonctionnalité crée (et incrémente) un effet sur un jeton qui compte si ce dernier a utilisé une réaction. À noter : cet effet s'applique également à chaque jeton au début du combat, si vous avez tous activé cette fonctionnalité.",
           "choices": {
             "all": "Toutes les fonctionnalités",
@@ -197,15 +226,15 @@
       },
       "replace": {
         "pause-text": {
-          "name": "[Remplacer] Texte de la pause",
+          "name": "Texte de la pause",
           "hint": "Permet de remplacer le texte de pause par défaut. Plusieurs options de texte de pause sont disponibles ; le système en choisira une au hasard, séparées par '|' ou ';' (Laissez ce champ vide pour conserver le texte de pause d'origine). Il est également possible d'utiliser une table aléatoire en spécifiant l'UUID de la table."
         },
         "pause-img": {
-          "name": "[Remplacer] Image de pause",
+          "name": "Image de pause",
           "hint": "Permet de remplacer l'image de base de la pause."
         },
         "pause-img-class": {
-          "name": "[Remplacer] Classe d'image de Pause",
+          "name": "Classe d'image de Pause",
           "hint": "Permet de remplacer la classe de l'image de pause (animation). Voir les options ici (https://docs.fontawesome.com/web/style/animate) sur fontawesome (la valeur par défaut est 'fa-spin')."
         }
       }
@@ -220,7 +249,7 @@
         "hint": "Bascule l'état du jeton survolé (débutant à indifférent). Utilisez Maj + bouton si l'état empire et la valeur par défaut pour l'améliorer."
       },
       "random-location": {
-        "name": "[Surligner] Sélecteur de lieu aléatoire",
+        "name": "Sélecteur de lieu aléatoire",
         "hint": "Après activation, cliquez sur plusieurs lieux sur la carte pour la cible, puis faites un clic droit pour lui faire choisir un point aléatoirement (nécessite `Sequencer`)."
       }
     },

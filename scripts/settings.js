@@ -38,6 +38,8 @@ import { setupHideTokenEffects } from "./lib/tokenEffectHider.js";
 import { MODULE_ID } from "./module.js";
 
 export function setupSettings() {
+  Hooks.on("renderSettingsConfig", renderSettingsConfig);
+
   game.settings.register(MODULE_ID, "colorize.pf2e-hud.persistent", {
     name: `${MODULE_ID}.module-settings.colorize.pf2e-hud.persistent.name`,
     hint: `${MODULE_ID}.module-settings.colorize.pf2e-hud.persistent.hint`,
@@ -356,65 +358,23 @@ export function setupSettings() {
     },
   );
 
-  game.settings.register(MODULE_ID, "hotkey.player-notes.enabled", {
-    name: game.i18n.format(`${MODULE_ID}.module-settings.hotkey.name`, {
-      name: game.i18n.localize("sundry.controls.player-notes.name"),
-    }),
-    hint: game.i18n.format(`${MODULE_ID}.module-settings.hotkey.hint`, {
-      description: game.i18n.localize(
-        "sundry.controls.player-notes.description",
-      ),
-    }),
-    scope: "world",
-    config: true,
-    default: "off",
-    type: String,
-    choices: {
-      off: "sundry.module-settings.hotkey.choices.off",
-      all: "sundry.module-settings.hotkey.choices.all",
-      gm: "sundry.module-settings.hotkey.choices.gm",
-    },
-  });
-
-  game.settings.register(MODULE_ID, "hotkey.random-location.enabled", {
-    name: game.i18n.format(`${MODULE_ID}.module-settings.hotkey.name`, {
-      name: game.i18n.localize("sundry.controls.random-location.name"),
-    }),
-    hint: game.i18n.format(`${MODULE_ID}.module-settings.hotkey.hint`, {
-      description: game.i18n.localize(
-        "sundry.controls.random-location.description",
-      ),
-    }),
-    scope: "world",
-    config: true,
-    default: "off",
-    type: String,
-    choices: {
-      off: "sundry.module-settings.hotkey.choices.off",
-      all: "sundry.module-settings.hotkey.choices.all",
-      gm: "sundry.module-settings.hotkey.choices.gm",
-    },
-  });
-
-  game.settings.register(MODULE_ID, "hotkey.toggle-disposition.enabled", {
-    name: game.i18n.format(`${MODULE_ID}.module-settings.hotkey.name`, {
-      name: game.i18n.localize("sundry.controls.toggle-disposition.name"),
-    }),
-    hint: game.i18n.format(`${MODULE_ID}.module-settings.hotkey.hint`, {
-      description: game.i18n.localize(
-        "sundry.controls.toggle-disposition.description",
-      ),
-    }),
-    scope: "world",
-    config: true,
-    default: "off",
-    type: String,
-    choices: {
-      off: "sundry.module-settings.hotkey.choices.off",
-      all: "sundry.module-settings.hotkey.choices.all",
-      gm: "sundry.module-settings.hotkey.choices.gm",
-    },
-  });
+  ["player-notes", "random-location", "toggle-disposition"]
+    .sort()
+    .forEach((controlID) => {
+      game.settings.register(MODULE_ID, `hotkey.${controlID}.enabled`, {
+        name: game.i18n.format(`${MODULE_ID}.controls.${controlID}.name`),
+        hint: game.i18n.format(`${MODULE_ID}.controls.${controlID}.hint`),
+        scope: "world",
+        config: true,
+        default: "off",
+        type: String,
+        choices: {
+          off: "sundry.module-settings.hotkey.choices.off",
+          all: "sundry.module-settings.hotkey.choices.all",
+          gm: "sundry.module-settings.hotkey.choices.gm",
+        },
+      });
+    });
 
   game.settings.register(MODULE_ID, "minify.simple-requests", {
     name: `${MODULE_ID}.module-settings.minify.simple-requests.name`,
@@ -476,16 +436,6 @@ export function setupSettings() {
     onChange: (value) => {
       setupStartOfSession(value);
     },
-  });
-
-  //TODO remove next version
-  game.settings.register(MODULE_ID, "track.reactions", {
-    name: "",
-    hint: "",
-    scope: "world",
-    config: false,
-    default: false,
-    type: Boolean,
   });
 
   game.settings.register(MODULE_ID, "track.reaction-usage", {
@@ -664,4 +614,56 @@ function getAndHandleControlsEnabled(controlID) {
     return game.user.isGM;
   } else if (enableMode === "all") {
   }
+}
+
+const SETTINGS_HEADERS = [
+  "colorize",
+  "display",
+  "hide",
+  "highlight",
+  "hotkey",
+  "minify",
+  "notify",
+  "track",
+  "replace",
+];
+
+function renderSettingsConfig(_, html) {
+  const moduleTab = html.querySelector(`.tab[data-tab=${MODULE_ID}]`);
+
+  function addSettingsGroup(settingID, elementType = "h3") {
+    const name = game.i18n.localize(
+      `${MODULE_ID}.module-settings.headers.${settingID}.title`,
+    );
+
+    const hint = game.i18n.localize(
+      `${MODULE_ID}.module-settings.headers.${settingID}.hint`,
+    );
+    const finalizedHint =
+      hint === `${MODULE_ID}.module-settings.headers.${settingID}.hint`
+        ? ""
+        : hint;
+
+    const setting = moduleTab.querySelector(
+      `div.form-group input[name^="${MODULE_ID}.${settingID}"]`,
+    );
+
+    if (setting) {
+      setting
+        .closest(".form-group")
+        .insertAdjacentHTML(
+          "beforebegin",
+          `<${elementType} data-tooltip="${finalizedHint}">${name}</${elementType}>`,
+        );
+    }
+  }
+
+  SETTINGS_HEADERS.forEach((item) => {
+    if (typeof item === "string") {
+      addSettingsGroup(item);
+    } else {
+      const { id, type } = item;
+      addSettingsGroup(id, type);
+    }
+  });
 }

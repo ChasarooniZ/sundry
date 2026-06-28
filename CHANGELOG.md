@@ -3,9 +3,10 @@
 - **Updated**
   - Added Localization where possible for some names
 
-## 1.7.2
+## 1.8.0
 
 - **New**
+  - Reworked settings naming to use a new section menu titling scheme
   - All controls now have an additional setting that must be toggled on to function, and will notify the GM the first time they try to use a control that is disabled
 - **Updated**
   - Updated Chinese translation (🌐 @AlphaStarguide)

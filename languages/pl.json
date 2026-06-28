@@ -2,9 +2,35 @@
   "I18N.LANGUAGE": "Polski",
   "sundry": {
     "module-settings": {
+      "headers": {
+        "colorize": {
+          "title": "Koloryzacja"
+        },
+        "display": {
+          "title": "Wyświetlanie"
+        },
+        "hide": {
+          "title": "Ukrycie"
+        },
+        "highlight": {
+          "title": "Wyróżnienie"
+        },
+        "minify": {
+          "title": "Minimalizacja"
+        },
+        "notify": {
+          "title": "Powiadomienie"
+        },
+        "track": {
+          "title": "Śledzenie"
+        },
+        "replace": {
+          "title": "Zastąp"
+        }
+      },
       "colorize": {
         "message": {
-          "name": "[Koloryzacja] Nagłówek wiadomości dostosowany do koloru użytkownika",
+          "name": " Nagłówek wiadomości dostosowany do koloru użytkownika",
           "hint": "Zmienia kolor nagłówka wiadomości na wybrany przez użytkownika (zobacz opcje, aby wybrać styl, który Ci odpowiada)",
           "choices": {
             "off": "Wyłącz",
@@ -14,14 +40,14 @@
         },
         "pf2e-hud": {
           "persistent": {
-            "name": "[Koloryzacja] PF2e HUD — trwały HUD",
+            "name": " PF2e HUD — trwały HUD",
             "hint": "Koloryzacja funkcji 'Trwały HUD' w 'PF2e HUD'"
           }
         },
         "pf2e-toolbelt": {
           "target-helper": {
             "roll": {
-              "name": "[Koloryzacja] PF2e Toolbelt – typy rzutów pomocniczych celów",
+              "name": " PF2e Toolbelt – typy rzutów pomocniczych celów",
               "hint": "Koloryzacja funkcji 'Pomocnik celowania' narzędzia 'PF2e Toolbelt', tak aby każdy typ rzutu był pokolorowany"
             }
           }
@@ -29,17 +55,17 @@
       },
       "display": {
         "item-property-runes": {
-          "name": "[Wyświetlanie] Runy właściwości przedmiotu",
+          "name": "Runy właściwości przedmiotu",
           "hint": "Kiedy przejdziesz do karty przedmiotu, zostanie dodana nazwa i opis wszystkich run właściwości znajdujących się na tym przedmiocie"
         },
         "weapon": {
           "base-damage": {
-            "name": "[Wyświetlanie] Podstawowe obrażenia broni",
+            "name": "Podstawowe obrażenia broni",
             "hint": "Dodaje niewielki wyświetlacz poniżej ceny na kartach broni, który pokazuje ich podstawowe obrażenia (uwaga: obejmuje to wszystkie runy uderzeń, które posiada broń)"
           }
         },
         "action-comparison": {
-          "name": "[Wyświetlanie] Porównanie akcji",
+          "name": "Porównanie akcji",
           "hint": "Dodaje niewielką podpowiedź do wszystkich ikonek akcji w wiadomościach czatu od przeciwników, aby pokazać ich względne znaczenie w stosunku do akcji bohaterów na podstawie połączenia dwóch czynników: procentowego udziału w PD danej potyczki oraz liczby bohaterów biorących w niej udział. (Opcje pozwalają skalować liczbę akcji w oparciu o stosunek PD danego przeciwnika do całkowitej liczby PD w potyczce)",
           "choices": {
             "xp": "Współczynnik PD (%)",
@@ -49,13 +75,13 @@
       },
       "hide": {
         "default-craft-checks": {
-          "name": "[Ukrycie] Domyślne przyciski testów Rzemiosła",
+          "name": "Domyślne przyciski testów Rzemiosła",
           "hint": "Aby uniemożliwić graczom korzystanie z domyślnego Rzemiosła zamiast przycisków 'Heroiczne Rzemiosło' w przypadku korzystania z tego dodatku"
         },
         "effects": {
           "token": {
             "enabled-for": {
-              "name": "[Ukrycie] Efekty tokenów dla...",
+              "name": "Efekty tokenów dla...",
               "hint": "Ukrywa efekty tokenów, domyślnie wyświetlając tylko te istotne, a po najechaniu kursorem na konkretny typ obiektu pokazuje wszystkie",
               "choices": {
                 "none": "Brak",
@@ -65,7 +91,7 @@
               }
             },
             "surface": {
-              "name": "[Ukrycie] Efekty tokenów, z wyjątkiem tych...",
+              "name": "Efekty tokenów, z wyjątkiem tych...",
               "hint": "Ukrywa efekty tokenów, wyświetlając jedynie te istotne (Istotne – efekty stanów i wyboru wyświetlane na podstawie ich skrótów; Czas trwania – oparte na czasie pozostałym dla danego efektu)",
               "choices": {
                 "nothing": "nic",
@@ -82,13 +108,13 @@
         },
         "header": {
           "button-text": {
-            "name": "[Ukrycie] Tekst przycisków na karcie tytułowej",
+            "name": "Tekst przycisków na karcie tytułowej",
             "hint": "Ukrywa tekst przycisków nagłówka, ale zachowuje ich ikony w nienaruszonym stanie dla wielu modułów"
           }
         },
         "hud": {
           "player-list": {
-            "name": "[Ukrycie] Lista graczy",
+            "name": "Lista graczy",
             "hint": "Ukrywa listę graczy i dodaje przycisk służący do przełączania jej widoczności; to ustawienie określa, w jakim stanie lista graczy znajduje się domyślnie",
             "choices": {
               "off": "-",
@@ -98,7 +124,7 @@
           }
         },
         "sell-all-treasure": {
-          "name": "[Ukrycie] Sprzedaj wszystkie skarby",
+          "name": "Sprzedaj wszystkie skarby",
           "hint": "Ukrywa przycisk 'Sprzedaj wszystkie skarby', aby zapobiec przypadkowej sprzedaży kluczowych przedmiotów"
         }
       },
@@ -106,38 +132,38 @@
         "pf2e-toolbelt": {
           "target-helper": {
             "roll": {
-              "name": "[Wyróżnienie] PF2e Toolbelt – Pomocnik celowania rozwinięty przycisk rzutu",
+              "name": "PF2e Toolbelt – Pomocnik celowania rozwinięty przycisk rzutu",
               "hint": "Podświetl niezrobione rzuty, sprawiając, że będą świecić w funkcji 'Pomocnik celowania' w 'PF2e Toolbelt', aby było bardziej oczywiste, że należy je wykonać"
             }
           }
         },
         "languages-known": {
-          "name": "[Wyróżnienie] Znajomość języków stworzeń przez drużynę",
+          "name": "Znajomość języków stworzeń przez drużynę",
           "hint": "Wyróżnia języki (na stronach statystyk BN), które zna aktualnie aktywna drużyna, a także dodaje podpowiedź, aby zapewnić jasność."
         },
         "loading-tips": {
           "items": {
-            "name": "[Wyróżnienie] Wskazówki podczas ładowania – identyfikator UUID dziennika",
+            "name": "Wskazówki podczas ładowania – identyfikator UUID dziennika",
             "hint": "Opcja „Podświetlaj wskazówki podczas ładowania” spowoduje wyświetlanie wskazówek w stylu „Skyrim” za każdym razem, gdy zostanie załadowana nowa scena. Jeśli wpiszesz tutaj identyfikator UUID dziennika, funkcja ta zostanie włączona, a grafika będzie pobierana ze stron „Obraz” dziennika, a tekst z podpisu."
           },
           "duration": {
-            "name": "[Wyróżnienie] Wskazówki podczas ładowania – czas trwania",
+            "name": "Wskazówki podczas ładowania – czas trwania",
             "hint": "Jak długo powinna trwać animacja wskazówek podczas ładowania (w sekundach)?"
           }
         },
         "pan-current-combatant": {
           "enabled": {
-            "name": "[Wyróżnienie] Przesuń, aby zobaczyć aktualnego uczestnika walki",
+            "name": "Przesuń, aby zobaczyć aktualnego uczestnika walki",
             "hint": "Po włączeniu tej opcji kamera będzie przesuwać się tak, aby gracze widzieli zarówno swój token, jak i token przeciwnika"
           },
           "enabled-gm": {
-            "name": "[Wyróżnienie] Przesuń widok na aktualnego uczestnika walki – MG",
+            "name": "Przesuń widok na aktualnego uczestnika walki – MG",
             "hint": "W ten sposób włącza się tę funkcję dla MG"
           }
         },
         "prone-tokens": {
           "rotate": {
-            "name": "[Wyróżnienie] Tokeny przewrócone – Obrót",
+            "name": "Tokeny przewrócone – Obrót",
             "hint": "Odwraca leżące tokeny na plecy, a gdy przestaną leżeć, ponownie ustawia je w pozycji stojącej"
           }
         }
@@ -150,39 +176,39 @@
       },
       "minify": {
         "simple-requests": {
-          "name": "[Minimalizacja] Simple Requests",
+          "name": "Simple Requests",
           "hint": "Zmniejsza nieco rozmiar modułu HUD 'Simple Requests', aby nie przeszkadzał tak bardzo"
         }
       },
       "notify": {
         "spellstrike": {
           "recharge": {
-            "name": "[Powiadomienie] Ładowanie Ciosu Zaklęciem",
+            "name": "Ładowanie Ciosu Zaklęciem",
             "hint": "Dodaje małe powiadomienie w interfejsie użytkownika, gdy twój Cios Zaklęciem powinien zostać ponownie naładowany"
           }
         },
         "start-session": {
           "journal": {
-            "name": "[Powiadomienie] Lista kontrolna MG na rozpoczęcie sesji (dziennik)",
+            "name": "Lista kontrolna MG na rozpoczęcie sesji (dziennik)",
             "hint": "Ta funkcja, gdy dołączy wystarczająca liczba graczy, otworzy listę kontrolną na początku sesji dla MG, aby upewnić się, że niczego nie zapomnisz. (Aby aktywować tę funkcję, ustaw to ustawienie na UUID dziennika lub strony dziennika)."
           },
           "journal-players": {
-            "name": "[Powiadomienie] Lista kontrolna Graczy na rozpoczęcie sesji (dziennik)",
+            "name": "Lista kontrolna Graczy na rozpoczęcie sesji (dziennik)",
             "hint": "Ta funkcja, gdy dołączy wystarczająca liczba graczy, otworzy listę kontrolną na początku sesji, aby gracze nie zapomnieli o niczym. (Aby aktywować tę funkcję, ustaw to ustawienie na UUID dziennika lub strony dziennika)."
           },
           "players-needed": {
-            "name": "[Powiadomienie] Lista kontrolna przed rozpoczęciem sesji (potrzebni gracze)",
+            "name": "Lista kontrolna przed rozpoczęciem sesji (potrzebni gracze)",
             "hint": "Jest to minimalna liczba graczy niebędących MG, którzy muszą być aktywni w grze, aby lista kontrolna została wyświetlona (domyślnie liczba graczy - 1)."
           }
         }
       },
       "track": {
         "flourish-usage": {
-          "name": "[Śledzenie] Wykorzystanie Rozmachu",
+          "name": "Wykorzystanie Rozmachu",
           "hint": "Ta funkcja wywołuje efekt na tokenie, gdy wykona on akcję rozmachu, a następnie ostrzega właściciela, gdy ten wykona kolejną akcję, podczas gdy wskaźnik rozmachu jest na nim."
         },
         "reaction-usage": {
-          "name": "[Śledzenie] Wykorzystanie reakcji",
+          "name": "Wykorzystanie reakcji",
           "hint": "Ta funkcja tworzy (i zwiększa) efekt na tokenie, który liczy, czy token użył reakcji. Należy zauważyć, że efekt ten stosuje się również do każdego tokenu na początku walki, jeśli wszystkie są włączone",
           "choices": {
             "all": "Wszystkie funkcje",
@@ -193,15 +219,15 @@
       },
       "replace": {
         "pause-text": {
-          "name": "[Zastąp] Tekst pauzy",
+          "name": "Tekst pauzy",
           "hint": "Pozwala na zastąpienie podstawowego tekstu pauzy. Obsługuje wiele opcji tekstu pauzy, z których wybiera losowo, oddzielając każdą opcję znakiem „|” lub „;”. (Aby uzyskać oryginalny tekst pauzy, pozostaw to pole puste). (Obsługuje również tabelę opcji Rolltable poprzez ustawienie tego pola na UUID tabeli)."
         },
         "pause-img": {
-          "name": "[Zastąp] Obraz pauzy",
+          "name": "Obraz pauzy",
           "hint": "Pozwala na zastąpienie podstawowego obrazu pauzy."
         },
         "pause-img-class": {
-          "name": "[Zastąp] Klasa obrazu pauzy",
+          "name": "Klasa obrazu pauzy",
           "hint": "Pozwala zastąpić klasę obrazu pauzy (animacji). Opcje można znaleźć tutaj (https://docs.fontawesome.com/web/style/animate) na stronie fontawesome (domyślnie jest to „fa-spin”)."
         }
       }
@@ -216,7 +242,7 @@
         "hint": "Przełącza nastawienie tokenu, nad którym znajduje się kursor (zaczynając od obojętnego). Użyj Shift + przycisk, aby zmniejszyć nastawienie, a domyślnie, aby je zwiększyć."
       },
       "random-location": {
-        "name": "[Wyróżnienie] Wybór losowej lokalizacji",
+        "name": "Wybór losowej lokalizacji",
         "hint": "Po włączeniu funkcji kliknij kilka miejsc na mapie, które chcesz wybrać jako cele, a następnie kliknij prawym przyciskiem myszy, aby losowo wybrać punkt (wymagany jest moduł `Sequencer`)"
       }
     },

@@ -2,9 +2,38 @@
   "I18N.LANGUAGE": "English",
   "sundry": {
     "module-settings": {
+      "headers": {
+        "colorize": {
+          "title": "Colorize"
+        },
+        "display": {
+          "title": "Display"
+        },
+        "hide": {
+          "title": "Hide"
+        },
+        "highlight": {
+          "title": "Highlight"
+        },
+        "hotkey": {
+          "title": "Hotkey"
+        },
+        "minify": {
+          "title": "Minify"
+        },
+        "notify": {
+          "title": "Notify"
+        },
+        "track": {
+          "title": "Track"
+        },
+        "replace": {
+          "title": "Replace"
+        }
+      },
       "colorize": {
         "message": {
-          "name": "[Colorize] Message Header to User Color",
+          "name": "Message Header to User Color",
           "hint": "Colorizes the message header to the user's color (see the options to pick what style is for you)",
           "choices": {
             "off": "Off",
@@ -14,14 +43,14 @@
         },
         "pf2e-hud": {
           "persistent": {
-            "name": "[Colorize] PF2e HUD - Persistent HUD",
+            "name": "PF2e HUD - Persistent HUD",
             "hint": "Colorize the 'Persistent HUD' feature of 'PF2e HUD'"
           }
         },
         "pf2e-toolbelt": {
           "target-helper": {
             "roll": {
-              "name": "[Colorize] PF2e Toolbelt - Target helper Roll Types",
+              "name": "PF2e Toolbelt - Target helper Roll Types",
               "hint": "Colorize the 'Target helper' feature of 'PF2e Toolbelt' so that each roll type is colorized"
             }
           }
@@ -29,21 +58,21 @@
       },
       "display": {
         "item-property-runes": {
-          "name": "[Display] Item Property Runes",
+          "name": "Item Property Runes",
           "hint": "When you go to look an item's sheet will add in the name and description of any Property Runes on the item"
         },
         "item-property-runes-actor": {
-          "name": "[Display] Item Property Runes on Actor Sheet",
+          "name": "Item Property Runes on Actor Sheet",
           "hint": "When you go to look an actor's sheet and look at item descriptions, the name and description of any Property Runes on the item will be displayed"
         },
         "weapon": {
           "base-damage": {
-            "name": "[Display] Weapon Base Damage",
+            "name": "Weapon Base Damage",
             "hint": "Adds a little display below the price on weapon sheets that displays their base damage (Note: This includes any Striking runes the weapon has)"
           }
         },
         "action-comparison": {
-          "name": "[Display] Action Comparison",
+          "name": "Action Comparison",
           "hint": "Adds a little tooltip on all action glyphs in chat messages from enemies, to show their relative PC action comparison based on a combination of both what pertcentage of the combat's XP they take up, as well as how many PCs are in the combat. (Choices allow you to scale the action count based on the actor's XP vs the total encounter XP)",
           "choices": {
             "xp": "Factor in XP %",
@@ -53,13 +82,13 @@
       },
       "hide": {
         "default-craft-checks": {
-          "name": "[Hide] Default Craft Checks Buttons",
+          "name": "Default Craft Checks Buttons",
           "hint": "To Prevent players from using default crafting as opposed to the 'Heroic Crafting' Buttons if using that addon"
         },
         "effects": {
           "token": {
             "enabled-for": {
-              "name": "[Hide] Token Effects For...",
+              "name": "Token Effects For...",
               "hint": "Hides Token Effects only surfacing relevant ones by default, and showing all on hover for the specific actor type",
               "choices": {
                 "none": "None",
@@ -69,7 +98,7 @@
               }
             },
             "surface": {
-              "name": "[Hide] Token Effects Except show these...",
+              "name": "Token Effects Except show these...",
               "hint": "Hides Token Effects only surfacing relevant ones (Relevant - Conditions + Choice Effects that are surfaced based on their slugs, Duration - Base it on time left for a particular effect",
               "choices": {
                 "nothing": "nothing",
@@ -86,13 +115,13 @@
         },
         "header": {
           "button-text": {
-            "name": "[Hide] Header Button Text",
+            "name": "Header Button Text",
             "hint": "Hides the header buttons' text, but keeps their icons in tact for this with a lot of modules"
           }
         },
         "hud": {
           "player-list": {
-            "name": "[Hide] Player List",
+            "name": "Player List",
             "hint": "Hides the player list and adds a button to toggle its visibility, the setting sets what state the player list is in by default",
             "choices": {
               "off": "-",
@@ -102,7 +131,7 @@
           }
         },
         "sell-all-treasure": {
-          "name": "[Hide] Sell All Treasure",
+          "name": "Sell All Treasure",
           "hint": "Hides the 'Sell All Treasure' button to prevent accidentally selling key items"
         }
       },
@@ -110,45 +139,43 @@
         "pf2e-toolbelt": {
           "target-helper": {
             "roll": {
-              "name": "[Highlight] PF2e Toolbelt - Target Helper Unrolled Roll",
+              "name": "PF2e Toolbelt - Target Helper Unrolled Roll",
               "hint": "Highlight unmade rolls by making them glow in the 'Target helper' feature of 'PF2e Toolbelt' to make it more clear to roll it"
             }
           }
         },
         "languages-known": {
-          "name": "[Highlight] Which party Members know Creature Languages",
+          "name": "Which party Members know Creature Languages",
           "hint": "Highlights which languages (on NPC stat block pages) are known by the current active party as well as adds a tooltip to make sure its clear"
         },
         "loading-tips": {
           "items": {
-            "name": "[Highlight] Loading Tips - Journal UUID",
+            "name": "Loading Tips - Journal UUID",
             "hint": "Highlight Loading tips will show 'Skyrim Style' loading tips every time a new scene is loaded. If you put in a journal UUID here this will enable this feature ,and will reference the journal's 'Image' pages for the Art, and its Caption for the text to display."
           },
           "duration": {
-            "name": "[Highlight] Loading Tips - Duration",
+            "name": "Loading Tips - Duration",
             "hint": "How long should the loading tips animation be in seconds"
           }
         },
         "pan-current-combatant": {
           "enabled": {
-            "name": "[Highlight] Pan to See Current Combatant",
+            "name": "Pan to See Current Combatant",
             "hint": "When enabled will pan the camera for the players to include their token as well as the opponent"
           },
           "enabled-gm": {
-            "name": "[Highlight] Pan to See Current Combatant - GM",
+            "name": "Pan to See Current Combatant - GM",
             "hint": "This enables the feature for the GM"
           }
         },
         "prone-tokens": {
           "rotate": {
-            "name": "[Highlight] Prone Tokens - Rotate",
+            "name": "Prone Tokens - Rotate",
             "hint": "Rotates prone tokens on their back, and back upright when no longer prone"
           }
         }
       },
       "hotkey": {
-        "name": "[Hotkey] Enable {name}",
-        "hint": "Enables the following '{description}'",
         "choices": {
           "all": "Enabled for All",
           "gm": "GM Only",
@@ -163,39 +190,39 @@
       },
       "minify": {
         "simple-requests": {
-          "name": "[Minify] Simple Requests",
+          "name": "Simple Requests",
           "hint": "Makes 'Simple Requests' module HUD a bit smaller so its less in the way"
         }
       },
       "notify": {
         "spellstrike": {
           "recharge": {
-            "name": "[Notify] Spellstrike Recharge",
+            "name": "Spellstrike Recharge",
             "hint": "Adds a little ui notification when your spellstrike should be recharged"
           }
         },
         "start-session": {
           "journal": {
-            "name": "[Notify] GM Start of Session Checklist (Journal)",
+            "name": "GM Start of Session Checklist (Journal)",
             "hint": "This feature when enough players join will open a start of session checklist for the GM to ensure you don't forget anything. (To activate this feature set this setting to a Journal or Journal Page UUID)"
           },
           "journal-players": {
-            "name": "[Notify] Players Start of Session Checklist (Journal)",
+            "name": "Players Start of Session Checklist (Journal)",
             "hint": "This feature when enough players join will open a start of session checklist for players to ensure the players don't forget anything. (To activate this feature set this setting to a Journal or Journal Page UUID)"
           },
           "players-needed": {
-            "name": "[Notify] Start of Session Checklist (Players Needed)",
+            "name": "Start of Session Checklist (Players Needed)",
             "hint": "This is the minimum amount of Non-GM players needed to be active in the game for the checklist to show up (defaults to Player count - 1)"
           }
         }
       },
       "track": {
         "flourish-usage": {
-          "name": "[Track] Flourish Usage",
+          "name": "Flourish Usage",
           "hint": "This feature creates an effect on a token when it uses a flourish action, and then warns the owner when they use another while the flourish tracker is on them."
         },
         "reaction-usage": {
-          "name": "[Track] Reaction Usage",
+          "name": "Reaction Usage",
           "hint": "This feature creates (and increments) an effect on a token that counts if a token has used a reaction. To note it also applies this effect to every token as combat starts if you have all enabled",
           "choices": {
             "all": "All Features",
@@ -206,15 +233,15 @@
       },
       "replace": {
         "pause-text": {
-          "name": "[Replace] Pause Text",
+          "name": "Pause Text",
           "hint": "Allows you to override the base pause text. This supports multiple pause text options from which it will pick randomly, separate each option with either '|' or ';'. (Set this setting blank to get the original pause text) (Also supports a Rolltable of options by setting this to the Table's UUID)"
         },
         "pause-img": {
-          "name": "[Replace] Pause Image",
+          "name": "Pause Image",
           "hint": "Allows you to override the base pause image."
         },
         "pause-img-class": {
-          "name": "[Replace] Pause Image Class",
+          "name": "Pause Image Class",
           "hint": "Allows you to replace the class for the pause image (animation) see the options here (https://docs.fontawesome.com/web/style/animate) on fontawesome (Default is 'fa-spin')"
         }
       }
@@ -229,7 +256,7 @@
         "hint": "Toggles the disposition of the hovered token (starting with indifferent), Use Shift + button to decrease disposition, and the default to increase it"
       },
       "random-location": {
-        "name": "[Highlight] Random Location Picker",
+        "name": "Random Location Picker",
         "hint": "When activated click a number of locations on the map to target, them right click to have it randomly select a point (requires `Sequencer`)"
       }
     },
