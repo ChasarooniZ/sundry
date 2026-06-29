@@ -15,6 +15,9 @@
         "highlight": {
           "title": "Wyróżnienie"
         },
+        "hotkey": {
+          "title": "Skrót klawiszowy"
+        },
         "minify": {
           "title": "Minimalizacja"
         },
@@ -57,6 +60,10 @@
         "item-property-runes": {
           "name": "Runy właściwości przedmiotu",
           "hint": "Kiedy przejdziesz do karty przedmiotu, zostanie dodana nazwa i opis wszystkich run właściwości znajdujących się na tym przedmiocie"
+        },
+        "item-property-runes-actor": {
+          "name": "Runy właściwości przedmiotów w karcie postaci",
+          "hint": "Gdy przejdziesz do karty postaci aktora i przejrzysz opisy przedmiotów, wyświetlą się nazwy i opisy wszystkich run przedmiotowych związanych z danym przedmiotem"
         },
         "weapon": {
           "base-damage": {
@@ -168,6 +175,13 @@
           }
         }
       },
+      "hotkey": {
+        "choices": {
+          "all": "Dostępne dla wszystkich",
+          "gm": "Tylko MG",
+          "off": "Wyłącz"
+        }
+      },
       "message": {
         "user-color": {
           "name": "Kolor użytkownika dla nagłówków wiadomości",
@@ -247,6 +261,7 @@
       }
     },
     "notification": {
+      "flourish-used": "W tej turze skorzystałeś już z akcji Rozmachu",
       "player-notes": {
         "updated": "Zaktualizowano Notatki dotyczące kampanii!",
         "no-character": "Nie ma żadnych notatek do otwarcia, ponieważ nie masz przypisanej ani wybranej postaci"
@@ -254,7 +269,6 @@
       "session-start": {
         "active": "[Rozpoczęcie sesji] Do lobby dołączyła wystarczająca liczba graczy, aby wyświetlić listę kontrolną rozpoczęcia sesji!"
       },
-      "flourish-used": "W tej turze skorzystałeś już z akcji Rozmachu",
       "spellstrike": {
         "recharged": "Cios Zaklęciem naładowany",
         "conflux": "Właśnie rzuciłeś zaklęcie konfluencji, które pozwala ci naładować Cios Zaklęciem.",
@@ -263,7 +277,11 @@
         "other-option": "Alternatywnie zawsze możesz wydać 1 akcję, aby się naładować. Ta akcja ma cechę <b>koncentracji</b>"
       },
       "random-location": {
-        "finished": "Wybrano losową lokalizację!"
+        "finished": "Wybrano losową lokalizację!",
+        "first-use": "Jest to funkcja „Losowa lokalizacja”, którą aktywuje się, naciskając klawisz R (można to skonfigurować w ustawieniach sterowania). Kliknij lewym przyciskiem myszy, aby wybrać punkty, między którymi ma nastąpić losowy wybór, a następnie kliknij prawym przyciskiem myszy, aby losowo wybrać jeden z nich!"
+      },
+      "controls": {
+        "disabled": "[Różne] Element sterujący {name} jest obecnie wyłączony w ustawieniach; aby go włączyć, użyj tego skrótu klawiszowego (ten komunikat pojawi się tylko przy pierwszym użyciu tego elementu sterującego przez MG w danej sesji)"
       }
     },
     "display": {
