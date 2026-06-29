@@ -3,6 +3,10 @@
 - **Updated**
   - Added Localization where possible for some names
 
+## 1.8.1
+  
+- Updated Polish translation (🌐 @Lioheart)
+
 ## 1.8.0
 
 - **New**
