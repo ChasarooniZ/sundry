@@ -3,8 +3,13 @@
 - **Updated**
   - Added Localization where possible for some names
 
+## 1.8.2
+
+- Fixed description for control enabling (🐛 @Hawk)
+- Updated some settings names to be clearer
+
 ## 1.8.1
-  
+
 - Updated Polish translation (🌐 @Lioheart)
 
 ## 1.8.0

@@ -363,7 +363,7 @@ export function setupSettings() {
     .forEach((controlID) => {
       game.settings.register(MODULE_ID, `hotkey.${controlID}.enabled`, {
         name: game.i18n.format(`${MODULE_ID}.controls.${controlID}.name`),
-        hint: game.i18n.format(`${MODULE_ID}.controls.${controlID}.hint`),
+        hint: game.i18n.format(`${MODULE_ID}.controls.${controlID}.description`),
         scope: "world",
         config: true,
         default: "off",

@@ -82,13 +82,13 @@
       },
       "hide": {
         "default-craft-checks": {
-          "name": "Default Craft Checks Buttons",
+          "name": "Hide Default Craft Checks Buttons",
           "hint": "To Prevent players from using default crafting as opposed to the 'Heroic Crafting' Buttons if using that addon"
         },
         "effects": {
           "token": {
             "enabled-for": {
-              "name": "Token Effects For...",
+              "name": "Hide Token Effects For...",
               "hint": "Hides Token Effects only surfacing relevant ones by default, and showing all on hover for the specific actor type",
               "choices": {
                 "none": "None",
@@ -98,8 +98,8 @@
               }
             },
             "surface": {
-              "name": "Token Effects Except show these...",
-              "hint": "Hides Token Effects only surfacing relevant ones (Relevant - Conditions + Choice Effects that are surfaced based on their slugs, Duration - Base it on time left for a particular effect",
+              "name": "Hide Token Effects Except show these...",
+              "hint": "Hides Token Effects only surfacing relevant ones  (Relevant - Conditions + Choice Effects that are surfaced based on their slugs, Duration - Base it on time left for a particular effect",
               "choices": {
                 "nothing": "nothing",
                 "relevant-under-1-hour": "Relevant + Duration ≤1hr",
