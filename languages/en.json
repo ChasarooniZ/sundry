@@ -249,7 +249,7 @@
     "controls": {
       "player-notes": {
         "name": "Open Character 'Campaign Notes'",
-        "description": "Opens an editable version of the player's assigned character's 'Campaign Notes' section of their character sheet"
+        "hint": "Opens an editable version of the player's assigned character's 'Campaign Notes' section of their character sheet"
       },
       "toggle-disposition": {
         "name": "Toggle Disposition",

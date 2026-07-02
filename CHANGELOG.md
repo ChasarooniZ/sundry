@@ -3,6 +3,11 @@
 - **Updated**
   - Added Localization where possible for some names
 
+## 1.8.3
+
+- Fixed setting order issue 
+- Fixed description for control enabling (🐛 @Hawk)
+
 ## 1.8.2
 
 - Fixed description for control enabling (🐛 @Hawk)

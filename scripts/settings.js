@@ -264,6 +264,19 @@ export function setupSettings() {
     },
   });
 
+    game.settings.register(
+    MODULE_ID,
+    "highlight.pan-current-combatant.enabled-gm",
+    {
+      name: `${MODULE_ID}.module-settings.highlight.pan-current-combatant.enabled-gm.name`,
+      hint: `${MODULE_ID}.module-settings.highlight.pan-current-combatant.enabled-gm.hint`,
+      scope: "world",
+      config: true,
+      default: false,
+      type: Boolean,
+    },
+  );
+
   game.settings.register(MODULE_ID, "highlight.prone-tokens.rotate", {
     name: `${MODULE_ID}.module-settings.highlight.prone-tokens.rotate.name`,
     hint: `${MODULE_ID}.module-settings.highlight.prone-tokens.rotate.hint`,
@@ -284,19 +297,6 @@ export function setupSettings() {
     default: true,
     type: Boolean,
   });
-
-  game.settings.register(
-    MODULE_ID,
-    "highlight.pan-current-combatant.enabled-gm",
-    {
-      name: `${MODULE_ID}.module-settings.highlight.pan-current-combatant.enabled-gm.name`,
-      hint: `${MODULE_ID}.module-settings.highlight.pan-current-combatant.enabled-gm.hint`,
-      scope: "world",
-      config: true,
-      default: false,
-      type: Boolean,
-    },
-  );
 
   game.settings.register(MODULE_ID, "highlight.loading-tips.items", {
     name: `${MODULE_ID}.module-settings.highlight.loading-tips.items.name`,
@@ -363,7 +363,7 @@ export function setupSettings() {
     .forEach((controlID) => {
       game.settings.register(MODULE_ID, `hotkey.${controlID}.enabled`, {
         name: game.i18n.format(`${MODULE_ID}.controls.${controlID}.name`),
-        hint: game.i18n.format(`${MODULE_ID}.controls.${controlID}.description`),
+        hint: game.i18n.format(`${MODULE_ID}.controls.${controlID}.hint`),
         scope: "world",
         config: true,
         default: "off",
