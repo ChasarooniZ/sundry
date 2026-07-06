@@ -3,9 +3,13 @@
 - **Updated**
   - Added Localization where possible for some names
 
+## 1.8.4
+
+- Fixed issue with control enabling settings not working on `all` settings (🐛 @reaperzeus)
+
 ## 1.8.3
 
-- Fixed setting order issue 
+- Fixed setting order issue
 - Fixed description for control enabling (🐛 @Hawk)
 
 ## 1.8.2

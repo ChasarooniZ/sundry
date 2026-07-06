@@ -613,6 +613,7 @@ function getAndHandleControlsEnabled(controlID) {
   } else if (enableMode === "gm") {
     return game.user.isGM;
   } else if (enableMode === "all") {
+    return true;
   }
 }
 
