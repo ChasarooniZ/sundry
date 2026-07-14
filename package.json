@@ -6,7 +6,7 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "extract": "node macros/extract.mjs && eslint ./source --fix",
+    "extract": "node macros/extract.mjs && eslint packs --fix",
     "lint": "eslint . --cache",
     "lint:fix": "eslint . --fix --cache",
     "pack": "node macros/pack.mjs",
@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.19.0",
-    "@foundryvtt/foundryvtt-cli": "^1.1.0",
+    "@foundryvtt/foundryvtt-cli": "^3.0.4",
     "@lucide/svelte": "^0.526.0",
     "@sveltejs/vite-plugin-svelte": "^6.1.0",
     "@tailwindcss/vite": "^4.1.11",

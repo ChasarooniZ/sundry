@@ -1,0 +1,56 @@
+{
+	"folder": "UnFDXm81p6tXZpYd",
+	"name": "Independent Brains",
+	"type": "action",
+	"effects": [],
+	"system": {
+		"_migration": {
+			"version": 0.959,
+			"previous": null
+		},
+		"description": {
+			"value": "<p>Each of the twinned creature's heads rolls its own initiative and has its own turn. Neither head can @UUID[Compendium.pf2e.actionspf2e.Item.A72nHGUtNXgY5Ey9]{Delay}. At the start of a head's turn, that head gets 2 actions and 1 reaction. Each brain can control the creature's body normally. Taking damage equal to half its hit points or any ability that would sever a twinned creature's head (such as the vorpal weapon property) destroys one head and causes the twinned creature to lose the turns, actions, and reactions of the severed head. Mental effects that target a single creature affect only one of the creature's heads.</p>",
+			"gm": ""
+		},
+		"publication": {
+			"title": "",
+			"authors": "",
+			"license": "OGL",
+			"remaster": false
+		},
+		"rules": [],
+		"slug": "independent-brains",
+		"traits": {
+			"otherTags": [],
+			"value": []
+		},
+		"actionType": {
+			"value": "passive"
+		},
+		"actions": {
+			"value": null
+		},
+		"category": "interaction",
+		"deathNote": false
+	},
+	"_id": "hOSoDbXdeaJC5n9C",
+	"img": "systems/pf2e/icons/default-icons/action.svg",
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"flags": {},
+	"_stats": {
+		"coreVersion": "14.364",
+		"systemId": "pf2e",
+		"systemVersion": "8.3.0",
+		"createdTime": 1784054511228,
+		"modifiedTime": 1784054542942,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2",
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null
+	},
+	"_key": "!items!hOSoDbXdeaJC5n9C"
+}

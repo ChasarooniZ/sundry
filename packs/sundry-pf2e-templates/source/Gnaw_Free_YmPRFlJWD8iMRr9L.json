@@ -1,0 +1,68 @@
+{
+	"folder": "UnFDXm81p6tXZpYd",
+	"name": "Gnaw Free",
+	"type": "action",
+	"effects": [],
+	"system": {
+		"_migration": {
+			"version": 0.959,
+			"previous": null
+		},
+		"description": {
+			"value": "<p><strong>Trigger</strong> The twinned creature's other head attempts to @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape}</p><hr><p><strong>Effect</strong> This head bites its grappler or restraints to help the other head break free. The twinned creature gains a +2 circumstance bonus to its Escape check.</p>",
+			"gm": ""
+		},
+		"publication": {
+			"title": "",
+			"authors": "",
+			"license": "OGL",
+			"remaster": false
+		},
+		"rules": [
+			{
+				"key": "FlatModifier",
+				"value": 2,
+				"predicate": [
+					"action:escape"
+				],
+				"type": "circumstance",
+				"selector": [
+					"all"
+				]
+			}
+		],
+		"slug": "gnaw-free",
+		"traits": {
+			"otherTags": [],
+			"value": []
+		},
+		"actionType": {
+			"value": "reaction"
+		},
+		"actions": {
+			"value": null
+		},
+		"category": "defensive",
+		"deathNote": false
+	},
+	"_id": "YmPRFlJWD8iMRr9L",
+	"img": "systems/pf2e/icons/default-icons/action.svg",
+	"sort": 0,
+	"ownership": {
+		"default": 0,
+		"vj8VUT8j7Wtzy3Y2": 3
+	},
+	"flags": {},
+	"_stats": {
+		"coreVersion": "14.364",
+		"systemId": "pf2e",
+		"systemVersion": "8.3.0",
+		"createdTime": 1784054575785,
+		"modifiedTime": 1784054642122,
+		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2",
+		"compendiumSource": null,
+		"duplicateSource": null,
+		"exportSource": null
+	},
+	"_key": "!items!YmPRFlJWD8iMRr9L"
+}

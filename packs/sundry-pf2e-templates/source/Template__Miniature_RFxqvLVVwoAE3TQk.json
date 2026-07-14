@@ -192,7 +192,7 @@
 	},
 	"_id": "RFxqvLVVwoAE3TQk",
 	"img": "icons/magic/control/silhouette-grow-shrink-blue.webp",
-	"sort": 0,
+	"sort": 200000,
 	"ownership": {
 		"default": 0,
 		"vj8VUT8j7Wtzy3Y2": 3
@@ -202,11 +202,11 @@
 		"compendiumSource": null,
 		"duplicateSource": null,
 		"exportSource": null,
-		"coreVersion": "13.351",
+		"coreVersion": "14.364",
 		"systemId": "pf2e",
 		"systemVersion": "7.10.1",
 		"createdTime": 1771612139261,
-		"modifiedTime": 1771613618118,
+		"modifiedTime": 1784054498544,
 		"lastModifiedBy": "vj8VUT8j7Wtzy3Y2"
 	},
 	"_key": "!items!RFxqvLVVwoAE3TQk"

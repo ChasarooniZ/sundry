@@ -130,7 +130,7 @@ jobs:
             styles/                              \
             packs/                               \
             languages/                           \
-            lang/
+            --exclude \*source\*   
           # Don't forget to add a backslash at the end of the line for any
           # additional files or directories!
 
