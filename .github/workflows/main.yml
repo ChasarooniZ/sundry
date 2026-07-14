@@ -84,6 +84,11 @@ jobs:
         id: get_version
         uses: battila7/get-version-action@v2
 
+      # https://github.com/MrVauxs/trigger-animations/blob/master/.github/workflows/main.yml
+      - name: Extract Changelog
+        id: changelog
+        run: node .github/scripts/extract-changelog.mjs ${{steps.get_version.outputs.version-without-v}} "## " "CHANGELOG.md"
+
 
       # Modify "module.json" with values specific to the release.
       # Since the values for the "version" and "url" keys aren't known ahead of
@@ -142,4 +147,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: './module.json, ./module.zip'
           tag: ${{ github.event.release.tag_name }}
-          body: ${{ github.event.release.body }}
+          body: ${{ steps.changelog.outputs.changelog }}

@@ -305,6 +305,10 @@ async function actorSheetRuneWork({
   const element = await waitForElm(html, appId, selector);
   const runeHTML = await getItemRuneHTML(propertyRunes, type, uuid);
   if (!runeHTML) return;
+  const existingRuneHTML = elements?.querySelector("div#sundry-property-runes");
+  if (existingRuneHTML) {
+    existingRuneHTML?.remove();
+  }
   element.insertAdjacentHTML("beforeend", runeHTML);
 }
 

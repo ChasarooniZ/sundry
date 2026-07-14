@@ -1,7 +1,15 @@
 ## Unreleased
-
 - **Updated**
   - Added Localization where possible for some names
+
+## 1.8.5
+
+- **New**
+  - Added `Twinned` template
+  - Added release script to make releases easier
+- **Updated**
+  - `Display Property Runes - Actor Sheet` - Handled case where property runes could be displayed twice
+  - Fixed bug with showing languages known in the `sf2e` system (🐛 @Sasane)
 
 ## 1.8.4
 

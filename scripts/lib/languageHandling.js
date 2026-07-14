@@ -1,19 +1,16 @@
 export function setuplanguageHandling(active) {
-  Hooks[active ? "on" : "off"](
-    "renderNPCSheetPF2e",
-    showRelevantLanguages
-  );
+  Hooks[active ? "on" : "off"]("renderNPCSheetPF2e", showRelevantLanguages);
 }
 
 async function showRelevantLanguages(_sheet, html, info) {
   const commonLanguage = game.settings.get(
-    "pf2e",
-    "homebrew.languageRarities"
+    game.system.id,
+    "homebrew.languageRarities",
   )?.commonLanguage;
 
   const languages = info?.languages?.map((lang) => lang?.slug);
   const partyMembers = game.actors.party.members.filter(
-    (m) => m.type === "character"
+    (m) => m.type === "character",
   );
   const partyCount = partyMembers?.length;
 
@@ -30,7 +27,7 @@ async function showRelevantLanguages(_sheet, html, info) {
 
   for (const languageSlug of languages) {
     const langItem = html?.[0]?.querySelector(
-      `.languages .comma-separated li[data-slug="${languageSlug}"]`
+      `.languages .comma-separated li[data-slug="${languageSlug}"]`,
     );
 
     const knowLangugeMembers = partyLanguages
