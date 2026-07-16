@@ -75,7 +75,11 @@ function shouldSkipEffectBackground() {
 export function shouldAlwaysShowEffect(effect, { surfaceMode }) {
   return (
     relevantSlug(effect, surfaceMode) ||
-    relevantDuration(effect?.duration?.secondsRemaining, surfaceMode)
+    relevantDuration(
+      effect?.duration?.secondsRemaining ??
+        (effect?.duration?.unit === "rounds" ? 0 : undefined),
+      surfaceMode,
+    )
   );
 }
 
