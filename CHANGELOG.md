@@ -2,11 +2,11 @@
 
 - **Updated**
   - Added Localization where possible for some names
+  - `Hide Token Effects` updated to cover edge case of effects with a duration in `rounds` not passing through
 
 ## 1.8.6
 
-- **Updated**
-  - `Hide Token Effects` updated to cover edge case of effects with a duration in `rounds` not passing through
+- Fixed misspelled variable causing `Item Property Sheet` issues to fail
 
 ## 1.8.5
 
