@@ -146,7 +146,7 @@ const RUNE_LIST = {
   greaterSlick: "Compendium.pf2e.equipment-srd.Item.LiJMupjynmkM5Mld",
   greaterStanching: "Compendium.pf2e.equipment-srd.Item.ioLWDzXp2dG7ZMHf",
   greaterSwallowSpike: "Compendium.pf2e.equipment-srd.Item.ciykvIC4SFFxIfUw",
-  greaterWinged: "Compendium.pf2e.equipment-srd.Item.ciykvIC4SFFxIfUw",
+  greaterWinged: "Compendium.pf2e.equipment-srd.Item.Ztb4xv4UGZbF32TE",
   immovable: "Compendium.pf2e.equipment-srd.Item.n8nLwFR4VFFmAny5",
   implacable: "Compendium.pf2e.equipment-srd.Item.XkjOK05Gw0o3iycr",
   invisibility: "Compendium.pf2e.equipment-srd.Item.VDudQ4x2ozosAbTb",
