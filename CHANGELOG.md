@@ -4,6 +4,10 @@
   - Added Localization where possible for some names
   - `Hide Token Effects` updated to cover edge case of effects with a duration in `rounds` not passing through
 
+## 1.8.8
+- **Updated**
+  - Updated Chinese translation (🌐 @AlphaStarguide)
+
 ## 1.8.7
 
 - Fixed greater winged data entry for `Display Property Runes - Actor Sheet`
