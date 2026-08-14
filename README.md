@@ -69,6 +69,8 @@ https://github.com/user-attachments/assets/5a8ac4dd-861e-4751-93ce-de5ca0cb18ab
   - `Sell All Treasure`
   - `Hide Player List`
     - Hides the player list and adds a button to toggle its visibility, the setting sets what state the player list is in by default +
+  - `Item Mystification Helper` - Adds an option to drop an item on the identification tab to transform the false identification into that item
+    - Additionally it also will remove the cursed trait on items that are mystified and re-add it when the item is identified
 
 - **Highlight**
   - `Pf2e Toolbelt`'s `Target Helper` unrolled rolls and make them glow

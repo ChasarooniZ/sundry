@@ -130,6 +130,10 @@
             }
           }
         },
+        "item-mystification-helper": {
+          "name": "Item Mystification Helper (Misidentification)",
+          "hint": "Adds an option to drop an item on the identification tab to transform the false identification into that item. Additionally it also will remove the cursed trait on items that are mystified and re-add it when the item is identified"
+        },
         "sell-all-treasure": {
           "name": "Sell All Treasure",
           "hint": "Hides the 'Sell All Treasure' button to prevent accidentally selling key items"
@@ -290,10 +294,15 @@
         "title": "Campaign Notes"
       },
       "team-members": "members",
-      "property-runes": "Property Runes"
+      "property-runes": "Property Runes",
+      "drop-item": "Drop Mystification Item"
     },
     "tooltip": {
       "hud": {
+        "actor-effects": {
+          "show": "Show Actor Effects",
+          "hide": "Hide Actor Effects"
+        },
         "player-list": {
           "show": "Show Player List",
           "hide": "Hide Player List"
@@ -304,7 +313,8 @@
         "action": "Actions",
         "free": "Free Actions",
         "reaction": "Reactions"
-      }
+      },
+      "mystification-drop-zone": "Drop an item here to override the current item's mystification settings"
     },
     "items": {
       "effects": {

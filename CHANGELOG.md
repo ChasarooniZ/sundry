@@ -4,6 +4,12 @@
   - Added Localization where possible for some names
   - `Hide Token Effects` updated to cover edge case of effects with a duration in `rounds` not passing through
 
+## 1.9.0
+
+- **New**
+  - `Item Mystification Helper` - Adds an option to drop an item on the identification tab to transform the false identification into that item
+  - Additionally it also will remove the cursed trait on items that are mystified and re-add it when the item is identified
+
 ## 1.8.7
 
 - Fixed greater winged data entry for `Display Property Runes - Actor Sheet`

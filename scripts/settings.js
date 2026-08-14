@@ -9,6 +9,7 @@ import {
 } from "./lib/itemPropertyRunes.js";
 import { setuplanguageHandling } from "./lib/languageHandling.js";
 import { setupMessageUserColor } from "./lib/messageUserColor.js";
+import { setupMystificationHelper } from "./lib/mystifyHelper.js";
 import { setupNotifySpellstrikeRecharge } from "./lib/notify.js";
 import { openPlayerNotes } from "./lib/openNotes.js";
 import { setupPanToCombatant } from "./lib/panToCurrentCombatant.js";
@@ -210,15 +211,15 @@ export function setupSettings() {
     },
   });
 
-  game.settings.register(MODULE_ID, "hide.sell-all-treasure", {
-    name: `${MODULE_ID}.module-settings.hide.sell-all-treasure.name`,
-    hint: `${MODULE_ID}.module-settings.hide.sell-all-treasure.hint`,
+  game.settings.register(MODULE_ID, "hide.item-mystification-helper", {
+    name: `${MODULE_ID}.module-settings.hide.item-mystification-helper.name`,
+    hint: `${MODULE_ID}.module-settings.hide.item-mystification-helper.hint`,
     scope: "world",
     config: isF2eSystem(),
     default: false,
     type: Boolean,
     onChange: (value) => {
-      hideSellAllTreasure(value);
+      setupMystificationHelper(value);
     },
   });
 
@@ -237,6 +238,18 @@ export function setupSettings() {
     },
     onChange: (value) => {
       setupPlayerListToggleButton(value);
+    },
+  });
+
+  game.settings.register(MODULE_ID, "hide.sell-all-treasure", {
+    name: `${MODULE_ID}.module-settings.hide.sell-all-treasure.name`,
+    hint: `${MODULE_ID}.module-settings.hide.sell-all-treasure.hint`,
+    scope: "world",
+    config: isF2eSystem(),
+    default: false,
+    type: Boolean,
+    onChange: (value) => {
+      hideSellAllTreasure(value);
     },
   });
 
@@ -264,7 +277,7 @@ export function setupSettings() {
     },
   });
 
-    game.settings.register(
+  game.settings.register(
     MODULE_ID,
     "highlight.pan-current-combatant.enabled-gm",
     {
