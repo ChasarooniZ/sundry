@@ -496,3 +496,56 @@ figure.paused figcaption {
     }
   }
 }
+
+article#effects-panel.sundry-hide-effects.hide {
+  div.effect-item.sundry-hidden {
+    display: none;
+  }
+}
+
+#sundry-actor-effects-toggle-button {
+  z-index: 9999;
+  width: 18px;
+  height: 18px;
+  background: rgba(30, 30, 30, 0.75);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0 6px 0 0;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: rgba(60, 60, 60, 0.9);
+  }
+}
+
+#sundry-mystification-drop-zone.drop-zone {
+  align-items: center;
+  border: 1px solid var(--color-border-light-tertiary);
+  display: flex;
+  gap: 0.25rem;
+  max-width: fit-content;
+  padding: 0 4px 0 0;
+
+  &.empty {
+    font-weight: normal;
+    min-width: 12rem;
+    padding: 4px;
+  }
+
+  .name {
+    font-style: italic;
+    flex: 1;
+    text-align: center;
+  }
+
+  picture,
+  img {
+    border: 1px solid var(--color-border-dark);
+    border-radius: 2px;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    height: 24px;
+    width: 24px;
+  }
+}

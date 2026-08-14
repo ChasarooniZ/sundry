@@ -36,8 +36,12 @@ import { setupMessageUserColor } from "./lib/messageUserColor.js";
 import { setupPanToCombatant } from "./lib/panToCurrentCombatant.js";
 import { setupPlayerListToggleButton } from "./lib/hidePlayerList.js";
 import { setupDisplayActionComparison } from "./lib/showPlayerActionEquivalance.js";
-import { setupHideTokenEffects } from "./lib/tokenEffectHider.js";
+import {
+  setupHideActorEffects,
+  setupHideTokenEffects,
+} from "./lib/tokenEffectHider.js";
 import { setupRotateProneTokens } from "./lib/rotateProneTokens.js";
+import { setupMystificationHelper } from "./lib/mystifyHelper.js";
 
 export const MODULE_ID = "sundry";
 
@@ -91,11 +95,17 @@ Hooks.once("ready", async function () {
     getSetting("hide.effects.token.enabled-for") !== "none",
   );
 
+  setupHideActorEffects(
+    getSetting("hide.effects.token.enabled-for") !== "none",
+  );
+
   setupHideHeaderButtonText(getSetting("hide.header.button-text"));
 
   if (getSetting("hide.default-craft-checks")) hideDefaultCraftChecks();
 
   setupPlayerListToggleButton(getSetting("hide.hud.player-list"));
+
+  setupMystificationHelper(getSetting("hide.item-mystification-helper"));
 
   //Minify
   if (getSetting("minify.simple-requests")) minifySimpleRequests();
