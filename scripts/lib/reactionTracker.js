@@ -37,15 +37,21 @@ async function startOfCombatReactions(encounter) {
 }
 
 async function usedReaction(message) {
+  const reactiveStrike = isReactiveStrike(message);
   if (
     (message?.item?.system?.actionType?.value === "reaction" ||
-      message?.item?.system?.time?.value === "reaction") &&
+      message?.item?.system?.time?.value === "reaction" ||
+      reactiveStrike) &&
     message?.actor?.combatant &&
     (message?.flags?.pf2e?.context?.type === "self-effect" ||
-      !message?.flags?.pf2e?.context?.type) &&
+      !message?.flags?.pf2e?.context?.type ||
+      reactiveStrike) &&
     message.actor
   ) {
-    reactionUsed([message.actor], false);
+    reactionUsed(
+      [message.actor],
+      game?.combat?.current?.turn < message?.actor?.combatant?.turnNumber,
+    );
   }
 }
 
@@ -103,7 +109,7 @@ export async function reactionUsed(actors, combatStart) {
   }
 }
 
-const REACTION_USED_EFFECT = (combatStart) => ({
+const REACTION_USED_EFFECT = (beforeTurn) => ({
   name: game.i18n.has("sundry.items.effects.reaction-used.name")
     ? game.i18n.localize("sundry.items.effects.reaction-used.name")
     : "Effect: Reaction Used",
@@ -115,7 +121,7 @@ const REACTION_USED_EFFECT = (combatStart) => ({
       value: 1,
     },
     duration: {
-      value: combatStart ? 0 : 1,
+      value: beforeTurn ? 0 : 1,
       unit: "rounds",
       expiry: "turn-start",
       sustained: false,
@@ -130,3 +136,10 @@ const REACTION_USED_EFFECT = (combatStart) => ({
 const ROLL_OPTIONS_WITH_REACTIONS_AT_START_OF_COMBAT = [
   "feature:guardians-techniques",
 ];
+
+function isReactiveStrike(message) {
+  return (
+    game?.combat?.current?.turn !== message?.actor?.combatant?.turnNumber &&
+    message?.flags?.pf2e?.context?.type === "attack-roll"
+  );
+}

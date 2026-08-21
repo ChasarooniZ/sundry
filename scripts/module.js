@@ -95,9 +95,9 @@ Hooks.once("ready", async function () {
     getSetting("hide.effects.token.enabled-for") !== "none",
   );
 
-  setupHideActorEffects(
-    getSetting("hide.effects.token.enabled-for") !== "none",
-  );
+  // setupHideActorEffects(
+  //   getSetting("hide.effects.token.enabled-for") !== "none",
+  // );
 
   setupHideHeaderButtonText(getSetting("hide.header.button-text"));
 

@@ -2,7 +2,15 @@
 
 - **Updated**
   - Added Localization where possible for some names
+
+## 1.10.0
+
+- **New**
+  - `Reaction Tracker` - Added support for tracking `Reactive Strikes`
+- **Updated**
+  - `Reaction Tracker` fixed issue causing reaction used effect to last too long when activated on not your turn (🐛 @Joshmvii7)
   - `Hide Token Effects` updated to cover edge case of effects with a duration in `rounds` not passing through
+  - Fixed issue with test feature being enabled
 
 ## 1.9.0
 
