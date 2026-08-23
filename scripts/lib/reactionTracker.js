@@ -38,14 +38,20 @@ async function startOfCombatReactions(encounter) {
 
 async function usedReaction(message) {
   const reactiveStrike = isReactiveStrike(message);
+  const isMessageActionAReaction =
+    message?.item?.system?.actionType?.value === "reaction" ||
+    message?.item?.system?.time?.value === "reaction" ||
+    reactiveStrike;
+  const isCombatant = message?.actor?.combatant;
+  const isValidContext =
+    message?.flags?.pf2e?.context?.type === "self-effect" ||
+    !message?.flags?.pf2e?.context?.type ||
+    reactiveStrike;
+
   if (
-    (message?.item?.system?.actionType?.value === "reaction" ||
-      message?.item?.system?.time?.value === "reaction" ||
-      reactiveStrike) &&
-    message?.actor?.combatant &&
-    (message?.flags?.pf2e?.context?.type === "self-effect" ||
-      !message?.flags?.pf2e?.context?.type ||
-      reactiveStrike) &&
+    isMessageActionAReaction &&
+    isCombatant &&
+    isValidContext &&
     message.actor
   ) {
     reactionUsed(
