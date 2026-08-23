@@ -473,7 +473,7 @@ export function setupSettings() {
     hint: `${MODULE_ID}.module-settings.track.reaction-usage.reactive-strike.hint`,
     scope: "world",
     config: isF2eSystem(),
-    default: true,
+    default: false,
     type: Boolean,
   });
 
