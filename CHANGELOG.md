@@ -3,6 +3,12 @@
 - **Updated**
   - Added Localization where possible for some names
 
+## 1.10.1
+
+- **Update**
+  - Fix `Reaction Tracker` breaking on `reactive strike`
+  - Added a setting to allow disabling checking for reactive strikes
+
 ## 1.10.0
 
 - **New**

@@ -1,3 +1,5 @@
+import { MODULE_ID } from "../module.js";
+
 export function setupReactionTracker(setting) {
   if (game.user.isGM) {
     switch (setting) {
@@ -145,6 +147,7 @@ const ROLL_OPTIONS_WITH_REACTIONS_AT_START_OF_COMBAT = [
 
 function isReactiveStrike(message) {
   return (
+    game.settings.get(MODULE_ID, "track.reaction-usage.reactive-strike") &&
     game?.combat?.current?.turn !== message?.actor?.combatant?.turnNumber &&
     message?.flags?.pf2e?.context?.type === "attack-roll"
   );

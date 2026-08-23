@@ -468,6 +468,15 @@ export function setupSettings() {
     },
   });
 
+  game.settings.register(MODULE_ID, "track.reaction-usage.reactive-strike", {
+    name: `${MODULE_ID}.module-settings.track.reaction-usage.reactive-strike.name`,
+    hint: `${MODULE_ID}.module-settings.track.reaction-usage.reactive-strike.hint`,
+    scope: "world",
+    config: isF2eSystem(),
+    default: true,
+    type: Boolean,
+  });
+
   game.settings.register(MODULE_ID, "track.flourish-usage", {
     name: `${MODULE_ID}.module-settings.track.flourish-usage.name`,
     hint: `${MODULE_ID}.module-settings.track.flourish-usage.hint`,

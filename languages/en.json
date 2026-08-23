@@ -232,6 +232,10 @@
             "all": "All Features",
             "reaction-only": "Only Track Sent Reactions",
             "off": "Off"
+          },
+          "reactive-strike": {
+            "name": "Reaction Usage - Reactive Strike",
+            "hint": "This feature tracks strikes made in combat outside of the user's turn and treats them as reactions incrementing or creating the effect on the token"
           }
         }
       },
