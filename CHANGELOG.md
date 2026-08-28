@@ -3,6 +3,11 @@
 - **Updated**
   - Added Localization where possible for some names
 
+## 1.10.2
+
+- `Display Property Runes` - Added new Runes from Impossible magic
+- Updated French translation (🌐 @rectulo)
+
 ## 1.10.1
 
 - **Update**
