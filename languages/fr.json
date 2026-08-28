@@ -130,6 +130,10 @@
             }
           }
         },
+        "item-mystification-helper": {
+          "name": "Aide à la mystification d'objet (Mauvaise identification)",
+          "hint": "Ajoute une option permettant de glisser un objet dans l'onglet Identification afin de le transformer en cet objet en cas de fausse identification. De plus, cela supprimera le trait maudit des objets mystifiés et le rétablira une fois l'objet identifié."
+        },
         "sell-all-treasure": {
           "name": "Vendre tous les trésors",
           "hint": "Cache le bouton 'Vendre tous les trésors' pour prévenir la vente accidentelle d'objets clés"
@@ -173,6 +177,13 @@
             "name": "[Surlignage] Jetons À terre - Retourné",
             "hint": "Retourne les jetons À terre pour les mettre sur le dos  et les redresse lorsqu'ils ne le sont plus"
           }
+        }
+      },
+      "hotkey": {
+        "choices": {
+          "all": "Activé pour tous",
+          "gm": "MJ seulement",
+          "off": "Désactivé"
         }
       },
       "message": {
@@ -221,6 +232,10 @@
             "all": "Toutes les fonctionnalités",
             "reaction-only": "Suivre uniquement les réactions envoyées",
             "off": "Désactivé"
+          },
+          "reactive-strike": {
+            "name": "Utilisation de la réaction - Frappe réactive",
+            "hint": "Cette fonctionnalité enregistre les Frappes portées en combat en dehors du tour du joueur et les traite comme des réactions augmentant ou créant l'effet sur le jeton."
           }
         }
       },
@@ -272,6 +287,9 @@
       "random-location": {
         "finished": "Lieu aléatoire sélectionné !",
         "first-use": "Ceci est la fonction Lieux aléatoires, activée par la touche R (paramétrable dans les commandes). Cliquez à gauche pour sélectionner les points à répartir aléatoirement, puis à droite pour en sélectionner un au hasard !"
+      },
+      "controls": {
+        "disabled": "[Sundry] La commande {name} est actuellement désactivée dans les réglages, l'activer utilise ce raccourci (ce message ne sera montré que la première fois que le MJ utilisera cette commande par session)"
       }
     },
     "display": {
@@ -280,10 +298,15 @@
         "title": "Notes de campagne"
       },
       "team-members": "membres",
-      "property-runes": "Runes de propriété"
+      "property-runes": "Runes de propriété",
+      "drop-item": "Glisser un objet de mystification"
     },
     "tooltip": {
       "hud": {
+        "actor-effects": {
+          "show": "Afficher les effets de l'acteur",
+          "hide": "Masquer les effets de l'acteur"
+        },
         "player-list": {
           "show": "Afficher la liste des joueurs",
           "hide": "Masquer la liste des joueurs"
@@ -294,7 +317,8 @@
         "action": "Actions",
         "free": "Actions gratuites",
         "reaction": "Réactions"
-      }
+      },
+      "mystification-drop-zone": "Déposez un objet ici pour remplacer les paramètres de mystification de l'objet actuel"
     },
     "items": {
       "effects": {
