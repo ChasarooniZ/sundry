@@ -2,6 +2,10 @@
 
 - **Updated**
   - Added Localization where possible for some names
+ 
+## 1.10.3
+
+- Updated Chinese translation (🌐 @AlphaStarguide)
 
 ## 1.10.2
 
