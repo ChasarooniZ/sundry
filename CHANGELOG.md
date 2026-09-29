@@ -2,10 +2,6 @@
 
 - **Updated**
   - Added Localization where possible for some names
- 
-## 1.10.3
-
-- Updated Chinese translation (🌐 @AlphaStarguide)
 
 ## 1.11.0
 
@@ -13,6 +9,10 @@
   - Updated `Character Campaign Notes` to also now display the Notes and Private notes of NPCs as well so GMs can read that information quickly at a glance
 - **Updated**
   - Added performance improvements for unrolled glow and token effect hider (🐛 @takaqiao)
+
+## 1.10.3
+
+- Updated Chinese translation (🌐 @AlphaStarguide)
 
 ## 1.10.2
 
