@@ -112,7 +112,7 @@ function shouldShowEffects(token) {
 }
 
 function setEffectVisibility(token, value, { surfaceMode }) {
-  const fxInfoList = token.actor.appliedEffects;
+  let fxInfoList;
   if (!shouldSkipEffectBackground()) {
     token.effects.bg.visible = value;
   }
@@ -127,6 +127,7 @@ function setEffectVisibility(token, value, { surfaceMode }) {
   for (const fx of fxs) {
     cnt++;
     if (fx.visible !== value) {
+      fxInfoList ??= token.actor.appliedEffects;
       if (shouldAlwaysShowEffect(fxInfoList[cnt], { surfaceMode })) continue; // Skip effects that should always be shown
       fx.visible = value;
     }
