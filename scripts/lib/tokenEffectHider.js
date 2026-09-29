@@ -126,8 +126,10 @@ function setEffectVisibility(token, value, { surfaceMode }) {
   let cnt = -1;
   for (const fx of fxs) {
     cnt++;
-    if (shouldAlwaysShowEffect(fxInfoList[cnt], { surfaceMode })) continue; // Skip effects that should always be shown
-    fx.visible = value;
+    if (fx.visible !== value) {
+      if (shouldAlwaysShowEffect(fxInfoList[cnt], { surfaceMode })) continue; // Skip effects that should always be shown
+      fx.visible = value;
+    }
   }
 }
 

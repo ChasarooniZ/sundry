@@ -3,6 +3,13 @@
 - **Updated**
   - Added Localization where possible for some names
 
+## 1.11.0
+
+- **New**
+  - Updated `Character Campaign Notes` to also now display the Notes and Private notes of NPCs as well so GMs can read that information quickly at a glance
+- **Updated**
+  - Added performance improvements for unrolled glow and token effect hider (🐛 @takaqiao)
+
 ## 1.10.2
 
 - `Display Property Runes` - Added new Runes from Impossible magic

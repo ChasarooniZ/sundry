@@ -288,7 +288,7 @@
   .target-row
   .target-header
   .controls {
-  i.die {
+  i.die:before {
     animation: endTurnGlow 2.5s infinite;
   }
 }
