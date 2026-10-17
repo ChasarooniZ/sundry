@@ -34,7 +34,7 @@ async function startOfCombatReactions(encounter) {
     encounter?.combatants?.contents
       ?.filter((combatant) => combatant.id !== frontID)
       ?.map((combatant) => combatant.actor),
-    true,
+    { shortenedDuration: true, combatStart: true },
   );
 }
 
@@ -56,10 +56,10 @@ async function usedReaction(message) {
     isValidContext &&
     message.actor
   ) {
-    reactionUsed(
-      [message.actor],
-      game?.combat?.current?.turn < message?.actor?.combatant?.turnNumber,
-    );
+    reactionUsed([message.actor], {
+      shortenedDuration:
+        game?.combat?.current?.turn < message?.actor?.combatant?.turnNumber,
+    });
   }
 }
 
@@ -75,10 +75,13 @@ async function removeEncounterReactions(encounter) {
   }
 }
 
-export async function reactionUsed(actors, combatStart) {
+export async function reactionUsed(
+  actors,
+  { shortenedDuration = false, combatStart = false },
+) {
   if (actors.length === 0) return;
 
-  const item = REACTION_USED_EFFECT(combatStart);
+  const item = REACTION_USED_EFFECT(shortenedDuration);
 
   const actorsToCheck = actors.filter((actor) => {
     if (combatStart) {

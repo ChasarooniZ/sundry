@@ -3,6 +3,11 @@
 - **Updated**
   - Added Localization where possible for some names
 
+## 1.11.1
+
+- **Updated**
+  - `Reaction Tracker` fixed bad logic causing Guardians not to gain reaction used effect (🐛 @Joshmvii7)
+
 ## 1.11.0
 
 - **New**
