@@ -42,6 +42,7 @@ function insertHTML(sheetHTML, sourceItem) {
   const dropLocation = sheetHTML?.[0]?.querySelector(
     ".pf2e.item.sheet form .sheet-body .tab.mystification .form-group .img-name",
   );
+  if (!dropLocation) return;
   dropLocation.insertAdjacentHTML(
     "beforeend",
     `<div class="drop-zone empty" id="sundry-mystification-drop-zone"

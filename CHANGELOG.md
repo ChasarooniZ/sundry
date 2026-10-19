@@ -3,6 +3,11 @@
 - **Updated**
   - Added Localization where possible for some names
 
+## 1.11.2
+
+- **Updated**
+  - `Mystify Helper` - Fixed issue causing error spam to console
+
 ## 1.11.1
 
 - **Updated**
