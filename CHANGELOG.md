@@ -3,6 +3,10 @@
 - **Updated**
   - Added Localization where possible for some names
 
+## 1.12.1
+
+- Version bump for forge cache
+
 ## 1.12.0
 
 - **New**

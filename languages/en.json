@@ -148,6 +148,10 @@
             }
           }
         },
+        "exploration-activites": {
+          "name": "Show Exploration Activities - GM",
+          "hint": "Whenever you highlight tokens (default key is Alt) it will also add an overlay of an icon representing their exploration activity (Note: this requires Sequencer, also you can modify the icon on the activity to modify what is displayed)"
+        },
         "languages-known": {
           "name": "Which party Members know Creature Languages",
           "hint": "Highlights which languages (on NPC stat block pages) are known by the current active party as well as adds a tooltip to make sure its clear"
