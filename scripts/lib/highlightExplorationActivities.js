@@ -13,7 +13,7 @@ async function highlightExplorationActivities(active) {
       const explorationActivities = tok?.actor?.system?.exploration?.map((id) =>
         tok?.actor?.items?.get(id),
       );
-      const activity = explorationActivities?.[0];
+      const activity = explorationActivities?.at(-1);
       const slug = activity?.slug;
       const img =
         activity?.img !== "systems/pf2e/icons/actions/Passive.webp"

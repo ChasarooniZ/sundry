@@ -3,6 +3,12 @@
 - **Updated**
   - Added Localization where possible for some names
 
+## 1.12.2
+
+- **Update**
+  - `Highlight - Exploration Activities`
+    - Handles the multiple activities selected case by grabbing the **last** activated exploration activity (🙏 @Sarge)
+
 ## 1.12.1
 
 - Version bump for forge cache
