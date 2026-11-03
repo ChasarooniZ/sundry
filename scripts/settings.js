@@ -3,6 +3,7 @@ import { setupFlourishTracker } from "./lib/flourishTracker.js";
 import { isF2eSystem } from "./lib/helpers.js";
 import { setupHideHeaderButtonText } from "./lib/hideHeaderButtonText.js";
 import { setupPlayerListToggleButton } from "./lib/hidePlayerList.js";
+import { setupHighlightExplorationActivities } from "./lib/highlightExplorationActivities.js";
 import {
   setupActorSheetDisplayPropertyRunes,
   setupDisplayItemPropertyRunes,
@@ -290,6 +291,18 @@ export function setupSettings() {
     },
   );
 
+  game.settings.register(MODULE_ID, "highlight.exploration-activities", {
+    name: `${MODULE_ID}.module-settings.highlight.exploration-activities.name`,
+    hint: `${MODULE_ID}.module-settings.highlight.exploration-activities.hint`,
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean,
+    onChange: (value) => {
+      setupHighlightExplorationActivities(value);
+    },
+  });
+
   game.settings.register(MODULE_ID, "highlight.prone-tokens.rotate", {
     name: `${MODULE_ID}.module-settings.highlight.prone-tokens.rotate.name`,
     hint: `${MODULE_ID}.module-settings.highlight.prone-tokens.rotate.hint`,
@@ -570,11 +583,7 @@ export function registerKeybindings() {
   game.keybindings.register(MODULE_ID, "random-location", {
     name: game.i18n.localize(`${MODULE_ID}.controls.random-location.name`),
     hint: game.i18n.localize(`${MODULE_ID}.controls.random-location.hint`),
-    editable: [
-      {
-        key: "KeyR",
-      },
-    ],
+    editable: [],
     onDown: (context) => {
       if (getAndHandleControlsEnabled("random-location")) {
         getRandomPoint();

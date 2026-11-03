@@ -42,6 +42,7 @@ import {
 } from "./lib/tokenEffectHider.js";
 import { setupRotateProneTokens } from "./lib/rotateProneTokens.js";
 import { setupMystificationHelper } from "./lib/mystifyHelper.js";
+import { setupHighlightExplorationActivities } from "./lib/highlightExplorationActivities.js";
 
 export const MODULE_ID = "sundry";
 
@@ -81,6 +82,8 @@ Hooks.once("ready", async function () {
   setupHighlightToolbeltRollSaves(
     getSetting("highlight.pf2e-toolbelt.target-helper.roll"),
   );
+
+  setupHighlightExplorationActivities(getSetting("highlight.exploration-activities"))
 
   setuplanguageHandling(getSetting("highlight.languages-known"));
 

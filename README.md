@@ -76,6 +76,8 @@ https://github.com/user-attachments/assets/5a8ac4dd-861e-4751-93ce-de5ca0cb18ab
   - `Pf2e Toolbelt`'s `Target Helper` unrolled rolls and make them glow
 
   ![highlight-save](https://github.com/user-attachments/assets/0f8e1237-da4a-4e1f-947e-df5e94294bf3)
+  - `Exploration Activities` Whenever you highlight tokens (default key is Alt) it will also add an overlay of an icon representing their exploration activity (Note: this requires Sequencer, also you can modify the icon on the activity to modify what is displayed)
+
   - `Known Languages on Creatures` Highlights which languages (on NPC stat block pages) are known by the current active party as well as adds a tooltip to make sure its clear
 
   <img width="280" height="171" alt="image" src="https://github.com/user-attachments/assets/0bf22994-8524-47f1-9e16-ce9104f5534e" />

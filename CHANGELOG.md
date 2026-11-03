@@ -3,6 +3,12 @@
 - **Updated**
   - Added Localization where possible for some names
 
+## 1.12.0
+
+- **New**
+  - `Highlight - Exploration Activities`
+    - Whenever you highlight tokens (default key is Alt) it will also add an overlay of an icon representing their exploration activity (Note: this requires Sequencer, also you can modify the icon on the activity to modify what is displayed)
+
 ## 1.11.2
 
 - **Updated**
