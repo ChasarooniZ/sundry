@@ -2,6 +2,9 @@
 
 - **Updated**
   - Added Localization where possible for some names
+ 
+## 1.12.3
+- Updated French translation (🌐 @rectulo, @RadicalBlue)
 
 ## 1.12.2
 
