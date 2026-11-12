@@ -149,7 +149,8 @@
           }
         },
         "exploration-activites": {
-          "name": "Afficher les activités d'exploration - MJ"
+          "name": "Afficher les activités d'exploration - MJ",
+          "hint": "Lorsque vous mettez en évidence un jeton (Alt par défaut) cela ajoute une icône par dessus qui représente leur activité d'exploration (Note : ceci requiert Sequencer, de plus vous pouvez modifier l'icône sur l'activité pour modifier l'affichage)"
         },
         "languages-known": {
           "name": "Les membres du groupes connaissant les langues de la créature",
