@@ -148,6 +148,9 @@
             }
           }
         },
+        "exploration-activites": {
+          "name": "Afficher les activités d'exploration - MJ"
+        },
         "languages-known": {
           "name": "Les membres du groupes connaissant les langues de la créature",
           "hint": "Indique, dans les blocs de statistiques des PNJ, les langues connues par le groupe actif et ajoute une infobulle pour plus de clarté."
