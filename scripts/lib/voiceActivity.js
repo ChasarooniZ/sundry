@@ -31,6 +31,7 @@ export function setupVoiceActivityChecker() {
       analyser.connect(scriptProcessor);
       scriptProcessor.connect(audioContext.destination);
       let passed = false;
+      let lastUpdate = new Date();
       scriptProcessor.onaudioprocess = function () {
         const array = new Float32Array(analyser.frequencyBinCount);
         analyser.getFloatTimeDomainData(array);
@@ -42,7 +43,8 @@ export function setupVoiceActivityChecker() {
         const rms = calculateRMS(array);
         const decibel = 20 * Math.log10(rms);
 
-        if (window.sundryVoiceSettingsOpen) {
+        if (window.sundryVoiceSettingsOpen && new Date() - lastUpdate > 500) {
+          lastUpdate = new Date();
           const moduleTab = document.querySelector(
             `.tab[data-tab=${MODULE_ID}]`,
           );
@@ -52,13 +54,13 @@ export function setupVoiceActivityChecker() {
           if (setting) {
             const existingDB = setting.querySelector("span#db");
             if (existingDB) {
-              existingDB.innerText = ` ${decibel}DB`;
+              existingDB.innerText = ` ${Math.round(decibel)}DB`;
             } else {
               setting
                 .querySelector("label")
                 .insertAdjacentHTML(
                   "beforeend",
-                  `<span id="db" data-tooltip="Current Decibels"> ${decibel} DB</span>`,
+                  `<span id="db" data-tooltip="Current Decibels"> ${Math.round(decibel)} DB</span>`,
                 );
             }
           }
