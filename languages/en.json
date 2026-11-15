@@ -78,6 +78,16 @@
             "xp": "Factor in XP %",
             "no-xp": "Do NOT factor in XP %"
           }
+        },
+        "voice-activity": {
+          "enabled": {
+            "name": "Voice Activity - Enabled",
+            "hint": "[Restarts] Uses the browser voice activity of your mic (doesn't actually record any audio) and creates an indicator on the User's Character's token, or on a controlled token if the user's character has no active tokens"
+          },
+          "threshold": {
+            "name": "Voice Activity - Threshold",
+            "hint": "The audio threshold in DB to use for the voice activity setting (is per user)"
+          }
         }
       },
       "hide": {

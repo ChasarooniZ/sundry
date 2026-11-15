@@ -140,6 +140,33 @@ export function setupSettings() {
     },
   });
 
+  game.settings.register(MODULE_ID, "display.voice-activity.enabled", {
+    name: `${MODULE_ID}.module-settings.display.voice-activity.enabled.name`,
+    hint: `${MODULE_ID}.module-settings.display.voice-activity.enabled.hint`,
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean,
+    requiresReload: true,
+  });
+
+  game.settings.register(MODULE_ID, "display.voice-activity.threshold", {
+    name: `${MODULE_ID}.module-settings.display.voice-activity.threshold.name`,
+    hint: `${MODULE_ID}.module-settings.display.voice-activity.threshold.hint`,
+    scope: "user",
+    config: true,
+    default: -50,
+    type: Number,
+    range: {
+      min: -100,
+      step: 5,
+      max: 0,
+    },
+    onChange: (value) => {
+      window.sundryVoiceActivityThreshold = value;
+    },
+  });
+
   game.settings.register(MODULE_ID, "hide.default-craft-checks", {
     name: `${MODULE_ID}.module-settings.hide.default-craft-checks.name`,
     hint: `${MODULE_ID}.module-settings.hide.default-craft-checks.hint`,

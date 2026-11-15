@@ -43,6 +43,7 @@ import {
 import { setupRotateProneTokens } from "./lib/rotateProneTokens.js";
 import { setupMystificationHelper } from "./lib/mystifyHelper.js";
 import { setupHighlightExplorationActivities } from "./lib/highlightExplorationActivities.js";
+import { setupVoiceActivityChecker } from "./lib/voiceActivity.js";
 
 export const MODULE_ID = "sundry";
 
@@ -78,12 +79,21 @@ Hooks.once("ready", async function () {
 
   setupDisplayActionComparison(getSetting("display.action-comparison"));
 
+  if (getSetting("display.voice-activity.enabled")) {
+    window.sundryVoiceActivityThreshold = getSetting(
+      "display.voice-activity.threshold",
+    );
+    setupVoiceActivityChecker();
+  }
+
   //Highlighting
   setupHighlightToolbeltRollSaves(
     getSetting("highlight.pf2e-toolbelt.target-helper.roll"),
   );
 
-  setupHighlightExplorationActivities(getSetting("highlight.exploration-activities"))
+  setupHighlightExplorationActivities(
+    getSetting("highlight.exploration-activities"),
+  );
 
   setuplanguageHandling(getSetting("highlight.languages-known"));
 
